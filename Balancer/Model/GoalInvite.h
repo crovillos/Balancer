@@ -7,7 +7,10 @@
 //
 
 #import "Invite.h"
+#import "Goal.h"
 
 @interface GoalInvite : Invite
+
+@property (nonatomic, strong) Goal* goal;
 
 @end
