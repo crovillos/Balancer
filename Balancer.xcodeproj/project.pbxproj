@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		83AEDA41173CA2AE00D9C0F4 /* SocialNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEDA40173CA2AE00D9C0F4 /* SocialNavigationController.m */; };
-		83AEDA44173CA2F300D9C0F4 /* TodayNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEDA43173CA2F300D9C0F4 /* TodayNavigationController.m */; };
-		83AEDA47173CA35E00D9C0F4 /* GoalsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEDA46173CA35E00D9C0F4 /* GoalsNavigationController.m */; };
-		83AEDA4A173CA3A100D9C0F4 /* ProgressNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEDA49173CA3A100D9C0F4 /* ProgressNavigationController.m */; };
 		83DD42D9173447DB00FA7408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42D8173447DB00FA7408 /* UIKit.framework */; };
 		83DD42DB173447DB00FA7408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DA173447DB00FA7408 /* Foundation.framework */; };
 		83DD42DD173447DB00FA7408 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DC173447DB00FA7408 /* CoreGraphics.framework */; };
@@ -25,6 +21,7 @@
 		83DD42F9173447DB00FA7408 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42F8173447DB00FA7408 /* first@2x.png */; };
 		83DD42FE173447DC00FA7408 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42FD173447DC00FA7408 /* second.png */; };
 		83DD4300173447DC00FA7408 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42FF173447DC00FA7408 /* second@2x.png */; };
+		BF8FF99B173CB2FC003C6BBF /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FF99A173CB2FC003C6BBF /* Activity.m */; };
 		CB760787173CAD5C000810E1 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = CB760786173CAD5C000810E1 /* Goal.m */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +52,8 @@
 		83DD42F8173447DB00FA7408 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		83DD42FD173447DC00FA7408 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		83DD42FF173447DC00FA7408 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		BF8FF999173CB2FC003C6BBF /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		BF8FF99A173CB2FC003C6BBF /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		CB760785173CAD5C000810E1 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
 		CB760786173CAD5C000810E1 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +142,8 @@
 			children = (
 				CB760785173CAD5C000810E1 /* Goal.h */,
 				CB760786173CAD5C000810E1 /* Goal.m */,
+				BF8FF999173CB2FC003C6BBF /* Activity.h */,
+				BF8FF99A173CB2FC003C6BBF /* Activity.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,9 +220,8 @@
 			files = (
 				83DD42E5173447DB00FA7408 /* main.m in Sources */,
 				83DD42E9173447DB00FA7408 /* AppDelegate.m in Sources */,
-				83DD42F5173447DB00FA7408 /* FirstViewController.m in Sources */,
-				83DD42FC173447DC00FA7408 /* SecondViewController.m in Sources */,
 				CB760787173CAD5C000810E1 /* Goal.m in Sources */,
+				BF8FF99B173CB2FC003C6BBF /* Activity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
