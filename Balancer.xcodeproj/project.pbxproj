@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83AEDA41173CA2AE00D9C0F4 /* SocialNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEDA40173CA2AE00D9C0F4 /* SocialNavigationController.m */; };
+		83AEDA44173CA2F300D9C0F4 /* TodayNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEDA43173CA2F300D9C0F4 /* TodayNavigationController.m */; };
+		83AEDA47173CA35E00D9C0F4 /* GoalsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEDA46173CA35E00D9C0F4 /* GoalsNavigationController.m */; };
+		83AEDA4A173CA3A100D9C0F4 /* ProgressNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEDA49173CA3A100D9C0F4 /* ProgressNavigationController.m */; };
 		83DD42D9173447DB00FA7408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42D8173447DB00FA7408 /* UIKit.framework */; };
 		83DD42DB173447DB00FA7408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DA173447DB00FA7408 /* Foundation.framework */; };
 		83DD42DD173447DB00FA7408 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DC173447DB00FA7408 /* CoreGraphics.framework */; };
@@ -17,16 +21,22 @@
 		83DD42ED173447DB00FA7408 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42EC173447DB00FA7408 /* Default@2x.png */; };
 		83DD42EF173447DB00FA7408 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42EE173447DB00FA7408 /* Default-568h@2x.png */; };
 		83DD42F2173447DB00FA7408 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42F0173447DB00FA7408 /* MainStoryboard.storyboard */; };
-		83DD42F5173447DB00FA7408 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD42F4173447DB00FA7408 /* FirstViewController.m */; };
 		83DD42F7173447DB00FA7408 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42F6173447DB00FA7408 /* first.png */; };
 		83DD42F9173447DB00FA7408 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42F8173447DB00FA7408 /* first@2x.png */; };
-		83DD42FC173447DC00FA7408 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD42FB173447DC00FA7408 /* SecondViewController.m */; };
 		83DD42FE173447DC00FA7408 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42FD173447DC00FA7408 /* second.png */; };
 		83DD4300173447DC00FA7408 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42FF173447DC00FA7408 /* second@2x.png */; };
 		CB760787173CAD5C000810E1 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = CB760786173CAD5C000810E1 /* Goal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83AEDA3F173CA2AE00D9C0F4 /* SocialNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialNavigationController.h; sourceTree = "<group>"; };
+		83AEDA40173CA2AE00D9C0F4 /* SocialNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialNavigationController.m; sourceTree = "<group>"; };
+		83AEDA42173CA2F300D9C0F4 /* TodayNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayNavigationController.h; sourceTree = "<group>"; };
+		83AEDA43173CA2F300D9C0F4 /* TodayNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayNavigationController.m; sourceTree = "<group>"; };
+		83AEDA45173CA35E00D9C0F4 /* GoalsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsNavigationController.h; sourceTree = "<group>"; };
+		83AEDA46173CA35E00D9C0F4 /* GoalsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsNavigationController.m; sourceTree = "<group>"; };
+		83AEDA48173CA3A100D9C0F4 /* ProgressNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressNavigationController.h; sourceTree = "<group>"; };
+		83AEDA49173CA3A100D9C0F4 /* ProgressNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressNavigationController.m; sourceTree = "<group>"; };
 		83DD42D5173447DB00FA7408 /* Balancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DD42D8173447DB00FA7408 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83DD42DA173447DB00FA7408 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -41,12 +51,8 @@
 		83DD42EC173447DB00FA7408 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		83DD42EE173447DB00FA7408 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		83DD42F1173447DB00FA7408 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		83DD42F3173447DB00FA7408 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		83DD42F4173447DB00FA7408 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		83DD42F6173447DB00FA7408 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		83DD42F8173447DB00FA7408 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		83DD42FA173447DC00FA7408 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		83DD42FB173447DC00FA7408 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		83DD42FD173447DC00FA7408 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		83DD42FF173447DC00FA7408 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		CB760785173CAD5C000810E1 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
@@ -100,12 +106,16 @@
 				83DD42E7173447DB00FA7408 /* AppDelegate.h */,
 				83DD42E8173447DB00FA7408 /* AppDelegate.m */,
 				83DD42F0173447DB00FA7408 /* MainStoryboard.storyboard */,
-				83DD42F3173447DB00FA7408 /* FirstViewController.h */,
-				83DD42F4173447DB00FA7408 /* FirstViewController.m */,
+				83AEDA3F173CA2AE00D9C0F4 /* SocialNavigationController.h */,
+				83AEDA40173CA2AE00D9C0F4 /* SocialNavigationController.m */,
+				83AEDA42173CA2F300D9C0F4 /* TodayNavigationController.h */,
+				83AEDA43173CA2F300D9C0F4 /* TodayNavigationController.m */,
+				83AEDA45173CA35E00D9C0F4 /* GoalsNavigationController.h */,
+				83AEDA46173CA35E00D9C0F4 /* GoalsNavigationController.m */,
+				83AEDA48173CA3A100D9C0F4 /* ProgressNavigationController.h */,
+				83AEDA49173CA3A100D9C0F4 /* ProgressNavigationController.m */,
 				83DD42F6173447DB00FA7408 /* first.png */,
 				83DD42F8173447DB00FA7408 /* first@2x.png */,
-				83DD42FA173447DC00FA7408 /* SecondViewController.h */,
-				83DD42FB173447DC00FA7408 /* SecondViewController.m */,
 				83DD42FD173447DC00FA7408 /* second.png */,
 				83DD42FF173447DC00FA7408 /* second@2x.png */,
 				CB760784173CAD5C000810E1 /* Model */,
