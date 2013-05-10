@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSDate* completionDate;
 @property (nonatomic, strong) NSString* description;
 @property (nonatomic) BOOL open;
-@property (nonatomic, strong) NSString* createID;
+@property (nonatomic) NSInteger creatorID;
 @property (nonatomic) NSInteger numberActivitiesForCompletion;
 
 @end
