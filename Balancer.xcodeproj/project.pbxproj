@@ -22,6 +22,7 @@
 		83DD42FE173447DC00FA7408 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42FD173447DC00FA7408 /* second.png */; };
 		83DD4300173447DC00FA7408 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42FF173447DC00FA7408 /* second@2x.png */; };
 		BF8FF99B173CB2FC003C6BBF /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FF99A173CB2FC003C6BBF /* Activity.m */; };
+		BF8FF99E173CB443003C6BBF /* Invite.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FF99D173CB443003C6BBF /* Invite.m */; };
 		CB760787173CAD5C000810E1 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = CB760786173CAD5C000810E1 /* Goal.m */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		83DD42FF173447DC00FA7408 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		BF8FF999173CB2FC003C6BBF /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
 		BF8FF99A173CB2FC003C6BBF /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		BF8FF99C173CB443003C6BBF /* Invite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invite.h; sourceTree = "<group>"; };
+		BF8FF99D173CB443003C6BBF /* Invite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invite.m; sourceTree = "<group>"; };
 		CB760785173CAD5C000810E1 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
 		CB760786173CAD5C000810E1 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +147,8 @@
 				CB760786173CAD5C000810E1 /* Goal.m */,
 				BF8FF999173CB2FC003C6BBF /* Activity.h */,
 				BF8FF99A173CB2FC003C6BBF /* Activity.m */,
+				BF8FF99C173CB443003C6BBF /* Invite.h */,
+				BF8FF99D173CB443003C6BBF /* Invite.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				83DD42E9173447DB00FA7408 /* AppDelegate.m in Sources */,
 				CB760787173CAD5C000810E1 /* Goal.m in Sources */,
 				BF8FF99B173CB2FC003C6BBF /* Activity.m in Sources */,
+				BF8FF99E173CB443003C6BBF /* Invite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
