@@ -20,5 +20,6 @@
 @property (nonatomic) BOOL open;
 @property (nonatomic) NSInteger creatorID;
 @property (nonatomic, strong) Goal* goal;
+@property (nonatomic, strong) InviteList* inviteList;
 
 @end

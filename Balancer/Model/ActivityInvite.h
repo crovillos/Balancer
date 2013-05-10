@@ -7,7 +7,10 @@
 //
 
 #import "Invite.h"
+#import "Activity.h"
 
 @interface ActivityInvite : Invite
+
+@property (nonatomic, strong) Activity* acitivity;
 
 @end
