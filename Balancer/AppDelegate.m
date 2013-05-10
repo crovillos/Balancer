@@ -13,6 +13,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    UIColor *balancerPinkColor = [UIColor colorWithRed:166/255.0 green:36/255.0 blue:108/255.0 alpha:1.0];
+    [[UINavigationBar appearance] setTintColor:balancerPinkColor]; // set title bar tiny color
     return YES;
 }
 							
