@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Goal.h"
+#import "InviteList.h"
 
 
 @interface Activity : NSObject
