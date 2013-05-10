@@ -1,5 +1,5 @@
 //
-//  User.h
+//  InviteList.h
 //  Balancer
 //
 //  Created by Dian Hartono on 5/9/13.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
-@property  (nonatomic) NSInteger fbid; //need to look at fb sdk
-//fb_photo need to figure out what type
+@interface InviteList : NSObject
+@property (nonatomic, strong) NSArray* pendingInvites;
+@property (nonatomic, strong) NSArray* declineInvites;
 
 @end
