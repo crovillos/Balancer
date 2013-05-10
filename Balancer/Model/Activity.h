@@ -7,16 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Goal.h"
+
 
 @interface Activity : NSObject
 
 @property (nonatomic) NSInteger activityID;
 @property (nonatomic, strong) NSString* name;
-@property (nonatomic, strong) NSString* goal;
 @property (nonatomic, strong) NSDate* startDate;
 @property (nonatomic, strong) NSDate* endDate;
 @property (nonatomic, strong) NSString* description;
 @property (nonatomic) BOOL open;
 @property (nonatomic) NSInteger creatorID;
+@property (nonatomic, strong) Goal* goal;
 
 @end

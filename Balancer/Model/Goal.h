@@ -17,5 +17,6 @@
 @property (nonatomic) BOOL open;
 @property (nonatomic) NSInteger creatorID;
 @property (nonatomic) NSInteger numberActivitiesForCompletion;
+@property (nonatomic, strong) NSArray* activities;
 
 @end
