@@ -23,6 +23,8 @@
 		83DD4300173447DC00FA7408 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42FF173447DC00FA7408 /* second@2x.png */; };
 		BF8FF99B173CB2FC003C6BBF /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FF99A173CB2FC003C6BBF /* Activity.m */; };
 		BF8FF99E173CB443003C6BBF /* Invite.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FF99D173CB443003C6BBF /* Invite.m */; };
+		BF8FF9A1173CB506003C6BBF /* GoalInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FF9A0173CB506003C6BBF /* GoalInvite.m */; };
+		BF8FF9A4173CB533003C6BBF /* ActivityInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FF9A3173CB533003C6BBF /* ActivityInvite.m */; };
 		CB760787173CAD5C000810E1 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = CB760786173CAD5C000810E1 /* Goal.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,10 @@
 		BF8FF99A173CB2FC003C6BBF /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		BF8FF99C173CB443003C6BBF /* Invite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invite.h; sourceTree = "<group>"; };
 		BF8FF99D173CB443003C6BBF /* Invite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invite.m; sourceTree = "<group>"; };
+		BF8FF99F173CB506003C6BBF /* GoalInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalInvite.h; sourceTree = "<group>"; };
+		BF8FF9A0173CB506003C6BBF /* GoalInvite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalInvite.m; sourceTree = "<group>"; };
+		BF8FF9A2173CB533003C6BBF /* ActivityInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityInvite.h; sourceTree = "<group>"; };
+		BF8FF9A3173CB533003C6BBF /* ActivityInvite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityInvite.m; sourceTree = "<group>"; };
 		CB760785173CAD5C000810E1 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
 		CB760786173CAD5C000810E1 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +155,10 @@
 				BF8FF99A173CB2FC003C6BBF /* Activity.m */,
 				BF8FF99C173CB443003C6BBF /* Invite.h */,
 				BF8FF99D173CB443003C6BBF /* Invite.m */,
+				BF8FF99F173CB506003C6BBF /* GoalInvite.h */,
+				BF8FF9A0173CB506003C6BBF /* GoalInvite.m */,
+				BF8FF9A2173CB533003C6BBF /* ActivityInvite.h */,
+				BF8FF9A3173CB533003C6BBF /* ActivityInvite.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +238,8 @@
 				CB760787173CAD5C000810E1 /* Goal.m in Sources */,
 				BF8FF99B173CB2FC003C6BBF /* Activity.m in Sources */,
 				BF8FF99E173CB443003C6BBF /* Invite.m in Sources */,
+				BF8FF9A1173CB506003C6BBF /* GoalInvite.m in Sources */,
+				BF8FF9A4173CB533003C6BBF /* ActivityInvite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
