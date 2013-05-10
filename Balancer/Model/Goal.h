@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "InviteList.h"
 
 @interface Goal : NSObject
 
@@ -18,5 +19,6 @@
 @property (nonatomic) NSInteger creatorID;
 @property (nonatomic) NSInteger numberActivitiesForCompletion;
 @property (nonatomic, strong) NSArray* activities;
+@property (nonatomic, strong) InviteList* inviteList;
 
 @end
