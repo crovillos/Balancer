@@ -10,5 +10,6 @@
 #import "Social.h"
 
 @implementation Social
+@synthesize feed;
 
 @end

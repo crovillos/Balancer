@@ -9,5 +9,6 @@
 #import "GoalList.h"
 
 @implementation GoalList
+@synthesize goals;
 
 @end
