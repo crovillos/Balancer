@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8323FB42173EB2060016213D /* App Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8323FB41173EB2060016213D /* App Logo.png */; };
+		8323FB44173EB23D0016213D /* App Logo (Retina Display).png in Resources */ = {isa = PBXBuildFile; fileRef = 8323FB43173EB23D0016213D /* App Logo (Retina Display).png */; };
+		8323FB46173EB25A0016213D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8323FB45173EB25A0016213D /* Default-568h@2x.png */; };
+		8323FB48173EB2680016213D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8323FB47173EB2680016213D /* Default@2x.png */; };
+		8323FB4A173EB26B0016213D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8323FB49173EB26B0016213D /* Default.png */; };
 		83DD42D9173447DB00FA7408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42D8173447DB00FA7408 /* UIKit.framework */; };
 		83DD42DB173447DB00FA7408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DA173447DB00FA7408 /* Foundation.framework */; };
 		83DD42DD173447DB00FA7408 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DC173447DB00FA7408 /* CoreGraphics.framework */; };
@@ -36,6 +41,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8323FB41173EB2060016213D /* App Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App Logo.png"; sourceTree = "<group>"; };
+		8323FB43173EB23D0016213D /* App Logo (Retina Display).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App Logo (Retina Display).png"; sourceTree = "<group>"; };
+		8323FB45173EB25A0016213D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8323FB47173EB2680016213D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8323FB49173EB26B0016213D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		83AEDA3F173CA2AE00D9C0F4 /* SocialNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialNavigationController.h; sourceTree = "<group>"; };
 		83AEDA40173CA2AE00D9C0F4 /* SocialNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialNavigationController.m; sourceTree = "<group>"; };
 		83AEDA42173CA2F300D9C0F4 /* TodayNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayNavigationController.h; sourceTree = "<group>"; };
@@ -105,6 +115,11 @@
 		83DD42CC173447DB00FA7408 = {
 			isa = PBXGroup;
 			children = (
+				8323FB49173EB26B0016213D /* Default.png */,
+				8323FB47173EB2680016213D /* Default@2x.png */,
+				8323FB45173EB25A0016213D /* Default-568h@2x.png */,
+				8323FB43173EB23D0016213D /* App Logo (Retina Display).png */,
+				8323FB41173EB2060016213D /* App Logo.png */,
 				83DD42DE173447DB00FA7408 /* Balancer */,
 				83DD42D7173447DB00FA7408 /* Frameworks */,
 				83DD42D6173447DB00FA7408 /* Products */,
@@ -258,6 +273,11 @@
 				83DD42F9173447DB00FA7408 /* first@2x.png in Resources */,
 				83DD42FE173447DC00FA7408 /* second.png in Resources */,
 				83DD4300173447DC00FA7408 /* second@2x.png in Resources */,
+				8323FB42173EB2060016213D /* App Logo.png in Resources */,
+				8323FB44173EB23D0016213D /* App Logo (Retina Display).png in Resources */,
+				8323FB46173EB25A0016213D /* Default-568h@2x.png in Resources */,
+				8323FB48173EB2680016213D /* Default@2x.png in Resources */,
+				8323FB4A173EB26B0016213D /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
