@@ -9,5 +9,5 @@
 #import "ActivityInvite.h"
 
 @implementation ActivityInvite
-
+@synthesize acitivity;
 @end

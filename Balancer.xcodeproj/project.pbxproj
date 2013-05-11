@@ -12,7 +12,6 @@
 		8323FB46173EB25A0016213D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8323FB45173EB25A0016213D /* Default-568h@2x.png */; };
 		8323FB48173EB2680016213D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8323FB47173EB2680016213D /* Default@2x.png */; };
 		8323FB4A173EB26B0016213D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8323FB49173EB26B0016213D /* Default.png */; };
-		8323FB4D173EB5820016213D /* GoalsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323FB4C173EB5820016213D /* GoalsTableViewController.m */; };
 		83DD42D9173447DB00FA7408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42D8173447DB00FA7408 /* UIKit.framework */; };
 		83DD42DB173447DB00FA7408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DA173447DB00FA7408 /* Foundation.framework */; };
 		83DD42DD173447DB00FA7408 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DC173447DB00FA7408 /* CoreGraphics.framework */; };
@@ -23,6 +22,9 @@
 		83DD42ED173447DB00FA7408 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42EC173447DB00FA7408 /* Default@2x.png */; };
 		83DD42EF173447DB00FA7408 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42EE173447DB00FA7408 /* Default-568h@2x.png */; };
 		83DD42F2173447DB00FA7408 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42F0173447DB00FA7408 /* MainStoryboard.storyboard */; };
+		BF2ED7C2173EB797008A6A36 /* TodayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED7C1173EB797008A6A36 /* TodayTableViewController.m */; };
+		BF2ED7C5173EB7B7008A6A36 /* ProgressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED7C4173EB7B7008A6A36 /* ProgressTableViewController.m */; };
+		BF723546173EB58F00177D6A /* SocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF723545173EB58F00177D6A /* SocialTableViewController.m */; };
 		BF8FF99B173CB2FC003C6BBF /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FF99A173CB2FC003C6BBF /* Activity.m */; };
 		BF8FF99E173CB443003C6BBF /* Invite.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FF99D173CB443003C6BBF /* Invite.m */; };
 		BF8FF9A1173CB506003C6BBF /* GoalInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FF9A0173CB506003C6BBF /* GoalInvite.m */; };
@@ -67,6 +69,12 @@
 		83DD42EC173447DB00FA7408 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Balancer/Default@2x.png"; sourceTree = "<group>"; };
 		83DD42EE173447DB00FA7408 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Balancer/Default-568h@2x.png"; sourceTree = "<group>"; };
 		83DD42F1173447DB00FA7408 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BF2ED7C0173EB797008A6A36 /* TodayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayTableViewController.h; sourceTree = "<group>"; };
+		BF2ED7C1173EB797008A6A36 /* TodayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayTableViewController.m; sourceTree = "<group>"; };
+		BF2ED7C3173EB7B7008A6A36 /* ProgressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressTableViewController.h; sourceTree = "<group>"; };
+		BF2ED7C4173EB7B7008A6A36 /* ProgressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressTableViewController.m; sourceTree = "<group>"; };
+		BF723544173EB58F00177D6A /* SocialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialTableViewController.h; sourceTree = "<group>"; };
+		BF723545173EB58F00177D6A /* SocialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialTableViewController.m; sourceTree = "<group>"; };
 		BF8FF999173CB2FC003C6BBF /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
 		BF8FF99A173CB2FC003C6BBF /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		BF8FF99C173CB443003C6BBF /* Invite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invite.h; sourceTree = "<group>"; };
@@ -110,6 +118,8 @@
 		8323FB4E173EB5A40016213D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF723544173EB58F00177D6A /* SocialTableViewController.h */,
+				BF723545173EB58F00177D6A /* SocialTableViewController.m */,
 				83AEDA3F173CA2AE00D9C0F4 /* SocialNavigationController.h */,
 				83AEDA40173CA2AE00D9C0F4 /* SocialNavigationController.m */,
 				83AEDA42173CA2F300D9C0F4 /* TodayNavigationController.h */,
@@ -120,6 +130,10 @@
 				83AEDA49173CA3A100D9C0F4 /* ProgressNavigationController.m */,
 				8323FB4B173EB5820016213D /* GoalsTableViewController.h */,
 				8323FB4C173EB5820016213D /* GoalsTableViewController.m */,
+				BF2ED7C0173EB797008A6A36 /* TodayTableViewController.h */,
+				BF2ED7C1173EB797008A6A36 /* TodayTableViewController.m */,
+				BF2ED7C3173EB7B7008A6A36 /* ProgressTableViewController.h */,
+				BF2ED7C4173EB7B7008A6A36 /* ProgressTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -308,7 +322,9 @@
 				BF8FF9B3173CBA6A003C6BBF /* UserUtilities.m in Sources */,
 				BF8FF9B6173CBAFE003C6BBF /* Progress.m in Sources */,
 				BF8FF9B9173CBB0F003C6BBF /* Social.m in Sources */,
-				8323FB4D173EB5820016213D /* GoalsTableViewController.m in Sources */,
+				BF723546173EB58F00177D6A /* SocialTableViewController.m in Sources */,
+				BF2ED7C2173EB797008A6A36 /* TodayTableViewController.m in Sources */,
+				BF2ED7C5173EB7B7008A6A36 /* ProgressTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

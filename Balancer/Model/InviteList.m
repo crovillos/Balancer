@@ -9,5 +9,5 @@
 #import "InviteList.h"
 
 @implementation InviteList
-
+@synthesize pendingInvites, declineInvites;
 @end
