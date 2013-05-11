@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Today-->
+        <!--Today Table View Controller - Today-->
         <scene sceneID="Ubm-DT-oNT">
             <objects>
-                <tableViewController id="sih-ZT-NwH" sceneMemberID="viewController">
+                <tableViewController id="sih-ZT-NwH" customClass="TodayTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mcl-wC-x0L">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="877" y="-661"/>
         </scene>
-        <!--Table View Controller - Social-->
+        <!--Social Table View Controller - Social-->
         <scene sceneID="SWQ-Wu-bMk">
             <objects>
-                <tableViewController id="ESx-nY-SOK" sceneMemberID="viewController">
+                <tableViewController id="ESx-nY-SOK" customClass="SocialTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vem-V0-fdj">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="-1087" y="819"/>
         </scene>
-        <!--Table View Controller - Progress-->
+        <!--Progress Table View Controller - Progress-->
         <scene sceneID="yMg-Fn-t4O">
             <objects>
-                <tableViewController id="vio-Ll-gMN" sceneMemberID="viewController">
+                <tableViewController id="vio-Ll-gMN" customClass="ProgressTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tTb-IV-zck">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,20 +194,6 @@
             <point key="canvasLocation" x="-416" y="166"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="GoalsNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsNavigationController.h"/>
-        </class>
-        <class className="ProgressNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressNavigationController.h"/>
-        </class>
-        <class className="SocialNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialNavigationController.h"/>
-        </class>
-        <class className="TodayNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayNavigationController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
