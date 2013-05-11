@@ -10,4 +10,8 @@
 
 @interface GoalsTableViewController : UITableViewController
 
+// The model for this VC
+// obtained from network
+@property (nonatomic, strong) NSArray *goals; // of Goal
+
 @end
