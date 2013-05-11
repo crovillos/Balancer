@@ -9,5 +9,6 @@
 #import "ActivityList.h"
 
 @implementation ActivityList
+@synthesize activity;
 
 @end

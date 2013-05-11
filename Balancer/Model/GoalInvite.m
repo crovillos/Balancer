@@ -10,4 +10,5 @@
 
 @implementation GoalInvite
 
+@synthesize goal;
 @end
