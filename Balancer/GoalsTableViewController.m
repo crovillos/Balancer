@@ -32,6 +32,7 @@
     [super viewDidLoad];
     
     // create the dummy goal data and add it
+    // TODO: remove when networking code works
     Goal *goal1 = [[Goal alloc] init];
     goal1.goalID = 0;
     goal1.name = @"Goal 1";
@@ -51,8 +52,8 @@
     goal2.open = YES;
     goal2.creatorID = 1;
     goal2.numberActivitiesForCompletion = 2;
-    goal2.activities = nil; //TODO: add later
-    goal2.inviteList = nil; //TODO: add later
+    goal2.activities = nil; // TODO: add later
+    goal2.inviteList = nil; // TODO: add later
     
     NSArray *dummyGoals = [[NSArray alloc] initWithObjects:goal1, goal2, nil];
     [self setGoals:dummyGoals];
