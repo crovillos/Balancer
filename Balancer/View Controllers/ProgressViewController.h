@@ -1,13 +1,13 @@
 //
-//  ProgressTableViewController.h
+//  ProgressViewController.h
 //  Balancer
 //
-//  Created by Dian Hartono on 5/11/13.
+//  Created by Chris Rovillos on 5/14/13.
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ProgressTableViewController : UITableViewController
+@interface ProgressViewController : UIViewController
 
 @end

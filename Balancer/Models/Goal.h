@@ -11,13 +11,13 @@
 
 @interface Goal : NSObject
 
-@property (nonatomic) NSInteger goalID;
+@property (nonatomic) NSUInteger goalId;
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSDate* completionDate;
 @property (nonatomic, strong) NSString* description;
 @property (nonatomic, getter = isPublic) BOOL open;
-@property (nonatomic) NSInteger creatorID;
-@property (nonatomic) NSInteger numberActivitiesForCompletion;
+@property (nonatomic) NSUInteger creatorId;
+@property (nonatomic) NSUInteger numberActivitiesForCompletion;
 @property (nonatomic, strong) NSArray* activities;
 @property (nonatomic, strong) InviteList* inviteList;
 

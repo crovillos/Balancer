@@ -12,6 +12,30 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="kAT-sf-Os5">
+                            <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Under Construction Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="PnK-jL-rkS">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="320" id="RNN-JP-WhP"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Under construction!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQt-mR-YEA">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" red="0.65098041299999998" green="0.1411764771" blue="0.42352941630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="PnK-jL-rkS" firstAttribute="bottom" secondItem="kAT-sf-Os5" secondAttribute="bottom" type="default" id="82e-de-yQc"/>
+                                <constraint firstItem="PnK-jL-rkS" firstAttribute="top" secondItem="kAT-sf-Os5" secondAttribute="top" type="default" id="Ec5-Ly-tO1"/>
+                                <constraint firstItem="PnK-jL-rkS" firstAttribute="leading" secondItem="kAT-sf-Os5" secondAttribute="leading" constant="86" id="IeQ-z3-UEd"/>
+                                <constraint firstItem="WQt-mR-YEA" firstAttribute="leading" secondItem="kAT-sf-Os5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="v3X-6O-Tk7"/>
+                                <constraint firstItem="WQt-mR-YEA" firstAttribute="top" secondItem="kAT-sf-Os5" secondAttribute="top" constant="11" id="zAj-XW-yln"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jYz-Mm-ccH">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -38,15 +62,42 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Ga0-Ll-iQ7">
+                            <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Under Construction Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="W7t-Sr-uoB">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="320" id="f9R-PA-6NZ"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Under construction!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEg-dS-8GO">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" red="0.65098041299999998" green="0.1411764771" blue="0.42352941630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="WEg-dS-8GO" firstAttribute="leading" secondItem="Ga0-Ll-iQ7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="O26-5x-vGz"/>
+                                <constraint firstItem="W7t-Sr-uoB" firstAttribute="bottom" secondItem="Ga0-Ll-iQ7" secondAttribute="bottom" type="default" id="SdT-wB-DHR"/>
+                                <constraint firstItem="W7t-Sr-uoB" firstAttribute="top" secondItem="Ga0-Ll-iQ7" secondAttribute="top" type="default" id="TdE-oS-lBT"/>
+                                <constraint firstItem="WEg-dS-8GO" firstAttribute="top" secondItem="Ga0-Ll-iQ7" secondAttribute="top" constant="11" id="dFz-19-u2h"/>
+                                <constraint firstItem="W7t-Sr-uoB" firstAttribute="leading" secondItem="Ga0-Ll-iQ7" secondAttribute="leading" constant="91" id="wEJ-pQ-sdg"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="z42-7z-Jua">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="z42-7z-Jua">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="CZt-hy-Yum" kind="push" id="eNM-sW-YsS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -54,7 +105,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bF-BB-gFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1085" y="-661"/>
+            <point key="canvasLocation" x="-1701" y="-661"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W76-L4-8L8">
+            <objects>
+                <viewController id="CZt-hy-Yum" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a9C-Gk-mqw">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cnj-D3-roP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bRu-B6-x6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1203" y="-661"/>
         </scene>
         <!--Social Navigation Controller - Social-->
         <scene sceneID="lJa-aS-2l1">
@@ -70,7 +136,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2m-fd-d42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1621" y="-661"/>
+            <point key="canvasLocation" x="-2235" y="-661"/>
         </scene>
         <!--Today Navigation Controller - Today-->
         <scene sceneID="qf9-3O-Z2E">
@@ -117,6 +183,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="1bJ-8Q-bCG" kind="push" identifier="Show Goal Detail" id="vOe-RE-5nM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -128,33 +197,36 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTM-Ws-h73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1087" y="819"/>
+            <point key="canvasLocation" x="-1701" y="819"/>
         </scene>
-        <!--Progress Table View Controller - Progress-->
-        <scene sceneID="yMg-Fn-t4O">
+        <!--Goal Detail View Controller - Goal Detail-->
+        <scene sceneID="Qqc-xK-le8">
             <objects>
-                <tableViewController id="vio-Ll-gMN" customClass="ProgressTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tTb-IV-zck">
+                <viewController id="1bJ-8Q-bCG" customClass="GoalDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P97-xS-UTa">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="G7p-jK-OGd">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Progress" id="SAn-t3-9VS"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TZ1-ZA-eiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Goal Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPZ-rq-vay">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gPZ-rq-vay" firstAttribute="top" secondItem="P97-xS-UTa" secondAttribute="top" constant="20" symbolic="YES" type="default" id="71W-Gr-lrf"/>
+                            <constraint firstItem="gPZ-rq-vay" firstAttribute="leading" secondItem="P97-xS-UTa" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Rie-DJ-0q9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Goal Detail" id="vm8-39-akY"/>
+                    <connections>
+                        <outlet property="goalDescriptionLabel" destination="gPZ-rq-vay" id="cCh-2a-gPp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGp-vH-aTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875" y="819"/>
+            <point key="canvasLocation" x="-1203" y="819"/>
         </scene>
         <!--Progress Navigation Controller - Progress-->
         <scene sceneID="wOh-iP-j08">
@@ -165,12 +237,46 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vio-Ll-gMN" kind="relationship" relationship="rootViewController" id="jNd-fp-KuM"/>
+                        <segue destination="d8Y-Ql-jE3" kind="relationship" relationship="rootViewController" id="kOb-Bg-Bed"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USR-IF-IWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="343" y="819"/>
+        </scene>
+        <!--Progress View Controller - Progress-->
+        <scene sceneID="7NN-ou-Y0a">
+            <objects>
+                <viewController id="d8Y-Ql-jE3" customClass="ProgressViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ukd-7U-PxP">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Under Construction Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="xdz-Vj-Qbf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="hdJ-aP-g3j"/>
+                                    <constraint firstAttribute="width" constant="163" id="w8j-he-kvg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Under construction!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8T-CD-MqM">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.65098041299999998" green="0.1411764771" blue="0.42352941630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xdz-Vj-Qbf" firstAttribute="centerX" secondItem="Ukd-7U-PxP" secondAttribute="centerX" type="default" id="7ly-S0-7O2"/>
+                            <constraint firstItem="xdz-Vj-Qbf" firstAttribute="top" secondItem="Ukd-7U-PxP" secondAttribute="top" constant="173" id="e8z-Fk-yEW"/>
+                            <constraint firstItem="U8T-CD-MqM" firstAttribute="leading" secondItem="xdz-Vj-Qbf" secondAttribute="leading" type="default" id="eRt-2S-08n"/>
+                            <constraint firstItem="U8T-CD-MqM" firstAttribute="top" secondItem="xdz-Vj-Qbf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="suX-Wo-bSd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Progress" id="LaO-ib-m3N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSG-7a-qQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="819"/>
         </scene>
         <!--Goals Navigation Controller - Goals-->
         <scene sceneID="8dY-90-qyI">
@@ -186,7 +292,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCc-Op-6wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1621" y="819"/>
+            <point key="canvasLocation" x="-2235" y="819"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -199,9 +305,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ikG-pC-bSC" kind="relationship" relationship="viewControllers" id="bj1-0Z-wbp"/>
-                        <segue destination="JDP-a4-Atx" kind="relationship" relationship="viewControllers" id="tOW-Id-BPu"/>
                         <segue destination="ndN-EX-Avu" kind="relationship" relationship="viewControllers" id="9o0-g4-G1N"/>
+                        <segue destination="JDP-a4-Atx" kind="relationship" relationship="viewControllers" id="tOW-Id-BPu"/>
+                        <segue destination="ikG-pC-bSC" kind="relationship" relationship="viewControllers" id="bj1-0Z-wbp"/>
                         <segue destination="90T-6j-1lG" kind="relationship" relationship="viewControllers" id="WLh-ob-X4x"/>
                     </connections>
                 </tabBarController>
@@ -210,18 +316,30 @@
             <point key="canvasLocation" x="-416" y="166"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Under Construction Logo.png" width="877" height="375"/>
+    </resources>
     <classes>
+        <class className="GoalDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="goalDescriptionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="GoalsNavigationController" superclassName="UINavigationController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsNavigationController.h"/>
         </class>
         <class className="GoalsTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsTableViewController.h"/>
         </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
         <class className="ProgressNavigationController" superclassName="UINavigationController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressNavigationController.h"/>
         </class>
-        <class className="ProgressTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressTableViewController.h"/>
+        <class className="ProgressViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
         </class>
         <class className="SocialNavigationController" superclassName="UINavigationController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialNavigationController.h"/>

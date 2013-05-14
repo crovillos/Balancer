@@ -9,6 +9,6 @@
 #import "Activity.h"
 
 @implementation Activity
-@synthesize activityID, name, startDate, endDate, description, open, creatorID, goal, inviteList;
+@synthesize activityId, name, startDate, endDate, description, open, creatorId, goal, inviteList;
 
 @end

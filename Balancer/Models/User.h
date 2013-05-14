@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject
-@property  (nonatomic) NSInteger fbid; //need to look at fb sdk
+@property  (nonatomic) NSUInteger fbid; //need to look at fb sdk
 //fb_photo need to figure out what type
 
 @end
