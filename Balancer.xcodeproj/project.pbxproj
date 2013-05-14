@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8309FF4117421F0B00B7A335 /* GoalsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323FB4C173EB5820016213D /* GoalsTableViewController.m */; };
+		8309FF4217421F1400B7A335 /* GoalsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEDA46173CA35E00D9C0F4 /* GoalsNavigationController.m */; };
+		8309FF4317421F1500B7A335 /* TodayNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEDA43173CA2F300D9C0F4 /* TodayNavigationController.m */; };
+		8309FF4417421F1800B7A335 /* SocialNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEDA40173CA2AE00D9C0F4 /* SocialNavigationController.m */; };
 		83AEACEA173EF675006E1151 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACE9173EF675006E1151 /* Icon@2x.png */; };
 		83AEACEC173EF6BB006E1151 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACEB173EF6BB006E1151 /* Icon.png */; };
 		83AEACEE173EF6D9006E1151 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACED173EF6D9006E1151 /* Default@2x.png */; };
@@ -338,6 +342,10 @@
 				BF723546173EB58F00177D6A /* SocialTableViewController.m in Sources */,
 				BF2ED7C2173EB797008A6A36 /* TodayTableViewController.m in Sources */,
 				BF2ED7C5173EB7B7008A6A36 /* ProgressTableViewController.m in Sources */,
+				8309FF4117421F0B00B7A335 /* GoalsTableViewController.m in Sources */,
+				8309FF4217421F1400B7A335 /* GoalsNavigationController.m in Sources */,
+				8309FF4317421F1500B7A335 /* TodayNavigationController.m in Sources */,
+				8309FF4417421F1800B7A335 /* SocialNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
