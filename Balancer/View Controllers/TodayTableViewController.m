@@ -10,8 +10,10 @@
 #import "Activity.h"
 #import "Goal.h"
 #import "InviteList.h"
-#import "NSFetchedResultsController"
 @interface TodayTableViewController ()
+@property (strong, nonatomic) NSMutableDictionary *sections;
+@property (strong, nonatomic) NSArray *sortedDays;
+@property (strong, nonatomic) NSDateFormatter *sectionDateFormatter;
 
 @end
 
@@ -29,6 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self createDummyActivity:10];
+    self.sections = [NSMutableDictionary dictionary];
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -56,7 +61,7 @@
 /** Creates dummy activities and sets them to be the model for this view controller. 
  @param - The number of dummy goals to create.
  */
-- (void)createDummyGoals:(NSUInteger)numberOfDummyActivities 
+- (void)createDummyActivity:(NSUInteger)numberOfDummyActivities
 {
     NSMutableArray *dummyActivities = [[NSMutableArray alloc] init];
     
@@ -120,23 +125,6 @@
     return [self.sectionDateFormatter stringFromDate:dateRepresentingThisDay];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSString *reuseIdentifier = @"EventTitleCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-    
-    NSDate *dateRepresentingThisDay = [self.sortedDays objectAtIndex:indexPath.section];
-    NSArray *eventsOnThisDay = [self.sections objectForKey:dateRepresentingThisDay];
-    EKEvent *event = [eventsOnThisDay objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = event.title;
-    if (event.allDay) {
-        cell.detailTextLabel.text = @"all day";
-    } else {
-        cell.detailTextLabel.text = [self.cellDateFormatter stringFromDate:event.startDate];
-    }
-    return cell;
-}
 
 
 
