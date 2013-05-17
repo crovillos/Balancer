@@ -7,6 +7,9 @@
 //
 
 #import "TodayTableViewController.h"
+#import "Activity.h"
+#import "Goal.h"
+#import "InviteList.h"
 
 @interface TodayTableViewController ()
 
@@ -42,68 +45,61 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)setActivities:(NSArray *)activity
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    _activities = activity;
+    [self.tableView reloadData];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+/** Creates dummy activities and sets them to be the model for this view controller. 
+ @param - The number of dummy goals to create.
+ */
+- (void)createDummyGoals:(NSUInteger)numberOfDummyActivities 
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    NSMutableArray *dummyActivities = [[NSMutableArray alloc] init];
+    
+    for (int i = 1; i <= numberOfDummyActivities; i++)
+    {
+        Activity *activity = [[Activity alloc] init];
+        activity.activityId = i;
+        activity.name = [NSString stringWithFormat:@"Activity %u", activity.activityId];
+        activity.startDate = [[NSDate alloc] init]; // sets completion date to today
+        activity.endDate = [[NSDate alloc] init];
+        activity.description = [NSString stringWithFormat:@"This is activity %u.", activity.activityId];
+        activity.open = (i % 2) ? YES : NO;
+        activity.creatorId = arc4random_uniform(100);
+        activity.goal = [[Goal alloc] init];
+        activity.inviteList = nil; // TODO: add later
+        
+        [dummyActivities addObject:activity];
+    }
+    
+    [self setActivities:dummyActivities];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"Goal";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = [self titleForRow:indexPath.row];
+    cell.detailTextLabel.text = [self subtitleForRow:indexPath.row];
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (NSString *)titleForRow:(NSUInteger) row {
+    Activity *activityAtRow = (Activity *)self.activities[row];
+    return [activityAtRow.name description];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (NSString *)subtitleForRow:(NSUInteger) row {
+    Goal *goalAtRow = (Goal *)self.goals[row];
+    return [goalAtRow.description description];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
@@ -117,5 +113,6 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
 
 @end

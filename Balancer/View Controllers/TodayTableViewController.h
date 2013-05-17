@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TodayTableViewController : UITableViewController
+@property (nonatomic, strong) NSArray *activities; // of Goal
 
 @end
