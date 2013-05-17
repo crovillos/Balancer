@@ -96,8 +96,8 @@
 }
 
 - (NSString *)subtitleForRow:(NSUInteger) row {
-    Goal *goalAtRow = (Goal *)self.goals[row];
-    return [goalAtRow.description description];
+    Activity *activityAtRow = (Activity*)self.activities[row];
+    return [activityAtRow.description description];
 }
 
 
@@ -107,12 +107,25 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     DetailViewController *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        if (indexPath) {
+            if ([segue.identifier isEqualToString:@"Show Goal Detail"]) {
+                if ([segue.destinationViewController respondsToSelector:@selector(setGoalDescription:)]) {
+                    [segue.destinationViewController performSelector:@selector(setGoalDescription:) withObject:((Activity *)self.activities[indexPath.row]).description];
+                }
+            }
+        }
+    }
+}
 
 @end
