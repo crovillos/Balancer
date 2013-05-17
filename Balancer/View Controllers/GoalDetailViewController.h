@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Goal.h>
+#import "Goal.h"
 
 @interface GoalDetailViewController : UIViewController
 

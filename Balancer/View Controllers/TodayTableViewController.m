@@ -10,10 +10,13 @@
 #import "Activity.h"
 #import "Goal.h"
 #import "InviteList.h"
+
+
 @interface TodayTableViewController ()
 @property (strong, nonatomic) NSMutableDictionary *sections;
 @property (strong, nonatomic) NSArray *sortedDays;
 @property (strong, nonatomic) NSDateFormatter *sectionDateFormatter;
+@property (strong, nonatomic) NSDateFormatter *cellDateFormatter;
 
 @end
 
@@ -28,20 +31,60 @@
     return self;
 }
 
+- (NSDate *)dateAtBeginningOfDayForDate:(NSDate *)inputDate
+{
+    // Use the user's current calendar and time zone
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSTimeZone *timeZone = [NSTimeZone systemTimeZone];
+    [calendar setTimeZone:timeZone];
+    
+    // Selectively convert the date components (year, month, day) of the input date
+    NSDateComponents *dateComps = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:inputDate];
+    
+    // Set the time components manually
+    [dateComps setHour:0];
+    [dateComps setMinute:0];
+    [dateComps setSecond:0];
+    
+    // Convert back
+    NSDate *beginningOfDay = [calendar dateFromComponents:dateComps];
+    return beginningOfDay;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self createDummyActivity:10];
     self.sections = [NSMutableDictionary dictionary];
 
+    for (Activity *activity in self.activities)
+    {
+        // Reduce event start date to date components (year, month, day)
+        NSDate *dateRepresentingThisDay = [self dateAtBeginningOfDayForDate:activity.startDate];
+        
+        // If we don't yet have an array to hold the activities for this day, create one
+        NSMutableArray *eventsOnThisDay = [self.sections objectForKey:dateRepresentingThisDay];
+        if (eventsOnThisDay == nil) {
+            eventsOnThisDay = [NSMutableArray array];
+            
+            // Use the reduced date as dictionary key to later retrieve the event list this day
+            [self.sections setObject:eventsOnThisDay forKey:dateRepresentingThisDay];
+        }
+        
+        // Add the event to the list for this day
+        [eventsOnThisDay addObject:activity];
+    }
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     NSArray *unsortedDays = [self.sections allKeys];
     self.sortedDays = [unsortedDays sortedArrayUsingSelector:@selector(compare:)];
+    
+    self.sectionDateFormatter = [[NSDateFormatter alloc] init];
+    [self.sectionDateFormatter setDateStyle:NSDateFormatterLongStyle];
+    [self.sectionDateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    
+    self.cellDateFormatter = [[NSDateFormatter alloc] init];
+    [self.cellDateFormatter setDateStyle:NSDateFormatterNoStyle];
+    [self.cellDateFormatter setTimeStyle:NSDateFormatterShortStyle];
 }
 
 - (void)didReceiveMemoryWarning
