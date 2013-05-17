@@ -12,30 +12,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="kAT-sf-Os5">
-                            <rect key="frame" x="0.0" y="66" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Under Construction Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="PnK-jL-rkS">
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="320" id="RNN-JP-WhP"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Under construction!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQt-mR-YEA">
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                    <color key="textColor" red="0.65098041299999998" green="0.1411764771" blue="0.42352941630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="PnK-jL-rkS" firstAttribute="bottom" secondItem="kAT-sf-Os5" secondAttribute="bottom" type="default" id="82e-de-yQc"/>
-                                <constraint firstItem="PnK-jL-rkS" firstAttribute="top" secondItem="kAT-sf-Os5" secondAttribute="top" type="default" id="Ec5-Ly-tO1"/>
-                                <constraint firstItem="PnK-jL-rkS" firstAttribute="leading" secondItem="kAT-sf-Os5" secondAttribute="leading" constant="86" id="IeQ-z3-UEd"/>
-                                <constraint firstItem="WQt-mR-YEA" firstAttribute="leading" secondItem="kAT-sf-Os5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="v3X-6O-Tk7"/>
-                                <constraint firstItem="WQt-mR-YEA" firstAttribute="top" secondItem="kAT-sf-Os5" secondAttribute="top" constant="11" id="zAj-XW-yln"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jYz-Mm-ccH">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>

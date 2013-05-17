@@ -7,8 +7,13 @@
 //
 
 #import "TodayTableViewController.h"
-
+#import "Activity.h"
+#import "Goal.h"
+#import "InviteList.h"
 @interface TodayTableViewController ()
+@property (strong, nonatomic) NSMutableDictionary *sections;
+@property (strong, nonatomic) NSArray *sortedDays;
+@property (strong, nonatomic) NSDateFormatter *sectionDateFormatter;
 
 @end
 
@@ -26,12 +31,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self createDummyActivity:10];
+    self.sections = [NSMutableDictionary dictionary];
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSArray *unsortedDays = [self.sections allKeys];
+    self.sortedDays = [unsortedDays sortedArrayUsingSelector:@selector(compare:)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,68 +52,81 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)setActivities:(NSArray *)activity
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    _activities = activity;
+    [self.tableView reloadData];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+/** Creates dummy activities and sets them to be the model for this view controller. 
+ @param - The number of dummy goals to create.
+ */
+- (void)createDummyActivity:(NSUInteger)numberOfDummyActivities
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    NSMutableArray *dummyActivities = [[NSMutableArray alloc] init];
+    
+    for (int i = 1; i <= numberOfDummyActivities; i++)
+    {
+        Activity *activity = [[Activity alloc] init];
+        activity.activityId = i;
+        activity.name = [NSString stringWithFormat:@"Activity %u", activity.activityId];
+        activity.startDate = [[NSDate alloc] init]; // sets completion date to today
+        activity.endDate = [[NSDate alloc] init];
+        activity.description = [NSString stringWithFormat:@"This is activity %u.", activity.activityId];
+        activity.open = (i % 2) ? YES : NO;
+        activity.creatorId = arc4random_uniform(100);
+        activity.goal = [[Goal alloc] init];
+        activity.inviteList = nil; // TODO: add later
+        
+        [dummyActivities addObject:activity];
+    }
+    
+    [self setActivities:dummyActivities];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"Activity";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = [self titleForRow:indexPath.row];
+    cell.detailTextLabel.text = [self subtitleForRow:indexPath.row];
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (NSString *)titleForRow:(NSUInteger) row {
+    Activity *activityAtRow = (Activity *)self.activities[row];
+    return [activityAtRow.name description];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (NSString *)subtitleForRow:(NSUInteger) row {
+    Activity *activityAtRow = (Activity*)self.activities[row];
+    return [activityAtRow.description description];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    return [self.sections count];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+    NSDate *dateRepresentingThisDay = [self.sortedDays objectAtIndex:section];
+    NSArray *eventsOnThisDay = [self.sections objectForKey:dateRepresentingThisDay];
+    return [eventsOnThisDay count];
 }
-*/
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSDate *dateRepresentingThisDay = [self.sortedDays objectAtIndex:section];
+    return [self.sectionDateFormatter stringFromDate:dateRepresentingThisDay];
+}
+
+
+
 
 #pragma mark - Table view delegate
 
@@ -111,11 +134,25 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     DetailViewController *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        if (indexPath) {
+            if ([segue.identifier isEqualToString:@"Show Goal Detail"]) {
+                if ([segue.destinationViewController respondsToSelector:@selector(setGoalDescription:)]) {
+                    [segue.destinationViewController performSelector:@selector(setGoalDescription:) withObject:((Activity *)self.activities[indexPath.row]).description];
+                }
+            }
+        }
+    }
 }
 
 @end
