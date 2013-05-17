@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
-#import "GoalDetailViewController.h"
+#import "GoalDetailsViewController.h"
 
-@interface GoalDetailViewController ()
+@interface GoalDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *goalDescriptionLabel;
 
 @end
 
-@implementation GoalDetailViewController
+@implementation GoalDetailsViewController
 
 - (void)setGoal:(Goal *)goal
 {
