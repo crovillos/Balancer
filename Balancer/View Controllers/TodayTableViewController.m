@@ -10,7 +10,7 @@
 #import "Activity.h"
 #import "Goal.h"
 #import "InviteList.h"
-
+#import "NSFetchedResultsController"
 @interface TodayTableViewController ()
 
 @end
@@ -35,6 +35,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSArray *unsortedDays = [self.sections allKeys];
+    self.sortedDays = [unsortedDays sortedArrayUsingSelector:@selector(compare:)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,7 +82,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Goal";
+    static NSString *CellIdentifier = @"Activity";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
@@ -99,6 +101,43 @@
     Activity *activityAtRow = (Activity*)self.activities[row];
     return [activityAtRow.description description];
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [self.sections count];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSDate *dateRepresentingThisDay = [self.sortedDays objectAtIndex:section];
+    NSArray *eventsOnThisDay = [self.sections objectForKey:dateRepresentingThisDay];
+    return [eventsOnThisDay count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSDate *dateRepresentingThisDay = [self.sortedDays objectAtIndex:section];
+    return [self.sectionDateFormatter stringFromDate:dateRepresentingThisDay];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *reuseIdentifier = @"EventTitleCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    
+    NSDate *dateRepresentingThisDay = [self.sortedDays objectAtIndex:indexPath.section];
+    NSArray *eventsOnThisDay = [self.sections objectForKey:dateRepresentingThisDay];
+    EKEvent *event = [eventsOnThisDay objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = event.title;
+    if (event.allDay) {
+        cell.detailTextLabel.text = @"all day";
+    } else {
+        cell.detailTextLabel.text = [self.cellDateFormatter stringFromDate:event.startDate];
+    }
+    return cell;
+}
+
 
 
 #pragma mark - Table view delegate
