@@ -109,16 +109,6 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     DetailViewController *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 
 #pragma mark - Segue
 
@@ -128,8 +118,8 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         if (indexPath) {
             if ([segue.identifier isEqualToString:@"Show Goal Detail"]) {
-                if ([segue.destinationViewController respondsToSelector:@selector(setGoalDescription:)]) {
-                    [segue.destinationViewController performSelector:@selector(setGoalDescription:) withObject:((Goal *)self.goals[indexPath.row]).description];
+                if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
+                    [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)self.goals[indexPath.row])];
                 }
             }
         }

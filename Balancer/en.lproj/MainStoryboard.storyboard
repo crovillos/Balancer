@@ -184,7 +184,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="1bJ-8Q-bCG" kind="push" identifier="Show Goal Detail" id="vOe-RE-5nM"/>
+                                    <segue destination="1bJ-8Q-bCG" kind="push" id="jmM-Rj-24N"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

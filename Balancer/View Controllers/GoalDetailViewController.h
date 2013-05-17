@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Goal.h>
 
 @interface GoalDetailViewController : UIViewController
 
-@property (nonatomic, strong) NSString *goalDescription;
+@property (nonatomic, strong) Goal *goal;
 
 @end

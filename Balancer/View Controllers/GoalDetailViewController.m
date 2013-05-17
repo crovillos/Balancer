@@ -15,17 +15,15 @@
 
 @implementation GoalDetailViewController
 
-- (void)setGoalDescription:(NSString *)goalDescription
+- (void)setGoal:(Goal *)goal
 {
-    _goalDescription = goalDescription;
+    _goal= goal;
     [self reloadData];
-    
-    
 }
 
 - (void)reloadData
 {
-    [self.goalDescriptionLabel setText:self.goalDescription];
+    [self.goalDescriptionLabel setText:self.goal];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
