@@ -1,13 +1,15 @@
 //
-//  ActivityInvite.m
+//  User.h
 //  Balancer
 //
 //  Created by Dian Hartono on 5/9/13.
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
-#import "ActivityInvite.h"
+#import <Foundation/Foundation.h>
 
-@implementation ActivityInvite
+@interface User : NSObject
+@property  (nonatomic) NSUInteger fbid; //need to look at fb sdk
+//fb_photo need to figure out what type
 
 @end

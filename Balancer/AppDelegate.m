@@ -8,16 +8,38 @@
 
 #import "AppDelegate.h"
 
+#define BALANCER_PINK_RED 166/255.0
+#define BALANCER_PINK_GREEN 36/255.0
+#define BALANCER_PINK_BLUE 108/255.0
+
+#define BALANCER_FONT_REGULAR @"Bariol-Regular"
+#define BALANCER_FONT_BOLD @"Bariol-Bold"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UIColor *balancerPinkColor = [UIColor colorWithRed:166/255.0 green:36/255.0 blue:108/255.0 alpha:1.0];
-    [[UINavigationBar appearance] setTintColor:balancerPinkColor]; // set title bar tiny color
+    
+    // Set title bar tint color
+    UIColor *balancerPinkColor = [UIColor colorWithRed:BALANCER_PINK_RED green:BALANCER_PINK_GREEN blue:BALANCER_PINK_BLUE alpha:1.0];
+    [[UINavigationBar appearance] setTintColor:balancerPinkColor];
+    
+    // Set custom fonts for UILabels
+    UIFont *titleTextFont = [UIFont fontWithName:BALANCER_FONT_BOLD size:20.0];
+    UIFont *mainFont = [UIFont fontWithName:BALANCER_FONT_REGULAR size:[UIFont systemFontSize]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      titleTextFont,
+      UITextAttributeFont,
+      nil]];
+    
+    [[UILabel appearance] setFont:mainFont]; // TODO: change; uses deprecated method
+    
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

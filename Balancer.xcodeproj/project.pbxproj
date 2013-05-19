@@ -7,15 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8309FF4A1742298000B7A335 /* Under Construction Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8309FF491742298000B7A335 /* Under Construction Logo.png */; };
+		8331FA4417422FD6000F0642 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA2D17422FD6000F0642 /* Activity.m */; };
+		8331FA4517422FD6000F0642 /* ActivityInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA2F17422FD6000F0642 /* ActivityInvite.m */; };
+		8331FA4617422FD6000F0642 /* ActivityList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3117422FD6000F0642 /* ActivityList.m */; };
+		8331FA4717422FD6000F0642 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3317422FD6000F0642 /* Goal.m */; };
+		8331FA4817422FD6000F0642 /* GoalInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3517422FD6000F0642 /* GoalInvite.m */; };
+		8331FA4917422FD6000F0642 /* GoalList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3717422FD6000F0642 /* GoalList.m */; };
+		8331FA4A17422FD6000F0642 /* Invite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3917422FD6000F0642 /* Invite.m */; };
+		8331FA4B17422FD6000F0642 /* InviteList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3B17422FD6000F0642 /* InviteList.m */; };
+		8331FA4C17422FD6000F0642 /* Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3D17422FD6000F0642 /* Progress.m */; };
+		8331FA4D17422FD6000F0642 /* Social.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3F17422FD6000F0642 /* Social.m */; };
+		8331FA4E17422FD6000F0642 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA4117422FD6000F0642 /* User.m */; };
+		8331FA4F17422FD6000F0642 /* UserUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA4317422FD6000F0642 /* UserUtilities.m */; };
+		8331FA6017422FE3000F0642 /* GoalsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5117422FE3000F0642 /* GoalsNavigationController.m */; };
+		8331FA6117422FE3000F0642 /* GoalsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5317422FE3000F0642 /* GoalsTableViewController.m */; };
+		8331FA6217422FE3000F0642 /* ProgressNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5517422FE3000F0642 /* ProgressNavigationController.m */; };
+		8331FA6317422FE3000F0642 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5717422FE3000F0642 /* ProgressViewController.m */; };
+		8331FA6417422FE3000F0642 /* SocialNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5917422FE3000F0642 /* SocialNavigationController.m */; };
+		8331FA6517422FE3000F0642 /* SocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5B17422FE3000F0642 /* SocialTableViewController.m */; };
+		8331FA6617422FE3000F0642 /* TodayNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5D17422FE3000F0642 /* TodayNavigationController.m */; };
+		8331FA6717422FE3000F0642 /* TodayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5F17422FE3000F0642 /* TodayTableViewController.m */; };
+		8331FA6A17422FF0000F0642 /* Bariol Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8331FA6817422FF0000F0642 /* Bariol Bold.ttf */; };
+		8331FA6B17422FF0000F0642 /* Bariol Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8331FA6917422FF0000F0642 /* Bariol Regular.ttf */; };
+		83AEACEA173EF675006E1151 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACE9173EF675006E1151 /* Icon@2x.png */; };
+		83AEACEC173EF6BB006E1151 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACEB173EF6BB006E1151 /* Icon.png */; };
+		83AEACEE173EF6D9006E1151 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACED173EF6D9006E1151 /* Default@2x.png */; };
+		83AEACF0173EF6E7006E1151 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACEF173EF6E7006E1151 /* Default-568h@2x.png */; };
+		83AEACF2173EF70B006E1151 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACF1173EF70B006E1151 /* Default.png */; };
+		83B34CC917423591001EAEAC /* GoalDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B34CC817423591001EAEAC /* GoalDetailsViewController.m */; };
 		83DD42D9173447DB00FA7408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42D8173447DB00FA7408 /* UIKit.framework */; };
 		83DD42DB173447DB00FA7408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DA173447DB00FA7408 /* Foundation.framework */; };
 		83DD42DD173447DB00FA7408 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DC173447DB00FA7408 /* CoreGraphics.framework */; };
 		83DD42E3173447DB00FA7408 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42E1173447DB00FA7408 /* InfoPlist.strings */; };
 		83DD42E5173447DB00FA7408 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD42E4173447DB00FA7408 /* main.m */; };
 		83DD42E9173447DB00FA7408 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD42E8173447DB00FA7408 /* AppDelegate.m */; };
-		83DD42EB173447DB00FA7408 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42EA173447DB00FA7408 /* Default.png */; };
-		83DD42ED173447DB00FA7408 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42EC173447DB00FA7408 /* Default@2x.png */; };
-		83DD42EF173447DB00FA7408 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42EE173447DB00FA7408 /* Default-568h@2x.png */; };
 		83DD42F2173447DB00FA7408 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42F0173447DB00FA7408 /* MainStoryboard.storyboard */; };
 		83DD42F7173447DB00FA7408 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42F6173447DB00FA7408 /* first.png */; };
 		83DD42F9173447DB00FA7408 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42F8173447DB00FA7408 /* first@2x.png */; };
@@ -80,14 +106,56 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		83AEDA3F173CA2AE00D9C0F4 /* SocialNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialNavigationController.h; sourceTree = "<group>"; };
-		83AEDA40173CA2AE00D9C0F4 /* SocialNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialNavigationController.m; sourceTree = "<group>"; };
-		83AEDA42173CA2F300D9C0F4 /* TodayNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayNavigationController.h; sourceTree = "<group>"; };
-		83AEDA43173CA2F300D9C0F4 /* TodayNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayNavigationController.m; sourceTree = "<group>"; };
-		83AEDA45173CA35E00D9C0F4 /* GoalsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsNavigationController.h; sourceTree = "<group>"; };
-		83AEDA46173CA35E00D9C0F4 /* GoalsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsNavigationController.m; sourceTree = "<group>"; };
-		83AEDA48173CA3A100D9C0F4 /* ProgressNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressNavigationController.h; sourceTree = "<group>"; };
-		83AEDA49173CA3A100D9C0F4 /* ProgressNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressNavigationController.m; sourceTree = "<group>"; };
+		8309FF491742298000B7A335 /* Under Construction Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Under Construction Logo.png"; sourceTree = "<group>"; };
+		8331FA2C17422FD6000F0642 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Balancer/Models/Activity.h; sourceTree = SOURCE_ROOT; };
+		8331FA2D17422FD6000F0642 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = Balancer/Models/Activity.m; sourceTree = SOURCE_ROOT; };
+		8331FA2E17422FD6000F0642 /* ActivityInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityInvite.h; path = Balancer/Models/ActivityInvite.h; sourceTree = SOURCE_ROOT; };
+		8331FA2F17422FD6000F0642 /* ActivityInvite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityInvite.m; path = Balancer/Models/ActivityInvite.m; sourceTree = SOURCE_ROOT; };
+		8331FA3017422FD6000F0642 /* ActivityList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityList.h; path = Balancer/Models/ActivityList.h; sourceTree = SOURCE_ROOT; };
+		8331FA3117422FD6000F0642 /* ActivityList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityList.m; path = Balancer/Models/ActivityList.m; sourceTree = SOURCE_ROOT; };
+		8331FA3217422FD6000F0642 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Goal.h; path = Balancer/Models/Goal.h; sourceTree = SOURCE_ROOT; };
+		8331FA3317422FD6000F0642 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Goal.m; path = Balancer/Models/Goal.m; sourceTree = SOURCE_ROOT; };
+		8331FA3417422FD6000F0642 /* GoalInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalInvite.h; path = Balancer/Models/GoalInvite.h; sourceTree = SOURCE_ROOT; };
+		8331FA3517422FD6000F0642 /* GoalInvite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalInvite.m; path = Balancer/Models/GoalInvite.m; sourceTree = SOURCE_ROOT; };
+		8331FA3617422FD6000F0642 /* GoalList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalList.h; path = Balancer/Models/GoalList.h; sourceTree = SOURCE_ROOT; };
+		8331FA3717422FD6000F0642 /* GoalList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalList.m; path = Balancer/Models/GoalList.m; sourceTree = SOURCE_ROOT; };
+		8331FA3817422FD6000F0642 /* Invite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Invite.h; path = Balancer/Models/Invite.h; sourceTree = SOURCE_ROOT; };
+		8331FA3917422FD6000F0642 /* Invite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Invite.m; path = Balancer/Models/Invite.m; sourceTree = SOURCE_ROOT; };
+		8331FA3A17422FD6000F0642 /* InviteList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InviteList.h; path = Balancer/Models/InviteList.h; sourceTree = SOURCE_ROOT; };
+		8331FA3B17422FD6000F0642 /* InviteList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InviteList.m; path = Balancer/Models/InviteList.m; sourceTree = SOURCE_ROOT; };
+		8331FA3C17422FD6000F0642 /* Progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Progress.h; path = Balancer/Models/Progress.h; sourceTree = SOURCE_ROOT; };
+		8331FA3D17422FD6000F0642 /* Progress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Progress.m; path = Balancer/Models/Progress.m; sourceTree = SOURCE_ROOT; };
+		8331FA3E17422FD6000F0642 /* Social.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Social.h; path = Balancer/Models/Social.h; sourceTree = SOURCE_ROOT; };
+		8331FA3F17422FD6000F0642 /* Social.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Social.m; path = Balancer/Models/Social.m; sourceTree = SOURCE_ROOT; };
+		8331FA4017422FD6000F0642 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Balancer/Models/User.h; sourceTree = SOURCE_ROOT; };
+		8331FA4117422FD6000F0642 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Balancer/Models/User.m; sourceTree = SOURCE_ROOT; };
+		8331FA4217422FD6000F0642 /* UserUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserUtilities.h; path = Balancer/Models/UserUtilities.h; sourceTree = SOURCE_ROOT; };
+		8331FA4317422FD6000F0642 /* UserUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserUtilities.m; path = Balancer/Models/UserUtilities.m; sourceTree = SOURCE_ROOT; };
+		8331FA5017422FE3000F0642 /* GoalsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalsNavigationController.h; path = "View Controllers/GoalsNavigationController.h"; sourceTree = "<group>"; };
+		8331FA5117422FE3000F0642 /* GoalsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalsNavigationController.m; path = "View Controllers/GoalsNavigationController.m"; sourceTree = "<group>"; };
+		8331FA5217422FE3000F0642 /* GoalsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalsTableViewController.h; path = "View Controllers/GoalsTableViewController.h"; sourceTree = "<group>"; };
+		8331FA5317422FE3000F0642 /* GoalsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalsTableViewController.m; path = "View Controllers/GoalsTableViewController.m"; sourceTree = "<group>"; };
+		8331FA5417422FE3000F0642 /* ProgressNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressNavigationController.h; path = "View Controllers/ProgressNavigationController.h"; sourceTree = "<group>"; };
+		8331FA5517422FE3000F0642 /* ProgressNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressNavigationController.m; path = "View Controllers/ProgressNavigationController.m"; sourceTree = "<group>"; };
+		8331FA5617422FE3000F0642 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressViewController.h; path = "View Controllers/ProgressViewController.h"; sourceTree = "<group>"; };
+		8331FA5717422FE3000F0642 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressViewController.m; path = "View Controllers/ProgressViewController.m"; sourceTree = "<group>"; };
+		8331FA5817422FE3000F0642 /* SocialNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialNavigationController.h; path = "View Controllers/SocialNavigationController.h"; sourceTree = "<group>"; };
+		8331FA5917422FE3000F0642 /* SocialNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialNavigationController.m; path = "View Controllers/SocialNavigationController.m"; sourceTree = "<group>"; };
+		8331FA5A17422FE3000F0642 /* SocialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialTableViewController.h; path = "View Controllers/SocialTableViewController.h"; sourceTree = "<group>"; };
+		8331FA5B17422FE3000F0642 /* SocialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialTableViewController.m; path = "View Controllers/SocialTableViewController.m"; sourceTree = "<group>"; };
+		8331FA5C17422FE3000F0642 /* TodayNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayNavigationController.h; path = "View Controllers/TodayNavigationController.h"; sourceTree = "<group>"; };
+		8331FA5D17422FE3000F0642 /* TodayNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayNavigationController.m; path = "View Controllers/TodayNavigationController.m"; sourceTree = "<group>"; };
+		8331FA5E17422FE3000F0642 /* TodayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayTableViewController.h; path = "View Controllers/TodayTableViewController.h"; sourceTree = "<group>"; };
+		8331FA5F17422FE3000F0642 /* TodayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayTableViewController.m; path = "View Controllers/TodayTableViewController.m"; sourceTree = "<group>"; };
+		8331FA6817422FF0000F0642 /* Bariol Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bariol Bold.ttf"; path = "Fonts/Bariol Bold.ttf"; sourceTree = "<group>"; };
+		8331FA6917422FF0000F0642 /* Bariol Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bariol Regular.ttf"; path = "Fonts/Bariol Regular.ttf"; sourceTree = "<group>"; };
+		83AEACE9173EF675006E1151 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		83AEACEB173EF6BB006E1151 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		83AEACED173EF6D9006E1151 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		83AEACEF173EF6E7006E1151 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		83AEACF1173EF70B006E1151 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		83B34CC717423591001EAEAC /* GoalDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalDetailsViewController.h; path = "View Controllers/GoalDetailsViewController.h"; sourceTree = "<group>"; };
+		83B34CC817423591001EAEAC /* GoalDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalDetailsViewController.m; path = "View Controllers/GoalDetailsViewController.m"; sourceTree = "<group>"; };
 		83DD42D5173447DB00FA7408 /* Balancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DD42D8173447DB00FA7408 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83DD42DA173447DB00FA7408 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,9 +166,6 @@
 		83DD42E6173447DB00FA7408 /* Balancer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Balancer-Prefix.pch"; sourceTree = "<group>"; };
 		83DD42E7173447DB00FA7408 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83DD42E8173447DB00FA7408 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		83DD42EA173447DB00FA7408 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		83DD42EC173447DB00FA7408 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		83DD42EE173447DB00FA7408 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		83DD42F1173447DB00FA7408 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		83DD42F6173447DB00FA7408 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		83DD42F8173447DB00FA7408 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
@@ -158,6 +223,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8323FB4E173EB5A40016213D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83B34CC717423591001EAEAC /* GoalDetailsViewController.h */,
+				83B34CC817423591001EAEAC /* GoalDetailsViewController.m */,
+				8331FA5017422FE3000F0642 /* GoalsNavigationController.h */,
+				8331FA5117422FE3000F0642 /* GoalsNavigationController.m */,
+				8331FA5217422FE3000F0642 /* GoalsTableViewController.h */,
+				8331FA5317422FE3000F0642 /* GoalsTableViewController.m */,
+				8331FA5417422FE3000F0642 /* ProgressNavigationController.h */,
+				8331FA5517422FE3000F0642 /* ProgressNavigationController.m */,
+				8331FA5617422FE3000F0642 /* ProgressViewController.h */,
+				8331FA5717422FE3000F0642 /* ProgressViewController.m */,
+				8331FA5817422FE3000F0642 /* SocialNavigationController.h */,
+				8331FA5917422FE3000F0642 /* SocialNavigationController.m */,
+				8331FA5A17422FE3000F0642 /* SocialTableViewController.h */,
+				8331FA5B17422FE3000F0642 /* SocialTableViewController.m */,
+				8331FA5C17422FE3000F0642 /* TodayNavigationController.h */,
+				8331FA5D17422FE3000F0642 /* TodayNavigationController.m */,
+				8331FA5E17422FE3000F0642 /* TodayTableViewController.h */,
+				8331FA5F17422FE3000F0642 /* TodayTableViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8331FA2917422E25000F0642 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8331FA6817422FF0000F0642 /* Bariol Bold.ttf */,
+				8331FA6917422FF0000F0642 /* Bariol Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		83AEACF3173EF729006E1151 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8309FF491742298000B7A335 /* Under Construction Logo.png */,
+				83AEACF5173EF74A006E1151 /* Icon */,
+				83AEACF4173EF72E006E1151 /* Launch Images */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		83AEACF4173EF72E006E1151 /* Launch Images */ = {
+			isa = PBXGroup;
+			children = (
+				83AEACF1173EF70B006E1151 /* Default.png */,
+				83AEACEF173EF6E7006E1151 /* Default-568h@2x.png */,
+				83AEACED173EF6D9006E1151 /* Default@2x.png */,
+			);
+			name = "Launch Images";
+			sourceTree = "<group>";
+		};
+		83AEACF5173EF74A006E1151 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				83AEACEB173EF6BB006E1151 /* Icon.png */,
+				83AEACE9173EF675006E1151 /* Icon@2x.png */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		83AEACF6173EF791006E1151 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		83DD42CC173447DB00FA7408 = {
 			isa = PBXGroup;
 			children = (
@@ -197,19 +333,9 @@
 				83DD42E7173447DB00FA7408 /* AppDelegate.h */,
 				83DD42E8173447DB00FA7408 /* AppDelegate.m */,
 				83DD42F0173447DB00FA7408 /* MainStoryboard.storyboard */,
-				83AEDA3F173CA2AE00D9C0F4 /* SocialNavigationController.h */,
-				83AEDA40173CA2AE00D9C0F4 /* SocialNavigationController.m */,
-				83AEDA42173CA2F300D9C0F4 /* TodayNavigationController.h */,
-				83AEDA43173CA2F300D9C0F4 /* TodayNavigationController.m */,
-				83AEDA45173CA35E00D9C0F4 /* GoalsNavigationController.h */,
-				83AEDA46173CA35E00D9C0F4 /* GoalsNavigationController.m */,
-				83AEDA48173CA3A100D9C0F4 /* ProgressNavigationController.h */,
-				83AEDA49173CA3A100D9C0F4 /* ProgressNavigationController.m */,
-				83DD42F6173447DB00FA7408 /* first.png */,
-				83DD42F8173447DB00FA7408 /* first@2x.png */,
-				83DD42FD173447DC00FA7408 /* second.png */,
-				83DD42FF173447DC00FA7408 /* second@2x.png */,
-				CB760784173CAD5C000810E1 /* Model */,
+				CB760784173CAD5C000810E1 /* Models */,
+				83AEACF6173EF791006E1151 /* Views */,
+				8323FB4E173EB5A40016213D /* View Controllers */,
 				83DD42DF173447DB00FA7408 /* Supporting Files */,
 			);
 			path = Balancer;
@@ -218,45 +344,45 @@
 		83DD42DF173447DB00FA7408 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8331FA2917422E25000F0642 /* Fonts */,
+				83AEACF3173EF729006E1151 /* Images */,
 				83DD42E0173447DB00FA7408 /* Balancer-Info.plist */,
 				83DD42E1173447DB00FA7408 /* InfoPlist.strings */,
 				83DD42E4173447DB00FA7408 /* main.m */,
 				83DD42E6173447DB00FA7408 /* Balancer-Prefix.pch */,
-				83DD42EA173447DB00FA7408 /* Default.png */,
-				83DD42EC173447DB00FA7408 /* Default@2x.png */,
-				83DD42EE173447DB00FA7408 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CB760784173CAD5C000810E1 /* Model */ = {
+		CB760784173CAD5C000810E1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BF8FF999173CB2FC003C6BBF /* Activity.h */,
-				BF8FF99A173CB2FC003C6BBF /* Activity.m */,
-				BF8FF9A2173CB533003C6BBF /* ActivityInvite.h */,
-				BF8FF9A3173CB533003C6BBF /* ActivityInvite.m */,
-				BF8FF9AE173CB9FD003C6BBF /* ActivityList.h */,
-				BF8FF9AF173CB9FE003C6BBF /* ActivityList.m */,
-				CB760785173CAD5C000810E1 /* Goal.h */,
-				CB760786173CAD5C000810E1 /* Goal.m */,
-				BF8FF99F173CB506003C6BBF /* GoalInvite.h */,
-				BF8FF9A0173CB506003C6BBF /* GoalInvite.m */,
-				BF8FF9AB173CB999003C6BBF /* GoalList.h */,
-				BF8FF9AC173CB999003C6BBF /* GoalList.m */,
-				BF8FF99C173CB443003C6BBF /* Invite.h */,
-				BF8FF99D173CB443003C6BBF /* Invite.m */,
-				BF8FF9A8173CB7ED003C6BBF /* InviteList.h */,
-				BF8FF9A9173CB7EE003C6BBF /* InviteList.m */,
-				BF8FF9B4173CBAFD003C6BBF /* Progress.h */,
-				BF8FF9B5173CBAFD003C6BBF /* Progress.m */,
-				BF8FF9B7173CBB0E003C6BBF /* Social.h */,
-				BF8FF9B8173CBB0F003C6BBF /* Social.m */,
-				BF8FF9A5173CB6DB003C6BBF /* User.h */,
-				BF8FF9A6173CB6DB003C6BBF /* User.m */,
-				BF8FF9B1173CBA6A003C6BBF /* UserUtilities.h */,
-				BF8FF9B2173CBA6A003C6BBF /* UserUtilities.m */,
+				8331FA2C17422FD6000F0642 /* Activity.h */,
+				8331FA2D17422FD6000F0642 /* Activity.m */,
+				8331FA2E17422FD6000F0642 /* ActivityInvite.h */,
+				8331FA2F17422FD6000F0642 /* ActivityInvite.m */,
+				8331FA3017422FD6000F0642 /* ActivityList.h */,
+				8331FA3117422FD6000F0642 /* ActivityList.m */,
+				8331FA3217422FD6000F0642 /* Goal.h */,
+				8331FA3317422FD6000F0642 /* Goal.m */,
+				8331FA3417422FD6000F0642 /* GoalInvite.h */,
+				8331FA3517422FD6000F0642 /* GoalInvite.m */,
+				8331FA3617422FD6000F0642 /* GoalList.h */,
+				8331FA3717422FD6000F0642 /* GoalList.m */,
+				8331FA3817422FD6000F0642 /* Invite.h */,
+				8331FA3917422FD6000F0642 /* Invite.m */,
+				8331FA3A17422FD6000F0642 /* InviteList.h */,
+				8331FA3B17422FD6000F0642 /* InviteList.m */,
+				8331FA3C17422FD6000F0642 /* Progress.h */,
+				8331FA3D17422FD6000F0642 /* Progress.m */,
+				8331FA3E17422FD6000F0642 /* Social.h */,
+				8331FA3F17422FD6000F0642 /* Social.m */,
+				8331FA4017422FD6000F0642 /* User.h */,
+				8331FA4117422FD6000F0642 /* User.m */,
+				8331FA4217422FD6000F0642 /* UserUtilities.h */,
+				8331FA4317422FD6000F0642 /* UserUtilities.m */,
 			);
+			name = Models;
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -361,14 +487,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				83DD42E3173447DB00FA7408 /* InfoPlist.strings in Resources */,
-				83DD42EB173447DB00FA7408 /* Default.png in Resources */,
-				83DD42ED173447DB00FA7408 /* Default@2x.png in Resources */,
-				83DD42EF173447DB00FA7408 /* Default-568h@2x.png in Resources */,
 				83DD42F2173447DB00FA7408 /* MainStoryboard.storyboard in Resources */,
-				83DD42F7173447DB00FA7408 /* first.png in Resources */,
-				83DD42F9173447DB00FA7408 /* first@2x.png in Resources */,
-				83DD42FE173447DC00FA7408 /* second.png in Resources */,
-				83DD4300173447DC00FA7408 /* second@2x.png in Resources */,
+				83AEACEA173EF675006E1151 /* Icon@2x.png in Resources */,
+				83AEACEC173EF6BB006E1151 /* Icon.png in Resources */,
+				83AEACEE173EF6D9006E1151 /* Default@2x.png in Resources */,
+				83AEACF0173EF6E7006E1151 /* Default-568h@2x.png in Resources */,
+				83AEACF2173EF70B006E1151 /* Default.png in Resources */,
+				8309FF4A1742298000B7A335 /* Under Construction Logo.png in Resources */,
+				8331FA6A17422FF0000F0642 /* Bariol Bold.ttf in Resources */,
+				8331FA6B17422FF0000F0642 /* Bariol Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,18 +508,27 @@
 			files = (
 				83DD42E5173447DB00FA7408 /* main.m in Sources */,
 				83DD42E9173447DB00FA7408 /* AppDelegate.m in Sources */,
-				CB760787173CAD5C000810E1 /* Goal.m in Sources */,
-				BF8FF99B173CB2FC003C6BBF /* Activity.m in Sources */,
-				BF8FF99E173CB443003C6BBF /* Invite.m in Sources */,
-				BF8FF9A1173CB506003C6BBF /* GoalInvite.m in Sources */,
-				BF8FF9A4173CB533003C6BBF /* ActivityInvite.m in Sources */,
-				BF8FF9A7173CB6DB003C6BBF /* User.m in Sources */,
-				BF8FF9AA173CB7EE003C6BBF /* InviteList.m in Sources */,
-				BF8FF9AD173CB99A003C6BBF /* GoalList.m in Sources */,
-				BF8FF9B0173CB9FE003C6BBF /* ActivityList.m in Sources */,
-				BF8FF9B3173CBA6A003C6BBF /* UserUtilities.m in Sources */,
-				BF8FF9B6173CBAFE003C6BBF /* Progress.m in Sources */,
-				BF8FF9B9173CBB0F003C6BBF /* Social.m in Sources */,
+				8331FA4417422FD6000F0642 /* Activity.m in Sources */,
+				8331FA4517422FD6000F0642 /* ActivityInvite.m in Sources */,
+				8331FA4617422FD6000F0642 /* ActivityList.m in Sources */,
+				8331FA4717422FD6000F0642 /* Goal.m in Sources */,
+				8331FA4817422FD6000F0642 /* GoalInvite.m in Sources */,
+				8331FA4917422FD6000F0642 /* GoalList.m in Sources */,
+				8331FA4A17422FD6000F0642 /* Invite.m in Sources */,
+				8331FA4B17422FD6000F0642 /* InviteList.m in Sources */,
+				8331FA4C17422FD6000F0642 /* Progress.m in Sources */,
+				8331FA4D17422FD6000F0642 /* Social.m in Sources */,
+				8331FA4E17422FD6000F0642 /* User.m in Sources */,
+				8331FA4F17422FD6000F0642 /* UserUtilities.m in Sources */,
+				8331FA6017422FE3000F0642 /* GoalsNavigationController.m in Sources */,
+				8331FA6117422FE3000F0642 /* GoalsTableViewController.m in Sources */,
+				8331FA6217422FE3000F0642 /* ProgressNavigationController.m in Sources */,
+				8331FA6317422FE3000F0642 /* ProgressViewController.m in Sources */,
+				8331FA6417422FE3000F0642 /* SocialNavigationController.m in Sources */,
+				8331FA6517422FE3000F0642 /* SocialTableViewController.m in Sources */,
+				8331FA6617422FE3000F0642 /* TodayNavigationController.m in Sources */,
+				8331FA6717422FE3000F0642 /* TodayTableViewController.m in Sources */,
+				83B34CC917423591001EAEAC /* GoalDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

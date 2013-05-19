@@ -1,13 +1,13 @@
 //
-//  GoalList.m
+//  InviteList.m
 //  Balancer
 //
 //  Created by Dian Hartono on 5/9/13.
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
-#import "GoalList.h"
+#import "InviteList.h"
 
-@implementation GoalList
-
+@implementation InviteList
+@synthesize pendingInvites, declineInvites;
 @end
