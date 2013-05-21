@@ -8,9 +8,18 @@
 
 #import "GoalsTableViewController.h"
 #import "Goal.h"
+#import "Activity.h"
+#import "AppDelegate.h" //TODO: remove
+
+#import "DTCustomColoredAccessory.h"
 
 #define DUMMY_GOALS_COUNT 10
 #define DUMMY_GOALS_MAX_CREATOR_ID 100
+
+@interface GoalsTableViewController()
+@property (nonatomic, strong) NSMutableIndexSet *expandedSections;
+
+@end
 
 @implementation GoalsTableViewController
 
@@ -20,7 +29,14 @@
 {
     [super viewDidLoad];
     
-    [self createDummyGoals:DUMMY_GOALS_COUNT]; // TODO: remove when networking is implemented
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    [self setGoals:appDelegate.dummyGoals];
+    
+    if (!_expandedSections)
+    {
+        _expandedSections = [[NSMutableIndexSet alloc] init];
+    }
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -45,57 +61,194 @@
 
 #pragma mark - Helper methods
 
-/** Creates dummy goals and sets them to be the model for this view controller. For testing purposes only.
-  @param - The number of dummy goals to create.
- */
-- (void)createDummyGoals:(NSUInteger)numberOfDummyGoals
+#pragma mark - Expanding
+
+- (BOOL)tableView:(UITableView *)tableView canCollapseSection:(NSInteger)section
 {
-    NSMutableArray *dummyGoals = [[NSMutableArray alloc] init];
+    if (section>0) return YES;
     
-    for (int i = 1; i <= numberOfDummyGoals; i++)
+    return NO;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self tableView:tableView canCollapseSection:indexPath.section])
     {
-        Goal *goal = [[Goal alloc] init];
-        goal.goalId = i;
-        goal.name = [NSString stringWithFormat:@"Goal %u", goal.goalId];
-        goal.completionDate = [[NSDate alloc] init]; // sets completion date to today
-        goal.description = [NSString stringWithFormat:@"This is goal %u.", goal.goalId];
-        goal.open = (i % 2) ? YES : NO;
-        goal.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
-        goal.numberActivitiesForCompletion = 2; // TODO: figure out what this is for?
-        goal.activities = nil; // TODO: add later
-        goal.inviteList = nil; // TODO: add later
-        
-        [dummyGoals addObject:goal];
+        if (!indexPath.row) // indexPath.row == 0; the first row
+        {
+            return 100;
+        }
+        else
+        {
+            // all other rows
+            return 44;
+        }
     }
-    
-    [self setGoals:dummyGoals];
+    else
+    {
+        return 44;
+        
+    }
 }
 
 #pragma mark - Table view data source
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [self.goals count];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if ([self tableView:tableView canCollapseSection:section])
+    {
+        if ([self.expandedSections containsIndex:section])
+        {
+            Goal *goal = (Goal*)self.goals[section];
+            
+            return [goal.activities count]; // return rows when expanded
+        }
+        
+        return 1; // only top row showing
+    }
+    
     // Return the number of rows in the section.
-    return [self.goals count];
+    return 1;
+    //return [self.goals count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Goal";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *GoalCellIdentifier = @"Goal";
+    static NSString *StepCellIdentifier = @"Step";
+    
+    UITableViewCell *cell;
     
     // Configure the cell...
-    cell.textLabel.text = [self titleForRow:indexPath.row];
-    cell.detailTextLabel.text = [self subtitleForRow:indexPath.row];
+    
+    if ([self tableView:tableView canCollapseSection:indexPath.section])
+    {
+        if (!indexPath.row) // indexPath.row == 0; the first row
+        {
+            cell = [tableView dequeueReusableCellWithIdentifier:GoalCellIdentifier];
+            assert(cell != nil);
+            
+            
+            UILabel *goalLabel = (UILabel *)[cell viewWithTag:999];
+            UIButton *addButton = (UIButton *)[cell viewWithTag:1];
+            UIButton *editButton = (UIButton *)[cell viewWithTag:2];
+            UIButton *searchButton = (UIButton *)[cell viewWithTag:3];
+            
+            goalLabel.text = [self titleForGoalAtSection:indexPath.section];
+            
+           // [btn addTarget:self action:@selector(onClicked:) forControlEvents:UIControlEventTouchUpInside];
+            
+            if ([self.expandedSections containsIndex:indexPath.section])
+            {
+            //    cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
+            }
+            else
+            {
+             //   cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
+            }
+        }
+        else
+        {
+            cell = [tableView dequeueReusableCellWithIdentifier:StepCellIdentifier];
+            // all other rows
+            Goal *goalAtSection = (Goal *)self.goals[indexPath.section];
+            // have activity id row within goal section
+            Activity *activityAtRow = (Activity *)goalAtSection.activities[indexPath.row];
+            cell.textLabel.text = activityAtRow.description;
+            cell.accessoryView = nil;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+    }
+    else
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:StepCellIdentifier];
+        cell.accessoryView = nil;
+        cell.textLabel.text = @"Normal Cell";
+        
+    }
     
     return cell;
+    //static NSString *CellIdentifier = @"Goal";
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    //cell.textLabel.text = [self titleForRow:indexPath.row];
+    //cell.detailTextLabel.text = [self subtitleForRow:indexPath.row];
+    
+    //return cell;
+}
+
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self tableView:tableView canCollapseSection:indexPath.section])
+    {
+        if (!indexPath.row)
+        {
+            [self.tableView beginUpdates];
+            
+            // only first row toggles exapand/collapse
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+            
+            NSInteger section = indexPath.section;
+            BOOL currentlyExpanded = [self.expandedSections containsIndex:section];
+            NSInteger rows;
+            
+            NSMutableArray *tmpArray = [NSMutableArray array];
+            
+            if (currentlyExpanded)
+            {
+                rows = [self tableView:tableView numberOfRowsInSection:section];
+                [self.expandedSections removeIndex:section];
+                
+            }
+            else
+            {
+                [self.expandedSections addIndex:section];
+                rows = [self tableView:tableView numberOfRowsInSection:section];
+            }
+            
+            for (int i=1; i<rows; i++)
+            {
+                NSIndexPath *tmpIndexPath = [NSIndexPath indexPathForRow:i inSection:section];
+                [tmpArray addObject:tmpIndexPath];
+            }
+            
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            
+            if (currentlyExpanded)
+            {
+                [tableView deleteRowsAtIndexPaths:tmpArray
+                                 withRowAnimation:UITableViewRowAnimationTop];
+                
+                cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
+                
+            }
+            else
+            {
+                [tableView insertRowsAtIndexPaths:tmpArray
+                                 withRowAnimation:UITableViewRowAnimationTop];
+                cell.accessoryView =  [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
+                
+            }
+            
+            [self.tableView endUpdates];
+        }
+    }
 }
 
 /** Returns the goal title for a given table row.
  @param - The row number of the goal for which to get the title.
  */
-- (NSString *)titleForRow:(NSUInteger) row {
-    Goal *goalAtRow = (Goal *)self.goals[row];
+- (NSString *)titleForGoalAtSection:(NSUInteger) section {
+    Goal *goalAtRow = (Goal *)self.goals[section];
     return [goalAtRow.name description];
 }
 

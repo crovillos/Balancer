@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Goal.h"
+#import "Activity.h"
 
 #define BALANCER_PINK_RED 166/255.0
 #define BALANCER_PINK_GREEN 36/255.0
@@ -27,7 +29,7 @@
     
     // Set custom fonts for UILabels
     UIFont *titleTextFont = [UIFont fontWithName:BALANCER_FONT_BOLD size:20.0];
-    UIFont *mainFont = [UIFont fontWithName:BALANCER_FONT_REGULAR size:[UIFont systemFontSize]];
+    //UIFont *mainFont = [UIFont fontWithName:BALANCER_FONT_REGULAR size:[UIFont systemFontSize]];
     
     [[UINavigationBar appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
@@ -35,9 +37,109 @@
       UITextAttributeFont,
       nil]];
     
-    [[UILabel appearance] setFont:mainFont]; // TODO: change; uses deprecated method
+    //[[UILabel appearance] setFont:mainFont]; // TODO: change; uses deprecated method
+    
+    [self createDummyGoals:10];
     
     return YES;
+}
+
+/** Creates dummy goals and sets them to be the model for this view controller. For testing purposes only.
+ @param - The number of dummy goals to create.
+ */
+- (void)createDummyGoals:(NSUInteger)numberOfDummyGoals
+{
+    
+    _dummyGoals = [[NSMutableArray alloc] init];
+    
+
+    Goal *goal = [[Goal alloc] init];
+    goal.goalId = 1;
+    goal.name = [NSString stringWithFormat:@"Hangout with friends twice"];
+    goal.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    goal.description = [NSString stringWithFormat:@"Spend more time with friends"];
+    goal.open = YES;
+    goal.creatorId = arc4random_uniform(10);
+    goal.numberActivitiesForCompletion = 2; // TODO: figure out what this is for?
+    //goal.activities = [self createDummyActivities:10 withGoal:goal];
+    Activity *activity1 = [[Activity alloc] init];
+    activity1.activityId = 1;
+    activity1.name = @"Watch movies with friends";
+    activity1.startDate = [[NSDate alloc] init];
+    activity1.endDate = [[NSDate alloc] init];
+    activity1.open = YES;
+    activity1.creatorId = 1;
+    activity1.goal = goal;
+    goal.activities = [[NSMutableArray alloc] init];
+    [goal.activities addObject: activity1];
+    Activity *activity2 = [[Activity alloc] init];
+    activity2.activityId = 1;
+    activity2.name = @"Have dinner with friends";
+    activity2.startDate = [[NSDate alloc] init];
+    activity2.endDate = [[NSDate alloc] init];
+    activity2.open = YES;
+    activity2.creatorId = 1;
+    activity2.goal = goal;
+    [goal.activities addObject: activity2];
+    goal.inviteList = nil; // TODO: add later
+    [_dummyGoals addObject:goal];
+    
+    Goal *g2 = [[Goal alloc] init];
+    g2.goalId = 2;
+    g2.name = [NSString stringWithFormat:@"Read 5 acrticles on Economists"];
+    g2.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    g2.description = [NSString stringWithFormat:@"Be smarter"];
+    g2.open = YES;
+    g2.creatorId = arc4random_uniform(10);
+    g2.numberActivitiesForCompletion = 5;
+    g2.inviteList = nil;
+    [_dummyGoals addObject:g2];
+    
+    Goal *g3 = [[Goal alloc] init];
+    g3.goalId = 3;
+    g3.name = [NSString stringWithFormat:@"Kickboxing once"];
+    g3.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    g2.description = [NSString stringWithFormat:@"Learn how to defend yourself"];
+    g3.open = YES;
+    g3.creatorId = arc4random_uniform(10);
+    g2.numberActivitiesForCompletion = 1;
+    Activity *a1 = [[Activity alloc] init];
+    a1.activityId = 3;
+    a1.name = @"Kicboxing class at the IMA";
+    a1.startDate = [[NSDate alloc] init];
+    a1.endDate = [[NSDate alloc] init];
+    a1.open = YES;
+    a1.creatorId = 1;
+    a1.goal = g3;
+    g3.activities = [[NSMutableArray alloc] init];
+    [g3.activities addObject: a1];
+    g3.inviteList = nil;
+    [_dummyGoals addObject:g3];
+
+
+}
+
+- (NSArray*) createDummyActivities:(NSUInteger)numberOfDummyActivities withGoal:(Goal*)goal
+{
+    NSMutableArray *dummyActivities = [[NSMutableArray alloc] init];
+    
+    for (int i = 1; i <= numberOfDummyActivities; i++)
+    {
+        Activity *activity = [[Activity alloc] init];
+        
+        activity.activityId = i;
+        activity.name = [NSString stringWithFormat:@"Activity %u", activity.activityId];
+        activity.startDate = [[NSDate alloc] init]; // sets start date to today
+        activity.endDate = [[NSDate alloc] init];
+        activity.description = [NSString stringWithFormat:@"This is activity %u.", activity.activityId];
+        activity.open = (i % 2) ? YES : NO;
+        activity.goal = goal;
+        activity.inviteList = nil; //TODO
+        
+        [dummyActivities addObject:activity];
+    }
+    
+    return dummyActivities;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
