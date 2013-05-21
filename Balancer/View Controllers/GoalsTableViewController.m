@@ -38,6 +38,8 @@
     {
         _expandedSections = [[NSMutableIndexSet alloc] init];
     }
+    
+    [self runTimerFunctions];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -301,6 +303,13 @@
         }
 
     }
+    if ([segue.identifier isEqualToString:@"Add Goal"])
+	{
+		AddGoalTableViewController *addGoalTableViewController =
+        segue.destinationViewController;
+		addGoalTableViewController.delegate = self;
+
+	}
 }
 
 
@@ -309,5 +318,40 @@
     if ([[segue identifier] isEqualToString:@"CancelInput"]) {
         [self dismissViewControllerAnimated:YES completion:NULL];
     }
+}
+- (IBAction)done:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
+        
+        AddGoalTableViewController *addController = [segue sourceViewController];
+        if (addController.goal) {
+            [self addGoal:addController.goal];
+            [[self tableView] reloadData];
+        }
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
+
+
+- (void) reloadTableData:(NSTimer*) timer
+{
+    [[self tableView] reloadData];
+}
+- (void) addGoal:(Goal *)goal
+{
+    // TODO
+}
+
+- (void)addGoalTableViewController:(AddGoalTableViewController *)controller didSelectGoal:(Goal *)goal
+{
+	[self addGoal:goal];
+            [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) runTimerFunctions {
+    
+    CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
+    BOOL timerRunning = YES;
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(reloadTableData:) userInfo:nil repeats:YES];
 }
 @end

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddGoalTableViewController.h"
 
-@interface GoalsTableViewController : UITableViewController
+@interface GoalsTableViewController : UITableViewController <AddGoalTableViewControllerDelegate>
+
 
 
 /** The model for this view controller, obtained from the network */
@@ -16,5 +18,7 @@
 @property (nonatomic, strong) NSArray *goals; // of Goal
 
 - (IBAction)cancel:(UIStoryboardSegue *)segue;
+
+- (void) reloadData;
 
 @end

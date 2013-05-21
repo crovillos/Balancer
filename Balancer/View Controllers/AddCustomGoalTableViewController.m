@@ -48,7 +48,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
-        if ([self.titleInput.text length] && [self.completeByInput.text length]) {
             Goal *goal;
             NSDate *today = [NSDate date];
             goal = [[Goal alloc] init];
@@ -56,8 +55,9 @@
             goal.completionDate = today;
             goal.open = self.publicInput.enabled;
             self.goal = goal;
-        }
     }
+    
+    
 }
 
 @end
