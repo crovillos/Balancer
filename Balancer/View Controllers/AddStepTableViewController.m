@@ -8,6 +8,7 @@
 
 #import "AddStepTableViewController.h"
 #import "Activity.h"
+#import "AppDelegate.h"
 
 @interface AddStepTableViewController ()
 
@@ -36,7 +37,7 @@
     
         NSMutableArray *dummyActivities = [[NSMutableArray alloc] init];
         
-        for (int i = 1; i <= numberOfDummyActivities; i++)
+        for (int i = 1; i <= 10; i++)
         {
             Activity *activity = [[Activity alloc] init];
             
@@ -130,16 +131,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*[tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 	
 	NSInteger selectedIndex = indexPath.row;
 	UITableViewCell *cell =
     [tableView cellForRowAtIndexPath:indexPath];
 	cell.accessoryType = UITableViewCellAccessoryCheckmark;
-	Goal *goal = [self.availableGoals objectAtIndex:indexPath.row];
-    GoalsTableViewController *presenting = (GoalsTableViewController *)self.presentingViewController.presentingViewController;
-    [presenting reloadData];
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];*/
+	Activity *activity = [_availableSteps objectAtIndex:indexPath.row];
+
+    
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    [appDelegate.dummyGoals[0] addObject:activity]; //TODO: fix
+    
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
    
 }
 
