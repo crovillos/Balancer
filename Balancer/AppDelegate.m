@@ -100,11 +100,12 @@
     
     Activity *a1 = [[Activity alloc] init];
     a1.activityId = 3;
-    a1.name = @"Kicboxing class at the IMA";
+    a1.name = @"Kicboxing class";
+    a1.description = @"May 27 (Sun) 6:00PM @ IMA";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
-    a1.creatorId = 1;
+    a1.creatorId = 4;
     a1.goal = nil;
     ActivityInvite *aInvite = [[ActivityInvite alloc] init];
     aInvite.activity = a1;
@@ -139,6 +140,7 @@
     Activity *activity1 = [[Activity alloc] init];
     activity1.activityId = 1;
     activity1.name = @"Watch movies with friends";
+    activity1.description = @"May 25 (Fri) 9:00PM @ Regal";
     activity1.startDate = [[NSDate alloc] init];
     activity1.endDate = [[NSDate alloc] init];
     activity1.open = YES;
@@ -151,6 +153,7 @@
     activity2.name = @"Have dinner with friends";
     activity2.startDate = [[NSDate alloc] init];
     activity2.endDate = [[NSDate alloc] init];
+    activity2.description = @"May 25 (Fri) 6:00PM @ Cheesecake Factory";
     activity2.open = YES;
     activity2.creatorId = 1;
     activity2.goal = goal;
