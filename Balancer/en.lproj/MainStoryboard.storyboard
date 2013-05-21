@@ -534,6 +534,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="ZVv-JW-akH" id="ybr-5S-hGY"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqM-ID-TEq">
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -645,8 +648,18 @@
                                 <segue destination="F0R-Di-roq" kind="unwind" identifier="CancelInput" unwindAction="cancel:" id="iFr-xc-FXE"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="g8X-5H-ap6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="g8X-5H-ap6">
+                            <connections>
+                                <segue destination="F0R-Di-roq" kind="unwind" identifier="ReturnInput" unwindAction="done:" id="d1C-Sa-bEx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="completeByInput" destination="9Me-3c-pLN" id="AMp-54-8ut"/>
+                        <outlet property="inviteInput" destination="2lP-w3-jdh" id="dhp-J9-eA6"/>
+                        <outlet property="publicInput" destination="5BR-bY-GNf" id="EW1-e5-8UC"/>
+                        <outlet property="titleInput" destination="1bz-sa-iKv" id="UjD-q6-aF7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZq-dI-STX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="F0R-Di-roq" userLabel="Exit" sceneMemberID="exit"/>

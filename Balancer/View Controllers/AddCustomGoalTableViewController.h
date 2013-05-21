@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Goal.h"
+@class Goal;
 
-@interface AddCustomGoalTableViewController : UITableViewController
+@interface AddCustomGoalTableViewController : UITableViewController <UITextFieldDelegate>
+
+@property (strong, nonatomic) Goal *goal;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AddGoalTableViewController.h"
+#import "AddCustomGoalTableViewController.h"
 
 @interface AddGoalTableViewController ()
 
@@ -125,4 +126,23 @@
         [self dismissViewControllerAnimated:YES completion:NULL];
     }
 }
+
+- (IBAction)done:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
+        
+        AddCustomGoalTableViewController *addController = [segue sourceViewController];
+        if (addController.goal) {
+            [self addGoal:addController.goal];
+            [[self tableView] reloadData];
+        }
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
+
+- (void)addGoal:(Goal*) goal {
+    //TODO
+    goal.completionDate;
+}
+
 @end

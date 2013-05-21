@@ -9,6 +9,10 @@
 #import "AddCustomGoalTableViewController.h"
 
 @interface AddCustomGoalTableViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *titleInput;
+@property (weak, nonatomic) IBOutlet UITextField *completeByInput;
+@property (weak, nonatomic) IBOutlet UISwitch *publicInput;
+@property (weak, nonatomic) IBOutlet UITextField *inviteInput;
 
 @end
 
@@ -27,11 +31,6 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +39,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ((textField == self.titleInput) || (textField == self.completeByInput) || (textField == self.inviteInput)) {
+        [textField resignFirstResponder];
+    }
+    return YES;
+}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
+        if ([self.titleInput.text length] && [self.completeByInput.text length]) {
+            Goal *goal;
+            NSDate *today = [NSDate date];
+            goal = [[Goal alloc] init];
+            goal.name = self.titleInput.text;
+            goal.completionDate = today;
+            goal.open = self.publicInput.enabled;
+            self.goal = goal;
+        }
+    }
+}
 
 @end
