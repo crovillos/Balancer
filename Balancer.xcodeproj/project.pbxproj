@@ -30,6 +30,8 @@
 		8331FA6717422FE3000F0642 /* TodayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5F17422FE3000F0642 /* TodayTableViewController.m */; };
 		8331FA6A17422FF0000F0642 /* Bariol Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8331FA6817422FF0000F0642 /* Bariol Bold.ttf */; };
 		8331FA6B17422FF0000F0642 /* Bariol Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8331FA6917422FF0000F0642 /* Bariol Regular.ttf */; };
+		83394FD2174B309E0030B614 /* libDTFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83394FC2174B2DAA0030B614 /* libDTFoundation.a */; };
+		83394FD4174B30B40030B614 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83394FD3174B30B40030B614 /* QuartzCore.framework */; };
 		83AEACEA173EF675006E1151 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACE9173EF675006E1151 /* Icon@2x.png */; };
 		83AEACEC173EF6BB006E1151 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACEB173EF6BB006E1151 /* Icon.png */; };
 		83AEACEE173EF6D9006E1151 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACED173EF6D9006E1151 /* Default@2x.png */; };
@@ -57,6 +59,69 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		83394FBF174B2DAA0030B614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7BAD10E1483F934000E2B6A;
+			remoteInfo = "Static Framework";
+		};
+		83394FC1174B2DAA0030B614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A70B4CE71486637E00873A4A;
+			remoteInfo = "Static Library";
+		};
+		83394FC3174B2DAA0030B614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7D60FCF15D3B0BC00AEDD1B;
+			remoteInfo = "Unit Tests";
+		};
+		83394FC5174B2DAA0030B614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A710A5001607556000437D36;
+			remoteInfo = "Static Library (Mac)";
+		};
+		83394FC7174B2DAA0030B614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7E383C2160DFEDB00CF72D6;
+			remoteInfo = DTHTMLParser;
+		};
+		83394FC9174B2DAA0030B614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D7CE547166613B60028D339;
+			remoteInfo = "DTHTMLParser (Mac)";
+		};
+		83394FCB174B2DAA0030B614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7E383DA160DFF8600CF72D6;
+			remoteInfo = DTZipArchive;
+		};
+		83394FCD174B2DAA0030B614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A78220BA168060CA005B602D;
+			remoteInfo = "DTUTI (iOS)";
+		};
+		83394FCF174B2DAA0030B614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7E889A416A9B190009EF0DF;
+			remoteInfo = "DTUTI (Mac)";
+		};
 		CB87568017495775003159DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CB87567917495775003159DF /* RestKit.xcodeproj */;
@@ -138,6 +203,8 @@
 		8331FA5F17422FE3000F0642 /* TodayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayTableViewController.m; path = "View Controllers/TodayTableViewController.m"; sourceTree = "<group>"; };
 		8331FA6817422FF0000F0642 /* Bariol Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bariol Bold.ttf"; path = "Fonts/Bariol Bold.ttf"; sourceTree = "<group>"; };
 		8331FA6917422FF0000F0642 /* Bariol Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bariol Regular.ttf"; path = "Fonts/Bariol Regular.ttf"; sourceTree = "<group>"; };
+		83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTFoundation.xcodeproj; path = Externals/DTFoundation/DTFoundation.xcodeproj; sourceTree = "<group>"; };
+		83394FD3174B30B40030B614 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		83AEACE9173EF675006E1151 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		83AEACEB173EF6BB006E1151 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		83AEACED173EF6D9006E1151 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -174,6 +241,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83394FD4174B30B40030B614 /* QuartzCore.framework in Frameworks */,
+				83394FD2174B309E0030B614 /* libDTFoundation.a in Frameworks */,
 				CB8756A417496167003159DF /* Social.framework in Frameworks */,
 				CB8756921749592E003159DF /* Security.framework in Frameworks */,
 				CB8756A217496159003159DF /* libsqlite3.dylib in Frameworks */,
@@ -228,6 +297,22 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		83394FB3174B2DAA0030B614 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83394FC0174B2DAA0030B614 /* DTFoundation.framework */,
+				83394FC2174B2DAA0030B614 /* libDTFoundation.a */,
+				83394FC4174B2DAA0030B614 /* UnitTests.octest */,
+				83394FC6174B2DAA0030B614 /* libDTFoundation_Mac.a */,
+				83394FC8174B2DAA0030B614 /* libDTHTMLParser.a */,
+				83394FCA174B2DAA0030B614 /* libDTHTMLParser.a */,
+				83394FCC174B2DAA0030B614 /* libDTZipArchive.a */,
+				83394FCE174B2DAA0030B614 /* libDTUTI.a */,
+				83394FD0174B2DAA0030B614 /* libDTUTI.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		83AEACF3173EF729006E1151 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +353,8 @@
 		83DD42CC173447DB00FA7408 = {
 			isa = PBXGroup;
 			children = (
+				83394FD3174B30B40030B614 /* QuartzCore.framework */,
+				83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */,
 				CB87567917495775003159DF /* RestKit.xcodeproj */,
 				83DD42DE173447DB00FA7408 /* Balancer */,
 				83DD42D7173447DB00FA7408 /* Frameworks */,
@@ -415,6 +502,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 83394FB3174B2DAA0030B614 /* Products */;
+					ProjectRef = 83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */;
+				},
+				{
 					ProductGroup = CB87567A17495775003159DF /* Products */;
 					ProjectRef = CB87567917495775003159DF /* RestKit.xcodeproj */;
 				},
@@ -427,6 +518,69 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		83394FC0174B2DAA0030B614 /* DTFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DTFoundation.framework;
+			remoteRef = 83394FBF174B2DAA0030B614 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		83394FC2174B2DAA0030B614 /* libDTFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTFoundation.a;
+			remoteRef = 83394FC1174B2DAA0030B614 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		83394FC4174B2DAA0030B614 /* UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.octest;
+			remoteRef = 83394FC3174B2DAA0030B614 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		83394FC6174B2DAA0030B614 /* libDTFoundation_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTFoundation_Mac.a;
+			remoteRef = 83394FC5174B2DAA0030B614 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		83394FC8174B2DAA0030B614 /* libDTHTMLParser.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTHTMLParser.a;
+			remoteRef = 83394FC7174B2DAA0030B614 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		83394FCA174B2DAA0030B614 /* libDTHTMLParser.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTHTMLParser.a;
+			remoteRef = 83394FC9174B2DAA0030B614 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		83394FCC174B2DAA0030B614 /* libDTZipArchive.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTZipArchive.a;
+			remoteRef = 83394FCB174B2DAA0030B614 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		83394FCE174B2DAA0030B614 /* libDTUTI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTUTI.a;
+			remoteRef = 83394FCD174B2DAA0030B614 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		83394FD0174B2DAA0030B614 /* libDTUTI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTUTI.a;
+			remoteRef = 83394FCF174B2DAA0030B614 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		CB87568117495775003159DF /* libRestKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -599,18 +753,15 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Balancer/Balancer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "Balancer/Balancer-Info.plist";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "Externals/DTFoundation/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -620,18 +771,15 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Balancer/Balancer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "Balancer/Balancer-Info.plist";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "Externals/DTFoundation/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

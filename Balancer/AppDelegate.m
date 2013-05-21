@@ -27,7 +27,7 @@
     
     // Set custom fonts for UILabels
     UIFont *titleTextFont = [UIFont fontWithName:BALANCER_FONT_BOLD size:20.0];
-    UIFont *mainFont = [UIFont fontWithName:BALANCER_FONT_REGULAR size:[UIFont systemFontSize]];
+    //UIFont *mainFont = [UIFont fontWithName:BALANCER_FONT_REGULAR size:[UIFont systemFontSize]];
     
     [[UINavigationBar appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
@@ -35,7 +35,7 @@
       UITextAttributeFont,
       nil]];
     
-    [[UILabel appearance] setFont:mainFont]; // TODO: change; uses deprecated method
+    //[[UILabel appearance] setFont:mainFont]; // TODO: change; uses deprecated method
     
     return YES;
 }
