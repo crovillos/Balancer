@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8309FF4A1742298000B7A335 /* Under Construction Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8309FF491742298000B7A335 /* Under Construction Logo.png */; };
 		83216D62174B6CB60054573F /* EditGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216D61174B6CB60054573F /* EditGoalViewController.m */; };
-		83216D70174B745D0054573F /* AddGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216D6F174B745D0054573F /* AddGoalViewController.m */; };
 		83216D8A174B75E20054573F /* brian_profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D7B174B75E20054573F /* brian_profilePic.png */; };
 		83216D8B174B75E20054573F /* catriona_profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D7C174B75E20054573F /* catriona_profilePic.png */; };
 		83216D8C174B75E20054573F /* chris_profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D7D174B75E20054573F /* chris_profilePic.png */; };
@@ -25,7 +24,12 @@
 		83216D96174B75E20054573F /* progress_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D87174B75E20054573F /* progress_icon.png */; };
 		83216D97174B75E20054573F /* social_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D88174B75E20054573F /* social_icon.png */; };
 		83216D98174B75E20054573F /* today_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D89174B75E20054573F /* today_logo.png */; };
-		83216D9B174B784F0054573F /* AddCustomGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216D9A174B784F0054573F /* AddCustomGoalViewController.m */; };
+		83216D9F174B7AA00054573F /* addStepToGoal_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D9C174B7AA00054573F /* addStepToGoal_icon.png */; };
+		83216DA0174B7AA00054573F /* editGoal_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D9D174B7AA00054573F /* editGoal_icon.png */; };
+		83216DA1174B7AA00054573F /* viewGoal_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D9E174B7AA00054573F /* viewGoal_icon.png */; };
+		83216DA7174B7C090054573F /* AddGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DA6174B7C090054573F /* AddGoalTableViewController.m */; };
+		83216DAA174B7DB30054573F /* AddCustomGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DA9174B7DB30054573F /* AddCustomGoalTableViewController.m */; };
+		83216DAE174B7E920054573F /* StepDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DAD174B7E920054573F /* StepDetailTableViewController.m */; };
 		8331FA4417422FD6000F0642 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA2D17422FD6000F0642 /* Activity.m */; };
 		8331FA4517422FD6000F0642 /* ActivityInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA2F17422FD6000F0642 /* ActivityInvite.m */; };
 		8331FA4617422FD6000F0642 /* ActivityList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3117422FD6000F0642 /* ActivityList.m */; };
@@ -144,8 +148,6 @@
 		8309FF491742298000B7A335 /* Under Construction Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Under Construction Logo.png"; sourceTree = "<group>"; };
 		83216D60174B6CB60054573F /* EditGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditGoalViewController.h; path = "View Controllers/EditGoalViewController.h"; sourceTree = "<group>"; };
 		83216D61174B6CB60054573F /* EditGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditGoalViewController.m; path = "View Controllers/EditGoalViewController.m"; sourceTree = "<group>"; };
-		83216D6E174B745D0054573F /* AddGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddGoalViewController.h; path = "View Controllers/AddGoalViewController.h"; sourceTree = "<group>"; };
-		83216D6F174B745D0054573F /* AddGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddGoalViewController.m; path = "View Controllers/AddGoalViewController.m"; sourceTree = "<group>"; };
 		83216D7B174B75E20054573F /* brian_profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brian_profilePic.png; path = Balancer/Images/brian_profilePic.png; sourceTree = "<group>"; };
 		83216D7C174B75E20054573F /* catriona_profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = catriona_profilePic.png; path = Balancer/Images/catriona_profilePic.png; sourceTree = "<group>"; };
 		83216D7D174B75E20054573F /* chris_profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chris_profilePic.png; path = Balancer/Images/chris_profilePic.png; sourceTree = "<group>"; };
@@ -161,8 +163,15 @@
 		83216D87174B75E20054573F /* progress_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = progress_icon.png; path = Balancer/Images/progress_icon.png; sourceTree = "<group>"; };
 		83216D88174B75E20054573F /* social_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = social_icon.png; path = Balancer/Images/social_icon.png; sourceTree = "<group>"; };
 		83216D89174B75E20054573F /* today_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = today_logo.png; path = Balancer/Images/today_logo.png; sourceTree = "<group>"; };
-		83216D99174B784F0054573F /* AddCustomGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCustomGoalViewController.h; path = "View Controllers/AddCustomGoalViewController.h"; sourceTree = "<group>"; };
-		83216D9A174B784F0054573F /* AddCustomGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCustomGoalViewController.m; path = "View Controllers/AddCustomGoalViewController.m"; sourceTree = "<group>"; };
+		83216D9C174B7AA00054573F /* addStepToGoal_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addStepToGoal_icon.png; path = Balancer/Images/addStepToGoal_icon.png; sourceTree = "<group>"; };
+		83216D9D174B7AA00054573F /* editGoal_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = editGoal_icon.png; path = Balancer/Images/editGoal_icon.png; sourceTree = "<group>"; };
+		83216D9E174B7AA00054573F /* viewGoal_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = viewGoal_icon.png; path = Balancer/Images/viewGoal_icon.png; sourceTree = "<group>"; };
+		83216DA5174B7C090054573F /* AddGoalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddGoalTableViewController.h; path = "View Controllers/AddGoalTableViewController.h"; sourceTree = "<group>"; };
+		83216DA6174B7C090054573F /* AddGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddGoalTableViewController.m; path = "View Controllers/AddGoalTableViewController.m"; sourceTree = "<group>"; };
+		83216DA8174B7DB30054573F /* AddCustomGoalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCustomGoalTableViewController.h; path = "View Controllers/AddCustomGoalTableViewController.h"; sourceTree = "<group>"; };
+		83216DA9174B7DB30054573F /* AddCustomGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCustomGoalTableViewController.m; path = "View Controllers/AddCustomGoalTableViewController.m"; sourceTree = "<group>"; };
+		83216DAC174B7E920054573F /* StepDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepDetailTableViewController.h; path = "View Controllers/StepDetailTableViewController.h"; sourceTree = "<group>"; };
+		83216DAD174B7E920054573F /* StepDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepDetailTableViewController.m; path = "View Controllers/StepDetailTableViewController.m"; sourceTree = "<group>"; };
 		8331FA2C17422FD6000F0642 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Balancer/Models/Activity.h; sourceTree = SOURCE_ROOT; };
 		8331FA2D17422FD6000F0642 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = Balancer/Models/Activity.m; sourceTree = SOURCE_ROOT; };
 		8331FA2E17422FD6000F0642 /* ActivityInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityInvite.h; path = Balancer/Models/ActivityInvite.h; sourceTree = SOURCE_ROOT; };
@@ -264,10 +273,12 @@
 		8323FB4E173EB5A40016213D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				83216D99174B784F0054573F /* AddCustomGoalViewController.h */,
-				83216D9A174B784F0054573F /* AddCustomGoalViewController.m */,
-				83216D6E174B745D0054573F /* AddGoalViewController.h */,
-				83216D6F174B745D0054573F /* AddGoalViewController.m */,
+				83216DAC174B7E920054573F /* StepDetailTableViewController.h */,
+				83216DAD174B7E920054573F /* StepDetailTableViewController.m */,
+				83216DA8174B7DB30054573F /* AddCustomGoalTableViewController.h */,
+				83216DA9174B7DB30054573F /* AddCustomGoalTableViewController.m */,
+				83216DA5174B7C090054573F /* AddGoalTableViewController.h */,
+				83216DA6174B7C090054573F /* AddGoalTableViewController.m */,
 				83216D60174B6CB60054573F /* EditGoalViewController.h */,
 				83216D61174B6CB60054573F /* EditGoalViewController.m */,
 				83B34CC717423591001EAEAC /* GoalDetailsViewController.h */,
@@ -320,6 +331,9 @@
 		83AEACF3173EF729006E1151 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				83216D9C174B7AA00054573F /* addStepToGoal_icon.png */,
+				83216D9D174B7AA00054573F /* editGoal_icon.png */,
+				83216D9E174B7AA00054573F /* viewGoal_icon.png */,
 				83216D7B174B75E20054573F /* brian_profilePic.png */,
 				83216D7C174B75E20054573F /* catriona_profilePic.png */,
 				83216D7D174B75E20054573F /* chris_profilePic.png */,
@@ -614,6 +628,9 @@
 				83216D96174B75E20054573F /* progress_icon.png in Resources */,
 				83216D97174B75E20054573F /* social_icon.png in Resources */,
 				83216D98174B75E20054573F /* today_logo.png in Resources */,
+				83216D9F174B7AA00054573F /* addStepToGoal_icon.png in Resources */,
+				83216DA0174B7AA00054573F /* editGoal_icon.png in Resources */,
+				83216DA1174B7AA00054573F /* viewGoal_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,8 +665,9 @@
 				8331FA6717422FE3000F0642 /* TodayTableViewController.m in Sources */,
 				83B34CC917423591001EAEAC /* GoalDetailsViewController.m in Sources */,
 				83216D62174B6CB60054573F /* EditGoalViewController.m in Sources */,
-				83216D70174B745D0054573F /* AddGoalViewController.m in Sources */,
-				83216D9B174B784F0054573F /* AddCustomGoalViewController.m in Sources */,
+				83216DA7174B7C090054573F /* AddGoalTableViewController.m in Sources */,
+				83216DAA174B7DB30054573F /* AddCustomGoalTableViewController.m in Sources */,
+				83216DAE174B7E920054573F /* StepDetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  AddGoalViewController.h
+//  AddCustomGoalTableViewController.h
 //  Balancer
 //
 //  Created by Chris Rovillos on 5/21/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddGoalViewController : UIViewController
+@interface AddCustomGoalTableViewController : UITableViewController
 
 @end

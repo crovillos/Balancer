@@ -141,15 +141,15 @@
             
             goalLabel.text = [self titleForGoalAtSection:indexPath.section];
             
-           // [btn addTarget:self action:@selector(onClicked:) forControlEvents:UIControlEventTouchUpInside];
+            // [btn addTarget:self action:@selector(onClicked:) forControlEvents:UIControlEventTouchUpInside];
             
             if ([self.expandedSections containsIndex:indexPath.section])
             {
-            //    cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
+                //    cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
             }
             else
             {
-             //   cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
+                //   cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
             }
         }
         else
@@ -270,31 +270,31 @@
     if ([sender isKindOfClass:[UITableViewCell class]]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         if (indexPath) {
-            if ([segue.identifier isEqualToString:@"Show Goal Detail"]) {
+            if ([segue.identifier isEqualToString:@"Show Goal Details"]) {
                 if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
                     [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)self.goals[indexPath.row])];
                 }
             }
             if ([segue.identifier isEqualToString:@"Add Goal"])
             {
-               //TODO
+                //TODO
             }
-        if ([segue.identifier isEqualToString:@"Edit Goal"])
-        {
-            if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
-                [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)self.goals[indexPath.row])];
+            if ([segue.identifier isEqualToString:@"Edit Goal"])
+            {
+                if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
+                    [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)self.goals[indexPath.row])];
+                }
+                //UINavigationController *navigationController =
+                ////segue.destinationViewController;
+                //PlayerDetailsViewController
+                //*playerDetailsViewController =
+                //[[navigationController viewControllers]
+                // objectAtIndex:0];
+                //playerDetailsViewController.delegate = self;
             }
-            //UINavigationController *navigationController =
-            ////segue.destinationViewController;
-            //PlayerDetailsViewController
-            //*playerDetailsViewController =
-            //[[navigationController viewControllers]
-            // objectAtIndex:0];
-            //playerDetailsViewController.delegate = self;
-        }
         }
     }
-
+    
 }
 
 @end
