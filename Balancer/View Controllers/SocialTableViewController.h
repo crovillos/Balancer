@@ -11,6 +11,6 @@
 @interface SocialTableViewController : UITableViewController
 
 /** The model for this view controller, obtained from the network */
-@property (nonatomic, strong) NSArray *socialStream; // of Goal
+@property (nonatomic, strong) NSMutableArray *socialStream; // of Goal
 
 @end

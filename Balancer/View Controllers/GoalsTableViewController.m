@@ -65,9 +65,7 @@
 
 - (BOOL)tableView:(UITableView *)tableView canCollapseSection:(NSInteger)section
 {
-    if (section>0) return YES;
-    
-    return NO;
+    return YES;
 }
 
 
@@ -106,7 +104,7 @@
         {
             Goal *goal = (Goal*)self.goals[section];
             
-            return [goal.activities count]; // return rows when expanded
+            return [goal.activities count] + 1; // return rows when expanded
         }
         
         return 1; // only top row showing
@@ -114,7 +112,6 @@
     
     // Return the number of rows in the section.
     return 1;
-    //return [self.goals count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -141,15 +138,15 @@
             
             goalLabel.text = [self titleForGoalAtSection:indexPath.section];
             
-           // [btn addTarget:self action:@selector(onClicked:) forControlEvents:UIControlEventTouchUpInside];
+            // [btn addTarget:self action:@selector(onClicked:) forControlEvents:UIControlEventTouchUpInside];
             
             if ([self.expandedSections containsIndex:indexPath.section])
             {
-            //    cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
+                //    cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
             }
             else
             {
-             //   cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
+                //   cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
             }
         }
         else
@@ -158,16 +155,13 @@
             // all other rows
             Goal *goalAtSection = (Goal *)self.goals[indexPath.section];
             // have activity id row within goal section
-            Activity *activityAtRow = (Activity *)goalAtSection.activities[indexPath.row];
-            cell.textLabel.text = activityAtRow.description;
-            cell.accessoryView = nil;
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            Activity *activityAtRow = (Activity *)goalAtSection.activities[indexPath.row - 1];
+            cell.textLabel.text = activityAtRow.name;
         }
     }
     else
     {
         cell = [tableView dequeueReusableCellWithIdentifier:StepCellIdentifier];
-        cell.accessoryView = nil;
         cell.textLabel.text = @"Normal Cell";
         
     }
@@ -270,13 +264,31 @@
     if ([sender isKindOfClass:[UITableViewCell class]]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         if (indexPath) {
-            if ([segue.identifier isEqualToString:@"Show Goal Detail"]) {
+            if ([segue.identifier isEqualToString:@"Show Goal Details"]) {
                 if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
                     [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)self.goals[indexPath.row])];
                 }
             }
+            if ([segue.identifier isEqualToString:@"Add Goal"])
+            {
+                //TODO
+            }
+            if ([segue.identifier isEqualToString:@"Edit Goal"])
+            {
+                if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
+                    [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)self.goals[indexPath.row])];
+                }
+                //UINavigationController *navigationController =
+                ////segue.destinationViewController;
+                //PlayerDetailsViewController
+                //*playerDetailsViewController =
+                //[[navigationController viewControllers]
+                // objectAtIndex:0];
+                //playerDetailsViewController.delegate = self;
+            }
         }
     }
+    
 }
 
 @end

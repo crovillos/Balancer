@@ -11,6 +11,6 @@
 
 @interface ActivityInvite : Invite
 
-@property (nonatomic, strong) Activity* acitivity;
+@property (nonatomic, strong) Activity* activity;
 
 @end
