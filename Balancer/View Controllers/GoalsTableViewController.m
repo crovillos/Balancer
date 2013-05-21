@@ -30,6 +30,7 @@
     [super viewDidLoad];
     
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
     [self setGoals:appDelegate.dummyGoals];
     
     if (!_expandedSections)
@@ -98,12 +99,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *GoalCellIdentifier = @"Goal";
+    static NSString *StepCellIdentifier = @"Step";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+    UITableViewCell *cell;
     
     // Configure the cell...
     
@@ -111,19 +110,22 @@
     {
         if (!indexPath.row) // indexPath.row == 0; the first row
         {
-            cell.textLabel.text = [self titleForGoalAtSection:indexPath.section]; // only top row showing
+            cell = [tableView dequeueReusableCellWithIdentifier:GoalCellIdentifier];
+            assert(cell != nil);
+            //cell.textLabel.text = [self titleForGoalAtSection:indexPath.section]; // only top row showing
             
             if ([self.expandedSections containsIndex:indexPath.section])
             {
-                cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
+            //    cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
             }
             else
             {
-                cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
+             //   cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
             }
         }
         else
         {
+            cell = [tableView dequeueReusableCellWithIdentifier:StepCellIdentifier];
             // all other rows
             Goal *goalAtSection = (Goal *)self.goals[indexPath.section];
             // have activity id row within goal section
@@ -135,6 +137,7 @@
     }
     else
     {
+        cell = [tableView dequeueReusableCellWithIdentifier:StepCellIdentifier];
         cell.accessoryView = nil;
         cell.textLabel.text = @"Normal Cell";
         
