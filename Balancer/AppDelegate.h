@@ -14,5 +14,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) NSMutableArray *dummyGoals;
+@property (strong, nonatomic) NSMutableArray *dummySocial;
+@property (strong, nonatomic) NSMutableArray *dummyInvites;
 
 @end
