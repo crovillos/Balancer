@@ -29,7 +29,9 @@
 		83216DA1174B7AA00054573F /* viewGoal_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D9E174B7AA00054573F /* viewGoal_icon.png */; };
 		83216DA7174B7C090054573F /* AddGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DA6174B7C090054573F /* AddGoalTableViewController.m */; };
 		83216DAA174B7DB30054573F /* AddCustomGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DA9174B7DB30054573F /* AddCustomGoalTableViewController.m */; };
-		83216DAE174B7E920054573F /* StepDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DAD174B7E920054573F /* StepDetailTableViewController.m */; };
+		83216DAE174B7E920054573F /* StepDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DAD174B7E920054573F /* StepDetailsTableViewController.m */; };
+		83216DBB174B883D0054573F /* AddStepTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DBA174B883D0054573F /* AddStepTableViewController.m */; };
+		83216DBE174B8D8F0054573F /* GoalDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DBD174B8D8F0054573F /* GoalDetailsTableViewController.m */; };
 		8331FA4417422FD6000F0642 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA2D17422FD6000F0642 /* Activity.m */; };
 		8331FA4517422FD6000F0642 /* ActivityInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA2F17422FD6000F0642 /* ActivityInvite.m */; };
 		8331FA4617422FD6000F0642 /* ActivityList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3117422FD6000F0642 /* ActivityList.m */; };
@@ -59,7 +61,6 @@
 		83AEACEE173EF6D9006E1151 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACED173EF6D9006E1151 /* Default@2x.png */; };
 		83AEACF0173EF6E7006E1151 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACEF173EF6E7006E1151 /* Default-568h@2x.png */; };
 		83AEACF2173EF70B006E1151 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACF1173EF70B006E1151 /* Default.png */; };
-		83B34CC917423591001EAEAC /* GoalDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B34CC817423591001EAEAC /* GoalDetailsViewController.m */; };
 		83DD42D9173447DB00FA7408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42D8173447DB00FA7408 /* UIKit.framework */; };
 		83DD42DB173447DB00FA7408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DA173447DB00FA7408 /* Foundation.framework */; };
 		83DD42DD173447DB00FA7408 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DC173447DB00FA7408 /* CoreGraphics.framework */; };
@@ -170,8 +171,12 @@
 		83216DA6174B7C090054573F /* AddGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddGoalTableViewController.m; path = "View Controllers/AddGoalTableViewController.m"; sourceTree = "<group>"; };
 		83216DA8174B7DB30054573F /* AddCustomGoalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCustomGoalTableViewController.h; path = "View Controllers/AddCustomGoalTableViewController.h"; sourceTree = "<group>"; };
 		83216DA9174B7DB30054573F /* AddCustomGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCustomGoalTableViewController.m; path = "View Controllers/AddCustomGoalTableViewController.m"; sourceTree = "<group>"; };
-		83216DAC174B7E920054573F /* StepDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepDetailTableViewController.h; path = "View Controllers/StepDetailTableViewController.h"; sourceTree = "<group>"; };
-		83216DAD174B7E920054573F /* StepDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepDetailTableViewController.m; path = "View Controllers/StepDetailTableViewController.m"; sourceTree = "<group>"; };
+		83216DAC174B7E920054573F /* StepDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepDetailsTableViewController.h; path = "View Controllers/StepDetailsTableViewController.h"; sourceTree = "<group>"; };
+		83216DAD174B7E920054573F /* StepDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepDetailsTableViewController.m; path = "View Controllers/StepDetailsTableViewController.m"; sourceTree = "<group>"; };
+		83216DB9174B883C0054573F /* AddStepTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddStepTableViewController.h; path = "View Controllers/AddStepTableViewController.h"; sourceTree = "<group>"; };
+		83216DBA174B883D0054573F /* AddStepTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddStepTableViewController.m; path = "View Controllers/AddStepTableViewController.m"; sourceTree = "<group>"; };
+		83216DBC174B8D8F0054573F /* GoalDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalDetailsTableViewController.h; sourceTree = "<group>"; };
+		83216DBD174B8D8F0054573F /* GoalDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalDetailsTableViewController.m; sourceTree = "<group>"; };
 		8331FA2C17422FD6000F0642 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Balancer/Models/Activity.h; sourceTree = SOURCE_ROOT; };
 		8331FA2D17422FD6000F0642 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = Balancer/Models/Activity.m; sourceTree = SOURCE_ROOT; };
 		8331FA2E17422FD6000F0642 /* ActivityInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityInvite.h; path = Balancer/Models/ActivityInvite.h; sourceTree = SOURCE_ROOT; };
@@ -221,8 +226,6 @@
 		83AEACED173EF6D9006E1151 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		83AEACEF173EF6E7006E1151 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		83AEACF1173EF70B006E1151 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		83B34CC717423591001EAEAC /* GoalDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalDetailsViewController.h; path = "View Controllers/GoalDetailsViewController.h"; sourceTree = "<group>"; };
-		83B34CC817423591001EAEAC /* GoalDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalDetailsViewController.m; path = "View Controllers/GoalDetailsViewController.m"; sourceTree = "<group>"; };
 		83DD42D5173447DB00FA7408 /* Balancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DD42D8173447DB00FA7408 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83DD42DA173447DB00FA7408 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -273,16 +276,18 @@
 		8323FB4E173EB5A40016213D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				83216DAC174B7E920054573F /* StepDetailTableViewController.h */,
-				83216DAD174B7E920054573F /* StepDetailTableViewController.m */,
+				83216DBC174B8D8F0054573F /* GoalDetailsTableViewController.h */,
+				83216DBD174B8D8F0054573F /* GoalDetailsTableViewController.m */,
+				83216DB9174B883C0054573F /* AddStepTableViewController.h */,
+				83216DBA174B883D0054573F /* AddStepTableViewController.m */,
+				83216DAC174B7E920054573F /* StepDetailsTableViewController.h */,
+				83216DAD174B7E920054573F /* StepDetailsTableViewController.m */,
 				83216DA8174B7DB30054573F /* AddCustomGoalTableViewController.h */,
 				83216DA9174B7DB30054573F /* AddCustomGoalTableViewController.m */,
 				83216DA5174B7C090054573F /* AddGoalTableViewController.h */,
 				83216DA6174B7C090054573F /* AddGoalTableViewController.m */,
 				83216D60174B6CB60054573F /* EditGoalViewController.h */,
 				83216D61174B6CB60054573F /* EditGoalViewController.m */,
-				83B34CC717423591001EAEAC /* GoalDetailsViewController.h */,
-				83B34CC817423591001EAEAC /* GoalDetailsViewController.m */,
 				8331FA5017422FE3000F0642 /* GoalsNavigationController.h */,
 				8331FA5117422FE3000F0642 /* GoalsNavigationController.m */,
 				8331FA5217422FE3000F0642 /* GoalsTableViewController.h */,
@@ -663,11 +668,12 @@
 				8331FA6517422FE3000F0642 /* SocialTableViewController.m in Sources */,
 				8331FA6617422FE3000F0642 /* TodayNavigationController.m in Sources */,
 				8331FA6717422FE3000F0642 /* TodayTableViewController.m in Sources */,
-				83B34CC917423591001EAEAC /* GoalDetailsViewController.m in Sources */,
 				83216D62174B6CB60054573F /* EditGoalViewController.m in Sources */,
 				83216DA7174B7C090054573F /* AddGoalTableViewController.m in Sources */,
 				83216DAA174B7DB30054573F /* AddCustomGoalTableViewController.m in Sources */,
-				83216DAE174B7E920054573F /* StepDetailTableViewController.m in Sources */,
+				83216DAE174B7E920054573F /* StepDetailsTableViewController.m in Sources */,
+				83216DBB174B883D0054573F /* AddStepTableViewController.m in Sources */,
+				83216DBE174B8D8F0054573F /* GoalDetailsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

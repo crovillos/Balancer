@@ -134,11 +134,13 @@
             UILabel *goalLabel = (UILabel *)[cell viewWithTag:999];
             UIButton *addButton = (UIButton *)[cell viewWithTag:1];
             UIButton *editButton = (UIButton *)[cell viewWithTag:2];
-            UIButton *searchButton = (UIButton *)[cell viewWithTag:3];
+            UIButton *detailsButton = (UIButton *)[cell viewWithTag:3];
             
             goalLabel.text = [self titleForGoalAtSection:indexPath.section];
-            
-            // [btn addTarget:self action:@selector(onClicked:) forControlEvents:UIControlEventTouchUpInside];
+
+            //[addButton addTarget:self action:@selector(onClickedAddStepButton:) forControlEvents:UIControlEventTouchUpInside];
+            //[editButton addTarget:self action:@selector(onClickedEditGoalButton:) forControlEvents:UIControlEventTouchUpInside];
+            //[detailsButton addTarget:self action:@selector(onClickedShowGoalDetailsButton:) forControlEvents:UIControlEventTouchUpInside];
             
             if ([self.expandedSections containsIndex:indexPath.section])
             {
@@ -177,6 +179,29 @@
     //return cell;
 }
 
+-(void) onClickedAddStepButton: (id) sender{
+    
+    UITableViewCell *clickedCell = (UITableViewCell *)[[sender superview] superview];
+    
+    NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
+    
+}
+
+-(void) onClickedEditGoalButton: (id) sender{
+    
+    UITableViewCell *clickedCell = (UITableViewCell *)[[sender superview] superview];
+    
+    NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
+    
+}
+
+-(void) onClickedShowGoalDetailsButton: (id) sender{
+    
+    UITableViewCell *clickedCell = (UITableViewCell *)[[sender superview] superview];
+    
+    NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
+    
+}
 
 #pragma mark - Table view delegate
 
@@ -263,6 +288,11 @@
 {
     if ([sender isKindOfClass:[UITableViewCell class]]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+
+        
+    } else if ([sender isKindOfClass:[UIButton class]]){
+        UITableViewCell *clickedCell = (UITableViewCell *)[[sender superview] superview];
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:clickedCell];
         if (indexPath) {
             if ([segue.identifier isEqualToString:@"Show Goal Details"]) {
                 if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
@@ -278,17 +308,9 @@
                 if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
                     [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)self.goals[indexPath.row])];
                 }
-                //UINavigationController *navigationController =
-                ////segue.destinationViewController;
-                //PlayerDetailsViewController
-                //*playerDetailsViewController =
-                //[[navigationController viewControllers]
-                // objectAtIndex:0];
-                //playerDetailsViewController.delegate = self;
             }
-        }
     }
-    
+    }
 }
 
 @end

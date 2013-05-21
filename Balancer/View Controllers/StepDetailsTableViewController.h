@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StepDetailTableViewController : UITableViewController
+@interface StepDetailsTableViewController : UITableViewController
 
 @end

@@ -9,7 +9,7 @@
             <objects>
                 <tableViewController id="sih-ZT-NwH" customClass="TodayTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mcl-wC-x0L">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -34,7 +34,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="cZJ-0a-jUN" kind="push" id="uvq-0h-uEB"/>
+                                    <segue destination="cZJ-0a-jUN" kind="push" identifier="Show Step Details" id="uvq-0h-uEB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -49,12 +49,42 @@
             </objects>
             <point key="canvasLocation" x="877" y="-661"/>
         </scene>
+        <!--Add Step Table View Controller-->
+        <scene sceneID="9g8-b4-Ixm">
+            <objects>
+                <tableViewController id="u8D-um-qL1" customClass="AddStepTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BBa-LR-RaC">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pxH-9T-bxJ">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u8D-um-qL1" id="rd0-Hl-69L"/>
+                            <outlet property="delegate" destination="u8D-um-qL1" id="AFC-ZA-nyu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="BuZ-HG-2Wn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8cS-Bb-hUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479" y="-1428"/>
+        </scene>
         <!--Social Table View Controller - Social-->
         <scene sceneID="SWQ-Wu-bMk">
             <objects>
                 <tableViewController id="ESx-nY-SOK" customClass="SocialTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vem-V0-fdj">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -100,11 +130,11 @@
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="YVB-SM-aRE" secondAttribute="bottom" constant="21" id="1SZ-P7-HQP"/>
+                                    <constraint firstItem="fL8-Fb-oKG" firstAttribute="top" secondItem="z42-7z-Jua" secondAttribute="top" constant="-1" id="8at-zg-HrS"/>
                                     <constraint firstItem="9cH-oz-hKr" firstAttribute="leading" secondItem="z42-7z-Jua" secondAttribute="leading" constant="88" id="8wp-qF-2Tf"/>
                                     <constraint firstItem="9gL-7A-91k" firstAttribute="leading" secondItem="z42-7z-Jua" secondAttribute="leading" constant="20" type="default" id="M5Q-YZ-sqs"/>
                                     <constraint firstItem="YVB-SM-aRE" firstAttribute="leading" secondItem="9cH-oz-hKr" secondAttribute="leading" type="default" id="VB5-PJ-r8W"/>
                                     <constraint firstAttribute="trailing" secondItem="fL8-Fb-oKG" secondAttribute="trailing" constant="20" type="default" id="d4s-se-Pdj"/>
-                                    <constraint firstItem="fL8-Fb-oKG" firstAttribute="top" secondItem="z42-7z-Jua" secondAttribute="top" type="default" id="dEz-0N-1Pa"/>
                                     <constraint firstItem="9gL-7A-91k" firstAttribute="top" secondItem="z42-7z-Jua" secondAttribute="top" constant="18" id="sJ2-Lr-M8J"/>
                                     <constraint firstItem="9cH-oz-hKr" firstAttribute="top" secondItem="9gL-7A-91k" secondAttribute="top" type="default" id="zks-by-9zh"/>
                                 </constraints>
@@ -158,7 +188,7 @@
             <objects>
                 <tableViewController id="xGs-dH-6AL" customClass="GoalsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qMh-uB-u1c">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -171,7 +201,8 @@
                                     <subviews>
                                         <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jq8-4W-Ai5">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="22" id="zYt-PO-8DV"/>
+                                                <constraint firstAttribute="height" constant="23" id="8gy-MK-W1w"/>
+                                                <constraint firstAttribute="width" constant="96" id="cph-8T-1NB"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <state key="normal" title="Add" image="addStepToGoal_icon.png">
@@ -181,11 +212,13 @@
                                             <state key="highlighted">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="u8D-um-qL1" kind="modal" identifier="Add Step" id="kkS-dm-1cL"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBc-QI-4r2">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="22" id="YLS-fD-OoD"/>
-                                                <constraint firstAttribute="height" constant="23" id="yZe-v1-YeI"/>
+                                                <constraint firstAttribute="width" constant="96" id="hFt-jb-fOk"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <state key="normal" title="Edit" image="editGoal_icon.png">
@@ -201,7 +234,7 @@
                                         </button>
                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYr-CJ-AmL">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="22" id="5xP-hh-lcJ"/>
+                                                <constraint firstAttribute="width" constant="96" id="yVH-de-dn0"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <state key="normal" title="Info" image="viewGoal_icon.png">
@@ -212,7 +245,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="1bJ-8Q-bCG" kind="push" identifier="Show Goal Details" id="Sou-b5-CIh"/>
+                                                <segue destination="bHc-vc-aFY" kind="push" identifier="Show Goal Details" id="QYa-xd-5ns"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="999" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIo-HD-RzL">
@@ -226,14 +259,14 @@
                                 <constraints>
                                     <constraint firstItem="yIo-HD-RzL" firstAttribute="top" secondItem="eIs-fm-1RE" secondAttribute="top" constant="20" type="default" id="4vo-bJ-XKU"/>
                                     <constraint firstItem="cBc-QI-4r2" firstAttribute="top" secondItem="Jq8-4W-Ai5" secondAttribute="top" type="default" id="FF5-Ct-PlS"/>
-                                    <constraint firstAttribute="trailing" secondItem="WYr-CJ-AmL" secondAttribute="trailing" constant="15" id="ILH-5q-PwM"/>
+                                    <constraint firstAttribute="trailing" secondItem="WYr-CJ-AmL" secondAttribute="trailing" constant="20" type="default" id="I7V-Aj-N2X"/>
                                     <constraint firstItem="Jq8-4W-Ai5" firstAttribute="bottom" secondItem="cBc-QI-4r2" secondAttribute="bottom" type="default" id="KQz-50-q3Z"/>
+                                    <constraint firstItem="Jq8-4W-Ai5" firstAttribute="leading" secondItem="yIo-HD-RzL" secondAttribute="leading" type="default" id="O13-F2-lwF"/>
                                     <constraint firstItem="WYr-CJ-AmL" firstAttribute="bottom" secondItem="cBc-QI-4r2" secondAttribute="bottom" type="default" id="ZQn-tu-3fm"/>
-                                    <constraint firstItem="yIo-HD-RzL" firstAttribute="leading" secondItem="Jq8-4W-Ai5" secondAttribute="leading" type="default" id="buK-B5-4Z5"/>
+                                    <constraint firstItem="cBc-QI-4r2" firstAttribute="centerX" secondItem="eIs-fm-1RE" secondAttribute="centerX" type="default" id="cow-jS-CLq"/>
                                     <constraint firstItem="WYr-CJ-AmL" firstAttribute="top" secondItem="cBc-QI-4r2" secondAttribute="top" type="default" id="ded-mw-kgw"/>
-                                    <constraint firstItem="cBc-QI-4r2" firstAttribute="centerX" secondItem="eIs-fm-1RE" secondAttribute="centerX" type="default" id="gkA-KT-7HK"/>
-                                    <constraint firstAttribute="bottom" secondItem="Jq8-4W-Ai5" secondAttribute="bottom" constant="12" id="hLV-YD-wKr"/>
-                                    <constraint firstItem="yIo-HD-RzL" firstAttribute="leading" secondItem="eIs-fm-1RE" secondAttribute="leading" constant="12" id="hXK-Ep-8v6"/>
+                                    <constraint firstItem="WYr-CJ-AmL" firstAttribute="top" secondItem="eIs-fm-1RE" secondAttribute="top" constant="65" id="oYn-IP-1OE"/>
+                                    <constraint firstItem="yIo-HD-RzL" firstAttribute="leading" secondItem="eIs-fm-1RE" secondAttribute="leading" constant="12" id="the-6k-NW3"/>
                                 </constraints>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="Step" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Step" textLabel="Gha-Eg-hiX" rowHeight="45" style="IBUITableViewCellStyleDefault" id="i3u-rD-Qsl">
@@ -252,7 +285,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="cZJ-0a-jUN" kind="push" id="QW9-Xl-EgU"/>
+                                    <segue destination="cZJ-0a-jUN" kind="push" identifier="Show Step Details" id="QW9-Xl-EgU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -264,7 +297,7 @@
                     <navigationItem key="navigationItem" title="Goals" id="gXU-Hc-hQK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hf3-2v-poi">
                             <connections>
-                                <segue destination="uBB-Si-ajI" kind="modal" id="7jQ-8k-LY1"/>
+                                <segue destination="uBB-Si-ajI" kind="modal" identifier="Add Goal" id="7jQ-8k-LY1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -273,38 +306,50 @@
             </objects>
             <point key="canvasLocation" x="-1701" y="819"/>
         </scene>
-        <!--Goal Details View Controller - Goal Details-->
-        <scene sceneID="Qqc-xK-le8">
+        <!--Goal Details Table View Controller - Goal Details-->
+        <scene sceneID="4CE-OW-Ooq">
             <objects>
-                <viewController id="1bJ-8Q-bCG" customClass="GoalDetailsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="P97-xS-UTa">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Goal Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPZ-rq-vay">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="veL-a6-m5n">
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="284" id="jXX-lQ-hOO"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Complete By" textLabel="LU0-gy-fgA" detailTextLabel="Lyz-DN-Sq0" style="IBUITableViewCellStyleValue1" id="Psd-tx-JT0">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableViewController id="bHc-vc-aFY" customClass="GoalDetailsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BeT-hU-Ovn">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Description" id="7pi-SX-ym2">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8iH-Re-zZZ" style="IBUITableViewCellStyleDefault" id="Om5-Me-Z61">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Complete By" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU0-gy-fgA">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iH-Re-zZZ">
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyz-DN-Sq0">
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="CR6-bq-AOS">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="kG3-Ij-zpZ" detailTextLabel="psh-iM-EYN" style="IBUITableViewCellStyleValue1" id="5ZK-YF-i3n">
+                                        <rect key="frame" x="0.0" y="112" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Complete by" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG3-Ij-zpZ">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psh-iM-EYN">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -313,19 +358,19 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Goaled" textLabel="dpX-I0-KBH" detailTextLabel="WZG-bE-AFS" style="IBUITableViewCellStyleValue1" id="QOq-jJ-Wit">
-                                        <rect key="frame" x="0.0" y="91" width="320" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vI6-wo-bRW" detailTextLabel="hg0-sD-RCs" style="IBUITableViewCellStyleValue1" id="9Ns-qS-IsV">
+                                        <rect key="frame" x="0.0" y="157" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Goaled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpX-I0-KBH">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Goaled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI6-wo-bRW">
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZG-bE-AFS">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hg0-sD-RCs">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -334,45 +379,31 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="1bJ-8Q-bCG" id="6xw-l4-SGk"/>
-                                    <outlet property="delegate" destination="1bJ-8Q-bCG" id="XsL-BK-Y1J"/>
-                                </connections>
-                            </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3L-Va-Br2">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="8jP-hj-cNN"/>
-                                    <constraint firstAttribute="width" constant="122" id="j2I-ls-q9Y"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="veL-a6-m5n" firstAttribute="bottom" secondItem="P97-xS-UTa" secondAttribute="bottom" type="default" id="3Ex-E8-lTV"/>
-                            <constraint firstItem="gPZ-rq-vay" firstAttribute="top" secondItem="P97-xS-UTa" secondAttribute="top" constant="20" symbolic="YES" type="default" id="71W-Gr-lrf"/>
-                            <constraint firstItem="O3L-Va-Br2" firstAttribute="top" secondItem="P97-xS-UTa" secondAttribute="top" constant="20" symbolic="YES" type="default" id="MGU-ur-s1d"/>
-                            <constraint firstItem="gPZ-rq-vay" firstAttribute="leading" secondItem="P97-xS-UTa" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Rie-DJ-0q9"/>
-                            <constraint firstItem="veL-a6-m5n" firstAttribute="leading" secondItem="P97-xS-UTa" secondAttribute="leading" type="default" id="a8g-RC-Zix"/>
-                            <constraint firstItem="veL-a6-m5n" firstAttribute="trailing" secondItem="P97-xS-UTa" secondAttribute="trailing" type="default" id="bQA-2b-yFV"/>
-                            <constraint firstAttribute="trailing" secondItem="O3L-Va-Br2" secondAttribute="trailing" constant="26" id="hAi-4y-HU5"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Goal Details" id="vm8-39-akY"/>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="bHc-vc-aFY" id="A0y-bs-E0V"/>
+                            <outlet property="delegate" destination="bHc-vc-aFY" id="WHs-xO-udG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Goal Details" id="gBR-5r-fVx"/>
                     <connections>
-                        <outlet property="goalDescriptionLabel" destination="gPZ-rq-vay" id="cCh-2a-gPp"/>
+                        <outlet property="completeByLabel" destination="psh-iM-EYN" id="N30-L2-mqR"/>
+                        <outlet property="goalDescriptionLabel" destination="8iH-Re-zZZ" id="VfJ-rg-gOk"/>
+                        <outlet property="goaledLabel" destination="hg0-sD-RCs" id="fNJ-5F-gCG"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eGp-vH-aTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mc3-9s-KfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1053" y="799"/>
+            <point key="canvasLocation" x="-1077" y="771"/>
         </scene>
         <!--Add Goal Table View Controller - Add Goal-->
         <scene sceneID="VOm-GA-Uqi">
             <objects>
                 <tableViewController id="n4h-6N-8xh" customClass="AddGoalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="noZ-Hu-ai8">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -408,7 +439,7 @@
             <objects>
                 <tableViewController id="ZVv-JW-akH" customClass="AddCustomGoalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EDy-Sk-Wla">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -441,7 +472,7 @@
             <objects>
                 <viewController id="xuH-Qe-PZA" customClass="EditGoalViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e5I-16-P3N">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdh-5n-xRE">
@@ -486,7 +517,7 @@
             <objects>
                 <viewController id="d8Y-Ql-jE3" customClass="ProgressViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ukd-7U-PxP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Under Construction Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="xdz-Vj-Qbf">
@@ -552,12 +583,12 @@
             </objects>
             <point key="canvasLocation" x="-416" y="166"/>
         </scene>
-        <!--Step Detail Table View Controller-->
+        <!--Step Details Table View Controller - Step Detail-->
         <scene sceneID="6PO-Ek-ZaP">
             <objects>
-                <tableViewController id="cZJ-0a-jUN" customClass="StepDetailTableViewController" sceneMemberID="viewController">
+                <tableViewController id="cZJ-0a-jUN" customClass="StepDetailsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2eQ-zC-qFd">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -576,11 +607,11 @@
                             <outlet property="delegate" destination="cZJ-0a-jUN" id="35C-ng-ZDQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="GaH-0j-RKA"/>
+                    <navigationItem key="navigationItem" title="Step Detail" id="GaH-0j-RKA"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ej2-vi-ggN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="1820"/>
+            <point key="canvasLocation" x="351" y="-1476"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xNc-nt-Kup">
@@ -618,6 +649,24 @@
             </objects>
             <point key="canvasLocation" x="-2190" y="2568"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DUY-ir-vnU">
+            <objects>
+                <navigationController id="cel-Te-a7O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HQ3-ID-yTc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u8D-um-qL1" kind="relationship" relationship="rootViewController" id="vWT-wT-VSR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8L-D9-eve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1005" y="-1428"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Under Construction Logo.png" width="877" height="375"/>
@@ -629,12 +678,65 @@
         <image name="today_logo.png" width="44" height="51"/>
         <image name="viewGoal_icon.png" width="69" height="69"/>
     </resources>
+    <classes>
+        <class className="AddCustomGoalTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCustomGoalTableViewController.h"/>
+        </class>
+        <class className="AddGoalTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGoalTableViewController.h"/>
+        </class>
+        <class className="AddStepTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddStepTableViewController.h"/>
+        </class>
+        <class className="EditGoalViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditGoalViewController.h"/>
+        </class>
+        <class className="GoalDetailsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalDetailsTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="completeByLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goalDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goaledLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GoalsNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsNavigationController.h"/>
+        </class>
+        <class className="GoalsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsTableViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ProgressNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressNavigationController.h"/>
+        </class>
+        <class className="ProgressViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
+        </class>
+        <class className="SocialNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialNavigationController.h"/>
+        </class>
+        <class className="SocialTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialTableViewController.h"/>
+        </class>
+        <class className="StepDetailsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepDetailsTableViewController.h"/>
+        </class>
+        <class className="TodayNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayNavigationController.h"/>
+        </class>
+        <class className="TodayTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayTableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uvq-0h-uEB"/>
+        <segue reference="QW9-Xl-EgU"/>
+        <segue reference="kkS-dm-1cL"/>
     </inferredMetricsTieBreakers>
 </document>
