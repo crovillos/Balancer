@@ -210,6 +210,28 @@
     a1.creatorId = 2;
     a1.goal = nil;
     [_dummyActivities addObject:a1];
+
+    Activity *a2 = [[Activity alloc] init];
+    a2.activityId = 7;
+    a2.name = @"Read 5 Chapters";
+    a2.description = @"May 24 (Thur) 2:00PM @ Downtown Seattle";
+    a2.startDate = [[NSDate alloc] init];
+    a2.endDate = [[NSDate alloc] init];
+    a2.open = YES;
+    a2.creatorId = 3;
+    a2.goal = nil;
+    [_dummyActivities addObject:a2];
+    
+    Activity *a3 = [[Activity alloc] init];
+    a3.activityId = 8;
+    a3.name = @"Jogging";
+    a3.description = @"May 23 (Wed) 6:00PM @ Facebook Gym";
+    a3.startDate = [[NSDate alloc] init];
+    a3.endDate = [[NSDate alloc] init];
+    a3.open = YES;
+    a3.creatorId = 4;
+    a3.goal = nil;
+    [_dummyActivities addObject:a3];
     
 
   
