@@ -55,6 +55,7 @@
 		CB8756A017496140003159DF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87569F17496140003159DF /* AdSupport.framework */; };
 		CB8756A217496159003159DF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8756A117496159003159DF /* libsqlite3.dylib */; };
 		CB8756A417496167003159DF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8756A317496167003159DF /* Social.framework */; };
+		CBE0C395174B22AF005BF9EC /* Jazz.png in Resources */ = {isa = PBXBuildFile; fileRef = CBE0C394174B22AF005BF9EC /* Jazz.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +199,7 @@
 		CB87569F17496140003159DF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		CB8756A117496159003159DF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CB8756A317496167003159DF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CBE0C394174B22AF005BF9EC /* Jazz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Jazz.png; path = ../../../Desktop/Jazz.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 		83AEACF3173EF729006E1151 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CBE0C394174B22AF005BF9EC /* Jazz.png */,
 				8309FF491742298000B7A335 /* Under Construction Logo.png */,
 				83AEACF5173EF74A006E1151 /* Icon */,
 				83AEACF4173EF72E006E1151 /* Launch Images */,
@@ -544,6 +547,7 @@
 				8309FF4A1742298000B7A335 /* Under Construction Logo.png in Resources */,
 				8331FA6A17422FF0000F0642 /* Bariol Bold.ttf in Resources */,
 				8331FA6B17422FF0000F0642 /* Bariol Regular.ttf in Resources */,
+				CBE0C395174B22AF005BF9EC /* Jazz.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
