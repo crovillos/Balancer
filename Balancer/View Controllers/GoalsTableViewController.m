@@ -71,6 +71,26 @@
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self tableView:tableView canCollapseSection:indexPath.section])
+    {
+        if (!indexPath.row) // indexPath.row == 0; the first row
+        {
+            return 100;
+        }
+        else
+        {
+            // all other rows
+            return 44;
+        }
+    }
+    else
+    {
+        return 44;
+        
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -112,7 +132,16 @@
         {
             cell = [tableView dequeueReusableCellWithIdentifier:GoalCellIdentifier];
             assert(cell != nil);
-            //cell.textLabel.text = [self titleForGoalAtSection:indexPath.section]; // only top row showing
+            
+            
+            UILabel *goalLabel = (UILabel *)[cell viewWithTag:999];
+            UIButton *addButton = (UIButton *)[cell viewWithTag:1];
+            UIButton *editButton = (UIButton *)[cell viewWithTag:2];
+            UIButton *searchButton = (UIButton *)[cell viewWithTag:3];
+            
+            goalLabel.text = [self titleForGoalAtSection:indexPath.section];
+            
+           // [btn addTarget:self action:@selector(onClicked:) forControlEvents:UIControlEventTouchUpInside];
             
             if ([self.expandedSections containsIndex:indexPath.section])
             {
