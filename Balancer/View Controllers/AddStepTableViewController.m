@@ -7,6 +7,7 @@
 //
 
 #import "AddStepTableViewController.h"
+#import "Activity.h"
 
 @interface AddStepTableViewController ()
 
@@ -32,6 +33,26 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+        NSMutableArray *dummyActivities = [[NSMutableArray alloc] init];
+        
+        for (int i = 1; i <= numberOfDummyActivities; i++)
+        {
+            Activity *activity = [[Activity alloc] init];
+            
+            activity.activityId = i;
+            activity.name = [NSString stringWithFormat:@"Activity %u", activity.activityId];
+            activity.startDate = [[NSDate alloc] init]; // sets start date to today
+            activity.endDate = [[NSDate alloc] init];
+            activity.description = [NSString stringWithFormat:@"This is activity %u.", activity.activityId];
+            activity.open = (i % 2) ? YES : NO;
+            activity.goal = nil;
+            activity.inviteList = nil; //TODO
+            
+            [dummyActivities addObject:activity];
+        }
+        
+         _availableSteps = dummyActivities;
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,17 +72,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [_availableSteps count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"Available Step";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = _availableSteps[indexPath.row];
     
     return cell;
 }
@@ -109,13 +130,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    /*[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
+	NSInteger selectedIndex = indexPath.row;
+	UITableViewCell *cell =
+    [tableView cellForRowAtIndexPath:indexPath];
+	cell.accessoryType = UITableViewCellAccessoryCheckmark;
+	Goal *goal = [self.availableGoals objectAtIndex:indexPath.row];
+    GoalsTableViewController *presenting = (GoalsTableViewController *)self.presentingViewController.presentingViewController;
+    [presenting reloadData];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];*/
+   
 }
 
 @end

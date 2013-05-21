@@ -10,4 +10,6 @@
 
 @interface AddStepTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSArray* availableSteps;
+
 @end
