@@ -40,8 +40,47 @@
     //[[UILabel appearance] setFont:mainFont]; // TODO: change; uses deprecated method
     
     [self createDummyGoals:10];
+    [self createDummySocial];
     
     return YES;
+}
+
+/** Create dummy social */
+- (void)createDummySocial{
+    _dummySocial = [[NSMutableArray alloc] init];
+    Goal *g1 = [[Goal alloc] init];
+    g1.goalId = 2;
+    g1.name = [NSString stringWithFormat:@"Read the Hunger Games"];
+    g1.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    g1.description = [NSString stringWithFormat:@"Catch up on some reading"];
+    g1.open = YES;
+    g1.creatorId = arc4random_uniform(10);
+    g1.numberActivitiesForCompletion = 1;
+    g1.inviteList = nil;
+    [_dummySocial addObject:g1];
+    Goal *g2 = [[Goal alloc] init];
+    g2.goalId = 3;
+    g2.name = [NSString stringWithFormat:@"Hangout with Family"];
+    g2.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    g2.description = [NSString stringWithFormat:@"Do fun things with your family"];
+    g2.open = YES;
+    g2.creatorId = arc4random_uniform(10);
+    g2.numberActivitiesForCompletion = 2;
+    g2.inviteList = nil;
+    [_dummySocial addObject:g2];
+    Activity *a1 = [[Activity alloc] init];
+    a1.activityId = 4;
+    a1.name = @"Taking a morning art class";
+    a1.startDate = [[NSDate alloc] init];
+    a1.endDate = [[NSDate alloc] init];
+    a1.open = YES;
+    a1.creatorId = 2;
+    a1.goal = nil;
+    [_dummySocial addObject:a1];
+    
+    
+    
+    
 }
 
 /** Creates dummy goals and sets them to be the model for this view controller. For testing purposes only.
