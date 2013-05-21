@@ -77,6 +77,7 @@
     Activity *a1 = [[Activity alloc] init];
     a1.activityId = 4;
     a1.name = @"Taking a morning art class";
+    a1.description = @"May 21 (Tue) 8:00AM @ HUB";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
