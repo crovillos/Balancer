@@ -39,6 +39,9 @@
       UITextAttributeFont,
       nil]];
     
+    UIImage* tabBarBackground = [UIImage imageNamed:@"tabbar.png"];
+    [[UITabBar appearance] setBackgroundImage:tabBarBackground];
+    
     //[[UILabel appearance] setFont:mainFont]; // TODO: change; uses deprecated method
     
     [self createDummyGoals:10];

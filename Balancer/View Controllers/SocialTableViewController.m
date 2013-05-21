@@ -122,6 +122,10 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 88;
+}
+
 -(void)addGoal:(id)sender {
     if([sender isKindOfClass:[UIButton class]]) {
         UIButton* button = (UIButton* ) sender;

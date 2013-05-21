@@ -49,7 +49,7 @@
 
 - (void)configureView
 {
-
+    self.titleDetailLabel.text = self.step.name;
     
 }
 
