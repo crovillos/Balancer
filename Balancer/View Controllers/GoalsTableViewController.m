@@ -289,27 +289,16 @@
     if ([sender isKindOfClass:[UITableViewCell class]]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
 
-        
-    } else if ([sender isKindOfClass:[UIButton class]]){
-        UITableViewCell *clickedCell = (UITableViewCell *)[[sender superview] superview];
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:clickedCell];
         if (indexPath) {
-            if ([segue.identifier isEqualToString:@"Show Goal Details"]) {
-                if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
-                    [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)self.goals[indexPath.row])];
+            if ([segue.identifier isEqualToString:@"Show Step Details"]) {
+                if ([segue.destinationViewController respondsToSelector:@selector(setStep:)]) {
+                    Goal *goal = (Goal *)self.goals[indexPath.section];
+                    Activity *step = (Activity *)goal.activities[indexPath.row - 1];
+                    [segue.destinationViewController performSelector:@selector(setStep:) withObject:((Activity *)step)];
                 }
             }
-            if ([segue.identifier isEqualToString:@"Add Goal"])
-            {
-                //TODO
-            }
-            if ([segue.identifier isEqualToString:@"Edit Goal"])
-            {
-                if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
-                    [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)self.goals[indexPath.row])];
-                }
-            }
-    }
+        }
+
     }
 }
 
