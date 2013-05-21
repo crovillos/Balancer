@@ -182,7 +182,8 @@
     g2.numberActivitiesForCompletion = 1;
     Activity *a1 = [[Activity alloc] init];
     a1.activityId = 3;
-    a1.name = @"Kicboxing class at the IMA";
+    a1.name = @"Kicboxing Class";
+    a1.description = @"May 24 (Thur) 5:00PM @ Facebook Gym";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
@@ -196,27 +197,22 @@
 
 }
 
-- (NSArray*) createDummyActivities:(NSUInteger)numberOfDummyActivities withGoal:(Goal*)goal
+- (void) createDummyActivities
 {
-    NSMutableArray *dummyActivities = [[NSMutableArray alloc] init];
+    _dummyActivities = [[NSMutableArray alloc] init];
+    Activity *a1 = [[Activity alloc] init];
+    a1.activityId = 6;
+    a1.name = @"Cooking Class";
+    a1.description = @"May 24 (Thur) 5:00PM @ HUB";
+    a1.startDate = [[NSDate alloc] init];
+    a1.endDate = [[NSDate alloc] init];
+    a1.open = YES;
+    a1.creatorId = 2;
+    a1.goal = nil;
+    [_dummyActivities addObject:a1];
     
-    for (int i = 1; i <= numberOfDummyActivities; i++)
-    {
-        Activity *activity = [[Activity alloc] init];
-        
-        activity.activityId = i;
-        activity.name = [NSString stringWithFormat:@"Activity %u", activity.activityId];
-        activity.startDate = [[NSDate alloc] init]; // sets start date to today
-        activity.endDate = [[NSDate alloc] init];
-        activity.description = [NSString stringWithFormat:@"This is activity %u.", activity.activityId];
-        activity.open = (i % 2) ? YES : NO;
-        activity.goal = goal;
-        activity.inviteList = nil; //TODO
-        
-        [dummyActivities addObject:activity];
-    }
-    
-    return dummyActivities;
+
+  
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
