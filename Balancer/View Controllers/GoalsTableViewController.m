@@ -277,17 +277,24 @@
             }
             if ([segue.identifier isEqualToString:@"Add Goal"])
             {
-                UINavigationController *navigationController =
-                segue.destinationViewController;
-                PlayerDetailsViewController
-                *playerDetailsViewController =
-                [[navigationController viewControllers]
-                 objectAtIndex:0];
-                playerDetailsViewController.delegate = self;
+               //TODO
             }
+        if ([segue.identifier isEqualToString:@"Edit Goal"])
+        {
+            if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
+                [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)self.goals[indexPath.row])];
+            }
+            //UINavigationController *navigationController =
+            ////segue.destinationViewController;
+            //PlayerDetailsViewController
+            //*playerDetailsViewController =
+            //[[navigationController viewControllers]
+            // objectAtIndex:0];
+            //playerDetailsViewController.delegate = self;
+        }
         }
     }
-    
+
 }
 
 @end
