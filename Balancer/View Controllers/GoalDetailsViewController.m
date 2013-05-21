@@ -7,6 +7,7 @@
 //
 
 #import "GoalDetailsViewController.h"
+#import "Goal.h"
 
 @interface GoalDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *goalDescriptionLabel;
@@ -23,7 +24,8 @@
 
 - (void)reloadData
 {
-    [self.goalDescriptionLabel setText:self.goal];
+    [self.goalDescriptionLabel setText:self.goal.description];
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -39,8 +41,24 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
     [self reloadData];
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier1 = @"Complete By";
+    static NSString *CellIdentifier2 = @"Goaled";
+    UITableViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:CellIdentifier1 forIndexPath:indexPath];
+    UITableViewCell *cell2 = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2 forIndexPath:indexPath];
+    
+    // Configure the cell...
+    cell1.detailTextLabel.text = [self.goal.completionDate description];
+    cell2.detailTextLabel.text = @"to be continued";
+    
+    return cell1;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
