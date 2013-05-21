@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8309FF4A1742298000B7A335 /* Under Construction Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8309FF491742298000B7A335 /* Under Construction Logo.png */; };
+		83216D62174B6CB60054573F /* EditGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216D61174B6CB60054573F /* EditGoalViewController.m */; };
 		8331FA4417422FD6000F0642 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA2D17422FD6000F0642 /* Activity.m */; };
 		8331FA4517422FD6000F0642 /* ActivityInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA2F17422FD6000F0642 /* ActivityInvite.m */; };
 		8331FA4617422FD6000F0642 /* ActivityList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3117422FD6000F0642 /* ActivityList.m */; };
@@ -124,6 +125,8 @@
 
 /* Begin PBXFileReference section */
 		8309FF491742298000B7A335 /* Under Construction Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Under Construction Logo.png"; sourceTree = "<group>"; };
+		83216D60174B6CB60054573F /* EditGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditGoalViewController.h; path = "View Controllers/EditGoalViewController.h"; sourceTree = "<group>"; };
+		83216D61174B6CB60054573F /* EditGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditGoalViewController.m; path = "View Controllers/EditGoalViewController.m"; sourceTree = "<group>"; };
 		8331FA2C17422FD6000F0642 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Balancer/Models/Activity.h; sourceTree = SOURCE_ROOT; };
 		8331FA2D17422FD6000F0642 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = Balancer/Models/Activity.m; sourceTree = SOURCE_ROOT; };
 		8331FA2E17422FD6000F0642 /* ActivityInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityInvite.h; path = Balancer/Models/ActivityInvite.h; sourceTree = SOURCE_ROOT; };
@@ -225,6 +228,8 @@
 		8323FB4E173EB5A40016213D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				83216D60174B6CB60054573F /* EditGoalViewController.h */,
+				83216D61174B6CB60054573F /* EditGoalViewController.m */,
 				83B34CC717423591001EAEAC /* GoalDetailsViewController.h */,
 				83B34CC817423591001EAEAC /* GoalDetailsViewController.m */,
 				8331FA5017422FE3000F0642 /* GoalsNavigationController.h */,
@@ -572,6 +577,7 @@
 				8331FA6617422FE3000F0642 /* TodayNavigationController.m in Sources */,
 				8331FA6717422FE3000F0642 /* TodayTableViewController.m in Sources */,
 				83B34CC917423591001EAEAC /* GoalDetailsViewController.m in Sources */,
+				83216D62174B6CB60054573F /* EditGoalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

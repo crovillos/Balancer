@@ -275,8 +275,19 @@
                     [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)self.goals[indexPath.row])];
                 }
             }
+            if ([segue.identifier isEqualToString:@"Add Goal"])
+            {
+                UINavigationController *navigationController =
+                segue.destinationViewController;
+                PlayerDetailsViewController
+                *playerDetailsViewController =
+                [[navigationController viewControllers]
+                 objectAtIndex:0];
+                playerDetailsViewController.delegate = self;
+            }
         }
     }
+    
 }
 
 @end
