@@ -10,4 +10,6 @@
 
 @interface AddGoalTableViewController : UITableViewController
 
+- (IBAction)cancel:(UIStoryboardSegue *)segue;
+
 @end

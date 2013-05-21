@@ -10,6 +10,7 @@
 #import "Goal.h"
 #import "Activity.h"
 #import "AppDelegate.h" //TODO: remove
+#import "AddGoalTableViewController.h"
 
 #import "DTCustomColoredAccessory.h"
 
@@ -302,4 +303,11 @@
     }
 }
 
+
+- (IBAction)cancel:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"CancelInput"]) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
 @end

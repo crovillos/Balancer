@@ -15,4 +15,6 @@
 
 @property (nonatomic, strong) NSArray *goals; // of Goal
 
+- (IBAction)cancel:(UIStoryboardSegue *)segue;
+
 @end

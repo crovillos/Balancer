@@ -49,9 +49,7 @@
 
 - (void)configureView
 {
-    self.goalDescriptionLabel.text = self.goal.description;
-    self.completeByLabel.text = self.goal.completionDate.description;
-    self.goaledLabel.text = @"Goaled!";
+
     
 }
 
