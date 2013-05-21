@@ -353,12 +353,11 @@
 		83DD42CC173447DB00FA7408 = {
 			isa = PBXGroup;
 			children = (
-				83394FD3174B30B40030B614 /* QuartzCore.framework */,
-				83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */,
-				CB87567917495775003159DF /* RestKit.xcodeproj */,
 				83DD42DE173447DB00FA7408 /* Balancer */,
 				83DD42D7173447DB00FA7408 /* Frameworks */,
 				83DD42D6173447DB00FA7408 /* Products */,
+				83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */,
+				CB87567917495775003159DF /* RestKit.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -373,6 +372,7 @@
 		83DD42D7173447DB00FA7408 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83394FD3174B30B40030B614 /* QuartzCore.framework */,
 				83D7AFC6174AE43700026364 /* FacebookSDK.framework */,
 				CB8756A317496167003159DF /* Social.framework */,
 				CB8756A117496159003159DF /* libsqlite3.dylib */,

@@ -8,6 +8,8 @@
 
 #import "GoalsTableViewController.h"
 #import "Goal.h"
+#import "Activity.h"
+#import "AppDelegate.h" //TODO: remove
 
 #import "DTCustomColoredAccessory.h"
 
@@ -27,7 +29,8 @@
 {
     [super viewDidLoad];
     
-    [self createDummyGoals:DUMMY_GOALS_COUNT]; // TODO: remove when networking is implemented
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [self setGoals:appDelegate.dummyGoals];
     
     if (!_expandedSections)
     {
@@ -57,32 +60,6 @@
 
 #pragma mark - Helper methods
 
-/** Creates dummy goals and sets them to be the model for this view controller. For testing purposes only.
-  @param - The number of dummy goals to create.
- */
-- (void)createDummyGoals:(NSUInteger)numberOfDummyGoals
-{
-    NSMutableArray *dummyGoals = [[NSMutableArray alloc] init];
-    
-    for (int i = 1; i <= numberOfDummyGoals; i++)
-    {
-        Goal *goal = [[Goal alloc] init];
-        goal.goalId = i;
-        goal.name = [NSString stringWithFormat:@"Goal %u", goal.goalId];
-        goal.completionDate = [[NSDate alloc] init]; // sets completion date to today
-        goal.description = [NSString stringWithFormat:@"This is goal %u.", goal.goalId];
-        goal.open = (i % 2) ? YES : NO;
-        goal.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
-        goal.numberActivitiesForCompletion = 2; // TODO: figure out what this is for?
-        goal.activities = nil; // TODO: add later
-        goal.inviteList = nil; // TODO: add later
-        
-        [dummyGoals addObject:goal];
-    }
-    
-    [self setGoals:dummyGoals];
-}
-
 #pragma mark - Expanding
 
 - (BOOL)tableView:(UITableView *)tableView canCollapseSection:(NSInteger)section
@@ -97,7 +74,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return [self.goals count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -106,7 +83,9 @@
     {
         if ([self.expandedSections containsIndex:section])
         {
-            return 5; // return rows when expanded
+            Goal *goal = (Goal*)self.goals[section];
+            
+            return [goal.activities count]; // return rows when expanded
         }
         
         return 1; // only top row showing
@@ -130,10 +109,9 @@
     
     if ([self tableView:tableView canCollapseSection:indexPath.section])
     {
-        if (!indexPath.row)
+        if (!indexPath.row) // indexPath.row == 0; the first row
         {
-            // first row
-            cell.textLabel.text = @"Expandable"; // only top row showing
+            cell.textLabel.text = [self titleForGoalAtSection:indexPath.section]; // only top row showing
             
             if ([self.expandedSections containsIndex:indexPath.section])
             {
@@ -147,7 +125,10 @@
         else
         {
             // all other rows
-            cell.textLabel.text = @"Some Detail";
+            Goal *goalAtSection = (Goal *)self.goals[indexPath.section];
+            // have activity id row within goal section
+            Activity *activityAtRow = (Activity *)goalAtSection.activities[indexPath.row];
+            cell.textLabel.text = activityAtRow.description;
             cell.accessoryView = nil;
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
@@ -234,8 +215,8 @@
 /** Returns the goal title for a given table row.
  @param - The row number of the goal for which to get the title.
  */
-- (NSString *)titleForRow:(NSUInteger) row {
-    Goal *goalAtRow = (Goal *)self.goals[row];
+- (NSString *)titleForGoalAtSection:(NSUInteger) section {
+    Goal *goalAtRow = (Goal *)self.goals[section];
     return [goalAtRow.name description];
 }
 
