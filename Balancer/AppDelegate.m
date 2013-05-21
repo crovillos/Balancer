@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "Goal.h"
 #import "Activity.h"
+#import "GoalInvite.h"
+#import "ActivityInvite.h"
 
 #define BALANCER_PINK_RED 166/255.0
 #define BALANCER_PINK_GREEN 36/255.0
@@ -41,6 +43,7 @@
     
     [self createDummyGoals:10];
     [self createDummySocial];
+    [self createDummyInvites];
     
     return YES;
 }
@@ -78,10 +81,41 @@
     a1.goal = nil;
     [_dummySocial addObject:a1];
     
+}
+
+- (void)createDummyInvites{
+    _dummyInvites = [[NSMutableArray alloc] init];
+    Goal *goal = [[Goal alloc] init];
+    goal.goalId = 1;
+    goal.name = [NSString stringWithFormat:@"Hangout with friends twice"];
+    goal.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    goal.description = [NSString stringWithFormat:@"Spend more time with friends"];
+    goal.open = YES;
+    goal.creatorId = arc4random_uniform(10);
+    goal.numberActivitiesForCompletion = 2;
+    GoalInvite *gInvite1 = [[GoalInvite alloc] init];
+    gInvite1.goal = goal;
+    [_dummyInvites addObject:gInvite1];
+    
+    Activity *a1 = [[Activity alloc] init];
+    a1.activityId = 3;
+    a1.name = @"Kicboxing class at the IMA";
+    a1.startDate = [[NSDate alloc] init];
+    a1.endDate = [[NSDate alloc] init];
+    a1.open = YES;
+    a1.creatorId = 1;
+    a1.goal = nil;
+    ActivityInvite *aInvite = [[ActivityInvite alloc] init];
+    aInvite.activity = a1;
+    [_dummyInvites addObject:aInvite];
+    
+
+    
     
     
     
 }
+
 
 /** Creates dummy goals and sets them to be the model for this view controller. For testing purposes only.
  @param - The number of dummy goals to create.
