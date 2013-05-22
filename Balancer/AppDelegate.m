@@ -103,7 +103,8 @@
     
     Activity *a1 = [[Activity alloc] init];
     a1.activityId = 3;
-    a1.name = @"Kickboxing class at the IMA";
+    a1.name = @"Kicboxing class";
+    a1.description = @"May 27 (Sun) 6:00PM @ IMA";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
@@ -184,7 +185,8 @@
     g2.numberActivitiesForCompletion = 1;
     Activity *a1 = [[Activity alloc] init];
     a1.activityId = 3;
-    a1.name = @"Kickboxing class at the IMA";
+    a1.name = @"Kicboxing Class";
+    a1.description = @"May 24 (Thur) 5:00PM @ Facebook Gym";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
@@ -200,25 +202,41 @@
 
 - (void) createDummyActivities
 {
-    NSMutableArray *dummyActivities = [[NSMutableArray alloc] init];
+    _dummyActivities = [[NSMutableArray alloc] init];
+    Activity *a1 = [[Activity alloc] init];
+    a1.activityId = 6;
+    a1.name = @"Cooking Class";
+    a1.description = @"May 24 (Thur) 5:00PM @ HUB";
+    a1.startDate = [[NSDate alloc] init];
+    a1.endDate = [[NSDate alloc] init];
+    a1.open = YES;
+    a1.creatorId = 2;
+    a1.goal = nil;
+    [_dummyActivities addObject:a1];
+
+    Activity *a2 = [[Activity alloc] init];
+    a2.activityId = 7;
+    a2.name = @"Read 5 Chapters";
+    a2.description = @"May 24 (Thur) 2:00PM @ Downtown Seattle";
+    a2.startDate = [[NSDate alloc] init];
+    a2.endDate = [[NSDate alloc] init];
+    a2.open = YES;
+    a2.creatorId = 3;
+    a2.goal = nil;
+    [_dummyActivities addObject:a2];
     
-    for (int i = 1; i <= numberOfDummyActivities; i++)
-    {
-        Activity *activity = [[Activity alloc] init];
-        
-        activity.activityId = i;
-        activity.name = [NSString stringWithFormat:@"Step %u", activity.activityId];
-        activity.startDate = [[NSDate alloc] init]; // sets start date to today
-        activity.endDate = [[NSDate alloc] init];
-        activity.description = [NSString stringWithFormat:@"Step %u to achieving a new goal!", activity.activityId];
-        activity.open = (i % 2) ? YES : NO;
-        activity.goal = goal;
-        activity.inviteList = nil; //TODO
-        
-        [dummyActivities addObject:activity];
-    }
-    
-    return dummyActivities;
+    Activity *a3 = [[Activity alloc] init];
+    a3.activityId = 8;
+    a3.name = @"Jogging";
+    a3.description = @"May 23 (Wed) 6:00PM @ Facebook Gym";
+    a3.startDate = [[NSDate alloc] init];
+    a3.endDate = [[NSDate alloc] init];
+    a3.open = YES;
+    a3.creatorId = 4;
+    a3.goal = nil;
+    [_dummyActivities addObject:a3];
+
+  
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
