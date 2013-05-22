@@ -108,14 +108,14 @@
 {
     NSMutableArray *dummyActivities = [[NSMutableArray alloc] init];
     
-    for (int i = 1; i <= numberOfDummyActivities; i++)
+    for (int i = 1; i <= 5; i++)
     {
         Activity *activity = [[Activity alloc] init];
         activity.activityId = i;
-        activity.name = [NSString stringWithFormat:@"Activity %u", activity.activityId];
+        activity.name = [NSString stringWithFormat:@"Watch movies with friends", i];
         activity.startDate = [[[NSDate alloc] init] dateByAddingTimeInterval:86400 * i];
         activity.endDate = [[[NSDate alloc] init] dateByAddingTimeInterval:86400 * i];
-        activity.description = [NSString stringWithFormat:@"This is activity %u.", activity.activityId];
+        activity.description = [NSString stringWithFormat:@"Description", activity.activityId];
         activity.open = (i % 2) ? YES : NO;
         activity.creatorId = arc4random_uniform(100);
         activity.goal = [[Goal alloc] init];

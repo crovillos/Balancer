@@ -38,15 +38,15 @@
       titleTextFont,
       UITextAttributeFont,
       nil]];
-    
-    UIImage* tabBarBackground = [UIImage imageNamed:@"tabbar.png"];
-    [[UITabBar appearance] setBackgroundImage:tabBarBackground];
+
+    [[UITabBar appearance] setBackgroundColor:balancerPinkColor];
     
     //[[UILabel appearance] setFont:mainFont]; // TODO: change; uses deprecated method
     
     [self createDummyGoals:10];
     [self createDummySocial];
     [self createDummyInvites];
+    
     
     return YES;
 }
@@ -103,7 +103,7 @@
     
     Activity *a1 = [[Activity alloc] init];
     a1.activityId = 3;
-    a1.name = @"Kicboxing class at the IMA";
+    a1.name = @"Kickboxing class at the IMA";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
@@ -132,7 +132,7 @@
 
     Goal *goal = [[Goal alloc] init];
     goal.goalId = 1;
-    goal.name = [NSString stringWithFormat:@"Hangout with friends twice"];
+    goal.name = [NSString stringWithFormat:@"Hangout with friends often"];
     goal.completionDate = [[NSDate alloc] init]; // sets completion date to today
     goal.description = [NSString stringWithFormat:@"Spend more time with friends"];
     goal.open = YES;
@@ -163,7 +163,7 @@
     
     Goal *g2 = [[Goal alloc] init];
     g2.goalId = 2;
-    g2.name = [NSString stringWithFormat:@"Read 5 acrticles on Economists"];
+    g2.name = [NSString stringWithFormat:@"Read the Economist"];
     g2.completionDate = [[NSDate alloc] init]; // sets completion date to today
     g2.description = [NSString stringWithFormat:@"Be smarter"];
     g2.open = YES;
@@ -182,7 +182,7 @@
     g2.numberActivitiesForCompletion = 1;
     Activity *a1 = [[Activity alloc] init];
     a1.activityId = 3;
-    a1.name = @"Kicboxing class at the IMA";
+    a1.name = @"Kickboxing class at the IMA";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
@@ -205,10 +205,10 @@
         Activity *activity = [[Activity alloc] init];
         
         activity.activityId = i;
-        activity.name = [NSString stringWithFormat:@"Activity %u", activity.activityId];
+        activity.name = [NSString stringWithFormat:@"Step %u", activity.activityId];
         activity.startDate = [[NSDate alloc] init]; // sets start date to today
         activity.endDate = [[NSDate alloc] init];
-        activity.description = [NSString stringWithFormat:@"This is activity %u.", activity.activityId];
+        activity.description = [NSString stringWithFormat:@"Step %u to achieving a new goal!", activity.activityId];
         activity.open = (i % 2) ? YES : NO;
         activity.goal = goal;
         activity.inviteList = nil; //TODO

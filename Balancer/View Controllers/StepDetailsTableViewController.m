@@ -50,6 +50,9 @@
 - (void)configureView
 {
     self.titleDetailLabel.text = self.step.name;
+    self.descriptionDetailLabel.text = self.step.description;
+    self.whenDetailLabel.text = self.step.startDate.description;
+    
     
 }
 

@@ -123,7 +123,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 88;
+    if (indexPath.section == 0 && indexPath.row == 0)
+        return 44;
+    return 130;
 }
 
 -(void)addGoal:(id)sender {
@@ -132,7 +134,7 @@
         UITableViewCell* cell = (UITableViewCell*) button.superview;
         //NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell:cell];
         // Add Goal at this index to the goals added page
-        button.backgroundColor = [UIColor greenColor];
+        //button.backgroundColor = [UIColor greenColor];
         button.titleLabel.text = @"added";
         
         
