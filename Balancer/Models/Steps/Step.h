@@ -22,5 +22,6 @@
 @property (nonatomic) NSUInteger creatorId;
 @property (nonatomic, strong) Goal* goal;
 @property (nonatomic, strong) InviteList* inviteList;
+@property (nonatomic, getter = isSponsored) BOOL sponsored;
 
 @end

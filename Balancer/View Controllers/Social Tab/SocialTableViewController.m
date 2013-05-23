@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "SocialTableViewController.h"
 #import "Goal.h"
 #import "Step.h"
@@ -33,7 +35,7 @@
 }
 
 /** Sets the model for this view controller.
- @param - 
+ @param -
  */
 - (void)setGoals:(NSMutableArray *)socialStream
 {
@@ -57,81 +59,69 @@
     } else {
         return 1;
     }
-
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    if (!indexPath.section) {
-
+    if (!indexPath.section) { // at invites row
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Invitations" forIndexPath:indexPath];
-
-        UILabel* textLabel = (UILabel *)[cell viewWithTag:0];
-        textLabel.text = @"Invitations";
         return cell;
     } else {
-        static NSString *CellIdentifier;
-        NSString* buttonString;
-        NSString* labelText;
-        NSString* detailLabelText;
-        if([self.socialStream[indexPath.row] isKindOfClass:[Goal class]]) {
-            Goal* g = (Goal*) self.socialStream[indexPath.row];
-            CellIdentifier = @"Goal";
-            buttonString = @"Goal it";
-            labelText = g.name;
-            detailLabelText = g.description;
-            
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-            UIButton *goalItButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            
-            [goalItButton setTitle:@"Goal it!" forState:UIControlStateNormal];
-            [goalItButton sizeToFit];
-            //checkBox.frame = CGRectMake(0, 0, 30, 30);
-            goalItButton.userInteractionEnabled = YES;
-            //[checkBox addTarget:self action:@selector(didCheckTask:) forControlEvents:UIControlEventTouchDown];
-            cell.accessoryView = goalItButton;
-        } else if ([self.socialStream[indexPath.row] isKindOfClass:[Step class]]) {
-            Step* a = (Step*) self.socialStream[indexPath.row];
-            CellIdentifier = @"Step";
-            buttonString = @"Join";
-            labelText = a.name;
-            detailLabelText = a.description;
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-            UIButton *checkBox = [UIButton buttonWithType:UIButtonTypeCustom];
-            [checkBox setImage:[UIImage imageNamed:@"Jazz.png"] forState:UIControlStateNormal];
-            [checkBox setImage:[UIImage imageNamed:@"Jazz.png"] forState:UIControlStateSelected];
-            checkBox.frame = CGRectMake(0, 0, 30, 30);
-            checkBox.userInteractionEnabled = YES;
-            //[checkBox addTarget:self action:@selector(didCheckTask:) forControlEvents:UIControlEventTouchDown];
-            cell.accessoryView = checkBox;
-        }
-    
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-        // Configure the cell...
-        UILabel* textLabel = (UILabel *)[cell viewWithTag:2];
-        textLabel.text = labelText;
+        NSInteger row = indexPath.row;
+        id story = self.socialStream[row];
         
-        UILabel* detailTextLabel = (UILabel *)[cell viewWithTag:3];
-        detailTextLabel.text = detailLabelText;
-    
-        UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Jazz" ofType:@"png"]];
-    
-   
-        UIImageView* imageView = (UIImageView *)[cell viewWithTag:1];
-        imageView.image = image;
-    
-        UIButton* button = (UIButton*)  [cell viewWithTag:4];
-    
+        static NSString *cellIdentifier;
+        
+        NSString* storyHeaderText;
+        NSString* storyDetailText;
+        NSString* profileImagePath;
+        NSString* accessoryViewButtonText;
+        
+        if([story isKindOfClass:[Goal class]]) {
+            Goal* goal = (Goal *) story;
+            
+            cellIdentifier = @"Goal";
+            accessoryViewButtonText = @"Goal it!";
+            
+            storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
+            storyDetailText = goal.name;
 
-        UILabel* buttonLabel = button.titleLabel;
-        button.backgroundColor = [UIColor yellowColor];
-        buttonLabel.text = buttonString;
-        [button addTarget:self
-                   action:@selector(addGoal:)
-         forControlEvents:UIControlEventTouchUpInside];
-    
+            //[checkBox addTarget:self action:@selector(didCheckTask:) forControlEvents:UIControlEventTouchDown];
+        } else if ([story isKindOfClass:[Step class]]) {
+            Step* step = (Step *) story;
+            
+            cellIdentifier = @"Step";
+            accessoryViewButtonText = @"Add it!";
+                        
+            storyHeaderText = [NSString stringWithFormat:@"User %u added a new step", step.creatorId];
+            storyDetailText = step.name;
+        }
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+        
+        // add accessory view button
+        UIButton *accessoryViewButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [accessoryViewButton setTitle:accessoryViewButtonText forState:UIControlStateNormal];
+        [accessoryViewButton sizeToFit];
+        accessoryViewButton.userInteractionEnabled = YES;
+        cell.accessoryView = accessoryViewButton;
+        
+        // Configure the cell...
+        UILabel* storyHeaderLabel = (UILabel *)[cell viewWithTag:2];
+        storyHeaderLabel.text = storyHeaderText;
+        
+        UILabel* storyDetailLabel = (UILabel *)[cell viewWithTag:3];
+        storyDetailLabel.text = storyDetailText;
+        
+        UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Jazz" ofType:@"png"]];
+        UIImageView* profileImageView = (UIImageView *)[cell viewWithTag:1];
+        profileImageView.image = image;
+        
+        CALayer *imageLayer = profileImageView.layer;
+        [imageLayer setCornerRadius:25];
+        [imageLayer setMasksToBounds:YES];
+        
         return cell;
     }
 }
@@ -142,7 +132,7 @@
     return 130;
 }
 
--(void)addGoal:(id)sender {
+-(void)goalIt:(id)sender {
     if([sender isKindOfClass:[UIButton class]]) {
         UIButton* button = (UIButton* ) sender;
         UITableViewCell* cell = (UITableViewCell*) button.superview;
@@ -151,13 +141,12 @@
         //button.backgroundColor = [UIColor greenColor];
         button.titleLabel.text = @"added";
         
-        
+        // TODO: add to app delegate dummyGoals
     }
 }
 
 -(void)joinActivity:(id)sender {
-    
-    
+    // TODO
 }
 
 @end
