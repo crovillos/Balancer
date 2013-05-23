@@ -61,6 +61,7 @@
 		83C0CA7D174EC627007DDD05 /* StepList.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA6F174EC627007DDD05 /* StepList.m */; };
 		83C0CA7E174EC627007DDD05 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA71174EC627007DDD05 /* User.m */; };
 		83C0CA7F174EC627007DDD05 /* UserUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA73174EC627007DDD05 /* UserUtilities.m */; };
+		83C0CA82174EC6F6007DDD05 /* InvitesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA81174EC6F6007DDD05 /* InvitesTableViewController.m */; };
 		83DD42D9173447DB00FA7408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42D8173447DB00FA7408 /* UIKit.framework */; };
 		83DD42DB173447DB00FA7408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DA173447DB00FA7408 /* Foundation.framework */; };
 		83DD42DD173447DB00FA7408 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DC173447DB00FA7408 /* CoreGraphics.framework */; };
@@ -226,6 +227,8 @@
 		83C0CA71174EC627007DDD05 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		83C0CA72174EC627007DDD05 /* UserUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserUtilities.h; sourceTree = "<group>"; };
 		83C0CA73174EC627007DDD05 /* UserUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserUtilities.m; sourceTree = "<group>"; };
+		83C0CA80174EC6F6007DDD05 /* InvitesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitesTableViewController.h; sourceTree = "<group>"; };
+		83C0CA81174EC6F6007DDD05 /* InvitesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitesTableViewController.m; sourceTree = "<group>"; };
 		83DD42D5173447DB00FA7408 /* Balancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DD42D8173447DB00FA7408 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83DD42DA173447DB00FA7408 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -413,6 +416,8 @@
 				83C0CA42174EC4CA007DDD05 /* SocialNavigationController.m */,
 				83C0CA43174EC4CA007DDD05 /* SocialTableViewController.h */,
 				83C0CA44174EC4CA007DDD05 /* SocialTableViewController.m */,
+				83C0CA80174EC6F6007DDD05 /* InvitesTableViewController.h */,
+				83C0CA81174EC6F6007DDD05 /* InvitesTableViewController.m */,
 			);
 			path = "Social Tab";
 			sourceTree = "<group>";
@@ -737,6 +742,7 @@
 				83C0CA7D174EC627007DDD05 /* StepList.m in Sources */,
 				83C0CA7E174EC627007DDD05 /* User.m in Sources */,
 				83C0CA7F174EC627007DDD05 /* UserUtilities.m in Sources */,
+				83C0CA82174EC6F6007DDD05 /* InvitesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
