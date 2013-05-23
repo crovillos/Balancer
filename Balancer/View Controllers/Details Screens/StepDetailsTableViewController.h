@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Activity.h"
+#import "Step.h"
 
 @interface StepDetailsTableViewController : UITableViewController
 
-@property (nonatomic, strong) Activity *step;
+@property (nonatomic, strong) Step *step;
 
 @end

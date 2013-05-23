@@ -1,5 +1,5 @@
 //
-//  Activity.h
+//  Step.h
 //  Balancer
 //
 //  Created by Dian Hartono on 5/9/13.
@@ -11,7 +11,7 @@
 #import "InviteList.h"
 
 
-@interface Activity : NSObject
+@interface Step : NSObject
 
 @property (nonatomic) NSUInteger activityId;
 @property (nonatomic, strong) NSString* name;

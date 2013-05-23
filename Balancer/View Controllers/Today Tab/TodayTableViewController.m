@@ -7,7 +7,7 @@
 //
 
 #import "TodayTableViewController.h"
-#import "Activity.h"
+#import "Step.h"
 #import "Goal.h"
 #import "InviteList.h"
 
@@ -57,7 +57,7 @@
     [self createDummyActivity:10];
     self.sections = [NSMutableDictionary dictionary];
 
-    for (Activity *activity in self.activities)
+    for (Step *activity in self.activities)
     {
         // Reduce event start date to date components (year, month, day)
         NSDate *dateRepresentingThisDay = [self dateAtBeginningOfDayForDate:activity.startDate];
@@ -110,7 +110,7 @@
     
     for (int i = 1; i <= 5; i++)
     {
-        Activity *activity = [[Activity alloc] init];
+        Step *activity = [[Step alloc] init];
         activity.activityId = i;
         activity.name = [NSString stringWithFormat:@"Watch movies with friends", i];
         activity.startDate = [[[NSDate alloc] init] dateByAddingTimeInterval:86400 * i];
@@ -141,12 +141,12 @@
 }
 
 - (NSString *)titleForRow:(NSUInteger) row {
-    Activity *activityAtRow = (Activity *)self.activities[row];
+    Step *activityAtRow = (Step *)self.activities[row];
     return [activityAtRow.name description];
 }
 
 - (NSString *)subtitleForRow:(NSUInteger) row {
-    Activity *activityAtRow = (Activity*)self.activities[row];
+    Step *activityAtRow = (Step*)self.activities[row];
     return [activityAtRow.description description];
 }
 
@@ -191,7 +191,7 @@
         if (indexPath) {
             if ([segue.identifier isEqualToString:@"Show Goal Detail"]) {
                 if ([segue.destinationViewController respondsToSelector:@selector(setGoalDescription:)]) {
-                    [segue.destinationViewController performSelector:@selector(setGoalDescription:) withObject:((Activity *)self.activities[indexPath.row]).description];
+                    [segue.destinationViewController performSelector:@selector(setGoalDescription:) withObject:((Step *)self.activities[indexPath.row]).description];
                 }
             }
         }

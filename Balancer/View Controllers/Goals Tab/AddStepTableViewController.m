@@ -7,7 +7,7 @@
 //
 
 #import "AddStepTableViewController.h"
-#import "Activity.h"
+#import "Step.h"
 #import "AppDelegate.h"
 
 @interface AddStepTableViewController ()
@@ -39,7 +39,7 @@
         
         for (int i = 1; i <= 10; i++)
         {
-            Activity *activity = [[Activity alloc] init];
+            Step *activity = [[Step alloc] init];
             
             activity.activityId = i;
             activity.name = [NSString stringWithFormat:@"Activity %u", activity.activityId];
@@ -137,7 +137,7 @@
 	UITableViewCell *cell =
     [tableView cellForRowAtIndexPath:indexPath];
 	cell.accessoryType = UITableViewCellAccessoryCheckmark;
-	Activity *activity = [_availableSteps objectAtIndex:indexPath.row];
+	Step *activity = [_availableSteps objectAtIndex:indexPath.row];
 
     
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;

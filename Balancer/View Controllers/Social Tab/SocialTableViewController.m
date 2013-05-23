@@ -8,7 +8,7 @@
 
 #import "SocialTableViewController.h"
 #import "Goal.h"
-#import "Activity.h"
+#import "Step.h"
 #import "AppDelegate.h"
 
 #define DUMMY_GOALS_COUNT 10
@@ -86,12 +86,30 @@
             buttonString = @"Goal it";
             labelText = g.name;
             detailLabelText = g.description;
-        } else if ([self.socialStream[indexPath.row] isKindOfClass:[Activity class]]) {
-            Activity* a = (Activity*) self.socialStream[indexPath.row];
+            
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            UIButton *goalItButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            
+            [goalItButton setTitle:@"Goal it!" forState:UIControlStateNormal];
+            [goalItButton sizeToFit];
+            //checkBox.frame = CGRectMake(0, 0, 30, 30);
+            goalItButton.userInteractionEnabled = YES;
+            //[checkBox addTarget:self action:@selector(didCheckTask:) forControlEvents:UIControlEventTouchDown];
+            cell.accessoryView = goalItButton;
+        } else if ([self.socialStream[indexPath.row] isKindOfClass:[Step class]]) {
+            Step* a = (Step*) self.socialStream[indexPath.row];
             CellIdentifier = @"Activity";
             buttonString = @"Join";
             labelText = a.name;
             detailLabelText = a.description;
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            UIButton *checkBox = [UIButton buttonWithType:UIButtonTypeCustom];
+            [checkBox setImage:[UIImage imageNamed:@"Jazz.png"] forState:UIControlStateNormal];
+            [checkBox setImage:[UIImage imageNamed:@"Jazz.png"] forState:UIControlStateSelected];
+            checkBox.frame = CGRectMake(0, 0, 30, 30);
+            checkBox.userInteractionEnabled = YES;
+            //[checkBox addTarget:self action:@selector(didCheckTask:) forControlEvents:UIControlEventTouchDown];
+            cell.accessoryView = checkBox;
         }
     
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
@@ -110,6 +128,7 @@
         imageView.image = image;
     
         UIButton* button = (UIButton*)  [cell viewWithTag:4];
+    
 
         UILabel* buttonLabel = button.titleLabel;
         button.backgroundColor = [UIColor yellowColor];
