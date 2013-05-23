@@ -151,7 +151,7 @@
     
     Goal *g1 = [[Goal alloc] init];
     g1.goalId = 2;
-    g1.name = [NSString stringWithFormat:@"Read the Hunger Games"];
+    g1.name = [NSString stringWithFormat:@"Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games"];
     g1.completionDate = [[NSDate alloc] init]; // sets completion date to today
     g1.description = [NSString stringWithFormat:@"Catch up on some reading"];
     g1.open = YES;

@@ -84,10 +84,9 @@
             cellIdentifier = @"Goal";
             accessoryViewButtonText = @"Goal it!";
             
-            storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
+            storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal goal goal goal", goal.creatorId];
             storyDetailText = goal.name;
 
-            //[checkBox addTarget:self action:@selector(didCheckTask:) forControlEvents:UIControlEventTouchDown];
         } else if ([story isKindOfClass:[Step class]]) {
             Step* step = (Step *) story;
             
@@ -106,6 +105,8 @@
         [accessoryViewButton sizeToFit];
         accessoryViewButton.userInteractionEnabled = YES;
         cell.accessoryView = accessoryViewButton;
+        
+        [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchDown];
         
         // Configure the cell...
         UILabel* storyHeaderLabel = (UILabel *)[cell viewWithTag:2];
@@ -129,11 +130,39 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 && indexPath.row == 0)
         return 44;
+    
+    // TODO: factor out duplicated code; same as cellForRowAtIndexPath
+    NSString* storyHeaderText;
+    NSString* storyDetailText;
+    NSString* profileImagePath;
+    
+    NSInteger row = indexPath.row;
+    id story = self.socialStream[row];
+    
+    if([story isKindOfClass:[Goal class]]) {
+        Goal* goal = (Goal *) story;
+        
+        
+        storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
+        storyDetailText = goal.name;
+        
+    } else if ([story isKindOfClass:[Step class]]) {
+        Step* step = (Step *) story;
+        
+        
+        storyHeaderText = [NSString stringWithFormat:@"User %u added a new step", step.creatorId];
+        storyDetailText = step.name;
+    }
+    
+    float totalContentHeight = 130.0;
+    //totalContentHeight += [storyHeaderText size]
     return 130;
 }
 
 -(void)goalIt:(id)sender {
     if([sender isKindOfClass:[UIButton class]]) {
+        NSLog(@"test");
+        
         UIButton* button = (UIButton* ) sender;
         UITableViewCell* cell = (UITableViewCell*) button.superview;
         //NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell:cell];
