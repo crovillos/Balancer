@@ -41,7 +41,7 @@
     
     [self createDummyGoals];
     [self createDummyInvites];
-    [self createDummySocialFeed];
+    [self createDummySocialStream];
     
     return YES;
 }
@@ -116,44 +116,9 @@
     [self.dummyGoals addObject:g3];
 }
 
-/** Creates the dummy social feed. */
-- (void)createDummySocialFeed
-{
-    _dummySocial = [[NSMutableArray alloc] init];
-    
-    Goal *g1 = [[Goal alloc] init];
-    g1.goalId = 2;
-    g1.name = [NSString stringWithFormat:@"Read the Hunger Games"];
-    g1.completionDate = [[NSDate alloc] init]; // sets completion date to today
-    g1.description = [NSString stringWithFormat:@"Catch up on some reading"];
-    g1.open = YES;
-    g1.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
-    g1.inviteList = nil;
-    [_dummySocial addObject:g1];
-    Goal *g2 = [[Goal alloc] init];
-    g2.goalId = 3;
-    g2.name = [NSString stringWithFormat:@"Hangout with Family"];
-    g2.completionDate = [[NSDate alloc] init]; // sets completion date to today
-    g2.description = [NSString stringWithFormat:@"Do fun things with your family"];
-    g2.open = YES;
-    g2.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
-    g2.inviteList = nil;
-    [_dummySocial addObject:g2];
-    Step *a1 = [[Step alloc] init];
-    a1.activityId = 4;
-    a1.name = @"Taking a morning art class";
-    a1.description = @"May 21 (Tue) 8:00AM @ HUB";
-    a1.startDate = [[NSDate alloc] init];
-    a1.endDate = [[NSDate alloc] init];
-    a1.open = YES;
-    a1.creatorId = 2;
-    a1.goal = nil;
-    [_dummySocial addObject:a1];
-    
-}
-
 - (void)createDummyInvites{
     _dummyInvites = [[NSMutableArray alloc] init];
+    
     Goal *goal = [[Goal alloc] init];
     goal.goalId = 1;
     goal.name = [NSString stringWithFormat:@"Hangout with friends twice"];
@@ -163,7 +128,7 @@
     goal.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
     GoalInvite *gInvite1 = [[GoalInvite alloc] init];
     gInvite1.goal = goal;
-    [_dummyInvites addObject:gInvite1];
+    [self.dummyInvites addObject:gInvite1];
     
     Step *a1 = [[Step alloc] init];
     a1.activityId = 3;
@@ -176,44 +141,42 @@
     a1.goal = nil;
     StepInvite *aInvite = [[StepInvite alloc] init];
     aInvite.activity = a1;
-    [_dummyInvites addObject:aInvite];
+    [self.dummyInvites addObject:aInvite];
 }
 
-- (void) createDummyActivities
+/** Creates the dummy social feed. */
+- (void)createDummySocialStream
 {
-    _dummyActivities = [[NSMutableArray alloc] init];
+    _dummySocialStream = [[NSMutableArray alloc] init];
+    
+    Goal *g1 = [[Goal alloc] init];
+    g1.goalId = 2;
+    g1.name = [NSString stringWithFormat:@"Read the Hunger Games"];
+    g1.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    g1.description = [NSString stringWithFormat:@"Catch up on some reading"];
+    g1.open = YES;
+    g1.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
+    g1.inviteList = nil;
+    [self.dummySocialStream addObject:g1];
+    Goal *g2 = [[Goal alloc] init];
+    g2.goalId = 3;
+    g2.name = [NSString stringWithFormat:@"Hangout with Family"];
+    g2.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    g2.description = [NSString stringWithFormat:@"Do fun things with your family"];
+    g2.open = YES;
+    g2.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
+    g2.inviteList = nil;
+    [self.dummySocialStream addObject:g2];
     Step *a1 = [[Step alloc] init];
-    a1.activityId = 6;
-    a1.name = @"Cooking Class";
-    a1.description = @"May 24 (Thur) 5:00PM @ HUB";
+    a1.activityId = 4;
+    a1.name = @"Taking a morning art class";
+    a1.description = @"May 21 (Tue) 8:00AM @ HUB";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
     a1.creatorId = 2;
     a1.goal = nil;
-    [_dummyActivities addObject:a1];
-    
-    Step *a2 = [[Step alloc] init];
-    a2.activityId = 7;
-    a2.name = @"Read 5 Chapters";
-    a2.description = @"May 24 (Thur) 2:00PM @ Downtown Seattle";
-    a2.startDate = [[NSDate alloc] init];
-    a2.endDate = [[NSDate alloc] init];
-    a2.open = YES;
-    a2.creatorId = 3;
-    a2.goal = nil;
-    [_dummyActivities addObject:a2];
-    
-    Step *a3 = [[Step alloc] init];
-    a3.activityId = 8;
-    a3.name = @"Jogging";
-    a3.description = @"May 23 (Wed) 6:00PM @ Facebook Gym";
-    a3.startDate = [[NSDate alloc] init];
-    a3.endDate = [[NSDate alloc] init];
-    a3.open = YES;
-    a3.creatorId = 4;
-    a3.goal = nil;
-    [_dummyActivities addObject:a3];
+    [self.dummySocialStream addObject:a1];
 }
 
 @end

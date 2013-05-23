@@ -11,12 +11,6 @@
 #import "Step.h"
 #import "AppDelegate.h"
 
-
-
-@interface SocialTableViewController ()
-
-@end
-
 @implementation SocialTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -32,16 +26,18 @@
 {
     [super viewDidLoad];
     
-    [self setGoals];
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    NSMutableArray *dummySocialStream = appDelegate.dummySocialStream;
+    
+    [self setSocialStream:dummySocialStream];
 }
 
 /** Sets the model for this view controller.
- @param - The array of Goal objects that comprise the model.
+ @param - 
  */
-- (void)setGoals
+- (void)setGoals:(NSMutableArray *)socialStream
 {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-   _socialStream = appDelegate.dummyGoals;
+    _socialStream = socialStream;
     [self.tableView reloadData];
 }
 
@@ -97,7 +93,7 @@
             cell.accessoryView = goalItButton;
         } else if ([self.socialStream[indexPath.row] isKindOfClass:[Step class]]) {
             Step* a = (Step*) self.socialStream[indexPath.row];
-            CellIdentifier = @"Activity";
+            CellIdentifier = @"Step";
             buttonString = @"Join";
             labelText = a.name;
             detailLabelText = a.description;
