@@ -17,7 +17,6 @@
 @property (nonatomic, strong) NSString* description;
 @property (nonatomic, getter = isPublic) BOOL open;
 @property (nonatomic) NSUInteger creatorId;
-@property (nonatomic) NSUInteger numberActivitiesForCompletion;
 @property (nonatomic, strong) NSMutableArray* activities;
 @property (nonatomic, strong) InviteList* inviteList;
 

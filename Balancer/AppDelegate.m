@@ -19,6 +19,8 @@
 #define BALANCER_FONT_REGULAR @"Bariol-Regular"
 #define BALANCER_FONT_BOLD @"Bariol-Bold"
 
+#define DUMMY_GOALS_MAX_CREATOR_ID 100
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -29,39 +31,103 @@
     UIColor *balancerPinkColor = [UIColor colorWithRed:BALANCER_PINK_RED green:BALANCER_PINK_GREEN blue:BALANCER_PINK_BLUE alpha:1.0];
     [[UINavigationBar appearance] setTintColor:balancerPinkColor];
     
-    // Set custom fonts for UILabels
+    // Set custom font for the title bar
     UIFont *titleTextFont = [UIFont fontWithName:BALANCER_FONT_BOLD size:20.0];
-    //UIFont *mainFont = [UIFont fontWithName:BALANCER_FONT_REGULAR size:[UIFont systemFontSize]];
-    
     [[UINavigationBar appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
       titleTextFont,
       UITextAttributeFont,
       nil]];
-
-    [[UITabBar appearance] setBackgroundColor:balancerPinkColor];
     
-    //[[UILabel appearance] setFont:mainFont]; // TODO: change; uses deprecated method
-    
-    [self createDummyGoals:10];
-    [self createDummySocial];
+    [self createDummyGoals];
     [self createDummyInvites];
-    
+    [self createDummySocialFeed];
     
     return YES;
 }
 
-/** Create dummy social */
-- (void)createDummySocial{
+/** Creates dummy goals and sets them to be the model for this view controller. For testing purposes only. */
+- (void)createDummyGoals
+{
+    _dummyGoals = [[NSMutableArray alloc] init];
+    
+    Goal *goal1 = [[Goal alloc] init];
+    goal1.goalId = 1;
+    goal1.name = @"Hangout with friends often";
+    goal1.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    goal1.description = @"Spend more time with friends";
+    goal1.open = YES;
+    goal1.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
+    
+    Step *goal1Activity1 = [[Step alloc] init];
+    goal1Activity1.activityId = 1;
+    goal1Activity1.name = @"Watch a movie";
+    goal1Activity1.description = @"I want to watch a movie!";
+    goal1Activity1.startDate = [[NSDate alloc] init];
+    goal1Activity1.endDate = [[NSDate alloc] init];
+    goal1Activity1.open = YES;
+    goal1Activity1.creatorId = 1;
+    goal1Activity1.goal = goal1;
+    
+    goal1.activities = [[NSMutableArray alloc] init];
+    [goal1.activities addObject: goal1Activity1];
+    Step *activity2 = [[Step alloc] init];
+    activity2.activityId = 1;
+    activity2.name = @"Have dinner with friends";
+    activity2.startDate = [[NSDate alloc] init];
+    activity2.endDate = [[NSDate alloc] init];
+    activity2.description = @"May 25 (Fri) 6:00PM @ Cheesecake Factory";
+    activity2.open = YES;
+    activity2.creatorId = 1;
+    activity2.goal = goal1;
+    [goal1.activities addObject: activity2];
+    goal1.inviteList = nil; // TODO: add later
+    [self.dummyGoals addObject:goal1];
+    
+    Goal *g2 = [[Goal alloc] init];
+    g2.goalId = 2;
+    g2.name = [NSString stringWithFormat:@"Read the Economist"];
+    g2.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    g2.description = [NSString stringWithFormat:@"Be smarter"];
+    g2.open = YES;
+    g2.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
+    g2.inviteList = nil;
+    [self.dummyGoals addObject:g2];
+    
+    Goal *g3 = [[Goal alloc] init];
+    g3.goalId = 3;
+    g3.name = [NSString stringWithFormat:@"Kickboxing once"];
+    g3.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    g2.description = [NSString stringWithFormat:@"Learn how to defend yourself"];
+    g3.open = YES;
+    g3.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
+    Step *a1 = [[Step alloc] init];
+    a1.activityId = 3;
+    a1.name = @"Kicboxing Class";
+    a1.description = @"May 24 (Thur) 5:00PM @ Facebook Gym";
+    a1.startDate = [[NSDate alloc] init];
+    a1.endDate = [[NSDate alloc] init];
+    a1.open = YES;
+    a1.creatorId = 1;
+    a1.goal = g3;
+    g3.activities = [[NSMutableArray alloc] init];
+    [g3.activities addObject: a1];
+    g3.inviteList = nil;
+    [self.dummyGoals addObject:g3];
+}
+
+/** Creates the dummy social feed. */
+- (void)createDummySocialFeed
+{
     _dummySocial = [[NSMutableArray alloc] init];
+    
     Goal *g1 = [[Goal alloc] init];
     g1.goalId = 2;
     g1.name = [NSString stringWithFormat:@"Read the Hunger Games"];
     g1.completionDate = [[NSDate alloc] init]; // sets completion date to today
     g1.description = [NSString stringWithFormat:@"Catch up on some reading"];
     g1.open = YES;
-    g1.creatorId = arc4random_uniform(10);
-    g1.numberActivitiesForCompletion = 1;
+    g1.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
     g1.inviteList = nil;
     [_dummySocial addObject:g1];
     Goal *g2 = [[Goal alloc] init];
@@ -70,8 +136,7 @@
     g2.completionDate = [[NSDate alloc] init]; // sets completion date to today
     g2.description = [NSString stringWithFormat:@"Do fun things with your family"];
     g2.open = YES;
-    g2.creatorId = arc4random_uniform(10);
-    g2.numberActivitiesForCompletion = 2;
+    g2.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
     g2.inviteList = nil;
     [_dummySocial addObject:g2];
     Step *a1 = [[Step alloc] init];
@@ -95,8 +160,7 @@
     goal.completionDate = [[NSDate alloc] init]; // sets completion date to today
     goal.description = [NSString stringWithFormat:@"Spend more time with friends"];
     goal.open = YES;
-    goal.creatorId = arc4random_uniform(10);
-    goal.numberActivitiesForCompletion = 2;
+    goal.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
     GoalInvite *gInvite1 = [[GoalInvite alloc] init];
     gInvite1.goal = goal;
     [_dummyInvites addObject:gInvite1];
@@ -113,91 +177,6 @@
     StepInvite *aInvite = [[StepInvite alloc] init];
     aInvite.activity = a1;
     [_dummyInvites addObject:aInvite];
-    
-
-    
-    
-    
-    
-}
-
-
-/** Creates dummy goals and sets them to be the model for this view controller. For testing purposes only.
- @param - The number of dummy goals to create.
- */
-- (void)createDummyGoals:(NSUInteger)numberOfDummyGoals
-{
-    
-    _dummyGoals = [[NSMutableArray alloc] init];
-    
-
-    Goal *goal = [[Goal alloc] init];
-    goal.goalId = 1;
-    goal.name = [NSString stringWithFormat:@"Hangout with friends often"];
-    goal.completionDate = [[NSDate alloc] init]; // sets completion date to today
-    goal.description = [NSString stringWithFormat:@"Spend more time with friends"];
-    goal.open = YES;
-    goal.creatorId = arc4random_uniform(10);
-    goal.numberActivitiesForCompletion = 2; // TODO: figure out what this is for?
-    //goal.activities = [self createDummyActivities:10 withGoal:goal];
-    Step *activity1 = [[Step alloc] init];
-    activity1.activityId = 1;
-    activity1.name = @"Watch movies with friends";
-    activity1.description = @"May 25 (Fri) 9:00PM @ Regal";
-    activity1.startDate = [[NSDate alloc] init];
-    activity1.endDate = [[NSDate alloc] init];
-    activity1.open = YES;
-    activity1.creatorId = 1;
-    activity1.goal = goal;
-    goal.activities = [[NSMutableArray alloc] init];
-    [goal.activities addObject: activity1];
-    Step *activity2 = [[Step alloc] init];
-    activity2.activityId = 1;
-    activity2.name = @"Have dinner with friends";
-    activity2.startDate = [[NSDate alloc] init];
-    activity2.endDate = [[NSDate alloc] init];
-    activity2.description = @"May 25 (Fri) 6:00PM @ Cheesecake Factory";
-    activity2.open = YES;
-    activity2.creatorId = 1;
-    activity2.goal = goal;
-    [goal.activities addObject: activity2];
-    goal.inviteList = nil; // TODO: add later
-    [_dummyGoals addObject:goal];
-    
-    Goal *g2 = [[Goal alloc] init];
-    g2.goalId = 2;
-    g2.name = [NSString stringWithFormat:@"Read the Economist"];
-    g2.completionDate = [[NSDate alloc] init]; // sets completion date to today
-    g2.description = [NSString stringWithFormat:@"Be smarter"];
-    g2.open = YES;
-    g2.creatorId = arc4random_uniform(10);
-    g2.numberActivitiesForCompletion = 5;
-    g2.inviteList = nil;
-    [_dummyGoals addObject:g2];
-    
-    Goal *g3 = [[Goal alloc] init];
-    g3.goalId = 3;
-    g3.name = [NSString stringWithFormat:@"Kickboxing once"];
-    g3.completionDate = [[NSDate alloc] init]; // sets completion date to today
-    g2.description = [NSString stringWithFormat:@"Learn how to defend yourself"];
-    g3.open = YES;
-    g3.creatorId = arc4random_uniform(10);
-    g2.numberActivitiesForCompletion = 1;
-    Step *a1 = [[Step alloc] init];
-    a1.activityId = 3;
-    a1.name = @"Kicboxing Class";
-    a1.description = @"May 24 (Thur) 5:00PM @ Facebook Gym";
-    a1.startDate = [[NSDate alloc] init];
-    a1.endDate = [[NSDate alloc] init];
-    a1.open = YES;
-    a1.creatorId = 1;
-    a1.goal = g3;
-    g3.activities = [[NSMutableArray alloc] init];
-    [g3.activities addObject: a1];
-    g3.inviteList = nil;
-    [_dummyGoals addObject:g3];
-
-
 }
 
 - (void) createDummyActivities
@@ -213,7 +192,7 @@
     a1.creatorId = 2;
     a1.goal = nil;
     [_dummyActivities addObject:a1];
-
+    
     Step *a2 = [[Step alloc] init];
     a2.activityId = 7;
     a2.name = @"Read 5 Chapters";
@@ -235,35 +214,6 @@
     a3.creatorId = 4;
     a3.goal = nil;
     [_dummyActivities addObject:a3];
-
-  
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end

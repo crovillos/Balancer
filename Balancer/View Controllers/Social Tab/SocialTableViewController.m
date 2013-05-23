@@ -11,8 +11,7 @@
 #import "Step.h"
 #import "AppDelegate.h"
 
-#define DUMMY_GOALS_COUNT 10
-#define DUMMY_GOALS_MAX_CREATOR_ID 100
+
 
 @interface SocialTableViewController ()
 
