@@ -56,7 +56,7 @@
     s1.name = @"Cooking Class";
     s1.description = @"May 27 (Sat) 11:00AM @ HUB 441";
     s1.startDate = [[NSDate alloc] init];
-    s1.endDate = [[NSDate alloc] init];
+    s1.endDate = [[[NSDate alloc] init] dateByAddingTimeInterval: 86400];
     s1.open = YES;
     s1.creatorId = 2;
     s1.goal = nil;
@@ -67,7 +67,8 @@
     s2.name = @"Read 5 Chapters";
     s2.description = @"May 26 (Sun) 2:00PM @ Downtown Seattle";
     s2.startDate = [[NSDate alloc] init];
-    s2.endDate = [[NSDate alloc] init];
+    s2.endDate = [[[NSDate alloc] init] dateByAddingTimeInterval: 86400];
+    //s2.endDate = [NSDate dateWithNaturalLanguageString : @"12/31/01"];
     s2.open = YES;
     s2.creatorId = 2;
     s2.goal = nil;
@@ -78,7 +79,7 @@
     s3.name = @"Jogging";
     s3.description = @"Tomorrow 6:00AM @ Facebook Gym";
     s3.startDate = [[NSDate alloc] init];
-    s3.endDate = [[NSDate alloc] init];
+    s3.endDate = [[[NSDate alloc] init] dateByAddingTimeInterval: 86400];
     s3.open = YES;
     s3.creatorId = 4;
     s3.goal = nil;
