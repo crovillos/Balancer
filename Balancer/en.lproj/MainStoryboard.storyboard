@@ -320,7 +320,7 @@
         <scene sceneID="lJa-aS-2l1">
             <objects>
                 <navigationController definesPresentationContext="YES" id="ndN-EX-Avu" customClass="SocialNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Social" image="social_icon.png" id="nTS-t2-6F6"/>
+                    <tabBarItem key="tabBarItem" title="Social" id="nTS-t2-6F6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fZ5-99-tu5">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -336,7 +336,7 @@
         <scene sceneID="qf9-3O-Z2E">
             <objects>
                 <navigationController definesPresentationContext="YES" id="ikG-pC-bSC" customClass="TodayNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Today" image="today_logo.png" id="hdP-8N-pts"/>
+                    <tabBarItem key="tabBarItem" title="Today" id="hdP-8N-pts"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ZT-Xo-Y0Q">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -353,7 +353,7 @@
             <objects>
                 <tableViewController id="xGs-dH-6AL" customClass="GoalsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qMh-uB-u1c">
-                        <rect key="frame" x="0.0" y="20" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -565,7 +565,7 @@
             <objects>
                 <tableViewController id="n4h-6N-8xh" customClass="AddGoalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="noZ-Hu-ai8">
-                        <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -617,7 +617,7 @@
             <objects>
                 <tableViewController id="ZVv-JW-akH" customClass="AddCustomGoalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="EDy-Sk-Wla">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -801,7 +801,7 @@
         <scene sceneID="wOh-iP-j08">
             <objects>
                 <navigationController definesPresentationContext="YES" id="90T-6j-1lG" customClass="ProgressNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Progress" image="progress_icon.png" id="sM4-h5-FfK"/>
+                    <tabBarItem key="tabBarItem" title="Progress" id="sM4-h5-FfK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t87-1I-CId">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -851,7 +851,7 @@
         <scene sceneID="8dY-90-qyI">
             <objects>
                 <navigationController definesPresentationContext="YES" id="JDP-a4-Atx" customClass="GoalsNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Goals" image="goals_icon.png" id="Hzi-zc-nn3"/>
+                    <tabBarItem key="tabBarItem" title="Goals" id="Hzi-zc-nn3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fnI-6f-3ev">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1112,10 +1112,6 @@
     </scenes>
     <resources>
         <image name="Under Construction Logo.png" width="877" height="375"/>
-        <image name="goals_icon.png" width="30" height="30"/>
-        <image name="progress_icon.png" width="30" height="30"/>
-        <image name="social_icon.png" width="30" height="30"/>
-        <image name="today_logo.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="AddCustomGoalTableViewController" superclassName="FlatTableViewController">
@@ -1208,9 +1204,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0zL-9H-gfQ"/>
+        <segue reference="L0Q-N1-yab"/>
+        <segue reference="iQM-Io-Sew"/>
         <segue reference="QW9-Xl-EgU"/>
         <segue reference="ini-nr-Qle"/>
-        <segue reference="L0Q-N1-yab"/>
     </inferredMetricsTieBreakers>
 </document>

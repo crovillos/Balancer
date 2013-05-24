@@ -28,10 +28,10 @@
     UITabBarItem *tabBarItem4 = [self.tabBar.items objectAtIndex:3];
     
     // overrides storyboard
-    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"social_icon.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"social_icon.png"]];
-    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"goals_icon.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"goals_icon.png"]];
-    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"today_logo.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"today_logo.png"]];
-    [tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"progress_icon.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"progress_icon.png"]];
+    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"Social.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"Social.png"]];
+    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"Goals.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"Goals.png"]];
+    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"Today.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"Today.png"]];
+    [tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"Progress.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"Progress.png"]];
 }
 
 @end
