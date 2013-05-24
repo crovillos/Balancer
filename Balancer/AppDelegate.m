@@ -48,6 +48,33 @@
 }
 
 /** Creates dummy goals and sets them to be the model for this view controller. For testing purposes only. */
+- (void)createDummySteps
+{
+    _dummySteps = [[NSMutableArray alloc] init];
+    Step *s1 = [[Step alloc] init];
+    s1.activityId = 6;
+    s1.name = @"Cooking Class";
+    s1.description = @"May 26 (Sat) 11:00AM @ HUB 441";
+    s1.startDate = [[NSDate alloc] init];
+    s1.endDate = [[NSDate alloc] init];
+    s1.open = YES;
+    s1.creatorId = 2;
+    s1.goal = nil;
+    [_dummySteps addObject:s1];
+    
+    Step *s2 = [[Step alloc] init];
+    s2.activityId = 7;
+    s2.name = @"Cooking Class";
+    s2.description = @"May 26 (Sat) 11:00AM @ HUB 441";
+    s2.startDate = [[NSDate alloc] init];
+    s2.endDate = [[NSDate alloc] init];
+    s2.open = YES;
+    s2.creatorId = 2;
+    s2.goal = nil;
+    [_dummySteps addObject:s1];
+    
+}
+
 - (void)createDummyGoals
 {
     _dummyGoals = [[NSMutableArray alloc] init];
@@ -73,7 +100,7 @@
     goal1.activities = [[NSMutableArray alloc] init];
     [goal1.activities addObject: goal1Activity1];
     Step *activity2 = [[Step alloc] init];
-    activity2.activityId = 1;
+    activity2.activityId = 2;
     activity2.name = @"Have dinner with friends";
     activity2.startDate = [[NSDate alloc] init];
     activity2.endDate = [[NSDate alloc] init];
@@ -132,7 +159,7 @@
     [self.dummyInvites addObject:gInvite1];
     
     Step *a1 = [[Step alloc] init];
-    a1.activityId = 3;
+    a1.activityId = 4;
     a1.name = @"Kicboxing class";
     a1.description = @"May 27 (Sun) 6:00PM @ IMA";
     a1.startDate = [[NSDate alloc] init];
@@ -170,7 +197,7 @@
     g2.sponsored = YES;
     [self.dummySocialStream addObject:g2];
     Step *a1 = [[Step alloc] init];
-    a1.activityId = 4;
+    a1.activityId = 5;
     a1.name = @"Taking a morning art class";
     a1.description = @"May 21 (Tue) 8:00AM @ HUB";
     a1.startDate = [[NSDate alloc] init];
