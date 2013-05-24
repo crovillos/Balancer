@@ -11,8 +11,6 @@
 
 @interface GoalsTableViewController : FlatTableViewController <AddGoalTableViewControllerDelegate>
 
-
-
 /** The model for this view controller, obtained from the network */
 
 @property (nonatomic, strong) NSArray *goals; // of Goal

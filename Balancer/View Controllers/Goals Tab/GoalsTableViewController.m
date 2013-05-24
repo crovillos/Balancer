@@ -9,7 +9,7 @@
 #import "GoalsTableViewController.h"
 #import "Goal.h"
 #import "Step.h"
-#import "AppDelegate.h" //TODO: remove
+#import "AppDelegate.h"
 #import "AddGoalTableViewController.h"
 
 #import "DTCustomColoredAccessory.h"
@@ -18,6 +18,7 @@
 #define DUMMY_GOALS_MAX_CREATOR_ID 100
 
 @interface GoalsTableViewController()
+
 @property (nonatomic, strong) NSMutableIndexSet *expandedSections;
 
 @end
@@ -40,15 +41,6 @@
     }
     
     [self runTimerFunctions];
-}
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
 }
 
 #pragma mark - Setters
@@ -140,7 +132,7 @@
             UIButton *detailsButton = (UIButton *)[cell viewWithTag:3];
             
             goalLabel.text = [self titleForGoalAtSection:indexPath.section];
-
+            
             //[addButton addTarget:self action:@selector(onClickedAddStepButton:) forControlEvents:UIControlEventTouchUpInside];
             //[editButton addTarget:self action:@selector(onClickedEditGoalButton:) forControlEvents:UIControlEventTouchUpInside];
             //[detailsButton addTarget:self action:@selector(onClickedShowGoalDetailsButton:) forControlEvents:UIControlEventTouchUpInside];
@@ -291,7 +283,7 @@
 {
     if ([sender isKindOfClass:[UITableViewCell class]]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-
+        
         if (indexPath) {
             if ([segue.identifier isEqualToString:@"Show Step Details"]) {
                 if ([segue.destinationViewController respondsToSelector:@selector(setStep:)]) {
@@ -301,14 +293,14 @@
                 }
             }
         }
-
+        
     }
     if ([segue.identifier isEqualToString:@"Add Goal"])
 	{
 		AddGoalTableViewController *addGoalTableViewController =
         segue.destinationViewController;
 		addGoalTableViewController.delegate = self;
-
+        
 	}
 }
 
@@ -345,7 +337,7 @@
 - (void)addGoalTableViewController:(AddGoalTableViewController *)controller didSelectGoal:(Goal *)goal
 {
 	[self addGoal:goal];
-            [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) runTimerFunctions {

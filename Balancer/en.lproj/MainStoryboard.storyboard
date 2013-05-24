@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Activity" textLabel="TAS-GL-YfJ" detailTextLabel="rKG-3l-Tno" style="IBUITableViewCellStyleSubtitle" id="JX5-J5-7yW">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Step" textLabel="TAS-GL-YfJ" detailTextLabel="rKG-3l-Tno" style="IBUITableViewCellStyleSubtitle" id="JX5-J5-7yW">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -47,7 +47,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXw-8u-93E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="-661"/>
+            <point key="canvasLocation" x="-2146" y="1551"/>
         </scene>
         <!--Add Step Table View Controller-->
         <scene sceneID="9g8-b4-Ixm">
@@ -77,7 +77,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cS-Bb-hUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-479" y="-1428"/>
+            <point key="canvasLocation" x="-1132" y="-405"/>
         </scene>
         <!--Social Table View Controller - Social-->
         <scene sceneID="SWQ-Wu-bMk">
@@ -278,7 +278,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bF-BB-gFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1701" y="-661"/>
+            <point key="canvasLocation" x="-2146" y="-1528"/>
         </scene>
         <!--Table View Controller - Invites-->
         <scene sceneID="n0n-Kf-fh8">
@@ -308,7 +308,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcX-3w-Vd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1219" y="-661"/>
+            <point key="canvasLocation" x="-1664" y="-1528"/>
         </scene>
         <!--Social Navigation Controller - Social-->
         <scene sceneID="lJa-aS-2l1">
@@ -324,7 +324,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2m-fd-d42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2235" y="-661"/>
+            <point key="canvasLocation" x="-2680" y="-1528"/>
         </scene>
         <!--Today Navigation Controller - Today-->
         <scene sceneID="qf9-3O-Z2E">
@@ -340,14 +340,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cp-QG-9e3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343" y="-661"/>
+            <point key="canvasLocation" x="-2680" y="1551"/>
         </scene>
         <!--Goals Table View Controller - Goals-->
         <scene sceneID="wrM-HU-KLz">
             <objects>
                 <tableViewController id="xGs-dH-6AL" customClass="GoalsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qMh-uB-u1c">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -454,7 +454,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTM-Ws-h73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1701" y="819"/>
+            <point key="canvasLocation" x="-2146" y="-405"/>
         </scene>
         <!--Goal Details Table View Controller - Goal Details-->
         <scene sceneID="4CE-OW-Ooq">
@@ -546,14 +546,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mc3-9s-KfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1077" y="771"/>
+            <point key="canvasLocation" x="510" y="-137"/>
         </scene>
         <!--Add Goal Table View Controller - Add Goal-->
         <scene sceneID="VOm-GA-Uqi">
             <objects>
                 <tableViewController id="n4h-6N-8xh" customClass="AddGoalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="noZ-Hu-ai8">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -598,7 +598,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOh-V3-7LH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Oaa-5E-YvE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1709" y="1840"/>
+            <point key="canvasLocation" x="-2146" y="380"/>
         </scene>
         <!--Add Custom Goal Table View Controller - Add Custom Goal-->
         <scene sceneID="NXr-5u-aZr">
@@ -754,7 +754,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZq-dI-STX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="F0R-Di-roq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1664" y="2568"/>
+            <point key="canvasLocation" x="-1132" y="380"/>
         </scene>
         <!--Edit Goal View Controller-->
         <scene sceneID="fNZ-hd-9WN">
@@ -783,7 +783,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WzS-e1-g7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-995" y="1584"/>
+            <point key="canvasLocation" x="986" y="-128"/>
         </scene>
         <!--Progress Navigation Controller - Progress-->
         <scene sceneID="wOh-iP-j08">
@@ -799,7 +799,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USR-IF-IWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343" y="819"/>
+            <point key="canvasLocation" x="-2680" y="2387"/>
         </scene>
         <!--Progress View Controller - Progress-->
         <scene sceneID="7NN-ou-Y0a">
@@ -833,7 +833,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSG-7a-qQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="819"/>
+            <point key="canvasLocation" x="-2146" y="2387"/>
         </scene>
         <!--Goals Navigation Controller - Goals-->
         <scene sceneID="8dY-90-qyI">
@@ -849,7 +849,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCc-Op-6wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2235" y="819"/>
+            <point key="canvasLocation" x="-2680" y="-405"/>
         </scene>
         <!--Flat Tab Bar Controller-->
         <scene sceneID="15">
@@ -870,14 +870,14 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-416" y="166"/>
+            <point key="canvasLocation" x="-3540" y="-1528"/>
         </scene>
         <!--Step Details Table View Controller - Step Detail-->
         <scene sceneID="6PO-Ek-ZaP">
             <objects>
                 <tableViewController id="cZJ-0a-jUN" customClass="StepDetailsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="2eQ-zC-qFd">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1041,7 +1041,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ej2-vi-ggN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="351" y="-1476"/>
+            <point key="canvasLocation" x="499" y="-972"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xNc-nt-Kup">
@@ -1059,7 +1059,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34P-dC-KbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2235" y="1840"/>
+            <point key="canvasLocation" x="-2680" y="380"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nyp-TV-1f8">
@@ -1077,7 +1077,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqM-PQ-wP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2190" y="2568"/>
+            <point key="canvasLocation" x="-1658" y="380"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DUY-ir-vnU">
@@ -1095,7 +1095,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8L-D9-eve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1005" y="-1428"/>
+            <point key="canvasLocation" x="-1614" y="-405"/>
         </scene>
     </scenes>
     <resources>
@@ -1125,7 +1125,7 @@
         <class className="AddStepTableViewController" superclassName="FlatTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddStepTableViewController.h"/>
         </class>
-        <class className="EditGoalViewController" superclassName="UIViewController">
+        <class className="EditGoalViewController" superclassName="FlatViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EditGoalViewController.h"/>
         </class>
         <class className="FlatTabBarController" superclassName="UITabBarController">
@@ -1134,7 +1134,10 @@
         <class className="FlatTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatTableViewController.h"/>
         </class>
-        <class className="GoalDetailsTableViewController" superclassName="UITableViewController">
+        <class className="FlatViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatViewController.h"/>
+        </class>
+        <class className="GoalDetailsTableViewController" superclassName="FlatTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalDetailsTableViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="completeByLabel" candidateClass="UILabel"/>
@@ -1157,7 +1160,7 @@
         <class className="ProgressNavigationController" superclassName="UINavigationController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressNavigationController.h"/>
         </class>
-        <class className="ProgressViewController" superclassName="UIViewController">
+        <class className="ProgressViewController" superclassName="FlatViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
         </class>
         <class className="SocialNavigationController" superclassName="UINavigationController">
@@ -1166,7 +1169,7 @@
         <class className="SocialTableViewController" superclassName="FlatTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialTableViewController.h"/>
         </class>
-        <class className="StepDetailsTableViewController" superclassName="UITableViewController">
+        <class className="StepDetailsTableViewController" superclassName="FlatTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StepDetailsTableViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="descriptionDetailLabel" candidateClass="UILabel"/>
@@ -1180,7 +1183,7 @@
         <class className="TodayNavigationController" superclassName="UINavigationController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayNavigationController.h"/>
         </class>
-        <class className="TodayTableViewController" superclassName="UITableViewController">
+        <class className="TodayTableViewController" superclassName="FlatTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayTableViewController.h"/>
         </class>
         <class className="UIStoryboardSegue" superclassName="NSObject">
@@ -1193,7 +1196,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="uvq-0h-uEB"/>
         <segue reference="0zL-9H-gfQ"/>
-        <segue reference="QW9-Xl-EgU"/>
     </inferredMetricsTieBreakers>
 </document>

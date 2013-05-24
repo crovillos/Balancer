@@ -17,15 +17,6 @@
 
 @implementation SocialTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -151,13 +142,11 @@
     if([story isKindOfClass:[Goal class]]) {
         Goal* goal = (Goal *) story;
         
-        
         storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
         storyDetailText = goal.name;
         
     } else if ([story isKindOfClass:[Step class]]) {
         Step* step = (Step *) story;
-        
         
         storyHeaderText = [NSString stringWithFormat:@"User %u added a new step", step.creatorId];
         storyDetailText = step.name;
