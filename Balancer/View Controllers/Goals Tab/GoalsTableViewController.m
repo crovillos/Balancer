@@ -154,6 +154,9 @@
             // have activity id row within goal section
             Step *activityAtRow = (Step *)goalAtSection.activities[indexPath.row - 1];
             cell.textLabel.text = activityAtRow.name;
+            
+            cell.indentationLevel = 1;
+            cell.indentationWidth = 10;
         }
     }
     else
@@ -172,6 +175,26 @@
     //cell.detailTextLabel.text = [self subtitleForRow:indexPath.row];
     
     //return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self tableView:tableView canCollapseSection:indexPath.section])
+    {
+        if (!indexPath.row) // indexPath.row == 0; the first row
+        {
+            return 3;
+        }
+        else
+        {
+            return 3;
+        }
+    }
+    else
+    {
+        return 3;
+        
+    }
 }
 
 -(void) onClickedAddStepButton: (id) sender{
