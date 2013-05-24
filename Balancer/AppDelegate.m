@@ -41,7 +41,8 @@
     
     [self createDummyGoals];
     [self createDummyInvites];
-    [self createDummyActivities];
+    [self createDummySocialStream];
+    [self createDummySteps];
     
     return YES;
 }

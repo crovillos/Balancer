@@ -16,5 +16,6 @@
 @property (strong, nonatomic) NSMutableArray *dummyGoals;
 @property (strong, nonatomic) NSMutableArray *dummyInvites;
 @property (strong, nonatomic) NSMutableArray *dummySocialStream;
+@property (strong, nonatomic) NSMutableArray *dummySteps;
 
 @end
