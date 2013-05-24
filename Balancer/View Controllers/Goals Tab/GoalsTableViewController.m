@@ -222,11 +222,16 @@
                 rows = [self tableView:tableView numberOfRowsInSection:section];
                 [self.expandedSections removeIndex:section];
                 
+                // hide buttons
+                
             }
             else
             {
                 [self.expandedSections addIndex:section];
                 rows = [self tableView:tableView numberOfRowsInSection:section];
+                
+                // show buttons
+                
             }
             
             for (int i=1; i<rows; i++)
