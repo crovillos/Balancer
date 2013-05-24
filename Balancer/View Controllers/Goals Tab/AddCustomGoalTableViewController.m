@@ -9,6 +9,7 @@
 #import "AddCustomGoalTableViewController.h"
 
 @interface AddCustomGoalTableViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *titleInput;
 @property (weak, nonatomic) IBOutlet UITextField *completeByInput;
 @property (weak, nonatomic) IBOutlet UISwitch *publicInput;
@@ -17,27 +18,6 @@
 @end
 
 @implementation AddCustomGoalTableViewController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if ((textField == self.titleInput) || (textField == self.completeByInput) || (textField == self.inviteInput)) {
@@ -56,8 +36,6 @@
             goal.open = self.publicInput.enabled;
             self.goal = goal;
     }
-    
-    
 }
 
 @end

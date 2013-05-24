@@ -22,15 +22,6 @@
 
 @implementation TodayTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (NSDate *)dateAtBeginningOfDayForDate:(NSDate *)inputDate
 {
     // Use the user's current calendar and time zone
@@ -130,7 +121,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Activity";
+    static NSString *CellIdentifier = @"Step";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
@@ -167,9 +158,6 @@
     NSDate *dateRepresentingThisDay = [self.sortedDays objectAtIndex:section];
     return [self.sectionDateFormatter stringFromDate:dateRepresentingThisDay];
 }
-
-
-
 
 #pragma mark - Table view delegate
 

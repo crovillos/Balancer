@@ -12,26 +12,21 @@
 #import "Goal.h"
 #import "Step.h"
 #import "AppDelegate.h"
+#import "UINavigationBar+FlatUI.h"
+#import "UIColor+Balancer.h"
 
 @implementation SocialTableViewController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor balancerPinkColor]];
     
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSMutableArray *dummySocialStream = appDelegate.dummySocialStream;
     
     [self setSocialStream:dummySocialStream];
+    
 }
 
 /** Sets the model for this view controller.
@@ -147,13 +142,11 @@
     if([story isKindOfClass:[Goal class]]) {
         Goal* goal = (Goal *) story;
         
-        
         storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
         storyDetailText = goal.name;
         
     } else if ([story isKindOfClass:[Step class]]) {
         Step* step = (Step *) story;
-        
         
         storyHeaderText = [NSString stringWithFormat:@"User %u added a new step", step.creatorId];
         storyDetailText = step.name;

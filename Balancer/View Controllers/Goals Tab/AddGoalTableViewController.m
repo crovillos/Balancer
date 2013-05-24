@@ -11,20 +11,7 @@
 #import "AppDelegate.h"
 #import "GoalsTableViewController.h"
 
-@interface AddGoalTableViewController ()
-
-@end
-
 @implementation AddGoalTableViewController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 -(void)setAvailableGoals:(NSArray *)availableGoals
 {
@@ -37,12 +24,6 @@
     [super viewDidLoad];
     
     //[self setAvailableGoals:goals];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -78,7 +59,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 	
 	NSInteger selectedIndex = indexPath.row;
-	UITableViewCell *cell =
+	UITableViewCell *cell = nil;
     [tableView cellForRowAtIndexPath:indexPath];
 	cell.accessoryType = UITableViewCellAccessoryCheckmark;
 	Goal *goal = [self.availableGoals objectAtIndex:indexPath.row];
