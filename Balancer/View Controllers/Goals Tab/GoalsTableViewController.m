@@ -154,6 +154,9 @@
             // have activity id row within goal section
             Step *activityAtRow = (Step *)goalAtSection.activities[indexPath.row - 1];
             cell.textLabel.text = activityAtRow.name;
+            
+            cell.indentationLevel = 1;
+            cell.indentationWidth = 10;
         }
     }
     else
@@ -172,6 +175,26 @@
     //cell.detailTextLabel.text = [self subtitleForRow:indexPath.row];
     
     //return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self tableView:tableView canCollapseSection:indexPath.section])
+    {
+        if (!indexPath.row) // indexPath.row == 0; the first row
+        {
+            return 3;
+        }
+        else
+        {
+            return 3;
+        }
+    }
+    else
+    {
+        return 3;
+        
+    }
 }
 
 -(void) onClickedAddStepButton: (id) sender{
@@ -207,7 +230,7 @@
         if (!indexPath.row)
         {
             [self.tableView beginUpdates];
-            
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
             // only first row toggles exapand/collapse
             [tableView deselectRowAtIndexPath:indexPath animated:YES];
             
@@ -222,15 +245,46 @@
                 rows = [self tableView:tableView numberOfRowsInSection:section];
                 [self.expandedSections removeIndex:section];
                 
-                // hide buttons
+                UIButton* addStepButton = (UIButton *)[cell viewWithTag:1];
+                UIButton* editGoalButton = (UIButton *)[cell viewWithTag:2];
+                UIButton* goalInfoButton = (UIButton *)[cell viewWithTag:3];
                 
+                // hide buttons
+                [UIView animateWithDuration:0.25
+                                      delay:0
+                                    options:nil
+                                 animations:^{
+                                     addStepButton.alpha = 0.0;
+                                     editGoalButton.alpha = 0.0;
+                                     goalInfoButton.alpha = 0.0;
+                                 }
+                                 completion:^(BOOL finished){
+                                     // if you want to do anything when animation is done, do it here
+                                 }
+                 ];
             }
             else
             {
                 [self.expandedSections addIndex:section];
                 rows = [self tableView:tableView numberOfRowsInSection:section];
                 
+                UIButton* addStepButton = (UIButton *)[cell viewWithTag:1];
+                UIButton* editGoalButton = (UIButton *)[cell viewWithTag:2];
+                UIButton* goalInfoButton = (UIButton *)[cell viewWithTag:3];
+                
                 // show buttons
+                [UIView animateWithDuration:0.25
+                                      delay:0
+                                    options:nil
+                                 animations:^{
+                                     addStepButton.alpha = 1.0;
+                                     editGoalButton.alpha = 1.0;
+                                     goalInfoButton.alpha = 1.0;
+                                 }
+                                 completion:^(BOOL finished){
+                                     // if you want to do anything when animation is done, do it here
+                                 }
+                 ];
                 
             }
             
@@ -240,7 +294,7 @@
                 [tmpArray addObject:tmpIndexPath];
             }
             
-            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            
             
             if (currentlyExpanded)
             {
