@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -49,23 +49,55 @@
             </objects>
             <point key="canvasLocation" x="-2146" y="1551"/>
         </scene>
-        <!--Add Step Table View Controller-->
+        <!--Social Add Goal Table View Controller-->
         <scene sceneID="9g8-b4-Ixm">
             <objects>
-                <tableViewController id="u8D-um-qL1" customClass="AddStepTableViewController" sceneMemberID="viewController">
+                <tableViewController id="u8D-um-qL1" customClass="SocialAddGoalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BBa-LR-RaC">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Available Step" id="pxH-9T-bxJ">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Goal" rowHeight="130" id="WSr-qe-xGz">
+                                <rect key="frame" x="0.0" y="22" width="320" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="129"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="John Doe added a new goal" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="146" translatesAutoresizingMaskIntoConstraints="NO" id="5Ua-V4-nON">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="146" id="Io7-A6-nZ4"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" type="user" id="zAR-yJ-WTT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="Goal title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="205" translatesAutoresizingMaskIntoConstraints="NO" id="cjb-DF-U3N">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sK-TZ-2e4">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" type="user" id="38l-Q7-PcC"/>
+                                                <constraint firstAttribute="width" constant="51" type="user" id="HMi-bK-fac"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="cjb-DF-U3N" firstAttribute="leading" secondItem="3sK-TZ-2e4" secondAttribute="leading" type="default" id="CDt-HJ-a3V"/>
+                                    <constraint firstAttribute="bottom" secondItem="cjb-DF-U3N" secondAttribute="bottom" constant="10" type="user" id="Que-ym-jvc"/>
+                                    <constraint firstItem="5Ua-V4-nON" firstAttribute="trailing" secondItem="cjb-DF-U3N" secondAttribute="trailing" type="default" id="QyI-Gy-aBJ"/>
+                                    <constraint firstItem="3sK-TZ-2e4" firstAttribute="top" secondItem="WSr-qe-xGz" secondAttribute="top" constant="10" type="user" id="WYf-iC-ZVe"/>
+                                    <constraint firstItem="3sK-TZ-2e4" firstAttribute="leading" secondItem="WSr-qe-xGz" secondAttribute="leading" constant="10" id="dbs-7t-mMF"/>
+                                    <constraint firstItem="cjb-DF-U3N" firstAttribute="top" secondItem="3sK-TZ-2e4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iTD-5W-1VH"/>
+                                    <constraint firstItem="cjb-DF-U3N" firstAttribute="top" secondItem="5Ua-V4-nON" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="piX-V9-NRr"/>
+                                    <constraint firstItem="5Ua-V4-nON" firstAttribute="leading" secondItem="3sK-TZ-2e4" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="xni-0P-bHj"/>
+                                </constraints>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -73,11 +105,16 @@
                             <outlet property="delegate" destination="u8D-um-qL1" id="AFC-ZA-nyu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BuZ-HG-2Wn"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BuZ-HG-2Wn">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="124-M4-s92"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Yrb-DB-fnH"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cS-Bb-hUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1132" y="-405"/>
+            <point key="canvasLocation" x="-604" y="-1501"/>
         </scene>
         <!--Social Table View Controller - Social-->
         <scene sceneID="SWQ-Wu-bMk">
@@ -283,12 +320,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Social" id="ase-nW-i0g"/>
                     <connections>
-                        <segue destination="QxR-hd-cqV" kind="modal" identifier="Add Step to Goal" id="0pn-Ck-nF4"/>
+                        <segue destination="cel-Te-a7O" kind="modal" identifier="Add Step to Goal" id="boy-rf-77h"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bF-BB-gFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2146" y="-1528"/>
+            <point key="canvasLocation" x="-2214" y="-1508"/>
         </scene>
         <!--Table View Controller - Invites-->
         <scene sceneID="n0n-Kf-fh8">
@@ -615,7 +652,7 @@
             <objects>
                 <tableViewController id="ZVv-JW-akH" customClass="AddCustomGoalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="EDy-Sk-Wla">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.94901961089999998" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -1105,7 +1142,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8L-D9-eve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1614" y="-405"/>
+            <point key="canvasLocation" x="-1126" y="-1508"/>
         </scene>
     </scenes>
     <resources>
@@ -1114,99 +1151,14 @@
         <image name="editGoal_icon.png" width="20" height="20"/>
         <image name="viewGoal_icon.png" width="20" height="20"/>
     </resources>
-    <classes>
-        <class className="AddCustomGoalTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCustomGoalTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="completeByInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inviteInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="publicInput" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="titleInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddGoalTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGoalTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
-            </relationships>
-        </class>
-        <class className="AddStepTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddStepTableViewController.h"/>
-        </class>
-        <class className="EditGoalViewController" superclassName="FlatViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditGoalViewController.h"/>
-        </class>
-        <class className="FlatTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatTabBarController.h"/>
-        </class>
-        <class className="FlatTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatTableViewController.h"/>
-        </class>
-        <class className="FlatViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatViewController.h"/>
-        </class>
-        <class className="GoalDetailsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalDetailsTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="completeByLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goalDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goaledLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="GoalsNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsNavigationController.h"/>
-        </class>
-        <class className="GoalsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ProgressNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressNavigationController.h"/>
-        </class>
-        <class className="ProgressViewController" superclassName="FlatViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
-        </class>
-        <class className="SocialNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialNavigationController.h"/>
-        </class>
-        <class className="SocialTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialTableViewController.h"/>
-        </class>
-        <class className="StepDetailsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepDetailsTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goalDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="joiningDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="privacyDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="whenDetailLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TodayNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayNavigationController.h"/>
-        </class>
-        <class className="TodayTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayTableViewController.h"/>
-        </class>
-        <class className="UIStoryboardSegue" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="iQM-Io-Sew"/>
-        <segue reference="ini-nr-Qle"/>
-        <segue reference="QW9-Xl-EgU"/>
+        <segue reference="0zL-9H-gfQ"/>
+        <segue reference="ToB-SQ-gci"/>
+        <segue reference="jv6-Vq-oQ8"/>
     </inferredMetricsTieBreakers>
 </document>

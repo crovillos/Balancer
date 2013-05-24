@@ -93,6 +93,7 @@
 		83DD42E5173447DB00FA7408 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD42E4173447DB00FA7408 /* main.m */; };
 		83DD42E9173447DB00FA7408 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD42E8173447DB00FA7408 /* AppDelegate.m */; };
 		83DD42F2173447DB00FA7408 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42F0173447DB00FA7408 /* MainStoryboard.storyboard */; };
+		CB7C0A1917502947008E8AEA /* SocialAddGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7C0A1817502946008E8AEA /* SocialAddGoalTableViewController.m */; };
 		CB87568C1749590F003159DF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87568B1749590F003159DF /* CFNetwork.framework */; };
 		CB87568E17495918003159DF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87568D17495918003159DF /* CoreData.framework */; };
 		CB87569017495926003159DF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87568F17495926003159DF /* MobileCoreServices.framework */; };
@@ -305,6 +306,8 @@
 		83DD42E7173447DB00FA7408 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83DD42E8173447DB00FA7408 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		83DD42F1173447DB00FA7408 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CB7C0A1717502946008E8AEA /* SocialAddGoalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialAddGoalTableViewController.h; sourceTree = "<group>"; };
+		CB7C0A1817502946008E8AEA /* SocialAddGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialAddGoalTableViewController.m; sourceTree = "<group>"; };
 		CB87568B1749590F003159DF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		CB87568D17495918003159DF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CB87568F17495926003159DF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -471,6 +474,8 @@
 				83C0CA44174EC4CA007DDD05 /* SocialTableViewController.m */,
 				83C0CA80174EC6F6007DDD05 /* InvitesTableViewController.h */,
 				83C0CA81174EC6F6007DDD05 /* InvitesTableViewController.m */,
+				CB7C0A1717502946008E8AEA /* SocialAddGoalTableViewController.h */,
+				CB7C0A1817502946008E8AEA /* SocialAddGoalTableViewController.m */,
 			);
 			path = "Social Tab";
 			sourceTree = "<group>";
@@ -918,6 +923,7 @@
 				83D8B236174EF6C60027D1B8 /* UITabBar+FlatUI.m in Sources */,
 				83D8B243174F119B0027D1B8 /* UIColor+Balancer.m in Sources */,
 				83D8B24D174F207A0027D1B8 /* FlatViewController.m in Sources */,
+				CB7C0A1917502947008E8AEA /* SocialAddGoalTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
