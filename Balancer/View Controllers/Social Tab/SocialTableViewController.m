@@ -60,9 +60,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell *cell;
+    
     if (!indexPath.section) { // at invites row
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Invitations" forIndexPath:indexPath];
-        return cell;
+        cell = [tableView dequeueReusableCellWithIdentifier:@"Invitations" forIndexPath:indexPath];
     } else {
         NSInteger row = indexPath.row;
         id story = self.socialStream[row];
@@ -94,7 +95,7 @@
             storyDetailText = step.name;
         }
         
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
         
         // add accessory view button
         UIButton *accessoryViewButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -124,8 +125,17 @@
         [imageLayer setCornerRadius:25];
         [imageLayer setMasksToBounds:YES];
         
-        return cell;
+        UIView *cellBackgroundView = [[UIView alloc] init];
+        cellBackgroundView.backgroundColor = [UIColor whiteColor];
+        cell.backgroundView = cellBackgroundView;
     }
+    
+    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    UIView *selectedCellBackgroundView = [[UIView alloc] init];
+    selectedCellBackgroundView.backgroundColor = [UIColor balancerLightBlueColor];
+    cell.selectedBackgroundView = selectedCellBackgroundView;
+    
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
