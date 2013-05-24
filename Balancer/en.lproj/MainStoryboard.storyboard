@@ -282,6 +282,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Social" id="ase-nW-i0g"/>
+                    <connections>
+                        <segue destination="QxR-hd-cqV" kind="modal" identifier="Add Step to Goal" id="0pn-Ck-nF4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bF-BB-gFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

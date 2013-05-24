@@ -19,7 +19,7 @@
 #define BALANCER_FONT_REGULAR @"Bariol-Regular"
 #define BALANCER_FONT_BOLD @"Bariol-Bold"
 
-#define DUMMY_GOALS_MAX_CREATOR_ID 100
+#define DUMMY_GOALS_MAX_CREATOR_ID 5
 
 @implementation AppDelegate
 
