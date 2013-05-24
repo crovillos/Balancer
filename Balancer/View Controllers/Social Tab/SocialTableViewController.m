@@ -78,6 +78,7 @@
         NSString* profileImagePath;
         NSString* accessoryViewButtonText;
         
+        
         if([story isKindOfClass:[Goal class]]) {
             Goal* goal = (Goal *) story;
             
@@ -100,10 +101,14 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
         
         // add accessory view button
-        UIButton *accessoryViewButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        UIButton *accessoryViewButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [accessoryViewButton setTitle:accessoryViewButtonText forState:UIControlStateNormal];
         [accessoryViewButton sizeToFit];
         accessoryViewButton.userInteractionEnabled = YES;
+        [accessoryViewButton setBounds:cell.bounds];
+        CGRect accessoryViewButtonBounds = CGRectMake(0, 0, 75, cell.bounds.size.height);
+        [accessoryViewButton setBounds:accessoryViewButtonBounds];
+        //accessoryViewButton.frame.size.height = cell.bounds.size.height;
         cell.accessoryView = accessoryViewButton;
         
         [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchDown];

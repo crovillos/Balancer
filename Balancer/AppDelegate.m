@@ -166,6 +166,7 @@
     g2.open = YES;
     g2.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
     g2.inviteList = nil;
+    g2.sponsored = YES;
     [self.dummySocialStream addObject:g2];
     Step *a1 = [[Step alloc] init];
     a1.activityId = 4;
