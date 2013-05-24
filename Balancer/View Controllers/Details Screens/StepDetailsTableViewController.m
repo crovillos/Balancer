@@ -7,6 +7,7 @@
 //
 
 #import "StepDetailsTableViewController.h"
+
 #import "Step.h"
 
 @interface StepDetailsTableViewController ()
@@ -33,8 +34,9 @@
     self.titleDetailLabel.text = self.step.name;
     self.descriptionDetailLabel.text = self.step.description;
     self.whenDetailLabel.text = self.step.startDate.description;
-    
-    
+    self.privacyDetailLabel.text = self.step.isPublic ? @"Public" : @"Private";
+    self.goalDetailLabel.text = self.step.goal.name;
+    self.joiningDetailLabel.text = self.step.inviteList.description;
 }
 
 @end
