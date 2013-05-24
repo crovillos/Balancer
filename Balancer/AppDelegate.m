@@ -7,14 +7,14 @@
 //
 
 #import "AppDelegate.h"
+
 #import "Goal.h"
 #import "Step.h"
 #import "GoalInvite.h"
 #import "StepInvite.h"
 
-#define BALANCER_PINK_RED 166/255.0
-#define BALANCER_PINK_GREEN 36/255.0
-#define BALANCER_PINK_BLUE 108/255.0
+#import "UIBarButtonItem+FlatUI.h"
+#import "UIColor+Balancer.h"
 
 #define BALANCER_FONT_REGULAR @"Bariol-Regular"
 #define BALANCER_FONT_BOLD @"Bariol-Bold"
@@ -27,10 +27,6 @@
 {
     // Override point for customization after application launch.
     
-    // Set title bar tint color
-    UIColor *balancerPinkColor = [UIColor colorWithRed:BALANCER_PINK_RED green:BALANCER_PINK_GREEN blue:BALANCER_PINK_BLUE alpha:1.0];
-    [[UINavigationBar appearance] setTintColor:balancerPinkColor];
-    
     // Set custom font for the title bar
     UIFont *titleTextFont = [UIFont fontWithName:BALANCER_FONT_BOLD size:20.0];
     [[UINavigationBar appearance] setTitleTextAttributes:
@@ -38,6 +34,26 @@
       titleTextFont,
       UITextAttributeFont,
       nil]];
+    
+    UIFont *tabBarTextFont = [UIFont fontWithName:BALANCER_FONT_BOLD size:[UIFont smallSystemFontSize]];
+    [[UITabBarItem appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      tabBarTextFont,
+      UITextAttributeFont,
+      nil] forState:UIControlStateNormal];
+    
+    UIFont *titleBarButtonTextFont = [UIFont fontWithName:BALANCER_FONT_BOLD size:13.0];
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      titleBarButtonTextFont,
+      UITextAttributeFont,
+      nil] forState:UIControlStateNormal];
+    
+    // Customize buttons in title bar
+    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor balancerLightPinkColor]
+                                  highlightedColor:[UIColor balancerDarkPinkColor]
+                                      cornerRadius:3];
     
     [self createDummyGoals];
     [self createDummyInvites];

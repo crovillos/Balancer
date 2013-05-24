@@ -6,9 +6,10 @@
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "FlatTableViewController.h"
 
-@interface TodayTableViewController : UITableViewController
+@interface TodayTableViewController : FlatTableViewController
+
 @property (nonatomic, strong) NSArray *activities; // of Goal
 
 @end

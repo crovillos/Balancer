@@ -12,6 +12,8 @@
 #import "Goal.h"
 #import "Step.h"
 #import "AppDelegate.h"
+#import "UINavigationBar+FlatUI.h"
+#import "UIColor+Balancer.h"
 
 @implementation SocialTableViewController
 
@@ -27,11 +29,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor balancerPinkColor]];
     
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSMutableArray *dummySocialStream = appDelegate.dummySocialStream;
     
     [self setSocialStream:dummySocialStream];
+    
 }
 
 /** Sets the model for this view controller.

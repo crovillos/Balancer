@@ -6,10 +6,11 @@
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "FlatTableViewController.h"
+
 #import "Step.h"
 
-@interface StepDetailsTableViewController : UITableViewController
+@interface StepDetailsTableViewController : FlatTableViewController
 
 @property (nonatomic, strong) Step *step;
 
