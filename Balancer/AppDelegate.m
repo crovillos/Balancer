@@ -47,6 +47,7 @@
     [self createDummyGoals:10];
     [self createDummySocial];
     [self createDummyInvites];
+    [self createDummyActivities];
     
     return YES;
 }
