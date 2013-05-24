@@ -72,7 +72,10 @@
         NSString* storyDetailText;
         NSString* profileImagePath;
         NSString* accessoryViewButtonText;
+        NSInteger creatorFBID = 0;
         
+
+
         
         if([story isKindOfClass:[Goal class]]) {
             Goal* goal = (Goal *) story;
@@ -82,21 +85,25 @@
             
             storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal goal goal goal", goal.creatorId];
             storyDetailText = goal.name;
+            creatorFBID = goal.creatorId;
 
+
+            
         } else if ([story isKindOfClass:[Step class]]) {
             Step* step = (Step *) story;
             
             cellIdentifier = @"Step";
             accessoryViewButtonText = @"Add it!";
-                        
+            
             storyHeaderText = [NSString stringWithFormat:@"User %u added a new step", step.creatorId];
             storyDetailText = step.name;
+            creatorFBID = step.creatorId;
         }
         
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
         
         // add accessory view button
-        UIButton *accessoryViewButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        UIButton *accessoryViewButton =  [UIButton buttonWithType:UIButtonTypeRoundedRect];;
         [accessoryViewButton setTitle:accessoryViewButtonText forState:UIControlStateNormal];
         [accessoryViewButton sizeToFit];
         accessoryViewButton.userInteractionEnabled = YES;
@@ -106,7 +113,14 @@
         //accessoryViewButton.frame.size.height = cell.bounds.size.height;
         cell.accessoryView = accessoryViewButton;
         
-        [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchDown];
+        
+        if([story isKindOfClass:[Goal class]]) {
+            [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchDown];
+            
+        } else if ([story isKindOfClass:[Step class]]) {
+            [accessoryViewButton addTarget:self action:@selector(joinStep:) forControlEvents:UIControlEventTouchDown];
+        }
+
         
         // Configure the cell...
         UILabel* storyHeaderLabel = (UILabel *)[cell viewWithTag:2];
@@ -115,7 +129,8 @@
         UILabel* storyDetailLabel = (UILabel *)[cell viewWithTag:3];
         storyDetailLabel.text = storyDetailText;
         
-        UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Jazz" ofType:@"png"]];
+        NSString* userPicturePath = [NSString stringWithFormat:@"user%dPic", creatorFBID];
+        UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
         UIImageView* profileImageView = (UIImageView *)[cell viewWithTag:1];
         profileImageView.image = image;
         
@@ -162,17 +177,33 @@
         
         UIButton* button = (UIButton* ) sender;
         UITableViewCell* cell = (UITableViewCell*) button.superview;
-        //NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell:cell];
+        NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell:cell];
+        Goal* goal = (Goal *) self.socialStream[indexPath.row];
+        goal.added = !goal.added;
+        
         // Add Goal at this index to the goals added page
         //button.backgroundColor = [UIColor greenColor];
-        [button.titleLabel setText:@"added"];
-        
-        // TODO: add to app delegate dummyGoals
+        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        if(goal.isAdded) {
+            [button.titleLabel setText:@"added"];
+            [appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:goal]];
+            [appDelegate.dummyGoals addObject:goal];
+        } else { // This currently will never actually run...
+            //NSLog([NSString stringWithFormat:@"%d", [appDelegate.dummyGoals indexOfObject:goal]]);
+            [appDelegate.dummyGoals removeObjectAtIndex:[appDelegate.dummyGoals indexOfObject:goal]];
+            [appDelegate.dummySocialStream addObject:goal];
+        }
+        [[self tableView] reloadData];
     }
 }
 
--(void)joinActivity:(id)sender {
-    // TODO
+-(void)joinStep:(id)sender {
+    
+    if([sender isKindOfClass:[UIButton class]]) {
+        [self performSegueWithIdentifier: @"Add Step to Goal" sender: self];
+        
+    }
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
