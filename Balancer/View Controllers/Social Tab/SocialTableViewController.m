@@ -25,6 +25,7 @@
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSMutableArray *dummySocialStream = appDelegate.dummySocialStream;
     
+    //[self.tableView setBackgroundView:nil];
     [self setSocialStream:dummySocialStream];
     
 }
