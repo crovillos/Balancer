@@ -10,6 +10,6 @@
 
 @implementation Goal
 
-@synthesize goalId, name, completionDate, description, open, creatorId, activities, inviteList;
+@synthesize goalId, name, completionDate, description, open, creatorId, activities, inviteList, added;
 
 @end

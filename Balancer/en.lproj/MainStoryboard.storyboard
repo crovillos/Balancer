@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -391,9 +391,6 @@
                                             <state key="highlighted">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <connections>
-                                                <segue destination="ZVv-JW-akH" kind="push" id="9Yn-8v-ksv"/>
-                                            </connections>
                                         </button>
                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYr-CJ-AmL">
                                             <constraints>
@@ -767,7 +764,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZq-dI-STX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="F0R-Di-roq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1132" y="380"/>
+            <point key="canvasLocation" x="-1172" y="388"/>
         </scene>
         <!--Edit Goal View Controller-->
         <scene sceneID="fNZ-hd-9WN">
@@ -1112,93 +1109,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Under Construction Logo.png" width="877" height="375"/>
+        <image name="Under Construction Logo.png" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="AddCustomGoalTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCustomGoalTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="completeByInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inviteInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="publicInput" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="titleInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddGoalTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGoalTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
-            </relationships>
-        </class>
-        <class className="AddStepTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddStepTableViewController.h"/>
-        </class>
-        <class className="EditGoalViewController" superclassName="FlatViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditGoalViewController.h"/>
-        </class>
-        <class className="FlatTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatTabBarController.h"/>
-        </class>
-        <class className="FlatTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatTableViewController.h"/>
-        </class>
-        <class className="FlatViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatViewController.h"/>
-        </class>
-        <class className="GoalDetailsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalDetailsTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="completeByLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goalDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goaledLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="GoalsNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsNavigationController.h"/>
-        </class>
-        <class className="GoalsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ProgressNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressNavigationController.h"/>
-        </class>
-        <class className="ProgressViewController" superclassName="FlatViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
-        </class>
-        <class className="SocialNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialNavigationController.h"/>
-        </class>
-        <class className="SocialTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialTableViewController.h"/>
-        </class>
-        <class className="StepDetailsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepDetailsTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goalDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="joiningDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="privacyDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="whenDetailLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TodayNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayNavigationController.h"/>
-        </class>
-        <class className="TodayTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayTableViewController.h"/>
-        </class>
-        <class className="UIStoryboardSegue" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

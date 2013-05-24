@@ -176,4 +176,25 @@
     // TODO
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        if (indexPath) {
+            if ([segue.identifier isEqualToString:@"Social to Goal Detail"]) {
+                if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
+                    Goal *goal = (Goal *)self.socialStream[indexPath.row];
+                    [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)goal)];
+                }
+            } else if ([segue.identifier isEqualToString:@"Social to Step Detail"]) {
+                if ([segue.destinationViewController respondsToSelector:@selector(setStep:)]) {
+                    Step *step = (Step *)self.socialStream[indexPath.row];
+                    [segue.destinationViewController performSelector:@selector(setStep:) withObject:((Step *)step)];
+                }
+            }
+        }
+        
+    }
+}
+
 @end

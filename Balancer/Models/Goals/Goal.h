@@ -20,5 +20,6 @@
 @property (nonatomic, strong) NSMutableArray* activities;
 @property (nonatomic, strong) InviteList* inviteList;
 @property (nonatomic, getter = isSponsored) BOOL sponsored;
+@property (nonatomic, getter = isAdded) BOOL added;
 
 @end

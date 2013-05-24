@@ -19,6 +19,10 @@
 
 @implementation GoalDetailsTableViewController
 
+- (void)viewDidLoad {
+    [self configureView];
+}
+
 - (void)setGoal:(Goal *)goal
 {
     _goal= goal;
@@ -29,7 +33,11 @@
 {
     self.goalDescriptionLabel.text = self.goal.description;
     self.completeByLabel.text = self.goal.completionDate.description;
-    self.goaledLabel.text = @"Goaled!";
+    if(self.goal.isAdded) {
+        self.goaledLabel.text = @"Goaled!";
+    } else {
+        self.goaledLabel.text = @"Not Added";
+    }
 }
 
 @end

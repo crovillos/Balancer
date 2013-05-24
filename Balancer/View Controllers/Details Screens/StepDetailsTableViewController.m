@@ -29,13 +29,21 @@
     [self configureView];
 }
 
+- (void)viewDidLoad {
+    [self configureView];
+}
+
 - (void)configureView
 {
     self.titleDetailLabel.text = self.step.name;
     self.descriptionDetailLabel.text = self.step.description;
     self.whenDetailLabel.text = self.step.startDate.description;
     self.privacyDetailLabel.text = self.step.isPublic ? @"Public" : @"Private";
-    self.goalDetailLabel.text = self.step.goal.name;
+    if(self.step.goal) {
+        self.goalDetailLabel.text = self.step.goal.name;
+    } else {
+        self.goalDetailLabel.text = @"None";
+    }
     self.joiningDetailLabel.text = self.step.inviteList.description;
 }
 
