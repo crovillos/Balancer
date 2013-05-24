@@ -1,26 +1,24 @@
 //
-//  Activity.h
+//  Goal.h
 //  Balancer
 //
-//  Created by Dian Hartono on 5/9/13.
+//  Created by Catriona Scott on 5/9/13.
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "Goal.h"
 #import "InviteList.h"
 
+@interface Goal : NSObject
 
-@interface Activity : NSObject
-
-@property (nonatomic) NSUInteger activityId;
+@property (nonatomic) NSUInteger goalId;
 @property (nonatomic, strong) NSString* name;
-@property (nonatomic, strong) NSDate* startDate;
-@property (nonatomic, strong) NSDate* endDate;
+@property (nonatomic, strong) NSDate* completionDate;
 @property (nonatomic, strong) NSString* description;
 @property (nonatomic, getter = isPublic) BOOL open;
 @property (nonatomic) NSUInteger creatorId;
-@property (nonatomic, strong) Goal* goal;
+@property (nonatomic, strong) NSMutableArray* activities;
 @property (nonatomic, strong) InviteList* inviteList;
+@property (nonatomic, getter = isSponsored) BOOL sponsored;
 
 @end

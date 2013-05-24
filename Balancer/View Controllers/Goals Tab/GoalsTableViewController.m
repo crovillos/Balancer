@@ -8,7 +8,7 @@
 
 #import "GoalsTableViewController.h"
 #import "Goal.h"
-#import "Activity.h"
+#import "Step.h"
 #import "AppDelegate.h" //TODO: remove
 #import "AddGoalTableViewController.h"
 
@@ -160,7 +160,7 @@
             // all other rows
             Goal *goalAtSection = (Goal *)self.goals[indexPath.section];
             // have activity id row within goal section
-            Activity *activityAtRow = (Activity *)goalAtSection.activities[indexPath.row - 1];
+            Step *activityAtRow = (Step *)goalAtSection.activities[indexPath.row - 1];
             cell.textLabel.text = activityAtRow.name;
         }
     }
@@ -296,8 +296,8 @@
             if ([segue.identifier isEqualToString:@"Show Step Details"]) {
                 if ([segue.destinationViewController respondsToSelector:@selector(setStep:)]) {
                     Goal *goal = (Goal *)self.goals[indexPath.section];
-                    Activity *step = (Activity *)goal.activities[indexPath.row - 1];
-                    [segue.destinationViewController performSelector:@selector(setStep:) withObject:((Activity *)step)];
+                    Step *step = (Step *)goal.activities[indexPath.row - 1];
+                    [segue.destinationViewController performSelector:@selector(setStep:) withObject:((Step *)step)];
                 }
             }
         }

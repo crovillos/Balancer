@@ -7,7 +7,7 @@
 //
 
 #import "StepDetailsTableViewController.h"
-#import "Activity.h"
+#import "Step.h"
 
 @interface StepDetailsTableViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleDetailLabel;
@@ -41,7 +41,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)setStep:(Activity *)step
+- (void)setStep:(Step *)step
 {
     _step = step;
     [self configureView];
@@ -50,6 +50,9 @@
 - (void)configureView
 {
     self.titleDetailLabel.text = self.step.name;
+    self.descriptionDetailLabel.text = self.step.description;
+    self.whenDetailLabel.text = self.step.startDate.description;
+    
     
 }
 

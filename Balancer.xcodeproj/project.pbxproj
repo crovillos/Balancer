@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8309FF4A1742298000B7A335 /* Under Construction Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8309FF491742298000B7A335 /* Under Construction Logo.png */; };
-		83216D62174B6CB60054573F /* EditGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216D61174B6CB60054573F /* EditGoalViewController.m */; };
 		83216D8A174B75E20054573F /* brian_profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D7B174B75E20054573F /* brian_profilePic.png */; };
 		83216D8B174B75E20054573F /* catriona_profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D7C174B75E20054573F /* catriona_profilePic.png */; };
 		83216D8C174B75E20054573F /* chris_profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D7D174B75E20054573F /* chris_profilePic.png */; };
@@ -27,31 +26,6 @@
 		83216D9F174B7AA00054573F /* addStepToGoal_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D9C174B7AA00054573F /* addStepToGoal_icon.png */; };
 		83216DA0174B7AA00054573F /* editGoal_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D9D174B7AA00054573F /* editGoal_icon.png */; };
 		83216DA1174B7AA00054573F /* viewGoal_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83216D9E174B7AA00054573F /* viewGoal_icon.png */; };
-		83216DA7174B7C090054573F /* AddGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DA6174B7C090054573F /* AddGoalTableViewController.m */; };
-		83216DAA174B7DB30054573F /* AddCustomGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DA9174B7DB30054573F /* AddCustomGoalTableViewController.m */; };
-		83216DAE174B7E920054573F /* StepDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DAD174B7E920054573F /* StepDetailsTableViewController.m */; };
-		83216DBB174B883D0054573F /* AddStepTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DBA174B883D0054573F /* AddStepTableViewController.m */; };
-		83216DBE174B8D8F0054573F /* GoalDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83216DBD174B8D8F0054573F /* GoalDetailsTableViewController.m */; };
-		8331FA4417422FD6000F0642 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA2D17422FD6000F0642 /* Activity.m */; };
-		8331FA4517422FD6000F0642 /* ActivityInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA2F17422FD6000F0642 /* ActivityInvite.m */; };
-		8331FA4617422FD6000F0642 /* ActivityList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3117422FD6000F0642 /* ActivityList.m */; };
-		8331FA4717422FD6000F0642 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3317422FD6000F0642 /* Goal.m */; };
-		8331FA4817422FD6000F0642 /* GoalInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3517422FD6000F0642 /* GoalInvite.m */; };
-		8331FA4917422FD6000F0642 /* GoalList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3717422FD6000F0642 /* GoalList.m */; };
-		8331FA4A17422FD6000F0642 /* Invite.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3917422FD6000F0642 /* Invite.m */; };
-		8331FA4B17422FD6000F0642 /* InviteList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3B17422FD6000F0642 /* InviteList.m */; };
-		8331FA4C17422FD6000F0642 /* Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3D17422FD6000F0642 /* Progress.m */; };
-		8331FA4D17422FD6000F0642 /* Social.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA3F17422FD6000F0642 /* Social.m */; };
-		8331FA4E17422FD6000F0642 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA4117422FD6000F0642 /* User.m */; };
-		8331FA4F17422FD6000F0642 /* UserUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA4317422FD6000F0642 /* UserUtilities.m */; };
-		8331FA6017422FE3000F0642 /* GoalsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5117422FE3000F0642 /* GoalsNavigationController.m */; };
-		8331FA6117422FE3000F0642 /* GoalsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5317422FE3000F0642 /* GoalsTableViewController.m */; };
-		8331FA6217422FE3000F0642 /* ProgressNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5517422FE3000F0642 /* ProgressNavigationController.m */; };
-		8331FA6317422FE3000F0642 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5717422FE3000F0642 /* ProgressViewController.m */; };
-		8331FA6417422FE3000F0642 /* SocialNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5917422FE3000F0642 /* SocialNavigationController.m */; };
-		8331FA6517422FE3000F0642 /* SocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5B17422FE3000F0642 /* SocialTableViewController.m */; };
-		8331FA6617422FE3000F0642 /* TodayNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5D17422FE3000F0642 /* TodayNavigationController.m */; };
-		8331FA6717422FE3000F0642 /* TodayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331FA5F17422FE3000F0642 /* TodayTableViewController.m */; };
 		8331FA6A17422FF0000F0642 /* Bariol Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8331FA6817422FF0000F0642 /* Bariol Bold.ttf */; };
 		8331FA6B17422FF0000F0642 /* Bariol Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8331FA6917422FF0000F0642 /* Bariol Regular.ttf */; };
 		83394FD2174B309E0030B614 /* libDTFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83394FC2174B2DAA0030B614 /* libDTFoundation.a */; };
@@ -61,6 +35,33 @@
 		83AEACEE173EF6D9006E1151 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACED173EF6D9006E1151 /* Default@2x.png */; };
 		83AEACF0173EF6E7006E1151 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACEF173EF6E7006E1151 /* Default-568h@2x.png */; };
 		83AEACF2173EF70B006E1151 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACF1173EF70B006E1151 /* Default.png */; };
+		83C0CA4A174EC4CA007DDD05 /* EditGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA2B174EC4CA007DDD05 /* EditGoalViewController.m */; };
+		83C0CA4B174EC4CA007DDD05 /* GoalDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA2D174EC4CA007DDD05 /* GoalDetailsTableViewController.m */; };
+		83C0CA4C174EC4CA007DDD05 /* StepDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA2F174EC4CA007DDD05 /* StepDetailsTableViewController.m */; };
+		83C0CA4D174EC4CA007DDD05 /* AddCustomGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA32174EC4CA007DDD05 /* AddCustomGoalTableViewController.m */; };
+		83C0CA4E174EC4CA007DDD05 /* AddGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA34174EC4CA007DDD05 /* AddGoalTableViewController.m */; };
+		83C0CA4F174EC4CA007DDD05 /* AddStepTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA36174EC4CA007DDD05 /* AddStepTableViewController.m */; };
+		83C0CA50174EC4CA007DDD05 /* GoalsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA38174EC4CA007DDD05 /* GoalsNavigationController.m */; };
+		83C0CA51174EC4CA007DDD05 /* GoalsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA3A174EC4CA007DDD05 /* GoalsTableViewController.m */; };
+		83C0CA52174EC4CA007DDD05 /* ProgressNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA3D174EC4CA007DDD05 /* ProgressNavigationController.m */; };
+		83C0CA53174EC4CA007DDD05 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA3F174EC4CA007DDD05 /* ProgressViewController.m */; };
+		83C0CA54174EC4CA007DDD05 /* SocialNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA42174EC4CA007DDD05 /* SocialNavigationController.m */; };
+		83C0CA55174EC4CA007DDD05 /* SocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA44174EC4CA007DDD05 /* SocialTableViewController.m */; };
+		83C0CA56174EC4CA007DDD05 /* TodayNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA47174EC4CA007DDD05 /* TodayNavigationController.m */; };
+		83C0CA57174EC4CA007DDD05 /* TodayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA49174EC4CA007DDD05 /* TodayTableViewController.m */; };
+		83C0CA74174EC627007DDD05 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA5B174EC627007DDD05 /* Goal.m */; };
+		83C0CA75174EC627007DDD05 /* GoalInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA5D174EC627007DDD05 /* GoalInvite.m */; };
+		83C0CA76174EC627007DDD05 /* GoalList.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA5F174EC627007DDD05 /* GoalList.m */; };
+		83C0CA77174EC627007DDD05 /* Invite.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA62174EC627007DDD05 /* Invite.m */; };
+		83C0CA78174EC627007DDD05 /* InviteList.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA64174EC627007DDD05 /* InviteList.m */; };
+		83C0CA79174EC627007DDD05 /* Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA66174EC627007DDD05 /* Progress.m */; };
+		83C0CA7A174EC627007DDD05 /* Social.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA68174EC627007DDD05 /* Social.m */; };
+		83C0CA7B174EC627007DDD05 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA6B174EC627007DDD05 /* Step.m */; };
+		83C0CA7C174EC627007DDD05 /* StepInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA6D174EC627007DDD05 /* StepInvite.m */; };
+		83C0CA7D174EC627007DDD05 /* StepList.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA6F174EC627007DDD05 /* StepList.m */; };
+		83C0CA7E174EC627007DDD05 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA71174EC627007DDD05 /* User.m */; };
+		83C0CA7F174EC627007DDD05 /* UserUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA73174EC627007DDD05 /* UserUtilities.m */; };
+		83C0CA82174EC6F6007DDD05 /* InvitesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA81174EC6F6007DDD05 /* InvitesTableViewController.m */; };
 		83DD42D9173447DB00FA7408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42D8173447DB00FA7408 /* UIKit.framework */; };
 		83DD42DB173447DB00FA7408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DA173447DB00FA7408 /* Foundation.framework */; };
 		83DD42DD173447DB00FA7408 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DD42DC173447DB00FA7408 /* CoreGraphics.framework */; };
@@ -147,8 +148,6 @@
 
 /* Begin PBXFileReference section */
 		8309FF491742298000B7A335 /* Under Construction Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Under Construction Logo.png"; sourceTree = "<group>"; };
-		83216D60174B6CB60054573F /* EditGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditGoalViewController.h; path = "View Controllers/EditGoalViewController.h"; sourceTree = "<group>"; };
-		83216D61174B6CB60054573F /* EditGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditGoalViewController.m; path = "View Controllers/EditGoalViewController.m"; sourceTree = "<group>"; };
 		83216D7B174B75E20054573F /* brian_profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brian_profilePic.png; path = Balancer/Images/brian_profilePic.png; sourceTree = "<group>"; };
 		83216D7C174B75E20054573F /* catriona_profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = catriona_profilePic.png; path = Balancer/Images/catriona_profilePic.png; sourceTree = "<group>"; };
 		83216D7D174B75E20054573F /* chris_profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chris_profilePic.png; path = Balancer/Images/chris_profilePic.png; sourceTree = "<group>"; };
@@ -167,56 +166,6 @@
 		83216D9C174B7AA00054573F /* addStepToGoal_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addStepToGoal_icon.png; path = Balancer/Images/addStepToGoal_icon.png; sourceTree = "<group>"; };
 		83216D9D174B7AA00054573F /* editGoal_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = editGoal_icon.png; path = Balancer/Images/editGoal_icon.png; sourceTree = "<group>"; };
 		83216D9E174B7AA00054573F /* viewGoal_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = viewGoal_icon.png; path = Balancer/Images/viewGoal_icon.png; sourceTree = "<group>"; };
-		83216DA5174B7C090054573F /* AddGoalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddGoalTableViewController.h; path = "View Controllers/AddGoalTableViewController.h"; sourceTree = "<group>"; };
-		83216DA6174B7C090054573F /* AddGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddGoalTableViewController.m; path = "View Controllers/AddGoalTableViewController.m"; sourceTree = "<group>"; };
-		83216DA8174B7DB30054573F /* AddCustomGoalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCustomGoalTableViewController.h; path = "View Controllers/AddCustomGoalTableViewController.h"; sourceTree = "<group>"; };
-		83216DA9174B7DB30054573F /* AddCustomGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCustomGoalTableViewController.m; path = "View Controllers/AddCustomGoalTableViewController.m"; sourceTree = "<group>"; };
-		83216DAC174B7E920054573F /* StepDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepDetailsTableViewController.h; path = "View Controllers/StepDetailsTableViewController.h"; sourceTree = "<group>"; };
-		83216DAD174B7E920054573F /* StepDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepDetailsTableViewController.m; path = "View Controllers/StepDetailsTableViewController.m"; sourceTree = "<group>"; };
-		83216DB9174B883C0054573F /* AddStepTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddStepTableViewController.h; path = "View Controllers/AddStepTableViewController.h"; sourceTree = "<group>"; };
-		83216DBA174B883D0054573F /* AddStepTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddStepTableViewController.m; path = "View Controllers/AddStepTableViewController.m"; sourceTree = "<group>"; };
-		83216DBC174B8D8F0054573F /* GoalDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalDetailsTableViewController.h; sourceTree = "<group>"; };
-		83216DBD174B8D8F0054573F /* GoalDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalDetailsTableViewController.m; sourceTree = "<group>"; };
-		8331FA2C17422FD6000F0642 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Balancer/Models/Activity.h; sourceTree = SOURCE_ROOT; };
-		8331FA2D17422FD6000F0642 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = Balancer/Models/Activity.m; sourceTree = SOURCE_ROOT; };
-		8331FA2E17422FD6000F0642 /* ActivityInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityInvite.h; path = Balancer/Models/ActivityInvite.h; sourceTree = SOURCE_ROOT; };
-		8331FA2F17422FD6000F0642 /* ActivityInvite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityInvite.m; path = Balancer/Models/ActivityInvite.m; sourceTree = SOURCE_ROOT; };
-		8331FA3017422FD6000F0642 /* ActivityList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityList.h; path = Balancer/Models/ActivityList.h; sourceTree = SOURCE_ROOT; };
-		8331FA3117422FD6000F0642 /* ActivityList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityList.m; path = Balancer/Models/ActivityList.m; sourceTree = SOURCE_ROOT; };
-		8331FA3217422FD6000F0642 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Goal.h; path = Balancer/Models/Goal.h; sourceTree = SOURCE_ROOT; };
-		8331FA3317422FD6000F0642 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Goal.m; path = Balancer/Models/Goal.m; sourceTree = SOURCE_ROOT; };
-		8331FA3417422FD6000F0642 /* GoalInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalInvite.h; path = Balancer/Models/GoalInvite.h; sourceTree = SOURCE_ROOT; };
-		8331FA3517422FD6000F0642 /* GoalInvite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalInvite.m; path = Balancer/Models/GoalInvite.m; sourceTree = SOURCE_ROOT; };
-		8331FA3617422FD6000F0642 /* GoalList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalList.h; path = Balancer/Models/GoalList.h; sourceTree = SOURCE_ROOT; };
-		8331FA3717422FD6000F0642 /* GoalList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalList.m; path = Balancer/Models/GoalList.m; sourceTree = SOURCE_ROOT; };
-		8331FA3817422FD6000F0642 /* Invite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Invite.h; path = Balancer/Models/Invite.h; sourceTree = SOURCE_ROOT; };
-		8331FA3917422FD6000F0642 /* Invite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Invite.m; path = Balancer/Models/Invite.m; sourceTree = SOURCE_ROOT; };
-		8331FA3A17422FD6000F0642 /* InviteList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InviteList.h; path = Balancer/Models/InviteList.h; sourceTree = SOURCE_ROOT; };
-		8331FA3B17422FD6000F0642 /* InviteList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InviteList.m; path = Balancer/Models/InviteList.m; sourceTree = SOURCE_ROOT; };
-		8331FA3C17422FD6000F0642 /* Progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Progress.h; path = Balancer/Models/Progress.h; sourceTree = SOURCE_ROOT; };
-		8331FA3D17422FD6000F0642 /* Progress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Progress.m; path = Balancer/Models/Progress.m; sourceTree = SOURCE_ROOT; };
-		8331FA3E17422FD6000F0642 /* Social.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Social.h; path = Balancer/Models/Social.h; sourceTree = SOURCE_ROOT; };
-		8331FA3F17422FD6000F0642 /* Social.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Social.m; path = Balancer/Models/Social.m; sourceTree = SOURCE_ROOT; };
-		8331FA4017422FD6000F0642 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Balancer/Models/User.h; sourceTree = SOURCE_ROOT; };
-		8331FA4117422FD6000F0642 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Balancer/Models/User.m; sourceTree = SOURCE_ROOT; };
-		8331FA4217422FD6000F0642 /* UserUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserUtilities.h; path = Balancer/Models/UserUtilities.h; sourceTree = SOURCE_ROOT; };
-		8331FA4317422FD6000F0642 /* UserUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserUtilities.m; path = Balancer/Models/UserUtilities.m; sourceTree = SOURCE_ROOT; };
-		8331FA5017422FE3000F0642 /* GoalsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalsNavigationController.h; path = "View Controllers/GoalsNavigationController.h"; sourceTree = "<group>"; };
-		8331FA5117422FE3000F0642 /* GoalsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalsNavigationController.m; path = "View Controllers/GoalsNavigationController.m"; sourceTree = "<group>"; };
-		8331FA5217422FE3000F0642 /* GoalsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalsTableViewController.h; path = "View Controllers/GoalsTableViewController.h"; sourceTree = "<group>"; };
-		8331FA5317422FE3000F0642 /* GoalsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalsTableViewController.m; path = "View Controllers/GoalsTableViewController.m"; sourceTree = "<group>"; };
-		8331FA5417422FE3000F0642 /* ProgressNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressNavigationController.h; path = "View Controllers/ProgressNavigationController.h"; sourceTree = "<group>"; };
-		8331FA5517422FE3000F0642 /* ProgressNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressNavigationController.m; path = "View Controllers/ProgressNavigationController.m"; sourceTree = "<group>"; };
-		8331FA5617422FE3000F0642 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressViewController.h; path = "View Controllers/ProgressViewController.h"; sourceTree = "<group>"; };
-		8331FA5717422FE3000F0642 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressViewController.m; path = "View Controllers/ProgressViewController.m"; sourceTree = "<group>"; };
-		8331FA5817422FE3000F0642 /* SocialNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialNavigationController.h; path = "View Controllers/SocialNavigationController.h"; sourceTree = "<group>"; };
-		8331FA5917422FE3000F0642 /* SocialNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialNavigationController.m; path = "View Controllers/SocialNavigationController.m"; sourceTree = "<group>"; };
-		8331FA5A17422FE3000F0642 /* SocialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialTableViewController.h; path = "View Controllers/SocialTableViewController.h"; sourceTree = "<group>"; };
-		8331FA5B17422FE3000F0642 /* SocialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialTableViewController.m; path = "View Controllers/SocialTableViewController.m"; sourceTree = "<group>"; };
-		8331FA5C17422FE3000F0642 /* TodayNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayNavigationController.h; path = "View Controllers/TodayNavigationController.h"; sourceTree = "<group>"; };
-		8331FA5D17422FE3000F0642 /* TodayNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayNavigationController.m; path = "View Controllers/TodayNavigationController.m"; sourceTree = "<group>"; };
-		8331FA5E17422FE3000F0642 /* TodayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayTableViewController.h; path = "View Controllers/TodayTableViewController.h"; sourceTree = "<group>"; };
-		8331FA5F17422FE3000F0642 /* TodayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayTableViewController.m; path = "View Controllers/TodayTableViewController.m"; sourceTree = "<group>"; };
 		8331FA6817422FF0000F0642 /* Bariol Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bariol Bold.ttf"; path = "Fonts/Bariol Bold.ttf"; sourceTree = "<group>"; };
 		8331FA6917422FF0000F0642 /* Bariol Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bariol Regular.ttf"; path = "Fonts/Bariol Regular.ttf"; sourceTree = "<group>"; };
 		83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTFoundation.xcodeproj; path = Externals/DTFoundation/DTFoundation.xcodeproj; sourceTree = "<group>"; };
@@ -226,6 +175,60 @@
 		83AEACED173EF6D9006E1151 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		83AEACEF173EF6E7006E1151 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		83AEACF1173EF70B006E1151 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		83C0CA2A174EC4CA007DDD05 /* EditGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditGoalViewController.h; sourceTree = "<group>"; };
+		83C0CA2B174EC4CA007DDD05 /* EditGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditGoalViewController.m; sourceTree = "<group>"; };
+		83C0CA2C174EC4CA007DDD05 /* GoalDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalDetailsTableViewController.h; sourceTree = "<group>"; };
+		83C0CA2D174EC4CA007DDD05 /* GoalDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalDetailsTableViewController.m; sourceTree = "<group>"; };
+		83C0CA2E174EC4CA007DDD05 /* StepDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepDetailsTableViewController.h; sourceTree = "<group>"; };
+		83C0CA2F174EC4CA007DDD05 /* StepDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepDetailsTableViewController.m; sourceTree = "<group>"; };
+		83C0CA31174EC4CA007DDD05 /* AddCustomGoalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCustomGoalTableViewController.h; sourceTree = "<group>"; };
+		83C0CA32174EC4CA007DDD05 /* AddCustomGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCustomGoalTableViewController.m; sourceTree = "<group>"; };
+		83C0CA33174EC4CA007DDD05 /* AddGoalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGoalTableViewController.h; sourceTree = "<group>"; };
+		83C0CA34174EC4CA007DDD05 /* AddGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGoalTableViewController.m; sourceTree = "<group>"; };
+		83C0CA35174EC4CA007DDD05 /* AddStepTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStepTableViewController.h; sourceTree = "<group>"; };
+		83C0CA36174EC4CA007DDD05 /* AddStepTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStepTableViewController.m; sourceTree = "<group>"; };
+		83C0CA37174EC4CA007DDD05 /* GoalsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsNavigationController.h; sourceTree = "<group>"; };
+		83C0CA38174EC4CA007DDD05 /* GoalsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsNavigationController.m; sourceTree = "<group>"; };
+		83C0CA39174EC4CA007DDD05 /* GoalsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsTableViewController.h; sourceTree = "<group>"; };
+		83C0CA3A174EC4CA007DDD05 /* GoalsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsTableViewController.m; sourceTree = "<group>"; };
+		83C0CA3C174EC4CA007DDD05 /* ProgressNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressNavigationController.h; sourceTree = "<group>"; };
+		83C0CA3D174EC4CA007DDD05 /* ProgressNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressNavigationController.m; sourceTree = "<group>"; };
+		83C0CA3E174EC4CA007DDD05 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
+		83C0CA3F174EC4CA007DDD05 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
+		83C0CA41174EC4CA007DDD05 /* SocialNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialNavigationController.h; sourceTree = "<group>"; };
+		83C0CA42174EC4CA007DDD05 /* SocialNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialNavigationController.m; sourceTree = "<group>"; };
+		83C0CA43174EC4CA007DDD05 /* SocialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialTableViewController.h; sourceTree = "<group>"; };
+		83C0CA44174EC4CA007DDD05 /* SocialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialTableViewController.m; sourceTree = "<group>"; };
+		83C0CA46174EC4CA007DDD05 /* TodayNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayNavigationController.h; sourceTree = "<group>"; };
+		83C0CA47174EC4CA007DDD05 /* TodayNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayNavigationController.m; sourceTree = "<group>"; };
+		83C0CA48174EC4CA007DDD05 /* TodayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayTableViewController.h; sourceTree = "<group>"; };
+		83C0CA49174EC4CA007DDD05 /* TodayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayTableViewController.m; sourceTree = "<group>"; };
+		83C0CA5A174EC627007DDD05 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		83C0CA5B174EC627007DDD05 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
+		83C0CA5C174EC627007DDD05 /* GoalInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalInvite.h; sourceTree = "<group>"; };
+		83C0CA5D174EC627007DDD05 /* GoalInvite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalInvite.m; sourceTree = "<group>"; };
+		83C0CA5E174EC627007DDD05 /* GoalList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalList.h; sourceTree = "<group>"; };
+		83C0CA5F174EC627007DDD05 /* GoalList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalList.m; sourceTree = "<group>"; };
+		83C0CA61174EC627007DDD05 /* Invite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invite.h; sourceTree = "<group>"; };
+		83C0CA62174EC627007DDD05 /* Invite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invite.m; sourceTree = "<group>"; };
+		83C0CA63174EC627007DDD05 /* InviteList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteList.h; sourceTree = "<group>"; };
+		83C0CA64174EC627007DDD05 /* InviteList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteList.m; sourceTree = "<group>"; };
+		83C0CA65174EC627007DDD05 /* Progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Progress.h; sourceTree = "<group>"; };
+		83C0CA66174EC627007DDD05 /* Progress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Progress.m; sourceTree = "<group>"; };
+		83C0CA67174EC627007DDD05 /* Social.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Social.h; sourceTree = "<group>"; };
+		83C0CA68174EC627007DDD05 /* Social.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Social.m; sourceTree = "<group>"; };
+		83C0CA6A174EC627007DDD05 /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step.h; sourceTree = "<group>"; };
+		83C0CA6B174EC627007DDD05 /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step.m; sourceTree = "<group>"; };
+		83C0CA6C174EC627007DDD05 /* StepInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepInvite.h; sourceTree = "<group>"; };
+		83C0CA6D174EC627007DDD05 /* StepInvite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepInvite.m; sourceTree = "<group>"; };
+		83C0CA6E174EC627007DDD05 /* StepList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepList.h; sourceTree = "<group>"; };
+		83C0CA6F174EC627007DDD05 /* StepList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepList.m; sourceTree = "<group>"; };
+		83C0CA70174EC627007DDD05 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		83C0CA71174EC627007DDD05 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		83C0CA72174EC627007DDD05 /* UserUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserUtilities.h; sourceTree = "<group>"; };
+		83C0CA73174EC627007DDD05 /* UserUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserUtilities.m; sourceTree = "<group>"; };
+		83C0CA80174EC6F6007DDD05 /* InvitesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitesTableViewController.h; sourceTree = "<group>"; };
+		83C0CA81174EC6F6007DDD05 /* InvitesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitesTableViewController.m; sourceTree = "<group>"; };
 		83DD42D5173447DB00FA7408 /* Balancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DD42D8173447DB00FA7408 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83DD42DA173447DB00FA7408 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -273,41 +276,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8323FB4E173EB5A40016213D /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				83216DBC174B8D8F0054573F /* GoalDetailsTableViewController.h */,
-				83216DBD174B8D8F0054573F /* GoalDetailsTableViewController.m */,
-				83216DB9174B883C0054573F /* AddStepTableViewController.h */,
-				83216DBA174B883D0054573F /* AddStepTableViewController.m */,
-				83216DAC174B7E920054573F /* StepDetailsTableViewController.h */,
-				83216DAD174B7E920054573F /* StepDetailsTableViewController.m */,
-				83216DA8174B7DB30054573F /* AddCustomGoalTableViewController.h */,
-				83216DA9174B7DB30054573F /* AddCustomGoalTableViewController.m */,
-				83216DA5174B7C090054573F /* AddGoalTableViewController.h */,
-				83216DA6174B7C090054573F /* AddGoalTableViewController.m */,
-				83216D60174B6CB60054573F /* EditGoalViewController.h */,
-				83216D61174B6CB60054573F /* EditGoalViewController.m */,
-				8331FA5017422FE3000F0642 /* GoalsNavigationController.h */,
-				8331FA5117422FE3000F0642 /* GoalsNavigationController.m */,
-				8331FA5217422FE3000F0642 /* GoalsTableViewController.h */,
-				8331FA5317422FE3000F0642 /* GoalsTableViewController.m */,
-				8331FA5417422FE3000F0642 /* ProgressNavigationController.h */,
-				8331FA5517422FE3000F0642 /* ProgressNavigationController.m */,
-				8331FA5617422FE3000F0642 /* ProgressViewController.h */,
-				8331FA5717422FE3000F0642 /* ProgressViewController.m */,
-				8331FA5817422FE3000F0642 /* SocialNavigationController.h */,
-				8331FA5917422FE3000F0642 /* SocialNavigationController.m */,
-				8331FA5A17422FE3000F0642 /* SocialTableViewController.h */,
-				8331FA5B17422FE3000F0642 /* SocialTableViewController.m */,
-				8331FA5C17422FE3000F0642 /* TodayNavigationController.h */,
-				8331FA5D17422FE3000F0642 /* TodayNavigationController.m */,
-				8331FA5E17422FE3000F0642 /* TodayTableViewController.h */,
-				8331FA5F17422FE3000F0642 /* TodayTableViewController.m */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
 		8331FA2917422E25000F0642 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +356,138 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		83C0CA28174EC4CA007DDD05 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83C0CA29174EC4CA007DDD05 /* Details Screens */,
+				83C0CA30174EC4CA007DDD05 /* Goals Tab */,
+				83C0CA3B174EC4CA007DDD05 /* Progress Tab */,
+				83C0CA40174EC4CA007DDD05 /* Social Tab */,
+				83C0CA45174EC4CA007DDD05 /* Today Tab */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		83C0CA29174EC4CA007DDD05 /* Details Screens */ = {
+			isa = PBXGroup;
+			children = (
+				83C0CA2A174EC4CA007DDD05 /* EditGoalViewController.h */,
+				83C0CA2B174EC4CA007DDD05 /* EditGoalViewController.m */,
+				83C0CA2C174EC4CA007DDD05 /* GoalDetailsTableViewController.h */,
+				83C0CA2D174EC4CA007DDD05 /* GoalDetailsTableViewController.m */,
+				83C0CA2E174EC4CA007DDD05 /* StepDetailsTableViewController.h */,
+				83C0CA2F174EC4CA007DDD05 /* StepDetailsTableViewController.m */,
+			);
+			path = "Details Screens";
+			sourceTree = "<group>";
+		};
+		83C0CA30174EC4CA007DDD05 /* Goals Tab */ = {
+			isa = PBXGroup;
+			children = (
+				83C0CA31174EC4CA007DDD05 /* AddCustomGoalTableViewController.h */,
+				83C0CA32174EC4CA007DDD05 /* AddCustomGoalTableViewController.m */,
+				83C0CA33174EC4CA007DDD05 /* AddGoalTableViewController.h */,
+				83C0CA34174EC4CA007DDD05 /* AddGoalTableViewController.m */,
+				83C0CA35174EC4CA007DDD05 /* AddStepTableViewController.h */,
+				83C0CA36174EC4CA007DDD05 /* AddStepTableViewController.m */,
+				83C0CA37174EC4CA007DDD05 /* GoalsNavigationController.h */,
+				83C0CA38174EC4CA007DDD05 /* GoalsNavigationController.m */,
+				83C0CA39174EC4CA007DDD05 /* GoalsTableViewController.h */,
+				83C0CA3A174EC4CA007DDD05 /* GoalsTableViewController.m */,
+			);
+			path = "Goals Tab";
+			sourceTree = "<group>";
+		};
+		83C0CA3B174EC4CA007DDD05 /* Progress Tab */ = {
+			isa = PBXGroup;
+			children = (
+				83C0CA3C174EC4CA007DDD05 /* ProgressNavigationController.h */,
+				83C0CA3D174EC4CA007DDD05 /* ProgressNavigationController.m */,
+				83C0CA3E174EC4CA007DDD05 /* ProgressViewController.h */,
+				83C0CA3F174EC4CA007DDD05 /* ProgressViewController.m */,
+			);
+			path = "Progress Tab";
+			sourceTree = "<group>";
+		};
+		83C0CA40174EC4CA007DDD05 /* Social Tab */ = {
+			isa = PBXGroup;
+			children = (
+				83C0CA41174EC4CA007DDD05 /* SocialNavigationController.h */,
+				83C0CA42174EC4CA007DDD05 /* SocialNavigationController.m */,
+				83C0CA43174EC4CA007DDD05 /* SocialTableViewController.h */,
+				83C0CA44174EC4CA007DDD05 /* SocialTableViewController.m */,
+				83C0CA80174EC6F6007DDD05 /* InvitesTableViewController.h */,
+				83C0CA81174EC6F6007DDD05 /* InvitesTableViewController.m */,
+			);
+			path = "Social Tab";
+			sourceTree = "<group>";
+		};
+		83C0CA45174EC4CA007DDD05 /* Today Tab */ = {
+			isa = PBXGroup;
+			children = (
+				83C0CA46174EC4CA007DDD05 /* TodayNavigationController.h */,
+				83C0CA47174EC4CA007DDD05 /* TodayNavigationController.m */,
+				83C0CA48174EC4CA007DDD05 /* TodayTableViewController.h */,
+				83C0CA49174EC4CA007DDD05 /* TodayTableViewController.m */,
+			);
+			path = "Today Tab";
+			sourceTree = "<group>";
+		};
+		83C0CA58174EC627007DDD05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83C0CA59174EC627007DDD05 /* Goals */,
+				83C0CA60174EC627007DDD05 /* Invites */,
+				83C0CA65174EC627007DDD05 /* Progress.h */,
+				83C0CA66174EC627007DDD05 /* Progress.m */,
+				83C0CA67174EC627007DDD05 /* Social.h */,
+				83C0CA68174EC627007DDD05 /* Social.m */,
+				83C0CA69174EC627007DDD05 /* Steps */,
+				83C0CA70174EC627007DDD05 /* User.h */,
+				83C0CA71174EC627007DDD05 /* User.m */,
+				83C0CA72174EC627007DDD05 /* UserUtilities.h */,
+				83C0CA73174EC627007DDD05 /* UserUtilities.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83C0CA59174EC627007DDD05 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				83C0CA5A174EC627007DDD05 /* Goal.h */,
+				83C0CA5B174EC627007DDD05 /* Goal.m */,
+				83C0CA5C174EC627007DDD05 /* GoalInvite.h */,
+				83C0CA5D174EC627007DDD05 /* GoalInvite.m */,
+				83C0CA5E174EC627007DDD05 /* GoalList.h */,
+				83C0CA5F174EC627007DDD05 /* GoalList.m */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		83C0CA60174EC627007DDD05 /* Invites */ = {
+			isa = PBXGroup;
+			children = (
+				83C0CA61174EC627007DDD05 /* Invite.h */,
+				83C0CA62174EC627007DDD05 /* Invite.m */,
+				83C0CA63174EC627007DDD05 /* InviteList.h */,
+				83C0CA64174EC627007DDD05 /* InviteList.m */,
+			);
+			path = Invites;
+			sourceTree = "<group>";
+		};
+		83C0CA69174EC627007DDD05 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				83C0CA6A174EC627007DDD05 /* Step.h */,
+				83C0CA6B174EC627007DDD05 /* Step.m */,
+				83C0CA6C174EC627007DDD05 /* StepInvite.h */,
+				83C0CA6D174EC627007DDD05 /* StepInvite.m */,
+				83C0CA6E174EC627007DDD05 /* StepList.h */,
+				83C0CA6F174EC627007DDD05 /* StepList.m */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
 		83DD42CC173447DB00FA7408 = {
 			isa = PBXGroup;
 			children = (
@@ -429,12 +529,10 @@
 		83DD42DE173447DB00FA7408 /* Balancer */ = {
 			isa = PBXGroup;
 			children = (
-				83DD42E7173447DB00FA7408 /* AppDelegate.h */,
-				83DD42E8173447DB00FA7408 /* AppDelegate.m */,
 				83DD42F0173447DB00FA7408 /* MainStoryboard.storyboard */,
-				CB760784173CAD5C000810E1 /* Models */,
+				83C0CA28174EC4CA007DDD05 /* View Controllers */,
 				83AEACF6173EF791006E1151 /* Views */,
-				8323FB4E173EB5A40016213D /* View Controllers */,
+				83C0CA58174EC627007DDD05 /* Models */,
 				83DD42DF173447DB00FA7408 /* Supporting Files */,
 			);
 			path = Balancer;
@@ -443,6 +541,8 @@
 		83DD42DF173447DB00FA7408 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83DD42E7173447DB00FA7408 /* AppDelegate.h */,
+				83DD42E8173447DB00FA7408 /* AppDelegate.m */,
 				8331FA2917422E25000F0642 /* Fonts */,
 				83AEACF3173EF729006E1151 /* Images */,
 				83DD42E0173447DB00FA7408 /* Balancer-Info.plist */,
@@ -451,38 +551,6 @@
 				83DD42E6173447DB00FA7408 /* Balancer-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CB760784173CAD5C000810E1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				8331FA2C17422FD6000F0642 /* Activity.h */,
-				8331FA2D17422FD6000F0642 /* Activity.m */,
-				8331FA2E17422FD6000F0642 /* ActivityInvite.h */,
-				8331FA2F17422FD6000F0642 /* ActivityInvite.m */,
-				8331FA3017422FD6000F0642 /* ActivityList.h */,
-				8331FA3117422FD6000F0642 /* ActivityList.m */,
-				8331FA3217422FD6000F0642 /* Goal.h */,
-				8331FA3317422FD6000F0642 /* Goal.m */,
-				8331FA3417422FD6000F0642 /* GoalInvite.h */,
-				8331FA3517422FD6000F0642 /* GoalInvite.m */,
-				8331FA3617422FD6000F0642 /* GoalList.h */,
-				8331FA3717422FD6000F0642 /* GoalList.m */,
-				8331FA3817422FD6000F0642 /* Invite.h */,
-				8331FA3917422FD6000F0642 /* Invite.m */,
-				8331FA3A17422FD6000F0642 /* InviteList.h */,
-				8331FA3B17422FD6000F0642 /* InviteList.m */,
-				8331FA3C17422FD6000F0642 /* Progress.h */,
-				8331FA3D17422FD6000F0642 /* Progress.m */,
-				8331FA3E17422FD6000F0642 /* Social.h */,
-				8331FA3F17422FD6000F0642 /* Social.m */,
-				8331FA4017422FD6000F0642 /* User.h */,
-				8331FA4117422FD6000F0642 /* User.m */,
-				8331FA4217422FD6000F0642 /* UserUtilities.h */,
-				8331FA4317422FD6000F0642 /* UserUtilities.m */,
-			);
-			name = Models;
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -648,32 +716,33 @@
 			files = (
 				83DD42E5173447DB00FA7408 /* main.m in Sources */,
 				83DD42E9173447DB00FA7408 /* AppDelegate.m in Sources */,
-				8331FA4417422FD6000F0642 /* Activity.m in Sources */,
-				8331FA4517422FD6000F0642 /* ActivityInvite.m in Sources */,
-				8331FA4617422FD6000F0642 /* ActivityList.m in Sources */,
-				8331FA4717422FD6000F0642 /* Goal.m in Sources */,
-				8331FA4817422FD6000F0642 /* GoalInvite.m in Sources */,
-				8331FA4917422FD6000F0642 /* GoalList.m in Sources */,
-				8331FA4A17422FD6000F0642 /* Invite.m in Sources */,
-				8331FA4B17422FD6000F0642 /* InviteList.m in Sources */,
-				8331FA4C17422FD6000F0642 /* Progress.m in Sources */,
-				8331FA4D17422FD6000F0642 /* Social.m in Sources */,
-				8331FA4E17422FD6000F0642 /* User.m in Sources */,
-				8331FA4F17422FD6000F0642 /* UserUtilities.m in Sources */,
-				8331FA6017422FE3000F0642 /* GoalsNavigationController.m in Sources */,
-				8331FA6117422FE3000F0642 /* GoalsTableViewController.m in Sources */,
-				8331FA6217422FE3000F0642 /* ProgressNavigationController.m in Sources */,
-				8331FA6317422FE3000F0642 /* ProgressViewController.m in Sources */,
-				8331FA6417422FE3000F0642 /* SocialNavigationController.m in Sources */,
-				8331FA6517422FE3000F0642 /* SocialTableViewController.m in Sources */,
-				8331FA6617422FE3000F0642 /* TodayNavigationController.m in Sources */,
-				8331FA6717422FE3000F0642 /* TodayTableViewController.m in Sources */,
-				83216D62174B6CB60054573F /* EditGoalViewController.m in Sources */,
-				83216DA7174B7C090054573F /* AddGoalTableViewController.m in Sources */,
-				83216DAA174B7DB30054573F /* AddCustomGoalTableViewController.m in Sources */,
-				83216DAE174B7E920054573F /* StepDetailsTableViewController.m in Sources */,
-				83216DBB174B883D0054573F /* AddStepTableViewController.m in Sources */,
-				83216DBE174B8D8F0054573F /* GoalDetailsTableViewController.m in Sources */,
+				83C0CA4A174EC4CA007DDD05 /* EditGoalViewController.m in Sources */,
+				83C0CA4B174EC4CA007DDD05 /* GoalDetailsTableViewController.m in Sources */,
+				83C0CA4C174EC4CA007DDD05 /* StepDetailsTableViewController.m in Sources */,
+				83C0CA4D174EC4CA007DDD05 /* AddCustomGoalTableViewController.m in Sources */,
+				83C0CA4E174EC4CA007DDD05 /* AddGoalTableViewController.m in Sources */,
+				83C0CA4F174EC4CA007DDD05 /* AddStepTableViewController.m in Sources */,
+				83C0CA50174EC4CA007DDD05 /* GoalsNavigationController.m in Sources */,
+				83C0CA51174EC4CA007DDD05 /* GoalsTableViewController.m in Sources */,
+				83C0CA52174EC4CA007DDD05 /* ProgressNavigationController.m in Sources */,
+				83C0CA53174EC4CA007DDD05 /* ProgressViewController.m in Sources */,
+				83C0CA54174EC4CA007DDD05 /* SocialNavigationController.m in Sources */,
+				83C0CA55174EC4CA007DDD05 /* SocialTableViewController.m in Sources */,
+				83C0CA56174EC4CA007DDD05 /* TodayNavigationController.m in Sources */,
+				83C0CA57174EC4CA007DDD05 /* TodayTableViewController.m in Sources */,
+				83C0CA74174EC627007DDD05 /* Goal.m in Sources */,
+				83C0CA75174EC627007DDD05 /* GoalInvite.m in Sources */,
+				83C0CA76174EC627007DDD05 /* GoalList.m in Sources */,
+				83C0CA77174EC627007DDD05 /* Invite.m in Sources */,
+				83C0CA78174EC627007DDD05 /* InviteList.m in Sources */,
+				83C0CA79174EC627007DDD05 /* Progress.m in Sources */,
+				83C0CA7A174EC627007DDD05 /* Social.m in Sources */,
+				83C0CA7B174EC627007DDD05 /* Step.m in Sources */,
+				83C0CA7C174EC627007DDD05 /* StepInvite.m in Sources */,
+				83C0CA7D174EC627007DDD05 /* StepList.m in Sources */,
+				83C0CA7E174EC627007DDD05 /* User.m in Sources */,
+				83C0CA7F174EC627007DDD05 /* UserUtilities.m in Sources */,
+				83C0CA82174EC6F6007DDD05 /* InvitesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
