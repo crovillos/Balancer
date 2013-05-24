@@ -159,14 +159,13 @@
 
 -(void)goalIt:(id)sender {
     if([sender isKindOfClass:[UIButton class]]) {
-        NSLog(@"test");
         
         UIButton* button = (UIButton* ) sender;
         UITableViewCell* cell = (UITableViewCell*) button.superview;
         //NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell:cell];
         // Add Goal at this index to the goals added page
         //button.backgroundColor = [UIColor greenColor];
-        button.titleLabel.text = @"added";
+        [button.titleLabel setText:@"added"];
         
         // TODO: add to app delegate dummyGoals
     }
