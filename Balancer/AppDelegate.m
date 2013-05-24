@@ -54,7 +54,7 @@
     Step *s1 = [[Step alloc] init];
     s1.activityId = 6;
     s1.name = @"Cooking Class";
-    s1.description = @"May 26 (Sat) 11:00AM @ HUB 441";
+    s1.description = @"May 27 (Sat) 11:00AM @ HUB 441";
     s1.startDate = [[NSDate alloc] init];
     s1.endDate = [[NSDate alloc] init];
     s1.open = YES;
@@ -64,14 +64,27 @@
     
     Step *s2 = [[Step alloc] init];
     s2.activityId = 7;
-    s2.name = @"Cooking Class";
-    s2.description = @"May 26 (Sat) 11:00AM @ HUB 441";
+    s2.name = @"Read 5 Chapters";
+    s2.description = @"May 26 (Sun) 2:00PM @ Downtown Seattle";
     s2.startDate = [[NSDate alloc] init];
     s2.endDate = [[NSDate alloc] init];
     s2.open = YES;
     s2.creatorId = 2;
     s2.goal = nil;
-    [_dummySteps addObject:s1];
+    [_dummySteps addObject:s2];
+    
+    Step *s3 = [[Step alloc] init];
+    s3.activityId = 8;
+    s3.name = @"Jogging";
+    s3.description = @"Tomorrow 6:00AM @ Facebook Gym";
+    s3.startDate = [[NSDate alloc] init];
+    s3.endDate = [[NSDate alloc] init];
+    s3.open = YES;
+    s3.creatorId = 4;
+    s3.goal = nil;
+    [_dummySteps addObject:s3];
+    
+    
     
 }
 
