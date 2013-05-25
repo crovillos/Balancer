@@ -10,6 +10,6 @@
 
 @interface TodayTableViewController : FlatTableViewController
 
-@property (nonatomic, strong) NSArray *activities; // of Goal
+@property (nonatomic, strong) NSMutableArray *activities;
 
 @end

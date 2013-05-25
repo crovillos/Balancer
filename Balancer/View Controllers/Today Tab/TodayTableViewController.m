@@ -10,7 +10,7 @@
 #import "Step.h"
 #import "Goal.h"
 #import "InviteList.h"
-
+#import "AppDelegate.h"
 
 @interface TodayTableViewController ()
 @property (strong, nonatomic) NSMutableDictionary *sections;
@@ -45,9 +45,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self createDummyActivity:10];
+    
+    self.activities = [[NSMutableArray alloc] init];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    for (Goal *goal in appDelegate.dummyGoals)
+    {
+        [self.activities addObjectsFromArray:goal.activities];
+    }
+    
     self.sections = [NSMutableDictionary dictionary];
-
+    
     for (Step *activity in self.activities)
     {
         // Reduce event start date to date components (year, month, day)
@@ -65,7 +73,7 @@
         // Add the event to the list for this day
         [eventsOnThisDay addObject:activity];
     }
-
+    
     NSArray *unsortedDays = [self.sections allKeys];
     self.sortedDays = [unsortedDays sortedArrayUsingSelector:@selector(compare:)];
     
@@ -90,32 +98,6 @@
 {
     _activities = activity;
     [self.tableView reloadData];
-}
-
-/** Creates dummy activities and sets them to be the model for this view controller. 
- @param - The number of dummy goals to create.
- */
-- (void)createDummyActivity:(NSUInteger)numberOfDummyActivities
-{
-    NSMutableArray *dummyActivities = [[NSMutableArray alloc] init];
-    
-    for (int i = 1; i <= 5; i++)
-    {
-        Step *activity = [[Step alloc] init];
-        activity.activityId = i;
-        activity.name = [NSString stringWithFormat:@"Watch movies with friends", i];
-        activity.startDate = [[[NSDate alloc] init] dateByAddingTimeInterval:86400 * i];
-        activity.endDate = [[[NSDate alloc] init] dateByAddingTimeInterval:86400 * i];
-        activity.description = [NSString stringWithFormat:@"Description", activity.activityId];
-        activity.open = (i % 2) ? YES : NO;
-        activity.creatorId = arc4random_uniform(100);
-        activity.goal = [[Goal alloc] init];
-        activity.inviteList = nil; // TODO: add later
-        
-        [dummyActivities addObject:activity];
-    }
-    
-    [self setActivities:dummyActivities];
 }
 
 
