@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Step.h"
 
 @interface SocialAddGoalTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *goals;
+@property (nonatomic, strong) Step *step;
 
 @end

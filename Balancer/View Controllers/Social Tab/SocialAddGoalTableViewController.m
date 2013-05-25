@@ -27,7 +27,10 @@
     return self;
 }
 
-
+- (void)setStep:(Step *)step
+{
+    _step = step;
+}
 
 - (void)viewDidLoad
 {
@@ -68,7 +71,8 @@
 // called from the add custom goal screen
 - (IBAction)done:(UIStoryboardSegue *)segue
 {
-    if ([[segue identifier] isEqualToString:@"DoneInput"]) {
+    if ([[segue identifier] isEqualToString:@"Done"]) {
+        
         [self dismissViewControllerAnimated:YES completion:NULL];
     }
 }
@@ -133,6 +137,16 @@
     
     return cell;
 
+}
+
+//This should only be called when done is clicked
+-(void) updateGoalSelected:(id)sender {
+    
+    UITableViewCell* cell = (UITableViewCell*) sender;
+    NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell:cell];
+    Goal* goal = (Goal *) self.goals[indexPath.row];
+    goal.added = !goal.added;
+    [goal.activities addObject:self.step];
 }
 
 
