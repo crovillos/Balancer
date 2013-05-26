@@ -59,6 +59,8 @@
     [self createDummyInvites];
     [self createDummySocialStream];
     [self createDummySteps];
+    [self createDummyAvailableGoals];
+    [self createDummyAvailableSteps];
     
     return YES;
 }
@@ -209,7 +211,7 @@
     
     Goal *g1 = [[Goal alloc] init];
     g1.goalId = 2;
-    g1.name = [NSString stringWithFormat:@"Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games Read the Hunger Games"];
+    g1.name = [NSString stringWithFormat:@"Read the Hunger Games"];
     g1.completionDate = [[NSDate alloc] init]; // sets completion date to today
     g1.description = [NSString stringWithFormat:@"Catch up on some reading"];
     g1.open = YES;
@@ -236,6 +238,48 @@
     a1.creatorId = 2;
     a1.goal = nil;
     [self.dummySocialStream addObject:a1];
+}
+
+- (void)createDummyAvailableGoals {
+    _dummyAvailableGoals = [[NSMutableArray alloc] init];
+    
+    Goal *g1 = [[Goal alloc] init];
+    g1.goalId = 10;
+    g1.name = @"Check in to 80% of the available cafeterias at Facebook!";
+    g1.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    g1.description = [NSString stringWithFormat:@"Facebook has some great cafeterias, but have you tried them all?"];
+    g1.open = YES;
+    g1.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
+    g1.inviteList = nil;
+    g1.sponsored = YES;
+    [self.dummyAvailableGoals addObject:g1];
+    
+    Goal *g2 = [[Goal alloc] init];
+    g2.goalId = 11;
+    g2.name = [NSString stringWithFormat:@"Catriona's Goal: Take more micro breaks during the work day"];
+    g2.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    g2.description = [NSString stringWithFormat:@"I need rest time!"];
+    g2.open = YES;
+    g2.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
+    g2.inviteList = nil;
+    g2.sponsored = NO;
+    [self.dummyAvailableGoals addObject:g2];
+}
+
+- (void)createDummyAvailableSteps {
+    _dummyAvailableSteps = [[NSMutableArray alloc] init];
+    
+    Step *s1 = [[Step alloc] init];
+    s1.activityId = 10;
+    s1.name = @"Facebook Early Bird Run!";
+    s1.description = @"May 21 (Tue) 8:00AM";
+    s1.startDate = [[NSDate alloc] init];
+    s1.endDate = [[NSDate alloc] init];
+    s1.open = YES;
+    s1.creatorId = 2;
+    s1.goal = nil;
+    s1.sponsored = YES;
+    [self.dummyAvailableSteps addObject:s1];
 }
 
 @end

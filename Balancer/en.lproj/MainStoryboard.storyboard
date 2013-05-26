@@ -746,7 +746,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="OKS-dh-Fpv">
-                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="143" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -1171,6 +1171,9 @@
                 <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
             </relationships>
         </class>
+        <class className="AddStepTableViewController" superclassName="FlatTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddStepTableViewController.h"/>
+        </class>
         <class className="EditGoalViewController" superclassName="FlatViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EditGoalViewController.h"/>
         </class>
@@ -1208,9 +1211,6 @@
         </class>
         <class className="ProgressViewController" superclassName="FlatViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
-        </class>
-        <class className="SocialAddGoalTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialAddGoalTableViewController.h"/>
         </class>
         <class className="SocialNavigationController" superclassName="UINavigationController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialNavigationController.h"/>

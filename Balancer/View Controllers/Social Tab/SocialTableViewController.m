@@ -25,7 +25,6 @@
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSMutableArray *dummySocialStream = appDelegate.dummySocialStream;
     
-    //[self.tableView setBackgroundView:nil];
     [self setSocialStream:dummySocialStream];
     
 }
@@ -85,7 +84,7 @@
             cellIdentifier = @"Goal";
             accessoryViewButtonText = @"Goal it!";
             
-            storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal goal goal goal", goal.creatorId];
+            storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
             storyDetailText = goal.name;
             creatorFBID = goal.creatorId;
 
@@ -132,7 +131,8 @@
         storyDetailLabel.text = storyDetailText;
         
         NSString* userPicturePath = [NSString stringWithFormat:@"user%dPic", creatorFBID];
-        UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
+        //UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
+        UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"brian_profilePic" ofType:@"png"]];
         UIImageView* profileImageView = (UIImageView *)[cell viewWithTag:1];
         profileImageView.image = image;
         
