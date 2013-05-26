@@ -149,10 +149,6 @@
     [goal.activities addObject:self.step];
 }
 
-
-
-
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
