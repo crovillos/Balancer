@@ -11,6 +11,8 @@
 #import "InvitesTableViewController.h"
 #import "Invite.h"
 #import "Goal.h"
+#import "GoalInvite.h"
+#import "StepInvite.h"
 #import "Step.h"
 #import "AppDelegate.h"
 
@@ -56,13 +58,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Invite";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    NSString *CellIdentifier;
     
     NSInteger row = indexPath.row;
     Invite *invite = (Invite *)self.invites[row];
-    id inviteObject = invite.inviteObject;
+    
+    if ([invite isKindOfClass:[GoalInvite class]]) {
+        CellIdentifier = @"Goal Invite";
+    } else {
+        CellIdentifier = @"Step Invite";
+    }
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    
+    
+    
+    
     
     NSString* inviteHeaderText;
     NSString* inviteDetailText;
@@ -71,8 +83,8 @@
     
     BOOL disabled = NO;
     
-    if([inviteObject isKindOfClass:[Goal class]]) {
-        Goal* goal = (Goal *) invite;
+    if([invite isKindOfClass:[GoalInvite class]]) {
+        Goal* goal = (Goal *)invite.inviteObject;
         
         accessoryViewButtonText = @"Goal it!";
         
@@ -84,8 +96,8 @@
             disabled = YES;
         }
         
-    } else if ([inviteObject isKindOfClass:[Step class]]) {
-        Step* step = (Step *) inviteObject;
+    } else if ([invite isKindOfClass:[StepInvite class]]) {
+        Step* step = (Step *) invite.inviteObject;
         
         accessoryViewButtonText = @"Add it!";
         
@@ -122,10 +134,10 @@
     [accessoryViewButton setBounds:accessoryViewButtonBounds];
     cell.accessoryView = accessoryViewButton;
     
-    if([invite isKindOfClass:[Goal class]]) {
+    if([invite isKindOfClass:[GoalInvite class]]) {
         [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchUpInside];
         
-    } else if ([invite isKindOfClass:[Step class]]) {
+    } else if ([invite isKindOfClass:[StepInvite class]]) {
         [accessoryViewButton addTarget:self action:@selector(joinStep:) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -171,8 +183,8 @@
         UIButton* button = (UIButton* ) sender;
         UITableViewCell* cell = (UITableViewCell*) button.superview;
         NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell:cell];
-        id inviteObject = self.invites[indexPath.row];
-        Goal* goal = (Goal *)inviteObject;
+        Invite* invite = self.invites[indexPath.row];
+        Goal* goal = (Goal *)invite.inviteObject;
         goal.added = !goal.added;
         
         // Add Goal at this index to the goals added page
@@ -204,16 +216,16 @@
     if ([sender isKindOfClass:[UITableViewCell class]]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         if (indexPath) {
-            if ([segue.identifier isEqualToString:@"Social to Goal Detail"]) {
+            if ([segue.identifier isEqualToString:@"Show Goal Detail"]) {
                 if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
-                    id inviteObject = self.invites[indexPath.row];
-                    Goal *goal = (Goal *)inviteObject;
+                    Invite *invite = self.invites[indexPath.row];
+                    Goal *goal = (Goal *)invite.inviteObject;
                     [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)goal)];
                 }
-            } else if ([segue.identifier isEqualToString:@"Social to Step Detail"]) {
+            } else if ([segue.identifier isEqualToString:@"Show Step Detail"]) {
                 if ([segue.destinationViewController respondsToSelector:@selector(setStep:)]) {
-                    id inviteObject = self.invites[indexPath.row];
-                    Step *step = (Step *)inviteObject;
+                    Invite *invite = self.invites[indexPath.row];
+                    Step *step = (Step *)invite.inviteObject;
                     [segue.destinationViewController performSelector:@selector(setStep:) withObject:((Step *)step)];
                 }
             }

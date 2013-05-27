@@ -54,7 +54,7 @@
             <objects>
                 <tableViewController id="u8D-um-qL1" customClass="SocialAddGoalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BBa-LR-RaC">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -320,11 +320,12 @@
                     <connections>
                         <segue destination="cel-Te-a7O" kind="modal" identifier="Add Step to Goal" id="boy-rf-77h"/>
                         <segue destination="42b-dp-5WK" kind="push" identifier="Show Invitations" id="9V1-LA-2UE"/>
+                        <segue destination="cZJ-0a-jUN" kind="push" id="2SH-jm-iXz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bF-BB-gFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2214" y="-1508"/>
+            <point key="canvasLocation" x="-2214" y="-1492"/>
         </scene>
         <!--Invites Table View Controller - Invites-->
         <scene sceneID="n0n-Kf-fh8">
@@ -335,11 +336,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Invite" rowHeight="100" id="9ac-B9-r2r" customClass="SocialTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Step Invite" rowHeight="100" id="9ac-B9-r2r" customClass="SocialTableViewCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GcW-IC-lOc">
@@ -357,15 +358,6 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="Goal title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="205" translatesAutoresizingMaskIntoConstraints="NO" id="VLS-F7-Zty">
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="51" id="4h0-1f-xD8"/>
-                                                <constraint firstAttribute="width" constant="205" id="NH4-3R-maW"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="205" translatesAutoresizingMaskIntoConstraints="NO" id="AgU-3u-fI1">
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="205" id="Jh0-5W-BzJ"/>
@@ -379,15 +371,62 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="GcW-IC-lOc" firstAttribute="top" secondItem="9ac-B9-r2r" secondAttribute="top" constant="20" type="default" id="8pr-qR-jlR"/>
-                                    <constraint firstItem="Tjk-SD-NVp" firstAttribute="leading" secondItem="GcW-IC-lOc" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Fct-DI-zJT"/>
-                                    <constraint firstItem="GcW-IC-lOc" firstAttribute="leading" secondItem="9ac-B9-r2r" secondAttribute="leading" constant="20" type="default" id="QL9-Pe-bI0"/>
-                                    <constraint firstItem="AgU-3u-fI1" firstAttribute="leading" secondItem="GcW-IC-lOc" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="W1R-0f-gX4"/>
-                                    <constraint firstItem="Tjk-SD-NVp" firstAttribute="bottom" secondItem="GcW-IC-lOc" secondAttribute="bottom" type="default" id="jqY-jB-vtX"/>
-                                    <constraint firstItem="VLS-F7-Zty" firstAttribute="leading" secondItem="9ac-B9-r2r" secondAttribute="leading" constant="29" id="kEc-ZW-Jbu"/>
-                                    <constraint firstItem="AgU-3u-fI1" firstAttribute="top" secondItem="9ac-B9-r2r" secondAttribute="top" constant="48" id="nDh-go-OGg"/>
-                                    <constraint firstItem="VLS-F7-Zty" firstAttribute="top" secondItem="9ac-B9-r2r" secondAttribute="top" constant="152" id="rmk-cl-5gb"/>
+                                    <constraint firstItem="AgU-3u-fI1" firstAttribute="top" secondItem="9ac-B9-r2r" secondAttribute="top" constant="50" id="Bqw-Bn-A79"/>
+                                    <constraint firstItem="GcW-IC-lOc" firstAttribute="leading" secondItem="9ac-B9-r2r" secondAttribute="leading" constant="21" id="WJE-OA-u3x"/>
+                                    <constraint firstItem="GcW-IC-lOc" firstAttribute="top" secondItem="9ac-B9-r2r" secondAttribute="top" constant="22" id="cRx-xn-Tfs"/>
+                                    <constraint firstItem="Tjk-SD-NVp" firstAttribute="top" secondItem="9ac-B9-r2r" secondAttribute="top" constant="14" id="eFM-nA-tF5"/>
+                                    <constraint firstItem="Tjk-SD-NVp" firstAttribute="leading" secondItem="AgU-3u-fI1" secondAttribute="leading" type="default" id="nwA-FI-w8V"/>
+                                    <constraint firstItem="Tjk-SD-NVp" firstAttribute="leading" secondItem="9ac-B9-r2r" secondAttribute="leading" constant="78" id="tGN-O9-XtO"/>
                                 </constraints>
+                                <connections>
+                                    <segue destination="cZJ-0a-jUN" kind="push" identifier="Show Step Detail" id="s93-mb-ceg"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Goal Invite" rowHeight="100" id="xYh-Ma-iU5" customClass="SocialTableViewCell">
+                                <rect key="frame" x="0.0" y="122" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgh-Qn-UNt">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="51" type="user" id="kNh-r0-UmY"/>
+                                                <constraint firstAttribute="height" constant="51" type="user" id="rqz-8M-JNs"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="John Doe invited you to a goal" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="146" translatesAutoresizingMaskIntoConstraints="NO" id="DBk-om-xoQ">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="aiE-iv-sbe"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" type="user" id="fax-3h-zJX"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="205" translatesAutoresizingMaskIntoConstraints="NO" id="97z-fd-Qnv">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="205" id="19A-ta-KH5"/>
+                                                <constraint firstAttribute="height" constant="51" id="mHe-dK-KTz"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="97z-fd-Qnv" firstAttribute="bottom" secondItem="xYh-Ma-iU5" secondAttribute="bottom" type="default" id="3ld-em-uOF"/>
+                                    <constraint firstItem="DBk-om-xoQ" firstAttribute="bottom" secondItem="Sgh-Qn-UNt" secondAttribute="bottom" type="default" id="5Cg-ae-ybR"/>
+                                    <constraint firstItem="DBk-om-xoQ" firstAttribute="leading" secondItem="97z-fd-Qnv" secondAttribute="leading" type="default" id="UtI-ha-UnI"/>
+                                    <constraint firstItem="Sgh-Qn-UNt" firstAttribute="leading" secondItem="xYh-Ma-iU5" secondAttribute="leading" constant="21" id="Vel-YP-Cka"/>
+                                    <constraint firstItem="DBk-om-xoQ" firstAttribute="leading" secondItem="xYh-Ma-iU5" secondAttribute="leading" constant="78" id="buQ-Lz-M42"/>
+                                    <constraint firstItem="DBk-om-xoQ" firstAttribute="top" secondItem="xYh-Ma-iU5" secondAttribute="top" constant="17" id="sTi-q6-lW0"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="bHc-vc-aFY" kind="push" identifier="Show Goal Detail" id="UNR-Qx-FQM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -396,10 +435,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Invites" id="0HQ-PQ-bTF"/>
+                    <connections>
+                        <segue destination="u8D-um-qL1" kind="modal" identifier="Add Step to Goal" id="yKp-XC-jty"/>
+                        <segue destination="bHc-vc-aFY" kind="push" identifier="Social to Goal Detail" id="vHP-qV-wbg"/>
+                        <segue destination="cZJ-0a-jUN" kind="push" identifier="Social to Step Detail" id="ld4-Lp-Fpg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcX-3w-Vd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1682" y="-1508"/>
+            <point key="canvasLocation" x="-2381" y="-3366"/>
         </scene>
         <!--Social Navigation Controller - Social-->
         <scene sceneID="lJa-aS-2l1">
@@ -562,7 +606,7 @@
                             <tableViewSection headerTitle="Description" id="7pi-SX-ym2">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8iH-Re-zZZ" style="IBUITableViewCellStyleDefault" id="Om5-Me-Z61">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -603,7 +647,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vI6-wo-bRW" detailTextLabel="hg0-sD-RCs" style="IBUITableViewCellStyleValue1" id="9Ns-qS-IsV">
-                                        <rect key="frame" x="0.0" y="156" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="156" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -790,7 +834,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="OKS-dh-Fpv">
-                                        <rect key="frame" x="0.0" y="143" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -1198,105 +1242,15 @@
         <image name="editGoal_icon.png" width="20" height="20"/>
         <image name="viewGoal_icon.png" width="20" height="20"/>
     </resources>
-    <classes>
-        <class className="AddCustomGoalTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCustomGoalTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="completeByInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inviteInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="publicInput" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="titleInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddGoalTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGoalTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
-            </relationships>
-        </class>
-        <class className="EditGoalViewController" superclassName="FlatViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditGoalViewController.h"/>
-        </class>
-        <class className="FlatTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatTabBarController.h"/>
-        </class>
-        <class className="FlatTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatTableViewController.h"/>
-        </class>
-        <class className="FlatViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatViewController.h"/>
-        </class>
-        <class className="GoalDetailsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalDetailsTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="completeByLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goalDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goaledLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="GoalsNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsNavigationController.h"/>
-        </class>
-        <class className="GoalsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
-            </relationships>
-        </class>
-        <class className="InvitesTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InvitesTableViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ProgressNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressNavigationController.h"/>
-        </class>
-        <class className="ProgressViewController" superclassName="FlatViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
-        </class>
-        <class className="SocialAddGoalTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialAddGoalTableViewController.h"/>
-        </class>
-        <class className="SocialNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialNavigationController.h"/>
-        </class>
-        <class className="SocialTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialTableViewCell.h"/>
-        </class>
-        <class className="SocialTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialTableViewController.h"/>
-        </class>
-        <class className="StepDetailsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepDetailsTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goalDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="joiningDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="privacyDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="whenDetailLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TodayNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayNavigationController.h"/>
-        </class>
-        <class className="TodayTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayTableViewController.h"/>
-        </class>
-        <class className="UIStoryboardSegue" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="yKp-XC-jty"/>
+        <segue reference="UNR-Qx-FQM"/>
+        <segue reference="s93-mb-ceg"/>
         <segue reference="0zL-9H-gfQ"/>
-        <segue reference="ToB-SQ-gci"/>
-        <segue reference="jv6-Vq-oQ8"/>
     </inferredMetricsTieBreakers>
 </document>
