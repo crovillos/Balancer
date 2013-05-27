@@ -39,8 +39,6 @@
     {
         _expandedSections = [[NSMutableIndexSet alloc] init];
     }
-    
-    [self runTimerFunctions];
 }
 
 #pragma mark - Setters
@@ -352,57 +350,24 @@
                 }
             }
         }
-        
-    }
-    if ([segue.identifier isEqualToString:@"Add Goal"])
-	{
-		AddGoalTableViewController *addGoalTableViewController =
-        segue.destinationViewController;
-		addGoalTableViewController.delegate = self;
-        
-	}
-}
-
-
-- (IBAction)cancel:(UIStoryboardSegue *)segue
-{
-    if ([[segue identifier] isEqualToString:@"CancelInput"]) {
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    }
-}
-- (IBAction)done:(UIStoryboardSegue *)segue
-{
-    if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
-        
-        AddGoalTableViewController *addController = [segue sourceViewController];
-        if (addController.goal) {
-            [self addGoal:addController.goal];
-            [[self tableView] reloadData];
-        }
-        [self dismissViewControllerAnimated:YES completion:NULL];
     }
 }
 
-
-- (void) reloadTableData:(NSTimer*) timer
+- (void)addGoal:(Goal*)goal
 {
-    [[self tableView] reloadData];
-}
-- (void) addGoal:(Goal *)goal
-{
-    // TODO
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [appDelegate.dummyGoals addObject:goal];
+    self.goals = appDelegate.dummyGoals;
+    [self.tableView reloadData];
 }
 
-- (void)addGoalTableViewController:(AddGoalTableViewController *)controller didSelectGoal:(Goal *)goal
-{
-	[self addGoal:goal];
-    [self.navigationController popViewControllerAnimated:YES];
+#pragma mark - Unwind segues from adding a goal
+- (IBAction)cancelAddingGoal:(UIStoryboardSegue *)segue {
 }
 
-- (void) runTimerFunctions {
-    
-    CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
-    BOOL timerRunning = YES;
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(reloadTableData:) userInfo:nil repeats:YES];
+- (IBAction)addGoalFromModal:(UIStoryboardSegue *)segue {
+    AddGoalTableViewController *vc = (AddGoalTableViewController *)segue.sourceViewController; // get results out of vc, which I presented
+    [self addGoal:vc.selectedGoal];
 }
+
 @end

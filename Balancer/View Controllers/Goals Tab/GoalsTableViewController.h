@@ -9,13 +9,14 @@
 #import "FlatTableViewController.h"
 #import "AddGoalTableViewController.h"
 
-@interface GoalsTableViewController : FlatTableViewController <AddGoalTableViewControllerDelegate>
+@interface GoalsTableViewController : FlatTableViewController
 
 /** The model for this view controller, obtained from the network */
 
-@property (nonatomic, strong) NSArray *goals; // of Goal
+@property (nonatomic, strong) NSMutableArray *goals; // of Goal
 
-- (IBAction)cancel:(UIStoryboardSegue *)segue;
+- (IBAction)cancelAddingGoal:(UIStoryboardSegue *)segue;
+- (IBAction)addGoalFromModal:(UIStoryboardSegue *)segue;
 
 - (void) reloadData;
 
