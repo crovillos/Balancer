@@ -13,6 +13,7 @@
 #import "UIColor+Balancer.h"
 
 @interface SocialAddGoalTableViewController ()
+    @property (nonatomic, weak) Goal* selectedGoal;
 
 @end
 
@@ -80,55 +81,55 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
-        NSInteger row = indexPath.row;
-        id story = self.goals[row];
+    NSInteger row = indexPath.row;
+    id story = self.goals[row];
+    
+    static NSString *cellIdentifier;
+    
+    NSString* storyHeaderText;
+    NSString* storyDetailText;
+    NSString* profileImagePath;
+    NSString* accessoryViewButtonText;
+    NSInteger creatorFBID = 0;
+    
+    
+    
+    
+    if([story isKindOfClass:[Goal class]]) {
+        Goal* goal = (Goal *) story;
         
-        static NSString *cellIdentifier;
+        cellIdentifier = @"Goal";
+        accessoryViewButtonText = @"Goal it!";
         
-        NSString* storyHeaderText;
-        NSString* storyDetailText;
-        NSString* profileImagePath;
-        NSString* accessoryViewButtonText;
-        NSInteger creatorFBID = 0;
-        
+        storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal goal goal goal", goal.creatorId];
+        storyDetailText = goal.name;
+        creatorFBID = goal.creatorId;
         
         
         
-        if([story isKindOfClass:[Goal class]]) {
-            Goal* goal = (Goal *) story;
-            
-            cellIdentifier = @"Goal";
-            accessoryViewButtonText = @"Goal it!";
-            
-            storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal goal goal goal", goal.creatorId];
-            storyDetailText = goal.name;
-            creatorFBID = goal.creatorId;
-            
-            
-            
-        }
-        
-        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-        
-        // Configure the cell...
-        UILabel* storyHeaderLabel = (UILabel *)[cell viewWithTag:2];
-        storyHeaderLabel.text = storyHeaderText;
-        
-        UILabel* storyDetailLabel = (UILabel *)[cell viewWithTag:3];
-        storyDetailLabel.text = storyDetailText;
-        
-        NSString* userPicturePath = [NSString stringWithFormat:@"user%dPic", creatorFBID];
-        UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
-        UIImageView* profileImageView = (UIImageView *)[cell viewWithTag:1];
-        profileImageView.image = image;
-        
-        //CALayer *imageLayer = profileImageView.layer;
-        //[imageLayer setCornerRadius:25];
-        //[imageLayer setMasksToBounds:YES];
-        
-        UIView *cellBackgroundView = [[UIView alloc] init];
-        cellBackgroundView.backgroundColor = [UIColor whiteColor];
-        cell.backgroundView = cellBackgroundView;
+    }
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    UILabel* storyHeaderLabel = (UILabel *)[cell viewWithTag:2];
+    storyHeaderLabel.text = storyHeaderText;
+    
+    UILabel* storyDetailLabel = (UILabel *)[cell viewWithTag:3];
+    storyDetailLabel.text = storyDetailText;
+    
+    NSString* userPicturePath = [NSString stringWithFormat:@"user%dPic", creatorFBID];
+    UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
+    UIImageView* profileImageView = (UIImageView *)[cell viewWithTag:1];
+    profileImageView.image = image;
+    
+    //CALayer *imageLayer = profileImageView.layer;
+    //[imageLayer setCornerRadius:25];
+    //[imageLayer setMasksToBounds:YES];
+    
+    UIView *cellBackgroundView = [[UIView alloc] init];
+    cellBackgroundView.backgroundColor = [UIColor whiteColor];
+    cell.backgroundView = cellBackgroundView;
 
     //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     UIView *selectedCellBackgroundView = [[UIView alloc] init];
@@ -153,13 +154,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    self.selectedGoal = self.goals[indexPath.row];
 }
 
 @end

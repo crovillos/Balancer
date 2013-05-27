@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -54,7 +54,7 @@
             <objects>
                 <tableViewController id="u8D-um-qL1" customClass="SocialAddGoalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BBa-LR-RaC">
-                        <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -107,14 +107,14 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BuZ-HG-2Wn">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="124-M4-s92"/>
-                        <barButtonItem key="rightBarButtonItem" title="Done" systemItem="done" id="Yrb-DB-fnH"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="W36-dt-lhf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="jee-Vm-qtZ"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cS-Bb-hUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-604" y="-1501"/>
+            <point key="canvasLocation" x="-225" y="-1484"/>
         </scene>
         <!--Social Table View Controller - Social-->
         <scene sceneID="SWQ-Wu-bMk">
@@ -325,7 +325,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bF-BB-gFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2214" y="-1492"/>
+            <point key="canvasLocation" x="-1515" y="-1336"/>
         </scene>
         <!--Invites Table View Controller - Invites-->
         <scene sceneID="n0n-Kf-fh8">
@@ -1236,7 +1236,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8L-D9-eve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1126" y="-1508"/>
+            <point key="canvasLocation" x="-844" y="-1398"/>
         </scene>
     </scenes>
     <resources>
@@ -1305,10 +1305,6 @@
         </class>
         <class className="SocialAddGoalTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialAddGoalTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
-            </relationships>
         </class>
         <class className="SocialNavigationController" superclassName="UINavigationController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialNavigationController.h"/>
@@ -1346,8 +1342,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="yKp-XC-jty"/>
-        <segue reference="UNR-Qx-FQM"/>
-        <segue reference="s93-mb-ceg"/>
+        <segue reference="jv6-Vq-oQ8"/>
+        <segue reference="ToB-SQ-gci"/>
+        <segue reference="vWT-wT-VSR"/>
     </inferredMetricsTieBreakers>
 </document>
