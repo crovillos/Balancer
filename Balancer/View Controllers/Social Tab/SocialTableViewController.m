@@ -103,14 +103,14 @@
     
     BOOL disabled = NO;
     
-    
+    UIImage* image = [UIImage imageNamed:@"brian_profilePic"];
     if([story isKindOfClass:[Goal class]]) {
         Goal* goal = (Goal *) story;
         
         cellIdentifier = @"Goal";
         accessoryViewButtonText = @"Goal it!";
         
-        storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
+        storyHeaderText = [NSString stringWithFormat:@"Brian Yin added a new goal", goal.creatorId];
         storyDetailText = goal.name;
         creatorFBID = goal.creatorId;
         
@@ -125,9 +125,14 @@
         cellIdentifier = @"Step";
         accessoryViewButtonText = @"Add it!";
         
-        storyHeaderText = [NSString stringWithFormat:@"User %u added a new step", step.creatorId];
+        storyHeaderText = [NSString stringWithFormat:@"Brian Yin added a new step", step.creatorId];
         storyDetailText = step.name;
         creatorFBID = step.creatorId;
+        
+        if (step.sponsored) {
+            storyHeaderText = @"Facebook Sponsored";
+            image = [UIImage imageNamed:@"Facebook Logo"];
+        }
     }
     
     cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
@@ -180,13 +185,11 @@
     
     NSString* userPicturePath = [NSString stringWithFormat:@"user%dPic", creatorFBID];
     //UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
-    UIImage* image = [UIImage imageNamed:@"brian_profilePic"];
+    
     UIImageView* profileImageView = (UIImageView *)[cell viewWithTag:1];
     profileImageView.image = image;
     
-    CALayer *imageLayer = profileImageView.layer;
-    [imageLayer setCornerRadius:25];
-    [imageLayer setMasksToBounds:YES];
+    
     
     UIImage *cellBackgroundImage = [UIImage imageNamed:@"Social Story Background"];
     UIImage *cellBackgroundImageResizable = [cellBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(11.0, 11.0, 12.0, 11.0)];
@@ -214,13 +217,13 @@
     if([story isKindOfClass:[Goal class]]) {
         Goal* goal = (Goal *) story;
         
-        storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
+        storyHeaderText = [NSString stringWithFormat:@"Brian Yin added a new goal", goal.creatorId];
         storyDetailText = goal.name;
         
     } else if ([story isKindOfClass:[Step class]]) {
         Step* step = (Step *) story;
         
-        storyHeaderText = [NSString stringWithFormat:@"User %u added a new step", step.creatorId];
+        storyHeaderText = [NSString stringWithFormat:@"Brian Yin added a new step", step.creatorId];
         storyDetailText = step.name;
     }
     
