@@ -42,7 +42,7 @@
     if(self.step.goal) {
         self.goalDetailLabel.text = self.step.goal.name;
     } else {
-        self.goalDetailLabel.text = @"None";
+        self.goalDetailLabel.text = @"none";
     }
     self.joiningDetailLabel.text = self.step.inviteList.description;
 }
