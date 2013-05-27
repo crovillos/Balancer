@@ -8,6 +8,8 @@
 
 #import "SocialTableViewCell.h"
 
+#import "UIColor+Balancer.h"
+
 #define MARGIN 10;
 
 @implementation SocialTableViewCell
@@ -46,8 +48,6 @@
                 
                 // This subview should be the accessory, change its frame
                 frame = subview.frame;
-                frame.origin.x -= MARGIN;
-                frame.origin.y -= MARGIN;
                 
                 subview.frame = frame;
                 break;

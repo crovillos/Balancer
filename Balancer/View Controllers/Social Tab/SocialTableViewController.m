@@ -51,12 +51,26 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UITableViewCell *invitesHeader = [tableView dequeueReusableCellWithIdentifier:@"Invitations"];
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showInvitations)];
-    tapGesture.cancelsTouchesInView = NO;
-    [invitesHeader addGestureRecognizer:tapGesture];
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
-    return invitesHeader;
+    if (appDelegate.dummyInvites.count > 0) {
+        UITableViewCell *invitesHeader = [tableView dequeueReusableCellWithIdentifier:@"Invitations"];
+        invitesHeader.textLabel.text = [NSString stringWithFormat:@"%i Invites", appDelegate.dummyInvites.count];
+        
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showInvitations)];
+        tapGesture.cancelsTouchesInView = NO;
+        [invitesHeader addGestureRecognizer:tapGesture];
+        
+        return invitesHeader;
+    }
+    else {
+        return nil;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 35.0;
 }
 
 - (void) showInvitations
@@ -87,7 +101,7 @@
     NSString* accessoryViewButtonText;
     NSInteger creatorFBID = 0;
     
-    
+    BOOL disabled = NO;
     
     
     if([story isKindOfClass:[Goal class]]) {
@@ -100,7 +114,10 @@
         storyDetailText = goal.name;
         creatorFBID = goal.creatorId;
         
-        
+        if (goal.added) {
+            accessoryViewButtonText = @"Goaled!";
+            disabled = YES;
+        }
         
     } else if ([story isKindOfClass:[Step class]]) {
         Step* step = (Step *) story;
@@ -116,10 +133,29 @@
     cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     // add accessory view button
-    UIButton *accessoryViewButton =  [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *accessoryViewButton =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [accessoryViewButton setEnabled:!disabled];
+    
+    UIFont *accessoryButtonFont = [UIFont boldSystemFontOfSize:14.0];
     [accessoryViewButton setTitle:accessoryViewButtonText forState:UIControlStateNormal];
+    accessoryViewButton.titleLabel.font = accessoryButtonFont;
+    [accessoryViewButton setTitleColor:[UIColor balancerDarkBlueColor] forState:UIControlStateNormal];
+    [accessoryViewButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
     [accessoryViewButton sizeToFit];
     accessoryViewButton.userInteractionEnabled = YES;
+    
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context,
+                                   [UIColor balancerLightBlueColor].CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    [accessoryViewButton setBackgroundImage:img forState:UIControlStateHighlighted];
+    
+    [accessoryViewButton setTitleColor:[UIColor balancerDarkBlueColor] forState:UIControlStateSelected];
     
     CGRect accessoryViewButtonBounds = CGRectMake(0, 0, 75, cell.bounds.size.height - 20);
     [accessoryViewButton setBounds:accessoryViewButtonBounds];
@@ -128,10 +164,10 @@
     
     
     if([story isKindOfClass:[Goal class]]) {
-        [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchDown];
+        [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchUpInside];
         
     } else if ([story isKindOfClass:[Step class]]) {
-        [accessoryViewButton addTarget:self action:@selector(joinStep:) forControlEvents:UIControlEventTouchDown];
+        [accessoryViewButton addTarget:self action:@selector(joinStep:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     
@@ -206,8 +242,7 @@
         //button.backgroundColor = [UIColor greenColor];
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
         if(goal.isAdded) {
-            [button.titleLabel setText:@"added"];
-            [appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:goal]];
+            //[appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:goal]];
             [appDelegate.dummyGoals addObject:goal];
         } else { // This currently will never actually run...
             //NSLog([NSString stringWithFormat:@"%d", [appDelegate.dummyGoals indexOfObject:goal]]);
