@@ -27,14 +27,14 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
+    if ([[segue identifier] isEqualToString:@"Add Custom Goal"]) {
             Goal *goal;
             NSDate *today = [NSDate date];
             goal = [[Goal alloc] init];
             goal.name = self.titleInput.text;
             goal.completionDate = today;
             goal.open = self.publicInput.enabled;
-            self.goal = goal;
+            self.customGoal = goal;
     }
 }
 

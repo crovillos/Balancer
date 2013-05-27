@@ -9,10 +9,9 @@
 #import "FlatTableViewController.h"
 
 #import "Goal.h"
-@class Goal;
 
-@interface AddCustomGoalTableViewController : FlatTableViewController <UITextFieldDelegate>
+@interface AddCustomGoalTableViewController : FlatTableViewController
 
-@property (strong, nonatomic) Goal *goal;
+@property (strong, nonatomic) Goal *customGoal;
 
 @end

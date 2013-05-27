@@ -13,18 +13,21 @@
 
 @implementation AddGoalTableViewController
 
--(void)setAvailableGoals:(NSArray *)availableGoals
-{
-    _availableGoals=  availableGoals;
-    [self.tableView reloadData];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    //[self setAvailableGoals:goals];
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    self.availableGoals = appDelegate.dummyAvailableGoals;
 }
+
+-(void)setAvailableGoals:(NSArray *)availableGoals
+{
+    _availableGoals = availableGoals;
+    [self.tableView reloadData];
+}
+
+
 
 #pragma mark - Table view data source
 
@@ -54,53 +57,19 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-	
-	NSInteger selectedIndex = indexPath.row;
-	UITableViewCell *cell = nil;
-    [tableView cellForRowAtIndexPath:indexPath];
-	cell.accessoryType = UITableViewCellAccessoryCheckmark;
-	Goal *goal = [self.availableGoals objectAtIndex:indexPath.row];
-	[self.delegate addGoalTableViewController:self didSelectGoal:goal];
-    
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
-    [appDelegate.dummyGoals addObject:goal];
-    GoalsTableViewController *presenting = (GoalsTableViewController *)self.presentingViewController.presentingViewController;
-    [presenting reloadData];
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
-- (IBAction)cancel:(UIStoryboardSegue *)segue
-{
-    if ([[segue identifier] isEqualToString:@"CancelInput"]) {
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    }
-}
-
-// called from the add custom goal screen
-- (IBAction)done:(UIStoryboardSegue *)segue
-{
-    if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
-        AddCustomGoalTableViewController *addController = [segue sourceViewController];
-        if (addController.goal) {
-            self.goal = addController.goal;
-            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-            [appDelegate.dummyGoals addObject:self.goal];
-
-            // need to now pass this goal to the main goals screen
-        }
-        [self dismissViewControllerAnimated:YES completion:NULL];
-                    [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-
-    }
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // nothing?
+    if ([[segue identifier] isEqualToString:@"Add Goal"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        Goal *goal = [self.availableGoals objectAtIndex:indexPath.row];
+        self.selectedGoal = goal;
+    } else if ([[segue identifier] isEqualToString:@"Add Custom Goal"]) {
+    }
+}
+
+- (IBAction)addCustomGoal:(UIStoryboardSegue *)segue {
+    AddCustomGoalTableViewController *vc = (AddCustomGoalTableViewController *)segue.sourceViewController; // get results out of vc, which I presented
+    self.selectedGoal = vc.customGoal;
+    [self performSegueWithIdentifier:@"Add Custom Goal" sender:self];
 }
 
 @end

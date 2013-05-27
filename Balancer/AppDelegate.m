@@ -178,22 +178,24 @@
 
 - (void)createDummyInvites{
     _dummyInvites = [[NSMutableArray alloc] init];
-    
+
     Goal *goal = [[Goal alloc] init];
     goal.goalId = 1;
-    goal.name = [NSString stringWithFormat:@"Hangout with friends twice"];
+    goal.name = [NSString stringWithFormat:@"Cooking class!"];
     goal.completionDate = [[NSDate alloc] init]; // sets completion date to today
-    goal.description = [NSString stringWithFormat:@"Spend more time with friends"];
+    goal.description = [NSString stringWithFormat:@"I want to learn how to cook!"];
     goal.open = YES;
     goal.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
     GoalInvite *gInvite1 = [[GoalInvite alloc] init];
     gInvite1.goal = goal;
+    gInvite1.title = goal.name;
+    gInvite1.inviteObject = goal;
     [self.dummyInvites addObject:gInvite1];
     
     Step *a1 = [[Step alloc] init];
     a1.activityId = 4;
-    a1.name = @"Kicboxing class";
-    a1.description = @"May 27 (Sun) 6:00PM @ IMA";
+    a1.name = @"Facebook 5k Marathon";
+    a1.description = @"Run with us!";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
@@ -201,6 +203,8 @@
     a1.goal = nil;
     StepInvite *aInvite = [[StepInvite alloc] init];
     aInvite.activity = a1;
+    aInvite.title = a1.name;
+    aInvite.inviteObject = a1;
     [self.dummyInvites addObject:aInvite];
 }
 

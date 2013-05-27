@@ -10,4 +10,6 @@
 
 @interface InvitesTableViewController : FlatTableViewController
 
+@property (nonatomic, strong) NSMutableArray *invites;
+
 @end

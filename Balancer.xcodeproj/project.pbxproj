@@ -11,6 +11,11 @@
 		8331FA6B17422FF0000F0642 /* Bariol Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8331FA6917422FF0000F0642 /* Bariol Regular.ttf */; };
 		83394FD2174B309E0030B614 /* libDTFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83394FC2174B2DAA0030B614 /* libDTFoundation.a */; };
 		83394FD4174B30B40030B614 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83394FD3174B30B40030B614 /* QuartzCore.framework */; };
+		8366918C1752FA9600CEEA46 /* SocialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8366918B1752FA9600CEEA46 /* SocialTableViewCell.m */; };
+		836691981752FF1600CEEA46 /* Social Story Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 836691971752FF1600CEEA46 /* Social Story Background.png */; };
+		8366919A175302F800CEEA46 /* Social Story Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83669199175302F800CEEA46 /* Social Story Background@2x.png */; };
+		8366919D1753043400CEEA46 /* Social Story Background (selected).png in Resources */ = {isa = PBXBuildFile; fileRef = 8366919B1753043400CEEA46 /* Social Story Background (selected).png */; };
+		8366919E1753043400CEEA46 /* Social Story Background (selected)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8366919C1753043400CEEA46 /* Social Story Background (selected)@2x.png */; };
 		83AEACEA173EF675006E1151 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACE9173EF675006E1151 /* Icon@2x.png */; };
 		83AEACEC173EF6BB006E1151 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACEB173EF6BB006E1151 /* Icon.png */; };
 		83AEACEE173EF6D9006E1151 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AEACED173EF6D9006E1151 /* Default@2x.png */; };
@@ -176,6 +181,12 @@
 		8331FA6917422FF0000F0642 /* Bariol Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bariol Regular.ttf"; path = "Fonts/Bariol Regular.ttf"; sourceTree = "<group>"; };
 		83394FB2174B2DAA0030B614 /* DTFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTFoundation.xcodeproj; path = Externals/DTFoundation/DTFoundation.xcodeproj; sourceTree = "<group>"; };
 		83394FD3174B30B40030B614 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8366918A1752FA9600CEEA46 /* SocialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialTableViewCell.h; sourceTree = "<group>"; };
+		8366918B1752FA9600CEEA46 /* SocialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialTableViewCell.m; sourceTree = "<group>"; };
+		836691971752FF1600CEEA46 /* Social Story Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Social Story Background.png"; path = "Balancer/Images/Social Story Background.png"; sourceTree = "<group>"; };
+		83669199175302F800CEEA46 /* Social Story Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Social Story Background@2x.png"; path = "Balancer/Images/Social Story Background@2x.png"; sourceTree = "<group>"; };
+		8366919B1753043400CEEA46 /* Social Story Background (selected).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Social Story Background (selected).png"; path = "Balancer/Images/Social Story Background (selected).png"; sourceTree = "<group>"; };
+		8366919C1753043400CEEA46 /* Social Story Background (selected)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Social Story Background (selected)@2x.png"; path = "Balancer/Images/Social Story Background (selected)@2x.png"; sourceTree = "<group>"; };
 		83AEACE9173EF675006E1151 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		83AEACEB173EF6BB006E1151 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		83AEACED173EF6D9006E1151 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -372,6 +383,10 @@
 		83AEACF3173EF729006E1151 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				836691971752FF1600CEEA46 /* Social Story Background.png */,
+				83669199175302F800CEEA46 /* Social Story Background@2x.png */,
+				8366919B1753043400CEEA46 /* Social Story Background (selected).png */,
+				8366919C1753043400CEEA46 /* Social Story Background (selected)@2x.png */,
 				83D8B254174F63D50027D1B8 /* Dummy Profile Pictures */,
 				83D8B25C174F63D50027D1B8 /* Facebook Logo.png */,
 				83D8B25D174F63D50027D1B8 /* Goals Tab Icons */,
@@ -472,6 +487,8 @@
 				83C0CA42174EC4CA007DDD05 /* SocialNavigationController.m */,
 				83C0CA43174EC4CA007DDD05 /* SocialTableViewController.h */,
 				83C0CA44174EC4CA007DDD05 /* SocialTableViewController.m */,
+				8366918A1752FA9600CEEA46 /* SocialTableViewCell.h */,
+				8366918B1752FA9600CEEA46 /* SocialTableViewCell.m */,
 				83C0CA80174EC6F6007DDD05 /* InvitesTableViewController.h */,
 				83C0CA81174EC6F6007DDD05 /* InvitesTableViewController.m */,
 				CB7C0A1717502946008E8AEA /* SocialAddGoalTableViewController.h */,
@@ -867,6 +884,10 @@
 				83D8B286174F63D50027D1B8 /* Today@2x.png in Resources */,
 				83D8B28D175016DE0027D1B8 /* viewGoal_icon.png in Resources */,
 				83D8B28E175016DE0027D1B8 /* viewGoal_icon@2x.png in Resources */,
+				836691981752FF1600CEEA46 /* Social Story Background.png in Resources */,
+				8366919A175302F800CEEA46 /* Social Story Background@2x.png in Resources */,
+				8366919D1753043400CEEA46 /* Social Story Background (selected).png in Resources */,
+				8366919E1753043400CEEA46 /* Social Story Background (selected)@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,6 +945,7 @@
 				83D8B243174F119B0027D1B8 /* UIColor+Balancer.m in Sources */,
 				83D8B24D174F207A0027D1B8 /* FlatViewController.m in Sources */,
 				CB7C0A1917502947008E8AEA /* SocialAddGoalTableViewController.m in Sources */,
+				8366918C1752FA9600CEEA46 /* SocialTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

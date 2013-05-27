@@ -22,6 +22,10 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor balancerPinkColor]];
     
+    // prevent empty table cells from appearing after the social feed by setting
+    // the table view's footer view to an empty view
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSMutableArray *dummySocialStream = appDelegate.dummySocialStream;
     
@@ -43,119 +47,161 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 2;
+    return 1;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    if (appDelegate.dummyInvites.count > 0) {
+        UITableViewCell *invitesHeader = [tableView dequeueReusableCellWithIdentifier:@"Invitations"];
+        invitesHeader.textLabel.text = [NSString stringWithFormat:@"%i Invites", appDelegate.dummyInvites.count];
+        
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showInvitations)];
+        tapGesture.cancelsTouchesInView = NO;
+        [invitesHeader addGestureRecognizer:tapGesture];
+        
+        return invitesHeader;
+    }
+    else {
+        return nil;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 35.0;
+}
+
+- (void)showInvitations
+{
+    [self performSegueWithIdentifier:@"Show Invitations" sender:self];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    if (section) {
-        return [self.socialStream count];
-    } else {
-        return 1;
-    }
-    
+    return [self.socialStream count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
     
-    if (!indexPath.section) { // at invites row
-        cell = [tableView dequeueReusableCellWithIdentifier:@"Invitations" forIndexPath:indexPath];
-    } else {
-        NSInteger row = indexPath.row;
-        id story = self.socialStream[row];
+    //if (!indexPath.section) { // at invites row
+    //    cell = [tableView dequeueReusableCellWithIdentifier:@"Invitations" forIndexPath:indexPath];
+    //} else {
+    NSInteger row = indexPath.row;
+    id story = self.socialStream[row];
+    
+    static NSString *cellIdentifier;
+    
+    NSString* storyHeaderText;
+    NSString* storyDetailText;
+    NSString* profileImagePath;
+    NSString* accessoryViewButtonText;
+    NSInteger creatorFBID = 0;
+    
+    BOOL disabled = NO;
+    
+    
+    if([story isKindOfClass:[Goal class]]) {
+        Goal* goal = (Goal *) story;
         
-        static NSString *cellIdentifier;
+        cellIdentifier = @"Goal";
+        accessoryViewButtonText = @"Goal it!";
         
-        NSString* storyHeaderText;
-        NSString* storyDetailText;
-        NSString* profileImagePath;
-        NSString* accessoryViewButtonText;
-        NSInteger creatorFBID = 0;
+        storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
+        storyDetailText = goal.name;
+        creatorFBID = goal.creatorId;
         
-
-
-        
-        if([story isKindOfClass:[Goal class]]) {
-            Goal* goal = (Goal *) story;
-            
-            cellIdentifier = @"Goal";
-            accessoryViewButtonText = @"Goal it!";
-            
-            storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
-            storyDetailText = goal.name;
-            creatorFBID = goal.creatorId;
-
-
-            
-        } else if ([story isKindOfClass:[Step class]]) {
-            Step* step = (Step *) story;
-            
-            cellIdentifier = @"Step";
-            accessoryViewButtonText = @"Add it!";
-            
-            storyHeaderText = [NSString stringWithFormat:@"User %u added a new step", step.creatorId];
-            storyDetailText = step.name;
-            creatorFBID = step.creatorId;
+        if (goal.added) {
+            accessoryViewButtonText = @"Goaled!";
+            disabled = YES;
         }
         
-        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    } else if ([story isKindOfClass:[Step class]]) {
+        Step* step = (Step *) story;
         
-        // add accessory view button
-        UIButton *accessoryViewButton =  [UIButton buttonWithType:UIButtonTypeRoundedRect];;
-        [accessoryViewButton setTitle:accessoryViewButtonText forState:UIControlStateNormal];
-        [accessoryViewButton sizeToFit];
-        accessoryViewButton.userInteractionEnabled = YES;
-        [accessoryViewButton setBounds:cell.bounds];
-        CGRect accessoryViewButtonBounds = CGRectMake(0, 0, 75, cell.bounds.size.height);
-        [accessoryViewButton setBounds:accessoryViewButtonBounds];
-        //accessoryViewButton.frame.size.height = cell.bounds.size.height;
-        cell.accessoryView = accessoryViewButton;
+        cellIdentifier = @"Step";
+        accessoryViewButtonText = @"Add it!";
         
-        
-        if([story isKindOfClass:[Goal class]]) {
-            [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchDown];
-            
-        } else if ([story isKindOfClass:[Step class]]) {
-            [accessoryViewButton addTarget:self action:@selector(joinStep:) forControlEvents:UIControlEventTouchDown];
-        }
-
-        
-        // Configure the cell...
-        UILabel* storyHeaderLabel = (UILabel *)[cell viewWithTag:2];
-        storyHeaderLabel.text = storyHeaderText;
-        
-        UILabel* storyDetailLabel = (UILabel *)[cell viewWithTag:3];
-        storyDetailLabel.text = storyDetailText;
-        
-        NSString* userPicturePath = [NSString stringWithFormat:@"user%dPic", creatorFBID];
-        //UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
-        UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"brian_profilePic" ofType:@"png"]];
-        UIImageView* profileImageView = (UIImageView *)[cell viewWithTag:1];
-        profileImageView.image = image;
-        
-        CALayer *imageLayer = profileImageView.layer;
-        [imageLayer setCornerRadius:25];
-        [imageLayer setMasksToBounds:YES];
-        
-        UIView *cellBackgroundView = [[UIView alloc] init];
-        cellBackgroundView.backgroundColor = [UIColor whiteColor];
-        cell.backgroundView = cellBackgroundView;
+        storyHeaderText = [NSString stringWithFormat:@"User %u added a new step", step.creatorId];
+        storyDetailText = step.name;
+        creatorFBID = step.creatorId;
     }
     
-    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    UIView *selectedCellBackgroundView = [[UIView alloc] init];
-    selectedCellBackgroundView.backgroundColor = [UIColor balancerLightBlueColor];
-    cell.selectedBackgroundView = selectedCellBackgroundView;
+    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    // add accessory view button
+    UIButton *accessoryViewButton =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [accessoryViewButton setEnabled:!disabled];
+    
+    UIFont *accessoryButtonFont = [UIFont boldSystemFontOfSize:14.0];
+    [accessoryViewButton setTitle:accessoryViewButtonText forState:UIControlStateNormal];
+    accessoryViewButton.titleLabel.font = accessoryButtonFont;
+    [accessoryViewButton setTitleColor:[UIColor balancerDarkBlueColor] forState:UIControlStateNormal];
+    [accessoryViewButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [accessoryViewButton sizeToFit];
+    accessoryViewButton.userInteractionEnabled = YES;
+    
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context,
+                                   [UIColor balancerLightBlueColor].CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    [accessoryViewButton setBackgroundImage:img forState:UIControlStateHighlighted];
+    
+    [accessoryViewButton setTitleColor:[UIColor balancerDarkBlueColor] forState:UIControlStateSelected];
+    
+    CGRect accessoryViewButtonBounds = CGRectMake(0, 0, 75, cell.bounds.size.height - 20);
+    [accessoryViewButton setBounds:accessoryViewButtonBounds];
+    //accessoryViewButton.frame.size.height = cell.bounds.size.height;
+    cell.accessoryView = accessoryViewButton;
+    
+    
+    if([story isKindOfClass:[Goal class]]) {
+        [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchUpInside];
+        
+    } else if ([story isKindOfClass:[Step class]]) {
+        [accessoryViewButton addTarget:self action:@selector(joinStep:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    
+    // Configure the cell...
+    UILabel* storyHeaderLabel = (UILabel *)[cell viewWithTag:2];
+    storyHeaderLabel.text = storyHeaderText;
+    
+    UILabel* storyDetailLabel = (UILabel *)[cell viewWithTag:3];
+    storyDetailLabel.text = storyDetailText;
+    
+    NSString* userPicturePath = [NSString stringWithFormat:@"user%dPic", creatorFBID];
+    //UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
+    UIImage* image = [UIImage imageNamed:@"brian_profilePic"];
+    UIImageView* profileImageView = (UIImageView *)[cell viewWithTag:1];
+    profileImageView.image = image;
+    
+    CALayer *imageLayer = profileImageView.layer;
+    [imageLayer setCornerRadius:25];
+    [imageLayer setMasksToBounds:YES];
+    
+    UIImage *cellBackgroundImage = [UIImage imageNamed:@"Social Story Background"];
+    UIImage *cellBackgroundImageResizable = [cellBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(11.0, 11.0, 12.0, 11.0)];
+    cell.backgroundView = [[UIImageView alloc] initWithImage:cellBackgroundImageResizable];
+    
+    UIImage *cellSelectedBackgroundImage = [UIImage imageNamed:@"Social Story Background (selected)"];
+    UIImage *cellSelectedBackgroundImageResizable = [cellSelectedBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(11.0, 11.0, 12.0, 11.0)];
+    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:cellSelectedBackgroundImageResizable];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0 && indexPath.row == 0)
-        return 44;
+    //if (indexPath.section == 0 && indexPath.row == 0)
+    //    return 44;
     
     // TODO: factor out duplicated code; same as cellForRowAtIndexPath
     NSString* storyHeaderText;
@@ -196,8 +242,7 @@
         //button.backgroundColor = [UIColor greenColor];
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
         if(goal.isAdded) {
-            [button.titleLabel setText:@"added"];
-            [appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:goal]];
+            //[appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:goal]];
             [appDelegate.dummyGoals addObject:goal];
         } else { // This currently will never actually run...
             //NSLog([NSString stringWithFormat:@"%d", [appDelegate.dummyGoals indexOfObject:goal]]);
@@ -214,7 +259,7 @@
         [self performSegueWithIdentifier: @"Add Step to Goal" sender: self];
         
     }
-
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
