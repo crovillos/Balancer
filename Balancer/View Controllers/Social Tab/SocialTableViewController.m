@@ -73,7 +73,7 @@
     return 35.0;
 }
 
-- (void) showInvitations
+- (void)showInvitations
 {
     [self performSegueWithIdentifier:@"Show Invitations" sender:self];
 }

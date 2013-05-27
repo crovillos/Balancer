@@ -10,6 +10,4 @@
 
 @implementation Invite
 
-@synthesize sender, sentDate;
-
 @end

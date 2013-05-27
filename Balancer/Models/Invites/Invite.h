@@ -11,5 +11,6 @@
 @interface Invite : NSObject
 @property  (nonatomic, strong) NSString* sender;
 @property (nonatomic, strong) NSDate* sentDate;
+@property (nonatomic, strong) id inviteObject;
 
 @end
