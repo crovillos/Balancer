@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -9,7 +9,7 @@
             <objects>
                 <tableViewController id="sih-ZT-NwH" customClass="TodayTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mcl-wC-x0L">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -54,7 +54,7 @@
             <objects>
                 <tableViewController id="u8D-um-qL1" customClass="SocialAddGoalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BBa-LR-RaC">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -120,16 +120,16 @@
         <scene sceneID="SWQ-Wu-bMk">
             <objects>
                 <tableViewController id="ESx-nY-SOK" customClass="SocialTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="vem-V0-fdj">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vem-V0-fdj">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.94901961089999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Invitations" textLabel="3nH-b1-3B0" style="IBUITableViewCellStyleDefault" id="WUZ-s3-OZL">
-                                <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Invites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nH-b1-3B0">
@@ -141,19 +141,17 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.01176470611" green="0.35294118520000001" blue="0.65098041299999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="42b-dp-5WK" kind="push" id="HJO-HI-58W"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Goal" rowHeight="130" id="z42-7z-Jua">
-                                <rect key="frame" x="0.0" y="91" width="320" height="130"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Goal" rowHeight="130" id="z42-7z-Jua" customClass="SocialTableViewCell">
+                                <rect key="frame" x="0.0" y="66" width="320" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="10" y="0.0" width="280" height="129"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="129"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="John Doe added a new goal" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="146" translatesAutoresizingMaskIntoConstraints="NO" id="9cH-oz-hKr">
                                             <constraints>
+                                                <constraint firstAttribute="width" constant="146" id="6OF-2f-w5G"/>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" type="user" id="K9J-On-FgU"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
@@ -175,25 +173,24 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="YVB-SM-aRE" firstAttribute="leading" secondItem="9gL-7A-91k" secondAttribute="leading" type="default" id="0nD-II-Qp2"/>
+                                    <constraint firstItem="9gL-7A-91k" firstAttribute="leading" secondItem="z42-7z-Jua" secondAttribute="leading" constant="10" id="4QJ-9z-rTb"/>
                                     <constraint firstItem="9cH-oz-hKr" firstAttribute="leading" secondItem="9gL-7A-91k" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="Xxh-Fz-dwu"/>
-                                    <constraint firstAttribute="trailing" secondItem="9cH-oz-hKr" secondAttribute="trailing" constant="95" type="user" id="ZSk-eH-OUq"/>
                                     <constraint firstItem="YVB-SM-aRE" firstAttribute="top" secondItem="9cH-oz-hKr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aD9-hk-xkY"/>
                                     <constraint firstAttribute="bottom" secondItem="YVB-SM-aRE" secondAttribute="bottom" constant="10" type="user" id="cbW-aW-m54"/>
-                                    <constraint firstItem="YVB-SM-aRE" firstAttribute="leading" secondItem="z42-7z-Jua" secondAttribute="leading" constant="20" type="user" id="lDj-UK-XlQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="YVB-SM-aRE" secondAttribute="trailing" constant="95" type="user" id="qlP-jJ-LoZ"/>
-                                    <constraint firstItem="9gL-7A-91k" firstAttribute="leading" secondItem="z42-7z-Jua" secondAttribute="leading" constant="20" type="user" id="sC9-vl-0S7"/>
                                     <constraint firstItem="9gL-7A-91k" firstAttribute="top" secondItem="z42-7z-Jua" secondAttribute="top" constant="10" type="user" id="wdL-XH-Paf"/>
+                                    <constraint firstItem="9cH-oz-hKr" firstAttribute="trailing" secondItem="YVB-SM-aRE" secondAttribute="trailing" type="default" id="xKJ-fh-pcl"/>
                                     <constraint firstItem="YVB-SM-aRE" firstAttribute="top" secondItem="9gL-7A-91k" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zgA-lz-d91"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="bHc-vc-aFY" kind="push" identifier="Social to Goal Detail" id="ToB-SQ-gci"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Step" rowHeight="130" id="hXI-B1-CwJ">
-                                <rect key="frame" x="0.0" y="221" width="320" height="130"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Step" rowHeight="130" id="hXI-B1-CwJ" customClass="SocialTableViewCell">
+                                <rect key="frame" x="0.0" y="196" width="320" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="10" y="0.0" width="280" height="129"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="129"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="John Doe added a new goal" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="146" translatesAutoresizingMaskIntoConstraints="NO" id="Xin-Zs-sal">
@@ -223,21 +220,21 @@
                                     <constraint firstItem="QW3-M5-7Mh" firstAttribute="trailing" secondItem="Xin-Zs-sal" secondAttribute="trailing" type="default" id="9oX-q8-750"/>
                                     <constraint firstItem="sne-pP-mXJ" firstAttribute="top" secondItem="hXI-B1-CwJ" secondAttribute="top" constant="10" type="user" id="EtV-LR-hWC"/>
                                     <constraint firstItem="Xin-Zs-sal" firstAttribute="leading" secondItem="sne-pP-mXJ" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="LxV-zj-v08"/>
-                                    <constraint firstItem="QW3-M5-7Mh" firstAttribute="leading" secondItem="hXI-B1-CwJ" secondAttribute="leading" constant="20" type="default" id="YDa-3Q-6i8"/>
+                                    <constraint firstItem="QW3-M5-7Mh" firstAttribute="leading" secondItem="sne-pP-mXJ" secondAttribute="leading" type="default" id="SAV-NB-Vh7"/>
                                     <constraint firstItem="Xin-Zs-sal" firstAttribute="top" secondItem="hXI-B1-CwJ" secondAttribute="top" constant="10" type="user" id="a8v-0o-k05"/>
                                     <constraint firstItem="QW3-M5-7Mh" firstAttribute="bottom" secondItem="hXI-B1-CwJ" secondAttribute="bottom" type="default" id="cvU-Xa-K2e"/>
                                     <constraint firstItem="QW3-M5-7Mh" firstAttribute="top" secondItem="sne-pP-mXJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gj7-I0-QlR"/>
-                                    <constraint firstItem="sne-pP-mXJ" firstAttribute="leading" secondItem="hXI-B1-CwJ" secondAttribute="leading" constant="20" type="user" id="itD-iz-q5e"/>
+                                    <constraint firstItem="sne-pP-mXJ" firstAttribute="leading" secondItem="hXI-B1-CwJ" secondAttribute="leading" constant="10" id="hdO-1b-WYD"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="cZJ-0a-jUN" kind="push" identifier="Social to Step Detail" id="jv6-Vq-oQ8"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Sponsored" rowHeight="130" id="9gc-yc-4JE">
-                                <rect key="frame" x="0.0" y="351" width="320" height="131"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Sponsored" rowHeight="130" id="9gc-yc-4JE" customClass="SocialTableViewCell">
+                                <rect key="frame" x="0.0" y="326" width="320" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="10" y="0.0" width="300" height="129"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="Step title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOx-Tq-wrh">
@@ -249,11 +246,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shw-x2-ZCz">
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="320" id="iee-lX-r9M"/>
-                                            </constraints>
-                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shw-x2-ZCz"/>
                                         <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5k8-6a-RyC">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="51" id="3sE-eh-4Y8"/>
@@ -299,17 +292,18 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="Shw-x2-ZCz" firstAttribute="leading" secondItem="9gc-yc-4JE" secondAttribute="leading" constant="10" id="31q-NT-s81"/>
                                     <constraint firstItem="Mg0-yg-Mze" firstAttribute="top" secondItem="5k8-6a-RyC" secondAttribute="top" type="default" id="4hC-wU-sWX"/>
+                                    <constraint firstAttribute="bottom" secondItem="747-aG-GVQ" secondAttribute="bottom" constant="31" id="7dQ-JH-MbS"/>
+                                    <constraint firstItem="5k8-6a-RyC" firstAttribute="leading" secondItem="747-aG-GVQ" secondAttribute="leading" type="default" id="DjU-Is-JVI"/>
+                                    <constraint firstItem="Shw-x2-ZCz" firstAttribute="trailing" secondItem="9gc-yc-4JE" secondAttribute="trailing" type="default" id="LVo-xP-K1C"/>
+                                    <constraint firstItem="Shw-x2-ZCz" firstAttribute="leading" secondItem="9gc-yc-4JE" secondAttribute="leading" type="default" id="OUf-FQ-Onv"/>
                                     <constraint firstItem="dOx-Tq-wrh" firstAttribute="top" secondItem="9gc-yc-4JE" secondAttribute="top" constant="456" id="Ooo-B9-U5l"/>
-                                    <constraint firstItem="Shw-x2-ZCz" firstAttribute="leading" secondItem="dOx-Tq-wrh" secondAttribute="leading" type="default" id="S9w-nE-Uaf"/>
                                     <constraint firstItem="Shw-x2-ZCz" firstAttribute="top" secondItem="9gc-yc-4JE" secondAttribute="top" type="default" id="WH2-Bl-JRu"/>
                                     <constraint firstItem="Shw-x2-ZCz" firstAttribute="centerY" secondItem="9gc-yc-4JE" secondAttribute="centerY" type="default" id="kAc-pZ-zF9"/>
-                                    <constraint firstAttribute="bottom" secondItem="747-aG-GVQ" secondAttribute="bottom" constant="32" id="tKY-vh-bTm"/>
-                                    <constraint firstItem="5k8-6a-RyC" firstAttribute="leading" secondItem="9gc-yc-4JE" secondAttribute="leading" constant="20" type="default" id="tVv-Ik-G2O"/>
+                                    <constraint firstItem="5k8-6a-RyC" firstAttribute="leading" secondItem="9gc-yc-4JE" secondAttribute="leading" constant="10" id="pjG-aG-dmj"/>
                                     <constraint firstItem="Mg0-yg-Mze" firstAttribute="leading" secondItem="5k8-6a-RyC" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="vBp-AD-vXT"/>
+                                    <constraint firstItem="dOx-Tq-wrh" firstAttribute="leading" secondItem="9gc-yc-4JE" secondAttribute="leading" type="default" id="vJR-L4-aAu"/>
                                     <constraint firstItem="5k8-6a-RyC" firstAttribute="top" secondItem="9gc-yc-4JE" secondAttribute="top" constant="10" id="vxB-cS-KD2"/>
-                                    <constraint firstItem="747-aG-GVQ" firstAttribute="leading" secondItem="9gc-yc-4JE" secondAttribute="leading" constant="20" type="default" id="yJB-Nf-mWy"/>
                                 </constraints>
                             </tableViewCell>
                         </prototypes>
@@ -321,6 +315,7 @@
                     <navigationItem key="navigationItem" title="Social" id="ase-nW-i0g"/>
                     <connections>
                         <segue destination="cel-Te-a7O" kind="modal" identifier="Add Step to Goal" id="boy-rf-77h"/>
+                        <segue destination="42b-dp-5WK" kind="push" identifier="Show Invitations" id="9V1-LA-2UE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bF-BB-gFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -332,7 +327,7 @@
             <objects>
                 <tableViewController id="42b-dp-5WK" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QKI-UQ-uGF">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -355,7 +350,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcX-3w-Vd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1664" y="-1528"/>
+            <point key="canvasLocation" x="-1682" y="-1508"/>
         </scene>
         <!--Social Navigation Controller - Social-->
         <scene sceneID="lJa-aS-2l1">
@@ -511,14 +506,14 @@
             <objects>
                 <tableViewController id="bHc-vc-aFY" customClass="GoalDetailsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BeT-hU-Ovn">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.94901961089999998" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Description" id="7pi-SX-ym2">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8iH-Re-zZZ" style="IBUITableViewCellStyleDefault" id="Om5-Me-Z61">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -559,7 +554,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vI6-wo-bRW" detailTextLabel="hg0-sD-RCs" style="IBUITableViewCellStyleValue1" id="9Ns-qS-IsV">
-                                        <rect key="frame" x="0.0" y="156" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="156" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -655,7 +650,7 @@
             <objects>
                 <tableViewController id="ZVv-JW-akH" customClass="AddCustomGoalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="EDy-Sk-Wla">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.94901961089999998" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -811,7 +806,7 @@
             <objects>
                 <viewController id="xuH-Qe-PZA" customClass="EditGoalViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e5I-16-P3N">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdh-5n-xRE">
@@ -856,7 +851,7 @@
             <objects>
                 <viewController id="d8Y-Ql-jE3" customClass="ProgressViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ukd-7U-PxP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Under Construction Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="xdz-Vj-Qbf">
@@ -927,7 +922,7 @@
             <objects>
                 <tableViewController id="cZJ-0a-jUN" customClass="StepDetailsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="2eQ-zC-qFd">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.94901961089999998" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -1154,95 +1149,10 @@
         <image name="editGoal_icon.png" width="20" height="20"/>
         <image name="viewGoal_icon.png" width="20" height="20"/>
     </resources>
-    <classes>
-        <class className="AddCustomGoalTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCustomGoalTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="completeByInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inviteInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="publicInput" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="titleInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddGoalTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGoalTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
-            </relationships>
-        </class>
-        <class className="AddStepTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddStepTableViewController.h"/>
-        </class>
-        <class className="EditGoalViewController" superclassName="FlatViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditGoalViewController.h"/>
-        </class>
-        <class className="FlatTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatTabBarController.h"/>
-        </class>
-        <class className="FlatTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatTableViewController.h"/>
-        </class>
-        <class className="FlatViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatViewController.h"/>
-        </class>
-        <class className="GoalDetailsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalDetailsTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="completeByLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goalDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goaledLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="GoalsNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsNavigationController.h"/>
-        </class>
-        <class className="GoalsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ProgressNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressNavigationController.h"/>
-        </class>
-        <class className="ProgressViewController" superclassName="FlatViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
-        </class>
-        <class className="SocialNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialNavigationController.h"/>
-        </class>
-        <class className="SocialTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialTableViewController.h"/>
-        </class>
-        <class className="StepDetailsTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepDetailsTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goalDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="joiningDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="privacyDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleDetailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="whenDetailLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TodayNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayNavigationController.h"/>
-        </class>
-        <class className="TodayTableViewController" superclassName="FlatTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayTableViewController.h"/>
-        </class>
-        <class className="UIStoryboardSegue" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="0zL-9H-gfQ"/>
