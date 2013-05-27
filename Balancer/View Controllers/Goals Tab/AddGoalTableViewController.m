@@ -13,18 +13,21 @@
 
 @implementation AddGoalTableViewController
 
--(void)setAvailableGoals:(NSArray *)availableGoals
-{
-    _availableGoals=  availableGoals;
-    [self.tableView reloadData];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    //[self setAvailableGoals:goals];
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    self.availableGoals = appDelegate.dummyAvailableGoals;
 }
+
+-(void)setAvailableGoals:(NSArray *)availableGoals
+{
+    _availableGoals = availableGoals;
+    [self.tableView reloadData];
+}
+
+
 
 #pragma mark - Table view data source
 
