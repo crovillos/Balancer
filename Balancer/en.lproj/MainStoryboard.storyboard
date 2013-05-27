@@ -58,11 +58,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Goal" rowHeight="130" id="WSr-qe-xGz">
-                                <rect key="frame" x="0.0" y="22" width="320" height="130"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Goal" id="WSr-qe-xGz">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="129"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="John Doe added a new goal" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="146" translatesAutoresizingMaskIntoConstraints="NO" id="5Ua-V4-nON">
@@ -74,29 +74,12 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="Goal title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="205" translatesAutoresizingMaskIntoConstraints="NO" id="cjb-DF-U3N">
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sK-TZ-2e4">
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="51" type="user" id="38l-Q7-PcC"/>
-                                                <constraint firstAttribute="width" constant="51" type="user" id="HMi-bK-fac"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="cjb-DF-U3N" firstAttribute="leading" secondItem="3sK-TZ-2e4" secondAttribute="leading" type="default" id="CDt-HJ-a3V"/>
-                                    <constraint firstAttribute="bottom" secondItem="cjb-DF-U3N" secondAttribute="bottom" constant="10" type="user" id="Que-ym-jvc"/>
-                                    <constraint firstItem="5Ua-V4-nON" firstAttribute="trailing" secondItem="cjb-DF-U3N" secondAttribute="trailing" type="default" id="QyI-Gy-aBJ"/>
-                                    <constraint firstItem="3sK-TZ-2e4" firstAttribute="top" secondItem="WSr-qe-xGz" secondAttribute="top" constant="10" type="user" id="WYf-iC-ZVe"/>
-                                    <constraint firstItem="3sK-TZ-2e4" firstAttribute="leading" secondItem="WSr-qe-xGz" secondAttribute="leading" constant="10" id="dbs-7t-mMF"/>
-                                    <constraint firstItem="cjb-DF-U3N" firstAttribute="top" secondItem="3sK-TZ-2e4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iTD-5W-1VH"/>
-                                    <constraint firstItem="cjb-DF-U3N" firstAttribute="top" secondItem="5Ua-V4-nON" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="piX-V9-NRr"/>
-                                    <constraint firstItem="5Ua-V4-nON" firstAttribute="leading" secondItem="3sK-TZ-2e4" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="xni-0P-bHj"/>
+                                    <constraint firstItem="5Ua-V4-nON" firstAttribute="top" secondItem="WSr-qe-xGz" secondAttribute="top" constant="-4" id="pv4-l3-OUX"/>
+                                    <constraint firstItem="5Ua-V4-nON" firstAttribute="leading" secondItem="WSr-qe-xGz" secondAttribute="leading" constant="20" type="default" id="x09-Ed-Gx7"/>
                                 </constraints>
                             </tableViewCell>
                         </prototypes>
@@ -107,12 +90,21 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BuZ-HG-2Wn">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="W36-dt-lhf"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="jee-Vm-qtZ"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="W36-dt-lhf">
+                            <connections>
+                                <segue destination="9He-14-lri" kind="unwind" unwindAction="cancelAddingGoal:" id="CQB-F4-90Q"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="jee-Vm-qtZ">
+                            <connections>
+                                <segue destination="9He-14-lri" kind="unwind" unwindAction="addGoalFromModal:" id="tSV-OP-f6f"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cS-Bb-hUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9He-14-lri" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-225" y="-1484"/>
         </scene>
@@ -436,9 +428,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Invites" id="0HQ-PQ-bTF"/>
                     <connections>
-                        <segue destination="u8D-um-qL1" kind="modal" identifier="Add Step to Goal" id="yKp-XC-jty"/>
                         <segue destination="bHc-vc-aFY" kind="push" identifier="Social to Goal Detail" id="vHP-qV-wbg"/>
                         <segue destination="cZJ-0a-jUN" kind="push" identifier="Social to Step Detail" id="ld4-Lp-Fpg"/>
+                        <segue destination="cel-Te-a7O" kind="modal" identifier="Add Step to Goal" id="ofU-rk-c8j"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcX-3w-Vd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -551,12 +543,9 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="yIo-HD-RzL" secondAttribute="trailing" constant="20" type="default" id="1Wc-1h-Wdu"/>
                                     <constraint firstItem="cBc-QI-4r2" firstAttribute="top" secondItem="Jq8-4W-Ai5" secondAttribute="top" type="default" id="B8s-jV-8Td"/>
-                                    <constraint firstItem="Jq8-4W-Ai5" firstAttribute="baseline" secondItem="WYr-CJ-AmL" secondAttribute="baseline" type="default" id="HeA-lZ-4VG"/>
                                     <constraint firstItem="Jq8-4W-Ai5" firstAttribute="leading" secondItem="yIo-HD-RzL" secondAttribute="leading" type="default" id="O13-F2-lwF"/>
                                     <constraint firstItem="cBc-QI-4r2" firstAttribute="bottom" secondItem="Jq8-4W-Ai5" secondAttribute="bottom" type="default" id="OhX-aw-WcJ"/>
-                                    <constraint firstItem="cBc-QI-4r2" firstAttribute="baseline" secondItem="Jq8-4W-Ai5" secondAttribute="baseline" type="default" id="U1p-fl-9Uo"/>
                                     <constraint firstItem="WYr-CJ-AmL" firstAttribute="top" secondItem="cBc-QI-4r2" secondAttribute="top" type="default" id="X7z-dA-jVI"/>
-                                    <constraint firstItem="WYr-CJ-AmL" firstAttribute="baseline" secondItem="cBc-QI-4r2" secondAttribute="baseline" type="default" id="Zur-Od-01Z"/>
                                     <constraint firstItem="cBc-QI-4r2" firstAttribute="centerX" secondItem="eIs-fm-1RE" secondAttribute="centerX" type="default" id="cow-jS-CLq"/>
                                     <constraint firstItem="WYr-CJ-AmL" firstAttribute="bottom" secondItem="cBc-QI-4r2" secondAttribute="bottom" type="default" id="dUN-UK-KIA"/>
                                     <constraint firstAttribute="bottom" secondItem="Jq8-4W-Ai5" secondAttribute="bottom" constant="1" id="kCt-B4-FkD"/>
@@ -613,7 +602,7 @@
                             <tableViewSection headerTitle="Description" id="7pi-SX-ym2">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8iH-Re-zZZ" rowHeight="130" style="IBUITableViewCellStyleDefault" id="Om5-Me-Z61">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="132"/>
+                                        <rect key="frame" x="0.0" y="46" width="320" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="129"/>
@@ -1349,8 +1338,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QW9-Xl-EgU"/>
-        <segue reference="yKp-XC-jty"/>
-        <segue reference="ini-nr-Qle"/>
+        <segue reference="vHP-qV-wbg"/>
+        <segue reference="s93-mb-ceg"/>
+        <segue reference="ofU-rk-c8j"/>
     </inferredMetricsTieBreakers>
 </document>

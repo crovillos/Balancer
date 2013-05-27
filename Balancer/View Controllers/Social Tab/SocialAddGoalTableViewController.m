@@ -13,7 +13,6 @@
 #import "UIColor+Balancer.h"
 
 @interface SocialAddGoalTableViewController ()
-    @property (nonatomic, weak) Goal* selectedGoal;
 
 @end
 
@@ -62,21 +61,11 @@
     return [self.goals count];
 }
 
-- (IBAction)cancel:(UIStoryboardSegue *)segue
-{
-    if ([[segue identifier] isEqualToString:@"Cancel"]) {
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44.0;
 }
 
-// called from the add custom goal screen
-- (IBAction)done:(UIStoryboardSegue *)segue
-{
-    if ([[segue identifier] isEqualToString:@"Done"]) {
-        
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    }
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -89,17 +78,15 @@
     NSString* storyHeaderText;
     NSString* storyDetailText;
     NSString* profileImagePath;
-    NSString* accessoryViewButtonText;
-    NSInteger creatorFBID = 0;
+    NSInteger creatorFBID = 1;
         
     if([story isKindOfClass:[Goal class]]) {
         Goal* goal = (Goal *) story;
         
         cellIdentifier = @"Goal";
-        accessoryViewButtonText = @"Goal it!";
         
-        storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
-        storyDetailText = goal.name;
+        //storyHeaderText = [NSString stringWithFormat:@"User %u added a new ", goal.creatorId];
+        storyHeaderText = goal.name;
         creatorFBID = goal.creatorId;
         
         
@@ -137,15 +124,6 @@
 
 }
 
-//This should only be called when done is clicked
--(void) updateGoalSelected:(id)sender {
-    
-    UITableViewCell* cell = (UITableViewCell*) sender;
-    NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell:cell];
-    Goal* goal = (Goal *) self.goals[indexPath.row];
-    goal.added = !goal.added;
-    [goal.activities addObject:self.step];
-}
 
 #pragma mark - Table view delegate
 
@@ -153,5 +131,6 @@
 {
     self.selectedGoal = self.goals[indexPath.row];
 }
+
 
 @end

@@ -13,5 +13,6 @@
 
 @property (nonatomic, strong) NSArray *goals;
 @property (nonatomic, strong) Step *step;
+@property (nonatomic, strong) Goal* selectedGoal;
 
 @end

@@ -7,9 +7,11 @@
 //
 
 #import "FlatTableViewController.h"
+#import "Invite.h"
 
 @interface InvitesTableViewController : FlatTableViewController
 
 @property (nonatomic, strong) NSMutableArray *invites;
+@property (nonatomic, strong) Invite* lastSelected;
 
 @end

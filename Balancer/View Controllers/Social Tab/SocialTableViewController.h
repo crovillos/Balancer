@@ -7,10 +7,12 @@
 //
 
 #import "FlatTableViewController.h"
+#import "Step.h"
 
 @interface SocialTableViewController : FlatTableViewController
 
 /** The model for this view controller, obtained from the network */
 @property (nonatomic, strong) NSMutableArray *socialStream; // of Goal
+@property (nonatomic, strong) Step* lastSelected;
 
 @end

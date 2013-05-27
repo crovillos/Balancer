@@ -96,6 +96,7 @@
         if ([self.expandedSections containsIndex:section])
         {
             Goal *goal = (Goal*)self.goals[section];
+            NSLog([NSString stringWithFormat:@"%d", [goal.activities count]]);
             
             return [goal.activities count] + 1; // return rows when expanded
         }

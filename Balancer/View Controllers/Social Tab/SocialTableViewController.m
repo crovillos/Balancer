@@ -10,10 +10,10 @@
 
 #import "SocialTableViewController.h"
 #import "Goal.h"
-#import "Step.h"
 #import "AppDelegate.h"
 #import "UINavigationBar+FlatUI.h"
 #import "UIColor+Balancer.h"
+#import "SocialAddGoalTableViewController.h"
 
 @implementation SocialTableViewController
 
@@ -259,6 +259,10 @@
 -(void)joinStep:(id)sender {
     
     if([sender isKindOfClass:[UIButton class]]) {
+        UIButton* button = (UIButton* ) sender;
+        UITableViewCell* cell = (UITableViewCell*) button.superview;
+        NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell:cell];
+        self.lastSelected = self.socialStream[indexPath.row];
         [self performSegueWithIdentifier: @"Add Step to Goal" sender: self];
         
     }
@@ -284,6 +288,28 @@
         }
         
     }
+}
+
+//This should only be called when done is clicked
+-(void) updateGoalSelected:(Goal*) goalSelected {
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    goalSelected.added = !goalSelected .added;
+    //NSLog(goalSelected.name);
+    //NSLog(self.lastSelected.name);
+    goalSelected.activities= [[NSMutableArray alloc] init];
+    [goalSelected.activities addObject:self.lastSelected];
+    [appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:self.lastSelected]];
+    [self.tableView reloadData];
+    
+}
+
+#pragma mark - Unwind segues from adding a goal
+- (IBAction)cancelAddingGoal:(UIStoryboardSegue *)segue {
+}
+
+- (IBAction)addGoalFromModal:(UIStoryboardSegue *)segue {
+    SocialAddGoalTableViewController *vc = (SocialAddGoalTableViewController *)segue.sourceViewController; // get results out of vc, which I presented
+    [self updateGoalSelected:vc.selectedGoal];
 }
 
 @end
