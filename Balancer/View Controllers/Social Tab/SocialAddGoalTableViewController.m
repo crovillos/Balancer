@@ -100,7 +100,7 @@
             cellIdentifier = @"Goal";
             accessoryViewButtonText = @"Goal it!";
             
-            storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal goal goal goal", goal.creatorId];
+            storyHeaderText = [NSString stringWithFormat:@"User %u added a new goal", goal.creatorId];
             storyDetailText = goal.name;
             creatorFBID = goal.creatorId;
             

@@ -111,7 +111,7 @@
 {
     _dummyGoals = [[NSMutableArray alloc] init];
     
-    Goal *goal1 = [[Goal alloc] init];
+    /*Goal *goal1 = [[Goal alloc] init];
     goal1.goalId = 1;
     goal1.name = @"Hangout with friends often";
     goal1.completionDate = [[NSDate alloc] init]; // sets completion date to today
@@ -173,7 +173,7 @@
     g3.activities = [[NSMutableArray alloc] init];
     [g3.activities addObject: a1];
     g3.inviteList = nil;
-    [self.dummyGoals addObject:g3];
+    [self.dummyGoals addObject:g3];*/
 }
 
 - (void)createDummyInvites{
@@ -234,13 +234,14 @@
     [self.dummySocialStream addObject:g2];
     Step *a1 = [[Step alloc] init];
     a1.activityId = 5;
-    a1.name = @"Taking a morning art class";
-    a1.description = @"May 21 (Tue) 8:00AM @ HUB";
+    a1.name = @"Yoga at Facebook!";
+    a1.description = @"It's our monthly yoga class for beginners! Take a break from coding and do some yoga!";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
     a1.creatorId = 2;
     a1.goal = nil;
+    a1.sponsored = YES;
     [self.dummySocialStream addObject:a1];
 }
 

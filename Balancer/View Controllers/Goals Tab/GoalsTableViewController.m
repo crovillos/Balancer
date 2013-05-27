@@ -349,6 +349,16 @@
                     [segue.destinationViewController performSelector:@selector(setStep:) withObject:((Step *)step)];
                 }
             }
+            
+
+        }
+    }
+     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    if ([segue.identifier isEqualToString:@"Show Goal Details"]) {
+        if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
+            Goal *goal = (Goal *)self.goals[indexPath.section];
+            Step *step = (Step *)goal.activities[indexPath.row - 1];
+            [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)goal)];
         }
     }
 }
