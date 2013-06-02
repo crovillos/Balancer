@@ -296,7 +296,7 @@
     goalSelected.added = !goalSelected .added;
     //NSLog(goalSelected.name);
     //NSLog(self.lastSelected.name);
-    goalSelected.activities= [[NSMutableArray alloc] init];
+    
     [goalSelected.activities addObject:self.lastSelected];
     [appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:self.lastSelected]];
     [self.tableView reloadData];
