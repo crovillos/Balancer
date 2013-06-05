@@ -9,6 +9,11 @@
 #import "GoalList.h"
 
 @implementation GoalList
-@synthesize goals;
+
+- (NSArray *)goals
+{
+    if (!_goals) _goals = [[NSArray alloc] init];
+    return _goals;
+}
 
 @end

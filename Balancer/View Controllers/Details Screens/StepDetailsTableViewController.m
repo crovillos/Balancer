@@ -40,11 +40,13 @@
     self.whenDetailLabel.text = self.step.startDate.description;
     self.privacyDetailLabel.text = self.step.isPublic ? @"Public" : @"Private";
     if(self.step.goal) {
+        self.joiningDetailLabel.text = @"Yes";
         self.goalDetailLabel.text = self.step.goal.name;
     } else {
+        self.joiningDetailLabel.text = @"No";
         self.goalDetailLabel.text = @"none";
     }
-    self.joiningDetailLabel.text = self.step.inviteList.description;
+
 }
 
 @end

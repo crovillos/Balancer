@@ -29,7 +29,16 @@
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSMutableArray *dummySocialStream = appDelegate.dummySocialStream;
     
-    [self setSocialStream:dummySocialStream];
+    [self setSocialStream:dummySocialStream];    
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UITableViewCell *invitesHeader = [self.tableView dequeueReusableCellWithIdentifier:@"Invitations"];
+    //NSLog([NSString stringWithFormat:@"%d", appDelegate.dummyInvites.count]);
+    invitesHeader.textLabel.text = [NSString stringWithFormat:@"Invites (%i)", appDelegate.dummyInvites.count];
     
 }
 
@@ -55,7 +64,7 @@
     
     if (appDelegate.dummyInvites.count > 0) {
         UITableViewCell *invitesHeader = [tableView dequeueReusableCellWithIdentifier:@"Invitations"];
-        invitesHeader.textLabel.text = [NSString stringWithFormat:@"%i Invites", appDelegate.dummyInvites.count];
+        invitesHeader.textLabel.text = [NSString stringWithFormat:@"Invites (%i)", appDelegate.dummyInvites.count];
         
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showInvitations)];
         tapGesture.cancelsTouchesInView = NO;

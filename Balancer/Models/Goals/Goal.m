@@ -10,6 +10,12 @@
 
 @implementation Goal
 
-@synthesize goalId, name, completionDate, description, open, creatorId, activities, inviteList, added;
+@synthesize goalId, name, completionDate, description, open, creatorId, inviteList, added;
+
+- (NSMutableArray *)activites
+{
+    if (!_activities) _activities = [[NSMutableArray alloc] init];
+    return _activities;
+}
 
 @end

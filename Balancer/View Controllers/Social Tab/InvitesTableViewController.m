@@ -37,6 +37,7 @@
     self.invites = dummyInvites;
 }
 
+
 - (void)setInvites:(NSMutableArray *)invites
 {
     _invites = invites;
@@ -71,11 +72,6 @@
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    
-    
-    
-    
     
     NSString* inviteHeaderText;
     NSString* inviteDetailText;
