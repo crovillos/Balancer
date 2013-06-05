@@ -131,6 +131,7 @@
     step1.goal = goal1;
     [goal1.activities addObject:step1];
     
+    
     Step *step2 = [[Step alloc] init];
     step2.activityId = 1;
     step2.name = @"Find a step";

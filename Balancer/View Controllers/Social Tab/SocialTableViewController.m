@@ -132,7 +132,7 @@
         Step* step = (Step *) story;
         
         cellIdentifier = @"Step";
-        accessoryViewButtonText = @"Add it!";
+        accessoryViewButtonText = @"Step it!";
         
         storyHeaderText = [NSString stringWithFormat:@"Brian Yin added a new step", step.creatorId];
         storyDetailText = step.name;
@@ -301,10 +301,9 @@
 -(void) updateGoalSelected:(Goal*) goalSelected {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     goalSelected.added = !goalSelected .added;
-    //NSLog(goalSelected.name);
-    //NSLog(self.lastSelected.name);
     
     [goalSelected.activities addObject:self.lastSelected];
+     NSLog([NSString stringWithFormat:@"%d", [goalSelected.activities count]]);
     [appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:self.lastSelected]];
     [self.tableView reloadData];
     

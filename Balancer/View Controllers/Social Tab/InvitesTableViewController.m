@@ -96,7 +96,7 @@
     } else if ([invite isKindOfClass:[StepInvite class]]) {
         Step* step = (Step *) invite.inviteObject;
         
-        accessoryViewButtonText = @"Add it!";
+        accessoryViewButtonText = @"Step it!";
         
         inviteHeaderText = [NSString stringWithFormat:@"User %u invited you to join a step", step.creatorId];
         inviteDetailText = step.name;
@@ -239,6 +239,7 @@
 -(void) updateGoalSelected:(Goal*) goalSelected {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     goalSelected.added = !goalSelected .added;
+    //NSLog([NSString stringWithFormat:@"%d", (NSInteger)goalSelected.activities]);
     [goalSelected.activities addObject:(Step*)self.lastSelected.inviteObject];
     [appDelegate.dummyInvites removeObjectAtIndex:1];
     [self.tableView reloadData];
