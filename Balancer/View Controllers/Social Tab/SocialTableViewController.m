@@ -254,10 +254,8 @@
         //button.backgroundColor = [UIColor greenColor];
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
         if(goal.isAdded) {
-            //[appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:goal]];
             [appDelegate.dummyGoals addObject:goal];
         } else { // This currently will never actually run...
-            //NSLog([NSString stringWithFormat:@"%d", [appDelegate.dummyGoals indexOfObject:goal]]);
             [appDelegate.dummyGoals removeObjectAtIndex:[appDelegate.dummyGoals indexOfObject:goal]];
             [appDelegate.dummySocialStream addObject:goal];
         }

@@ -239,9 +239,6 @@
 -(void) updateGoalSelected:(Goal*) goalSelected {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     goalSelected.added = !goalSelected .added;
-    //NSLog(goalSelected.name);
-    //NSLog(self.lastSelected.name);
-    goalSelected.activities= [[NSMutableArray alloc] init];
     [goalSelected.activities addObject:(Step*)self.lastSelected.inviteObject];
     [appDelegate.dummyInvites removeObjectAtIndex:1];
     [self.tableView reloadData];

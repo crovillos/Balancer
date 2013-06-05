@@ -9,5 +9,16 @@
 #import "InviteList.h"
 
 @implementation InviteList
-@synthesize pendingInvites, declineInvites;
+
+- (NSArray *)pendingInvites
+{
+    if (!_pendingInvites) _pendingInvites = [[NSArray alloc] init];
+    return _pendingInvites;
+}
+
+- (NSArray *)declineInvites
+{
+    if (!_declineInvites) _declineInvites = [[NSArray alloc] init];
+    return _declineInvites;
+}
 @end

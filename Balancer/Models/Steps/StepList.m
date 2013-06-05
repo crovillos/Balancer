@@ -9,6 +9,11 @@
 #import "StepList.h"
 
 @implementation StepList
-@synthesize activity;
+
+- (NSArray *)activity
+{
+    if (!_activity) _activity = [[NSArray alloc] init];
+    return _activity;
+}
 
 @end
