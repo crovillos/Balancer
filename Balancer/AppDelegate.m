@@ -65,6 +65,7 @@
     return YES;
 }
 
+
 /** Creates dummy goals and sets them to be the model for this view controller. For testing purposes only. */
 - (void)createDummySteps
 {
@@ -111,24 +112,38 @@
 {
     _dummyGoals = [[NSMutableArray alloc] init];
     
-    /*Goal *goal1 = [[Goal alloc] init];
+    Goal *goal1 = [[Goal alloc] init];
     goal1.goalId = 1;
-    goal1.name = @"Hangout with friends often";
+    goal1.name = @"Get Started With Balancer";
     goal1.completionDate = [[NSDate alloc] init]; // sets completion date to today
-    goal1.description = @"Spend more time with friends";
+    goal1.description = @"Explore each tab and find a goal and step";
     goal1.open = YES;
     goal1.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
     
-    Step *goal1Activity1 = [[Step alloc] init];
-    goal1Activity1.activityId = 1;
-    goal1Activity1.name = @"Watch a movie";
-    goal1Activity1.description = @"I want to watch a movie!";
-    goal1Activity1.startDate = [[NSDate alloc] init];
-    goal1Activity1.endDate = [[NSDate alloc] init];
-    goal1Activity1.open = YES;
-    goal1Activity1.creatorId = 1;
-    goal1Activity1.goal = goal1;
+    Step *step1 = [[Step alloc] init];
+    step1.activityId = 1;
+    step1.name = @"Find a goal";
+    step1.description = @"Find a goal that fits your needs";
+    step1.startDate = [[NSDate alloc] init];
+    step1.endDate = [[NSDate alloc] init];
+    step1.open = YES;
+    step1.creatorId = 1;
+    step1.goal = goal1;
+    [goal1.activities addObject:step1];
     
+    Step *step2 = [[Step alloc] init];
+    step2.activityId = 1;
+    step2.name = @"Find a step";
+    step2.description = @"Find a step and step it to your goal";
+    step2.startDate = [[NSDate alloc] init];
+    step2.endDate = [[NSDate alloc] init];
+    step2.open = YES;
+    step2.creatorId = 1;
+    step2.goal = goal1;
+    [goal1.activities addObject:step2];
+    
+    [self.dummyGoals addObject:goal1];
+    /*
     goal1.activities = [[NSMutableArray alloc] init];
     [goal1.activities addObject: goal1Activity1];
     Step *activity2 = [[Step alloc] init];
