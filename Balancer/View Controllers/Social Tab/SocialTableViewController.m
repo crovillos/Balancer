@@ -20,6 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"am I called when I go to social each time");
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor balancerPinkColor]];
     
     // prevent empty table cells from appearing after the social feed by setting
@@ -37,7 +38,7 @@
 {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     UITableViewCell *invitesHeader = [self.tableView dequeueReusableCellWithIdentifier:@"Invitations"];
-    //NSLog([NSString stringWithFormat:@"%d", appDelegate.dummyInvites.count]);
+    NSLog([NSString stringWithFormat:@"%d", appDelegate.dummyInvites.count]);
     invitesHeader.textLabel.text = [NSString stringWithFormat:@"Invites (%i)", appDelegate.dummyInvites.count];
     
 }
@@ -259,7 +260,6 @@
             [appDelegate.dummyGoals removeObjectAtIndex:[appDelegate.dummyGoals indexOfObject:goal]];
             [appDelegate.dummySocialStream addObject:goal];
         }
-        [[self tableView] reloadData];
     }
 }
 
@@ -303,10 +303,8 @@
     goalSelected.added = !goalSelected .added;
     
     [goalSelected.activities addObject:self.lastSelected];
-     NSLog([NSString stringWithFormat:@"%d", [goalSelected.activities count]]);
-    [appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:self.lastSelected]];
-    [self.tableView reloadData];
     
+    [appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:self.lastSelected]];    
 }
 
 #pragma mark - Unwind segues from adding a goal

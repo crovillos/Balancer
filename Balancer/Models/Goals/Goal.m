@@ -14,7 +14,6 @@
 
 - (NSMutableArray *)activities
 {
-    NSLog(@"in here getting initialized");
     if (!_activities) _activities = [[NSMutableArray alloc] init];
     return _activities;
 }

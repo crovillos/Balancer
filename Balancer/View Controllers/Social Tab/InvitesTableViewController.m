@@ -191,7 +191,6 @@
             //[appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:goal]];
             [appDelegate.dummyGoals addObject:goal];
         } else { // This currently will never actually run...
-            //NSLog([NSString stringWithFormat:@"%d", [appDelegate.dummyGoals indexOfObject:goal]]);
             [appDelegate.dummyGoals removeObjectAtIndex:[appDelegate.dummyGoals indexOfObject:goal]];
             [appDelegate.dummySocialStream addObject:goal];
         }
@@ -231,7 +230,6 @@
                 }
             }
         }
-        
     }
 }
 
@@ -239,11 +237,10 @@
 -(void) updateGoalSelected:(Goal*) goalSelected {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     goalSelected.added = !goalSelected .added;
-    //NSLog([NSString stringWithFormat:@"%d", (NSInteger)goalSelected.activities]);
     [goalSelected.activities addObject:(Step*)self.lastSelected.inviteObject];
     [appDelegate.dummyInvites removeObjectAtIndex:1];
-    [self.tableView reloadData];
 }
+
 #pragma mark - Unwind segues from adding a goal
 - (IBAction)cancelAddingGoal:(UIStoryboardSegue *)segue {
 }
