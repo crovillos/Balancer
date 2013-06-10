@@ -20,6 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"am I called when I go to social each time");
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor balancerPinkColor]];
     
     // prevent empty table cells from appearing after the social feed by setting
@@ -37,7 +38,7 @@
 {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     UITableViewCell *invitesHeader = [self.tableView dequeueReusableCellWithIdentifier:@"Invitations"];
-    //NSLog([NSString stringWithFormat:@"%d", appDelegate.dummyInvites.count]);
+    NSLog([NSString stringWithFormat:@"%d", appDelegate.dummyInvites.count]);
     invitesHeader.textLabel.text = [NSString stringWithFormat:@"Invites (%i)", appDelegate.dummyInvites.count];
     
     [[self.tabBarController.tabBar.items objectAtIndex:0] setBadgeValue:@"2"];
@@ -133,7 +134,7 @@
         Step* step = (Step *) story;
         
         cellIdentifier = @"Step";
-        accessoryViewButtonText = @"Add it!";
+        accessoryViewButtonText = @"Step it!";
         
         storyHeaderText = [NSString stringWithFormat:@"Brian Yin added a new step", step.creatorId];
         storyDetailText = step.name;
@@ -274,7 +275,6 @@
             [appDelegate.dummyGoals removeObjectAtIndex:[appDelegate.dummyGoals indexOfObject:goal]];
             [appDelegate.dummySocialStream addObject:goal];
         }
-        [[self tableView] reloadData];
     }
 }
 
@@ -316,13 +316,10 @@
 -(void) updateGoalSelected:(Goal*) goalSelected {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     goalSelected.added = !goalSelected .added;
-    //NSLog(goalSelected.name);
-    //NSLog(self.lastSelected.name);
     
     [goalSelected.activities addObject:self.lastSelected];
-    [appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:self.lastSelected]];
-    [self.tableView reloadData];
     
+    [appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:self.lastSelected]];    
 }
 
 #pragma mark - Unwind segues from adding a goal

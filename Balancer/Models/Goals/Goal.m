@@ -12,7 +12,7 @@
 
 @synthesize goalId, name, completionDate, description, open, creatorId, inviteList, added;
 
-- (NSMutableArray *)activites
+- (NSMutableArray *)activities
 {
     if (!_activities) _activities = [[NSMutableArray alloc] init];
     return _activities;

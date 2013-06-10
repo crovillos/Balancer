@@ -96,7 +96,7 @@
     } else if ([invite isKindOfClass:[StepInvite class]]) {
         Step* step = (Step *) invite.inviteObject;
         
-        accessoryViewButtonText = @"Add it!";
+        accessoryViewButtonText = @"Step it!";
         
         inviteHeaderText = [NSString stringWithFormat:@"User %u invited you to join a step", step.creatorId];
         inviteDetailText = step.name;
@@ -191,7 +191,6 @@
             //[appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:goal]];
             [appDelegate.dummyGoals addObject:goal];
         } else { // This currently will never actually run...
-            //NSLog([NSString stringWithFormat:@"%d", [appDelegate.dummyGoals indexOfObject:goal]]);
             [appDelegate.dummyGoals removeObjectAtIndex:[appDelegate.dummyGoals indexOfObject:goal]];
             [appDelegate.dummySocialStream addObject:goal];
         }
@@ -231,7 +230,6 @@
                 }
             }
         }
-        
     }
 }
 
@@ -241,8 +239,8 @@
     goalSelected.added = !goalSelected .added;
     [goalSelected.activities addObject:(Step*)self.lastSelected.inviteObject];
     [appDelegate.dummyInvites removeObjectAtIndex:1];
-    [self.tableView reloadData];
 }
+
 #pragma mark - Unwind segues from adding a goal
 - (IBAction)cancelAddingGoal:(UIStoryboardSegue *)segue {
 }
