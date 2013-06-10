@@ -30,7 +30,7 @@
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSMutableArray *dummySocialStream = appDelegate.dummySocialStream;
     
-    [self setSocialStream:dummySocialStream];    
+    [self setSocialStream:dummySocialStream];
 }
 
 
@@ -54,6 +54,8 @@
 -(void) viewDidAppear:(BOOL)animated
 {
     NSLog(@"view appeared ahhhh");
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [[self.tabBarController.tabBar.items objectAtIndex:0] setBadgeValue:[NSString stringWithFormat:@"%d", appDelegate.dummyInvites.count]];
 }
 
 /** Sets the model for this view controller.
@@ -82,6 +84,7 @@
         
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showInvitations)];
         tapGesture.cancelsTouchesInView = NO;
+        invitesHeader.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         [invitesHeader addGestureRecognizer:tapGesture];
         self.header = invitesHeader;
         
@@ -132,6 +135,12 @@
     
     
     if([story isKindOfClass:[Goal class]]) {
+        [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchUpInside];
+        
+    } else if ([story isKindOfClass:[Step class]]) {
+        [accessoryViewButton addTarget:self action:@selector(joinStep:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    if([story isKindOfClass:[Goal class]]) {
         Goal* goal = (Goal *) story;
         
         cellIdentifier = @"Goal";
@@ -152,7 +161,12 @@
         
         if (goal.added) {
             accessoryViewButtonText = @"Goaled!";
-            disabled = YES;
+            [accessoryViewButton setImage:[UIImage imageNamed:@"Joined Checkmark.png"] forState:UIControlStateNormal];
+            [UIView transitionWithView:accessoryViewButton
+                              duration:4.0
+                               options:UIViewAnimationOptionTransitionCrossDissolve
+                            animations:^{ accessoryViewButton.selected = YES; }
+                            completion:nil];
         }
         
     } else if ([story isKindOfClass:[Step class]]) {
@@ -179,8 +193,7 @@
     cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     // add accessory view button
-    UIButton *accessoryViewButton =  [UIButton buttonWithType:UIButtonTypeCustom];
-    [accessoryViewButton setEnabled:!disabled];
+
     
     UIFont *accessoryButtonFont = [UIFont boldSystemFontOfSize:14.0];
     [accessoryViewButton setTitle:accessoryViewButtonText forState:UIControlStateNormal];
@@ -209,12 +222,19 @@
     cell.accessoryView = accessoryViewButton;
     
     
-    if([story isKindOfClass:[Goal class]]) {
-        [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchUpInside];
-        
-    } else if ([story isKindOfClass:[Step class]]) {
-        [accessoryViewButton addTarget:self action:@selector(joinStep:) forControlEvents:UIControlEventTouchUpInside];
-    }
+    CGSize mainViewSize = accessoryViewButton.bounds.size;
+    CGFloat borderWidth = 1;
+    UIColor *borderColor = [UIColor balancerDarkBlueColor];
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, borderWidth, mainViewSize.height)];
+    leftView.opaque = YES;
+    leftView.backgroundColor = borderColor;
+    
+    // for bonus points, set the views' autoresizing mask so they'll stay with the edges:
+    leftView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin;
+    
+    [accessoryViewButton addSubview:leftView];
+    
+
     
     
     // Configure the cell...
@@ -246,6 +266,8 @@
     UIImage *cellSelectedBackgroundImage = [UIImage imageNamed:@"Social Story Background (selected)"];
     UIImage *cellSelectedBackgroundImageResizable = [cellSelectedBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(11.0, 11.0, 12.0, 11.0)];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:cellSelectedBackgroundImageResizable];
+    
+
     
     return cell;
 }
@@ -298,6 +320,7 @@
             [appDelegate.dummyGoals removeObjectAtIndex:[appDelegate.dummyGoals indexOfObject:goal]];
             [appDelegate.dummySocialStream addObject:goal];
         }
+        [self.tableView reloadData];
     }
 }
 
@@ -338,7 +361,7 @@
 //This should only be called when done is clicked
 -(void) updateGoalSelected:(Goal*) goalSelected {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    goalSelected.added = !goalSelected .added;
+    goalSelected.added = !goalSelected.added;
     
     [goalSelected.activities addObject:self.lastSelected];
     

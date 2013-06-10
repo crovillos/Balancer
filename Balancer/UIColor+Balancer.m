@@ -42,7 +42,7 @@
 
 + (UIColor *) balancerBeigeColor
 {
-    return [self colorWithRgbRed:94 green:48 blue:140 alpha:1.0];
+    return [self colorWithRgbRed:242 green:242 blue:242 alpha:1.0];
 }
 
 + (UIColor *) colorWithRgbRed:(NSUInteger)red green:(NSUInteger)green blue:(NSUInteger)blue alpha:(CGFloat)alpha;

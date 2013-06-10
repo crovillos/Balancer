@@ -159,9 +159,9 @@
     if ([sender isKindOfClass:[UITableViewCell class]]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         if (indexPath) {
-            if ([segue.identifier isEqualToString:@"Show Goal Detail"]) {
-                if ([segue.destinationViewController respondsToSelector:@selector(setGoalDescription:)]) {
-                    [segue.destinationViewController performSelector:@selector(setGoalDescription:) withObject:((Step *)self.activities[indexPath.row]).description];
+            if ([segue.identifier isEqualToString:@"Show Step Details"]) {
+                if ([segue.destinationViewController respondsToSelector:@selector(setStep:)]) {
+                    [segue.destinationViewController performSelector:@selector(setStep:) withObject:((Step *)self.activities[indexPath.row])];
                 }
             }
         }
