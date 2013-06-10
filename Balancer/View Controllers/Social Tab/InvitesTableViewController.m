@@ -132,7 +132,7 @@
         accessoryViewButtonText = @"Step it!";
         
         
-        NSString* temp = [appDelegate.userNames[step.creatorId] stringByAppendingString:@" added a new goal"];
+        NSString* temp = [appDelegate.userNames[step.creatorId] stringByAppendingString:@" added a new step"];
         
         storyHeaderText = [NSString stringWithFormat: temp, step.creatorId];
         storyDetailText = step.name;

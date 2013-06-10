@@ -396,7 +396,7 @@
     g1.description = @"Running is boring let's try swimming";
     g1.completionDate = [[NSDate alloc] init];
     g1.open = YES;
-    g1.creatorId = 9;
+    g1.creatorId = 5;
     g1.inviteList = nil;
     [self.dummyAvailableGoals addObject:g1];
     
