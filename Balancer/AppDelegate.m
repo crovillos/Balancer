@@ -140,6 +140,41 @@
     _dummyGoals = [[NSMutableArray alloc] init];
     Goal *g1 = [[Goal alloc] init];
     g1.goalId = 5;
+    g1.name = @"Get Started with Balancer";
+    g1.completionDate = [[NSDate alloc] init]; // sets completion date to today
+    g1.description = @"Get started with this app by exploring different goals and steps";
+    g1.open = YES;
+    g1.creatorId = 8;
+    
+    Step *step1 = [[Step alloc] init];
+    step1.activityId = 5;
+    step1.name = @"Add a goal";
+    step1.description = @"Add a goal that you want to achieve";
+    step1.startDate = [[NSDate alloc] init];
+    step1.endDate = [[NSDate alloc] init];
+    step1.open = YES;
+    step1.creatorId = 8;
+    step1.goal = g1;
+    [g1.activities addObject:step1];
+    
+    
+    Step *step2 = [[Step alloc] init];
+    step2.activityId = 6;
+    step2.name = @"Add a step to your goal";
+    step2.description = @"Add a step that will help you achieve your goal";
+    step2.startDate = [[NSDate alloc] init];
+    step2.endDate = [[NSDate alloc] init];
+    step2.open = YES;
+    step2.creatorId = 8;
+    step2.goal = g1;
+    [g1.activities addObject:step2];
+    
+    [self.dummyGoals addObject:g1];
+
+    /*
+    _dummyGoals = [[NSMutableArray alloc] init];
+    Goal *g1 = [[Goal alloc] init];
+    g1.goalId = 5;
     g1.name = @"Stay up to date with current events";
     g1.completionDate = [[NSDate alloc] init]; // sets completion date to today
     g1.description = @"Read CNN.com or BBC.com anything to keep you in the loop";
@@ -202,7 +237,7 @@
     [g2.activities addObject:step4];
     
     [self.dummyGoals addObject:g2];
-
+     */
     
  
 }
