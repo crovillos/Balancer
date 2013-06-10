@@ -13,5 +13,7 @@
 
 @property (nonatomic, strong) NSMutableArray *invites;
 @property (nonatomic, strong) Invite* lastSelected;
+@property (nonatomic, strong) NSMutableArray *goalsToRemove;
+@property (nonatomic, strong) NSMutableArray *stepsToRemove;
 
 @end

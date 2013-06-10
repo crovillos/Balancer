@@ -382,19 +382,15 @@
 }
 
 //This should only be called when done is clicked
--(void) updateGoalSelected:(Goal*) goalSelected {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;    
+-(void) updateGoalSelected:(Goal*) goalSelected {   
     [goalSelected.activities addObject:self.lastSelected];
     self.stepJustAdded = YES;
     [self.stepsToRemove addObject:self.lastSelected];
-
-    //[appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:self.lastSelected]];
 }
 
 #pragma mark - Unwind segues from adding a goal
 - (IBAction)cancelAddingGoal:(UIStoryboardSegue *)segue {
     self.lastSelected.added = NO;
-    //[self.tableView reloadData];
 }
 
 - (IBAction)addGoalFromModal:(UIStoryboardSegue *)segue {

@@ -252,9 +252,9 @@
     a2.creatorId = 1;
     a2.goal = nil;
     StepInvite *aInvite1 = [[StepInvite alloc] init];
-    aInvite1.activity = a1;
-    aInvite1.title = a1.name;
-    aInvite1.inviteObject = a1;
+    aInvite1.activity = a2;
+    aInvite1.title = a2.name;
+    aInvite1.inviteObject = a2;
     [self.dummyInvites addObject:aInvite1];
 
 
