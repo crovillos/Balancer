@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -602,13 +602,13 @@
                             <tableViewSection headerTitle="Description" id="7pi-SX-ym2">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8iH-Re-zZZ" rowHeight="130" style="IBUITableViewCellStyleDefault" id="Om5-Me-Z61">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="131"/>
+                                        <rect key="frame" x="0.0" y="46" width="320" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="8iH-Re-zZZ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="35" translatesAutoresizingMaskIntoConstraints="NO" id="8iH-Re-zZZ">
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -643,7 +643,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vI6-wo-bRW" detailTextLabel="hg0-sD-RCs" style="IBUITableViewCellStyleValue1" id="9Ns-qS-IsV">
-                                        <rect key="frame" x="0.0" y="242" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="242" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -946,24 +946,17 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Under Construction Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="xdz-Vj-Qbf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ProgressPage.png" translatesAutoresizingMaskIntoConstraints="NO" id="xdz-Vj-Qbf">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="hdJ-aP-g3j"/>
-                                    <constraint firstAttribute="width" constant="163" id="w8j-he-kvg"/>
+                                    <constraint firstAttribute="width" constant="303" id="GzW-AG-k20"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Under construction!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8T-CD-MqM">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.65098041299999998" green="0.1411764771" blue="0.42352941630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xdz-Vj-Qbf" firstAttribute="centerX" secondItem="Ukd-7U-PxP" secondAttribute="centerX" type="default" id="7ly-S0-7O2"/>
-                            <constraint firstItem="xdz-Vj-Qbf" firstAttribute="top" secondItem="Ukd-7U-PxP" secondAttribute="top" constant="173" id="e8z-Fk-yEW"/>
-                            <constraint firstItem="U8T-CD-MqM" firstAttribute="leading" secondItem="xdz-Vj-Qbf" secondAttribute="leading" type="default" id="eRt-2S-08n"/>
-                            <constraint firstItem="U8T-CD-MqM" firstAttribute="top" secondItem="xdz-Vj-Qbf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="suX-Wo-bSd"/>
+                            <constraint firstItem="xdz-Vj-Qbf" firstAttribute="top" secondItem="Ukd-7U-PxP" secondAttribute="top" type="default" id="UQO-JX-ZL5"/>
+                            <constraint firstItem="xdz-Vj-Qbf" firstAttribute="leading" secondItem="Ukd-7U-PxP" secondAttribute="leading" constant="10" id="mER-ad-6wA"/>
+                            <constraint firstItem="xdz-Vj-Qbf" firstAttribute="bottom" secondItem="Ukd-7U-PxP" secondAttribute="bottom" type="default" id="uQ3-VV-TwV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Progress" id="LaO-ib-m3N"/>
@@ -1236,7 +1229,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Under Construction Logo.png" width="16" height="16"/>
+        <image name="ProgressPage.png" width="640" height="884"/>
         <image name="addStepToGoal_icon.png" width="20" height="20"/>
         <image name="editGoal_icon.png" width="20" height="20"/>
         <image name="viewGoal_icon.png" width="20" height="20"/>
@@ -1338,8 +1331,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uvq-0h-uEB"/>
         <segue reference="ini-nr-Qle"/>
+        <segue reference="2SH-jm-iXz"/>
         <segue reference="boy-rf-77h"/>
     </inferredMetricsTieBreakers>
 </document>

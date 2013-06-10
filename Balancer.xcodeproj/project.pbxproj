@@ -98,6 +98,7 @@
 		83DD42E5173447DB00FA7408 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD42E4173447DB00FA7408 /* main.m */; };
 		83DD42E9173447DB00FA7408 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD42E8173447DB00FA7408 /* AppDelegate.m */; };
 		83DD42F2173447DB00FA7408 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42F0173447DB00FA7408 /* MainStoryboard.storyboard */; };
+		BF00E6411766395200950188 /* ProgressPage.png in Resources */ = {isa = PBXBuildFile; fileRef = BF00E6401766395200950188 /* ProgressPage.png */; };
 		CB7C0A1917502947008E8AEA /* SocialAddGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7C0A1817502946008E8AEA /* SocialAddGoalTableViewController.m */; };
 		CB87568C1749590F003159DF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87568B1749590F003159DF /* CFNetwork.framework */; };
 		CB87568E17495918003159DF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87568D17495918003159DF /* CoreData.framework */; };
@@ -319,6 +320,7 @@
 		83DD42E7173447DB00FA7408 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83DD42E8173447DB00FA7408 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		83DD42F1173447DB00FA7408 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BF00E6401766395200950188 /* ProgressPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ProgressPage.png; path = "../../Google Drive/ProgressPage.png"; sourceTree = "<group>"; };
 		CB7C0A1717502946008E8AEA /* SocialAddGoalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialAddGoalTableViewController.h; sourceTree = "<group>"; };
 		CB7C0A1817502946008E8AEA /* SocialAddGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialAddGoalTableViewController.m; sourceTree = "<group>"; };
 		CB87568B1749590F003159DF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -659,6 +661,7 @@
 		83DD42CC173447DB00FA7408 = {
 			isa = PBXGroup;
 			children = (
+				BF00E6401766395200950188 /* ProgressPage.png */,
 				83DD42DE173447DB00FA7408 /* Balancer */,
 				83DD42D7173447DB00FA7408 /* Frameworks */,
 				83DD42D6173447DB00FA7408 /* Products */,
@@ -888,6 +891,7 @@
 				8366919D1753043400CEEA46 /* Social Story Background (selected).png in Resources */,
 				8366919E1753043400CEEA46 /* Social Story Background (selected)@2x.png in Resources */,
 				CBD0C4DE175D831100536142 /* FacebookSDKResources.bundle in Resources */,
+				BF00E6411766395200950188 /* ProgressPage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
