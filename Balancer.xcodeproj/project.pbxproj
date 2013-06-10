@@ -48,6 +48,7 @@
 		83C0CA7E174EC627007DDD05 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA71174EC627007DDD05 /* User.m */; };
 		83C0CA7F174EC627007DDD05 /* UserUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA73174EC627007DDD05 /* UserUtilities.m */; };
 		83C0CA82174EC6F6007DDD05 /* InvitesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0CA81174EC6F6007DDD05 /* InvitesTableViewController.m */; };
+		83CBC2BE176641D90050A14B /* ProgressPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CBC2BD176641D90050A14B /* ProgressPage.png */; };
 		83D8B22A174EF6C60027D1B8 /* FUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8B211174EF6C60027D1B8 /* FUIAlertView.m */; };
 		83D8B22B174EF6C60027D1B8 /* FUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8B213174EF6C60027D1B8 /* FUIButton.m */; };
 		83D8B22C174EF6C60027D1B8 /* FUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D8B215174EF6C60027D1B8 /* FUISegmentedControl.m */; };
@@ -98,7 +99,6 @@
 		83DD42E5173447DB00FA7408 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD42E4173447DB00FA7408 /* main.m */; };
 		83DD42E9173447DB00FA7408 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD42E8173447DB00FA7408 /* AppDelegate.m */; };
 		83DD42F2173447DB00FA7408 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DD42F0173447DB00FA7408 /* MainStoryboard.storyboard */; };
-		BF00E6411766395200950188 /* ProgressPage.png in Resources */ = {isa = PBXBuildFile; fileRef = BF00E6401766395200950188 /* ProgressPage.png */; };
 		CB7C0A1917502947008E8AEA /* SocialAddGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7C0A1817502946008E8AEA /* SocialAddGoalTableViewController.m */; };
 		CB87568C1749590F003159DF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87568B1749590F003159DF /* CFNetwork.framework */; };
 		CB87568E17495918003159DF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87568D17495918003159DF /* CoreData.framework */; };
@@ -249,6 +249,7 @@
 		83C0CA73174EC627007DDD05 /* UserUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserUtilities.m; sourceTree = "<group>"; };
 		83C0CA80174EC6F6007DDD05 /* InvitesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitesTableViewController.h; sourceTree = "<group>"; };
 		83C0CA81174EC6F6007DDD05 /* InvitesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitesTableViewController.m; sourceTree = "<group>"; };
+		83CBC2BD176641D90050A14B /* ProgressPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ProgressPage.png; path = Balancer/Images/ProgressPage.png; sourceTree = "<group>"; };
 		83D8B210174EF6C60027D1B8 /* FUIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIAlertView.h; sourceTree = "<group>"; };
 		83D8B211174EF6C60027D1B8 /* FUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIAlertView.m; sourceTree = "<group>"; };
 		83D8B212174EF6C60027D1B8 /* FUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIButton.h; sourceTree = "<group>"; };
@@ -320,7 +321,6 @@
 		83DD42E7173447DB00FA7408 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83DD42E8173447DB00FA7408 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		83DD42F1173447DB00FA7408 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		BF00E6401766395200950188 /* ProgressPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ProgressPage.png; path = "../../Google Drive/ProgressPage.png"; sourceTree = "<group>"; };
 		CB7C0A1717502946008E8AEA /* SocialAddGoalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialAddGoalTableViewController.h; sourceTree = "<group>"; };
 		CB7C0A1817502946008E8AEA /* SocialAddGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialAddGoalTableViewController.m; sourceTree = "<group>"; };
 		CB87568B1749590F003159DF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -390,6 +390,7 @@
 		83AEACF3173EF729006E1151 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				83CBC2BD176641D90050A14B /* ProgressPage.png */,
 				836691971752FF1600CEEA46 /* Social Story Background.png */,
 				83669199175302F800CEEA46 /* Social Story Background@2x.png */,
 				8366919B1753043400CEEA46 /* Social Story Background (selected).png */,
@@ -661,7 +662,6 @@
 		83DD42CC173447DB00FA7408 = {
 			isa = PBXGroup;
 			children = (
-				BF00E6401766395200950188 /* ProgressPage.png */,
 				83DD42DE173447DB00FA7408 /* Balancer */,
 				83DD42D7173447DB00FA7408 /* Frameworks */,
 				83DD42D6173447DB00FA7408 /* Products */,
@@ -891,7 +891,7 @@
 				8366919D1753043400CEEA46 /* Social Story Background (selected).png in Resources */,
 				8366919E1753043400CEEA46 /* Social Story Background (selected)@2x.png in Resources */,
 				CBD0C4DE175D831100536142 /* FacebookSDKResources.bundle in Resources */,
-				BF00E6411766395200950188 /* ProgressPage.png in Resources */,
+				83CBC2BE176641D90050A14B /* ProgressPage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
