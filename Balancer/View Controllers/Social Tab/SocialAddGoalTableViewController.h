@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Step.h"
+#import "FlatTableViewController.h"
 
-@interface SocialAddGoalTableViewController : UITableViewController
+@interface SocialAddGoalTableViewController : FlatTableViewController
 
 @property (nonatomic, strong) NSArray *goals;
 @property (nonatomic, strong) Step *step;

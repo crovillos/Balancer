@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="-2146" y="1551"/>
         </scene>
-        <!--Social Add Goal Table View Controller-->
+        <!--Social Add Goal Table View Controller - Add Step to Goal-->
         <scene sceneID="9g8-b4-Ixm">
             <objects>
                 <tableViewController id="u8D-um-qL1" customClass="SocialAddGoalTableViewController" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="BuZ-HG-2Wn">
+                    <navigationItem key="navigationItem" title="Add Step to Goal" id="BuZ-HG-2Wn">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="W36-dt-lhf">
                             <connections>
                                 <segue destination="9He-14-lri" kind="unwind" unwindAction="cancelAddingGoal:" id="CQB-F4-90Q"/>
@@ -1241,14 +1241,105 @@
         <image name="editGoal_icon.png" width="20" height="20"/>
         <image name="viewGoal_icon.png" width="20" height="20"/>
     </resources>
+    <classes>
+        <class className="AddCustomGoalTableViewController" superclassName="FlatTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCustomGoalTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="completeByInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inviteInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="publicInput" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="titleInput" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddGoalTableViewController" superclassName="FlatTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGoalTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addCustomGoal:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+        <class className="EditGoalViewController" superclassName="FlatViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditGoalViewController.h"/>
+        </class>
+        <class className="FlatTabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatTabBarController.h"/>
+        </class>
+        <class className="FlatTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatTableViewController.h"/>
+        </class>
+        <class className="FlatViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlatViewController.h"/>
+        </class>
+        <class className="GoalDetailsTableViewController" superclassName="FlatTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalDetailsTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="completeByLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goalDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goaledLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GoalsNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsNavigationController.h"/>
+        </class>
+        <class className="GoalsTableViewController" superclassName="FlatTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addGoalFromModal:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="cancelAddingGoal:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+        <class className="InvitesTableViewController" superclassName="FlatTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InvitesTableViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ProgressNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressNavigationController.h"/>
+        </class>
+        <class className="ProgressViewController" superclassName="FlatViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
+        </class>
+        <class className="SocialAddGoalTableViewController" superclassName="FlatTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialAddGoalTableViewController.h"/>
+        </class>
+        <class className="SocialNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialNavigationController.h"/>
+        </class>
+        <class className="SocialTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialTableViewCell.h"/>
+        </class>
+        <class className="SocialTableViewController" superclassName="FlatTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialTableViewController.h"/>
+        </class>
+        <class className="StepDetailsTableViewController" superclassName="FlatTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepDetailsTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="descriptionDetailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goalDetailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="joiningDetailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="privacyDetailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleDetailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="whenDetailLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TodayNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayNavigationController.h"/>
+        </class>
+        <class className="TodayTableViewController" superclassName="FlatTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TodayTableViewController.h"/>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ToB-SQ-gci"/>
+        <segue reference="uvq-0h-uEB"/>
+        <segue reference="ini-nr-Qle"/>
         <segue reference="boy-rf-77h"/>
-        <segue reference="jv6-Vq-oQ8"/>
     </inferredMetricsTieBreakers>
 </document>
