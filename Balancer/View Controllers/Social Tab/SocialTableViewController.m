@@ -123,7 +123,7 @@
     NSString* storyDetailText;
     NSString* profileImagePath;
     NSString* accessoryViewButtonText;
-    NSInteger creatorFBID = 0;
+    NSUInteger creatorFBID = 0;
     UIImage* image;
     
     BOOL disabled = NO;
@@ -146,6 +146,8 @@
         
         if(goal.sponsored){
             sponsored = YES;
+            storyHeaderText = @"Facebook Sponsored";
+            image = [UIImage imageNamed:@"Facebook Logo"];
         }
         
         if (goal.added) {
@@ -161,6 +163,7 @@
      
         
         NSString* temp = [appDelegate.userNames[step.creatorId] stringByAppendingString:@" added a new goal"];
+        NSLog(temp);
         
         storyHeaderText = [NSString stringWithFormat: temp, step.creatorId];
         storyDetailText = step.name;
@@ -225,6 +228,7 @@
     if (sponsored) {
         NSString* userPicturePath = @"Facebook Logo";
         image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
+        sponsored = NO;
     }else{
         NSString* userPicturePath = [NSString stringWithFormat:@"user%d", creatorFBID];
         image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];

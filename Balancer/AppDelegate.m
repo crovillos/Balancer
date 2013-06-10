@@ -279,7 +279,7 @@
     g4.description = @"Finish 2 chapter of Fifty Shades of Gray";
     g4.completionDate = [[NSDate alloc] init];
     g4.open = YES;
-    g4.creatorId = 2;
+    g4.creatorId = 5;
     g4.inviteList = nil;
     [self.dummySocialStream addObject:g4];
     
@@ -289,7 +289,7 @@
     g5.description = @"Do something that involves moving my legs";
     g5.completionDate = [[NSDate alloc] init];
     g5.open = YES;
-    g5.creatorId = 3;
+    g5.creatorId = 9;
     g5.inviteList = nil;
     [self.dummySocialStream addObject:g5];
     
@@ -302,7 +302,7 @@
     a1.open = YES;
     a1.creatorId = 4;
     a1.goal = g5;
-    a1.sponsored = YES;
+    a1.sponsored = NO;
     [self.dummySocialStream addObject:a1];
     
     
@@ -315,7 +315,7 @@
     a2.open = YES;
     a2.creatorId = 5;
     a2.goal = g3;
-    a2.sponsored = YES;
+    a2.sponsored = NO;
     [self.dummySocialStream addObject:a2];
     
     Step *a3 = [[Step alloc] init];
@@ -327,7 +327,7 @@
     a3.open = YES;
     a3.creatorId = 6;
     a3.goal = g5;
-    a3.sponsored = YES;
+    a3.sponsored = NO;
     [self.dummySocialStream addObject:a3];
     
     Step *a4 = [[Step alloc] init];
@@ -375,7 +375,7 @@
     g4.description = @"Finish 2 chapter of Fifty Shades of Gray";
     g4.completionDate = [[NSDate alloc] init];
     g4.open = YES;
-    g4.creatorId = 2;
+    g4.creatorId = 1;
     g4.inviteList = nil;
     [self.dummyAvailableGoals addObject:g4];
     
@@ -412,7 +412,7 @@
     s1.startDate = [[NSDate alloc] init];
     s1.endDate = [[NSDate alloc] init];
     s1.open = YES;
-    s1.creatorId = 2;
+    s1.creatorId = 4;
     s1.goal = nil;
     s1.sponsored = YES;
     [self.dummyAvailableSteps addObject:s1];
