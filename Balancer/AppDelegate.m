@@ -235,10 +235,11 @@
     g1.open = YES;
     g1.creatorId = 9;
     g1.inviteList = nil;
+    g1.added= FALSE;
     GoalInvite *gInvite = [[GoalInvite alloc] init];
     gInvite.goal = g1;
-    gInvite.title = a1.name;
-    gInvite.inviteObject = a1;
+    gInvite.title = g1.name;
+    gInvite.inviteObject = g1;
     [self.dummyInvites addObject:gInvite];
     
     Step *a2 = [[Step alloc] init];
