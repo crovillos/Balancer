@@ -115,7 +115,7 @@
     g5.description = @"Do something that involves moving my legs";
     g5.completionDate = [[NSDate alloc] init];
     g5.open = YES;
-    g5.creatorId = 3;
+    g5.creatorId = 4;
     g5.inviteList = nil;
     
     Step *a1 = [[Step alloc] init];
@@ -253,7 +253,7 @@
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
-    a1.creatorId = 4;
+    a1.creatorId = 5;
     a1.goal = nil;
     StepInvite *aInvite = [[StepInvite alloc] init];
     aInvite.activity = a1;
