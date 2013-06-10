@@ -350,6 +350,7 @@
     g2.open = YES;
     g2.creatorId = 7;
     g2.inviteList = nil;
+    g2.sponsored = YES;
     [self.dummySocialStream addObject:g2];
     
     
