@@ -14,5 +14,6 @@
 /** The model for this view controller, obtained from the network */
 @property (nonatomic, strong) NSMutableArray *socialStream; // of Goal
 @property (nonatomic, strong) Step* lastSelected;
+@property (nonatomic, strong) UITableViewCell* header;
 
 @end
