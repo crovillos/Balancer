@@ -264,7 +264,7 @@
 
     Goal *g1 = [[Goal alloc] init];
     g1.goalId = 7;
-    g1.name = @"swim twice a week";
+    g1.name = @"Swim Twice a Week";
     g1.description = @"Running is boring let's try swimming";
     g1.completionDate = [[NSDate alloc] init];
     g1.open = YES;
@@ -279,7 +279,7 @@
     
     Step *a2 = [[Step alloc] init];
     a2.activityId = 9;
-    a2.name = @"Take the bus to work\n once per week";
+    a2.name = @"Take the Bus to Work\n Once Per Week";
     a2.description = @"Let's go green!";
     a2.startDate = [[NSDate alloc] init];
     a2.endDate = [[NSDate alloc] init];
@@ -332,7 +332,7 @@
     
     Goal *g5 = [[Goal alloc] init];
     g5.goalId = 3;
-    g5.name = @"exercise three times";
+    g5.name = @"Exercise Three Times";
     g5.description = @"Do something that involves moving my legs";
     g5.completionDate = [[NSDate alloc] init];
     g5.open = YES;
@@ -342,7 +342,7 @@
     
     Step *a1 = [[Step alloc] init];
     a1.activityId = 1;
-    a1.name = @"Do hot yoga";
+    a1.name = @"Do Hot Yoga";
     a1.description = @"It's our monthly hot yoga class for beginners! Take a break from coding and do some yoga!";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
@@ -355,7 +355,7 @@
     
     Step *a2 = [[Step alloc] init];
     a2.activityId = 2;
-    a2.name = @"eat a fruit every day";
+    a2.name = @"Eat a Fruit Every Day";
     a2.description = @"I'm trying to keep track of what I'm eating";
     a2.startDate = [[NSDate alloc] init];
     a2.endDate = [[NSDate alloc] init];
@@ -367,7 +367,7 @@
     
     Step *a3 = [[Step alloc] init];
     a3.activityId = 3;
-    a3.name = @"ab exercise";
+    a3.name = @"Ab Exercise";
     a3.description = @"Getting toned for the summer!!!";
     a3.startDate = [[NSDate alloc] init];
     a3.endDate = [[NSDate alloc] init];
@@ -381,7 +381,7 @@
     
     Goal *g2 = [[Goal alloc] init];
     g2.goalId = 4;
-    g2.name = @"Early Bird Worm Hun";
+    g2.name = @"Early Bird Worm Hunt";
     g2.description = @"come to work early";
     g2.completionDate = [[NSDate alloc] init];
     g2.open = YES;
@@ -398,7 +398,7 @@
     
     Goal *g2 = [[Goal alloc] init];
     g2.goalId = 4;
-    g2.name = @"Early Bird Worm Hun";
+    g2.name = @"Early Bird Worm Hunt";
     g2.description = @"come to work early (recommended to add a step that accompanies this goal";
     g2.completionDate = [[NSDate alloc] init];
     g2.open = YES;
@@ -408,8 +408,8 @@
     
     Goal *g4 = [[Goal alloc] init];
     g4.goalId = 2;
-    g4.name = @"Finish 2 chapters";
-    g4.description = @"Finish 2 chapter of Fifty Shades of Gray";
+    g4.name = @"Finish 2 Chapters of Harry Potter";
+    g4.description = @"I need to know if Harry Survives";
     g4.completionDate = [[NSDate alloc] init];
     g4.open = YES;
     g4.creatorId = 1;
@@ -418,7 +418,7 @@
     
     Goal *g5 = [[Goal alloc] init];
     g5.goalId = 3;
-    g5.name = @"exercise three times";
+    g5.name = @"Exercise Three Times";
     g5.description = @"Do something that involves moving my legs";
     g5.completionDate = [[NSDate alloc] init];
     g5.open = YES;
