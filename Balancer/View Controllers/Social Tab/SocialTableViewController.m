@@ -70,8 +70,8 @@
         
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showInvitations)];
         tapGesture.cancelsTouchesInView = NO;
+        invitesHeader.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         [invitesHeader addGestureRecognizer:tapGesture];
-        
         return invitesHeader;
     }
     else {
@@ -113,8 +113,15 @@
     NSInteger creatorFBID = 0;
     
     BOOL disabled = NO;
-    
+    UIButton *accessoryViewButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [accessoryViewButton setEnabled:!disabled];
     UIImage* image = [UIImage imageNamed:@"brian_profilePic"];
+    if([story isKindOfClass:[Goal class]]) {
+        [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchUpInside];
+        
+    } else if ([story isKindOfClass:[Step class]]) {
+        [accessoryViewButton addTarget:self action:@selector(joinStep:) forControlEvents:UIControlEventTouchUpInside];
+    }
     if([story isKindOfClass:[Goal class]]) {
         Goal* goal = (Goal *) story;
         
@@ -127,7 +134,12 @@
         
         if (goal.added) {
             accessoryViewButtonText = @"Goaled!";
-            disabled = YES;
+            [accessoryViewButton setImage:[UIImage imageNamed:@"Joined Checkmark.png"] forState:UIControlStateNormal];
+            [UIView transitionWithView:accessoryViewButton
+                              duration:4.0
+                               options:UIViewAnimationOptionTransitionCrossDissolve
+                            animations:^{ accessoryViewButton.selected = YES; }
+                            completion:nil];
         }
         
     } else if ([story isKindOfClass:[Step class]]) {
@@ -149,8 +161,7 @@
     cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     // add accessory view button
-    UIButton *accessoryViewButton =  [UIButton buttonWithType:UIButtonTypeCustom];
-    [accessoryViewButton setEnabled:!disabled];
+
     
     UIFont *accessoryButtonFont = [UIFont boldSystemFontOfSize:14.0];
     [accessoryViewButton setTitle:accessoryViewButtonText forState:UIControlStateNormal];
@@ -191,12 +202,7 @@
     
     [accessoryViewButton addSubview:leftView];
     
-    if([story isKindOfClass:[Goal class]]) {
-        [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchUpInside];
-        
-    } else if ([story isKindOfClass:[Step class]]) {
-        [accessoryViewButton addTarget:self action:@selector(joinStep:) forControlEvents:UIControlEventTouchUpInside];
-    }
+
     
     
     // Configure the cell...
@@ -275,6 +281,7 @@
             [appDelegate.dummyGoals removeObjectAtIndex:[appDelegate.dummyGoals indexOfObject:goal]];
             [appDelegate.dummySocialStream addObject:goal];
         }
+        [self.tableView reloadData];
     }
 }
 
