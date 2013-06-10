@@ -218,7 +218,7 @@
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
-    a1.creatorId = 2;
+    a1.creatorId = 4;
     a1.goal = nil;
     StepInvite *aInvite = [[StepInvite alloc] init];
     aInvite.activity = a1;
