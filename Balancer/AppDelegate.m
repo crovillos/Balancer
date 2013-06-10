@@ -228,37 +228,96 @@
 - (void)createDummySocialStream
 {
     _dummySocialStream = [[NSMutableArray alloc] init];
+    Goal *g3 = [[Goal alloc] init];
+    g3.goalId = 1;
+    g3.name = @"learn to cook a new dish";
+    g3.description = @"learn how to make dinner at home";
+    g3.completionDate = [[NSDate alloc] init];
+    g3.open = YES;
+    g3.creatorId = 1;
+    g3.inviteList = nil;
+    [self.dummySocialStream addObject:g3];
     
-    Goal *g1 = [[Goal alloc] init];
-    g1.goalId = 2;
-    g1.name = [NSString stringWithFormat:@"Read the Hunger Games"];
-    g1.completionDate = [[NSDate alloc] init]; // sets completion date to today
-    g1.description = [NSString stringWithFormat:@"Catch up on some reading"];
-    g1.open = YES;
-    g1.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
-    g1.inviteList = nil;
-    [self.dummySocialStream addObject:g1];
-    Goal *g2 = [[Goal alloc] init];
-    g2.goalId = 3;
-    g2.name = [NSString stringWithFormat:@"Hangout with Family"];
-    g2.completionDate = [[NSDate alloc] init]; // sets completion date to today
-    g2.description = [NSString stringWithFormat:@"Do fun things with your family"];
-    g2.open = YES;
-    g2.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
-    g2.inviteList = nil;
-    g2.sponsored = YES;
-    [self.dummySocialStream addObject:g2];
+    Goal *g4 = [[Goal alloc] init];
+    g4.goalId = 2;
+    g4.name = @"Finish 2 chapters";
+    g4.description = @"Finish 2 chapter of Fifty Shades of Gray";
+    g4.completionDate = [[NSDate alloc] init];
+    g4.open = YES;
+    g4.creatorId = 2;
+    g4.inviteList = nil;
+    [self.dummySocialStream addObject:g4];
+    
+    Goal *g5 = [[Goal alloc] init];
+    g5.goalId = 3;
+    g5.name = @"exercise three times";
+    g5.description = @"Do something that involves moving my legs";
+    g5.completionDate = [[NSDate alloc] init];
+    g5.open = YES;
+    g5.creatorId = 3;
+    g5.inviteList = nil;
+    [self.dummySocialStream addObject:g5];
+    
     Step *a1 = [[Step alloc] init];
-    a1.activityId = 5;
-    a1.name = @"Yoga at Facebook!";
-    a1.description = @"It's our monthly yoga class for beginners! Take a break from coding and do some yoga!";
+    a1.activityId = 1;
+    a1.name = @"Do hot yoga";
+    a1.description = @"It's our monthly hot yoga class for beginners! Take a break from coding and do some yoga!";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
-    a1.creatorId = 2;
-    a1.goal = nil;
+    a1.creatorId = 4;
+    a1.goal = g5;
     a1.sponsored = YES;
     [self.dummySocialStream addObject:a1];
+    
+    
+    Step *a2 = [[Step alloc] init];
+    a2.activityId = 2;
+    a2.name = @"eat a fruit every day";
+    a2.description = @"I'm trying to keep track of what I'm eating";
+    a2.startDate = [[NSDate alloc] init];
+    a2.endDate = [[NSDate alloc] init];
+    a2.open = YES;
+    a2.creatorId = 5;
+    a2.goal = g3;
+    a2.sponsored = YES;
+    [self.dummySocialStream addObject:a2];
+    
+    Step *a3 = [[Step alloc] init];
+    a3.activityId = 3;
+    a3.name = @"ab exercise";
+    a3.description = @"Getting toned for the summer!!!";
+    a3.startDate = [[NSDate alloc] init];
+    a3.endDate = [[NSDate alloc] init];
+    a3.open = YES;
+    a3.creatorId = 6;
+    a3.goal = g5;
+    a3.sponsored = YES;
+    [self.dummySocialStream addObject:a3];
+    
+    Step *a4 = [[Step alloc] init];
+    a4.activityId = 4;
+    a4.name = @"7-mile run";
+    a4.description = @"Let's go running outside when it is nice outside";
+    a4.startDate = [[NSDate alloc] init];
+    a4.endDate = [[NSDate alloc] init];
+    a4.open = YES;
+    a4.creatorId = 7;
+    a4.goal = g5;
+    a4.sponsored = YES;
+    [self.dummySocialStream addObject:a4];
+    
+    Goal *g2 = [[Goal alloc] init];
+    g2.goalId = 4;
+    g2.name = @"Early Bird Worm Hun";
+    g2.description = @"come to work early";
+    g2.completionDate = [[NSDate alloc] init];
+    g2.open = YES;
+    g2.creatorId = 7;
+    g2.inviteList = nil;
+    [self.dummySocialStream addObject:g2];
+    
+    
 }
 
 - (void)createDummyAvailableGoals {
