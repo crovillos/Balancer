@@ -23,5 +23,6 @@
 @property (nonatomic, strong) Goal* goal;
 @property (nonatomic, strong) InviteList* inviteList;
 @property (nonatomic, getter = isSponsored) BOOL sponsored;
+@property (nonatomic, getter = isAdded) BOOL added;
 
 @end

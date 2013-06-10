@@ -151,11 +151,6 @@
         if (goal.added) {
             accessoryViewButtonText = @"Goaled!";
             [accessoryViewButton setImage:[UIImage imageNamed:@"Joined Checkmark.png"] forState:UIControlStateNormal];
-            [UIView transitionWithView:accessoryViewButton
-                              duration:4.0
-                               options:UIViewAnimationOptionTransitionCrossDissolve
-                            animations:^{ accessoryViewButton.selected = YES; }
-                            completion:nil];
         }
         
     } else if ([story isKindOfClass:[Step class]]) {
@@ -172,6 +167,12 @@
             storyHeaderText = @"Facebook Sponsored";
             image = [UIImage imageNamed:@"Facebook Logo"];
         }
+        
+        if (step.isAdded) {
+            accessoryViewButtonText = @"Stepped!";
+            [accessoryViewButton setImage:[UIImage imageNamed:@"Joined Checkmark.png"] forState:UIControlStateNormal];
+        }
+
     }
     
     cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
@@ -309,7 +310,6 @@
         NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell:cell];
         self.lastSelected = self.socialStream[indexPath.row];
         [self performSegueWithIdentifier: @"Add Step to Goal" sender: self];
-        
     }
     
 }
@@ -352,6 +352,8 @@
 - (IBAction)addGoalFromModal:(UIStoryboardSegue *)segue {
     SocialAddGoalTableViewController *vc = (SocialAddGoalTableViewController *)segue.sourceViewController; // get results out of vc, which I presented
     [self updateGoalSelected:vc.selectedGoal];
+    self.lastSelected.added = TRUE;
+    [self.tableView reloadData];
 }
 
 @end
