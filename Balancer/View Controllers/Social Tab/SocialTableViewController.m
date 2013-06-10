@@ -17,10 +17,21 @@
 
 @implementation SocialTableViewController
 
+- (NSMutableArray *)goalsToRemove
+{
+    if (!_goalsToRemove) _goalsToRemove = [[NSMutableArray alloc] init];
+    return _goalsToRemove;
+}
+
+- (NSMutableArray *)stepsToRemove
+{
+    if (!_stepsToRemove) _stepsToRemove = [[NSMutableArray alloc] init];
+    return _stepsToRemove;
+}
+ 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"am I called when I go to social each time");
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor balancerPinkColor]];
     
     // prevent empty table cells from appearing after the social feed by setting
@@ -38,22 +49,28 @@
 {
     NSArray* visibleCells = [self.tableView visibleCells];
     if([visibleCells count]) {
-        NSLog(@"updating");
-
-        //UITableViewCell *invitationsHeader = [self.tableView dequeueReusableCellWithIdentifier:@"Invitations"];
         UITableViewCell *invitationsHeader = self.header;
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-        
         invitationsHeader.textLabel.text = [NSString stringWithFormat:@"Invites (%i)", appDelegate.dummyInvites.count];
-        NSIndexPath* inviteIndexPath = [self.tableView indexPathForCell:invitationsHeader];
-       // NSArray* inviteIndexRow = @[inviteIndexPath];
-        //[self.tableView reloadRowsAtIndexPaths:inviteIndexRow withRowAnimation:UITableViewRowAnimationNone];
+
+        for (int i = 0; i < [self.goalsToRemove count]; i = i + 1) {
+            [appDelegate.dummyGoals addObject:self.goalsToRemove[i]];
+            [appDelegate.dummySocialStream removeObject:self.goalsToRemove[i]];
+        }
+        [self.goalsToRemove removeAllObjects];
+        if (!self.stepJustAdded) {
+            for (int i = 0; i < [self.stepsToRemove count]; i = i + 1) {
+                [appDelegate.dummySocialStream removeObject:self.stepsToRemove[i]];
+            }
+            [self.stepsToRemove removeAllObjects];
+        }
+        self.stepJustAdded = NO;
+        [self.tableView reloadData];
     }
 }
 
 -(void) viewDidAppear:(BOOL)animated
 {
-    NSLog(@"view appeared ahhhh");
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [[self.tabBarController.tabBar.items objectAtIndex:0] setBadgeValue:[NSString stringWithFormat:@"%d", appDelegate.dummyInvites.count]];
 }
@@ -114,9 +131,6 @@
 {
     UITableViewCell *cell;
     
-    //if (!indexPath.section) { // at invites row
-    //    cell = [tableView dequeueReusableCellWithIdentifier:@"Invitations" forIndexPath:indexPath];
-    //} else {
     NSInteger row = indexPath.row;
     id story = self.socialStream[row];
     
@@ -124,7 +138,6 @@
     
     NSString* storyHeaderText;
     NSString* storyDetailText;
-    NSString* profileImagePath;
     NSString* accessoryViewButtonText;
     NSUInteger creatorFBID = 0;
     UIImage* image;
@@ -183,7 +196,6 @@
      
         
         NSString* temp = [appDelegate.userNames[step.creatorId] stringByAppendingString:@" added a new goal"];
-        NSLog(temp);
         
         storyHeaderText = [NSString stringWithFormat: temp, step.creatorId];
         storyDetailText = step.name;
@@ -193,6 +205,10 @@
             sponsored = YES;
             storyHeaderText = @"Facebook Sponsored";
             image = [UIImage imageNamed:@"Facebook Logo"];
+        }
+        
+        if(step.added) {
+            [accessoryViewButton setImage:[UIImage imageNamed:@"Joined Checkmark.png"] forState:UIControlStateNormal];
         }
     }
     
@@ -304,7 +320,6 @@
     }
     
     float totalContentHeight = 130.0;
-    //totalContentHeight += [storyHeaderText size]
     return 130;
 }
 
@@ -321,12 +336,12 @@
         //button.backgroundColor = [UIColor greenColor];
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
         if(goal.isAdded) {
-            [appDelegate.dummyGoals addObject:goal];
+            [button setImage:[UIImage imageNamed:@"Joined Checkmark.png"] forState:UIControlStateNormal];
+            [self.goalsToRemove addObject:goal];
         } else { // This currently will never actually run...
-            [appDelegate.dummyGoals removeObjectAtIndex:[appDelegate.dummyGoals indexOfObject:goal]];
-            [appDelegate.dummySocialStream addObject:goal];
+            [button setImage:nil forState:UIControlStateNormal];
+            [self.goalsToRemove removeObject:goal];
         }
-        [self.tableView reloadData];
     }
 }
 
@@ -337,7 +352,13 @@
         UITableViewCell* cell = (UITableViewCell*) button.superview;
         NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell:cell];
         self.lastSelected = self.socialStream[indexPath.row];
-        [self performSegueWithIdentifier: @"Add Step to Goal" sender: self];
+        self.lastSelected.added = !self.lastSelected.added;
+        if(self.lastSelected.added) {
+            [button setImage:[UIImage imageNamed:@"Joined Checkmark.png"] forState:UIControlStateNormal];
+            [self performSegueWithIdentifier: @"Add Step to Goal" sender:self];
+        } else {
+            [button setImage:nil forState:UIControlStateNormal];
+        }
         
     }
     
@@ -366,16 +387,18 @@
 
 //This should only be called when done is clicked
 -(void) updateGoalSelected:(Goal*) goalSelected {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    goalSelected.added = !goalSelected.added;
-    
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;    
     [goalSelected.activities addObject:self.lastSelected];
-    
-    [appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:self.lastSelected]];    
+    self.stepJustAdded = YES;
+    [self.stepsToRemove addObject:self.lastSelected];
+
+    //[appDelegate.dummySocialStream removeObjectAtIndex:[appDelegate.dummySocialStream indexOfObject:self.lastSelected]];
 }
 
 #pragma mark - Unwind segues from adding a goal
 - (IBAction)cancelAddingGoal:(UIStoryboardSegue *)segue {
+    self.lastSelected.added = NO;
+    //[self.tableView reloadData];
 }
 
 - (IBAction)addGoalFromModal:(UIStoryboardSegue *)segue {

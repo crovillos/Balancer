@@ -15,5 +15,7 @@
 @property (nonatomic, strong) NSMutableArray *socialStream; // of Goal
 @property (nonatomic, strong) Step* lastSelected;
 @property (nonatomic, strong) UITableViewCell* header;
-
+@property (nonatomic, strong) NSMutableArray *goalsToRemove;
+@property (nonatomic, strong) NSMutableArray *stepsToRemove;
+@property (nonatomic) BOOL stepJustAdded;
 @end

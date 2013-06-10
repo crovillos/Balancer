@@ -95,9 +95,7 @@
     {
         if ([self.expandedSections containsIndex:section])
         {
-            Goal *goal = (Goal*)self.goals[section];
-            NSLog([NSString stringWithFormat:@"%d", [goal.activities count]]);
-            
+            Goal *goal = (Goal*)self.goals[section];            
             return [goal.activities count] + 1; // return rows when expanded
         }
         
@@ -353,13 +351,14 @@
             
 
         }
-    }
-     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    if ([segue.identifier isEqualToString:@"Show Goal Details"]) {
-        if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
-            Goal *goal = (Goal *)self.goals[indexPath.section];
-            Step *step = (Step *)goal.activities[indexPath.row - 1];
-            [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)goal)];
+    } else if ([sender isKindOfClass:[UIButton class]]) {
+        UIButton* infoButton = (UIButton*) sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell*)infoButton.superview];
+        if ([segue.identifier isEqualToString:@"Show Goal Details"]) {
+            if ([segue.destinationViewController respondsToSelector:@selector(setGoal:)]) {
+                Goal *goal = (Goal *)self.goals[indexPath.row];
+                [segue.destinationViewController performSelector:@selector(setGoal:) withObject:((Goal *)goal)];
+            }
         }
     }
 }
