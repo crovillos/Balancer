@@ -124,10 +124,11 @@
     NSString* profileImagePath;
     NSString* accessoryViewButtonText;
     NSInteger creatorFBID = 0;
+    UIImage* image;
     
     BOOL disabled = NO;
     
-    UIImage* image = [UIImage imageNamed:@"brian_profilePic"];
+    
     if([story isKindOfClass:[Goal class]]) {
         Goal* goal = (Goal *) story;
         
@@ -208,7 +209,7 @@
     storyDetailLabel.text = storyDetailText;
     
     NSString* userPicturePath = [NSString stringWithFormat:@"user%dPic", creatorFBID];
-    //UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
+    image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
     
     UIImageView* profileImageView = (UIImageView *)[cell viewWithTag:1];
     profileImageView.image = image;
