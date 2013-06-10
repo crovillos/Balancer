@@ -22,5 +22,6 @@
 
 @property (strong, nonatomic) NSMutableArray *dummyAvailableGoals;
 @property (strong, nonatomic) NSMutableArray *dummyAvailableSteps;
+@property (strong, nonatomic) NSMutableArray *userNames;
 
 @end

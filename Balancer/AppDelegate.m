@@ -61,10 +61,37 @@
     [self createDummySteps];
     [self createDummyAvailableGoals];
     [self createDummyAvailableSteps];
+    [self createUsers];
+   
+    
     
     return YES;
 }
 
+- (void) createUsers
+{
+    _userNames = [[NSMutableArray alloc] init];
+    NSString* s0 = @"";
+    [self.userNames addObject: @""];
+    NSString* s1 = @"Dian";
+    [self.userNames addObject: s1];
+    NSString* s2 = @"Perry";
+    [self.userNames addObject: s2];
+    NSString* s3 = @"John";
+    [self.userNames addObject: s3];
+    NSString* s4 = @"Catriona";
+    [self.userNames addObject: s4];
+    NSString* s5 = @"Grace";
+    [self.userNames addObject: s5];
+    NSString* s6 = @"Brian";
+    [self.userNames addObject: s6];
+    NSString* s7 = @"Facebook";
+    [self.userNames addObject: s7];
+    NSString* s8 = @"You!";
+    [self.userNames addObject: s8];
+    NSString* s9 = @"Chris";
+    [self.userNames addObject: s9];
+}
 
 /** Creates dummy goals and sets them to be the model for this view controller. For testing purposes only. */
 - (void)createDummySteps

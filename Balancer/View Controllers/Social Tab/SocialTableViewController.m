@@ -127,6 +127,8 @@
     UIImage* image;
     
     BOOL disabled = NO;
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    BOOL sponsored = NO;
     
     
     if([story isKindOfClass:[Goal class]]) {
@@ -134,10 +136,17 @@
         
         cellIdentifier = @"Goal";
         accessoryViewButtonText = @"Goal it!";
+     
         
-        storyHeaderText = [NSString stringWithFormat:@"Brian Yin added a new goal", goal.creatorId];
+        NSString* temp = [appDelegate.userNames[goal.creatorId] stringByAppendingString:@" added a new goal"];
+        
+        storyHeaderText = [NSString stringWithFormat: temp, goal.creatorId];
         storyDetailText = goal.name;
         creatorFBID = goal.creatorId;
+        
+        if(goal.sponsored){
+            sponsored = YES;
+        }
         
         if (goal.added) {
             accessoryViewButtonText = @"Goaled!";
@@ -149,12 +158,16 @@
         
         cellIdentifier = @"Step";
         accessoryViewButtonText = @"Step it!";
+     
         
-        storyHeaderText = [NSString stringWithFormat:@"Brian Yin added a new step", step.creatorId];
+        NSString* temp = [appDelegate.userNames[step.creatorId] stringByAppendingString:@" added a new goal"];
+        
+        storyHeaderText = [NSString stringWithFormat: temp, step.creatorId];
         storyDetailText = step.name;
         creatorFBID = step.creatorId;
         
         if (step.sponsored) {
+            sponsored = YES;
             storyHeaderText = @"Facebook Sponsored";
             image = [UIImage imageNamed:@"Facebook Logo"];
         }
@@ -208,8 +221,14 @@
     UILabel* storyDetailLabel = (UILabel *)[cell viewWithTag:3];
     storyDetailLabel.text = storyDetailText;
     
-    NSString* userPicturePath = [NSString stringWithFormat:@"user%dPic", creatorFBID];
-    image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
+    //images
+    if (sponsored) {
+        NSString* userPicturePath = @"Facebook Logo";
+        image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
+    }else{
+        NSString* userPicturePath = [NSString stringWithFormat:@"user%d", creatorFBID];
+        image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:userPicturePath ofType:@"png"]];
+    }
     
     UIImageView* profileImageView = (UIImageView *)[cell viewWithTag:1];
     profileImageView.image = image;
