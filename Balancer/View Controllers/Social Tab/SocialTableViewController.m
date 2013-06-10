@@ -338,7 +338,7 @@
 //This should only be called when done is clicked
 -(void) updateGoalSelected:(Goal*) goalSelected {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    goalSelected.added = !goalSelected .added;
+    goalSelected.added = !goalSelected.added;
     
     [goalSelected.activities addObject:self.lastSelected];
     
