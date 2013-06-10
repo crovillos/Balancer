@@ -9,6 +9,6 @@
 #import "Step.h"
 
 @implementation Step
-@synthesize activityId, name, startDate, endDate, description, open, creatorId, goal, inviteList;
+@synthesize activityId, name, startDate, endDate, description, open, creatorId, goal, inviteList, added;
 
 @end

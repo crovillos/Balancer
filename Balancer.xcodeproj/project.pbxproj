@@ -424,13 +424,6 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
-		83AEACF6173EF791006E1151 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		83C0CA28174EC4CA007DDD05 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,7 +702,6 @@
 			children = (
 				83DD42F0173447DB00FA7408 /* MainStoryboard.storyboard */,
 				83C0CA28174EC4CA007DDD05 /* View Controllers */,
-				83AEACF6173EF791006E1151 /* Views */,
 				83C0CA58174EC627007DDD05 /* Models */,
 				83DD42DF173447DB00FA7408 /* Supporting Files */,
 			);
