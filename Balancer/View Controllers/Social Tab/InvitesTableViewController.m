@@ -108,7 +108,7 @@
         accessoryViewButtonText = @"Goal it!";
         
         
-        NSString* temp = [appDelegate.userNames[goal.creatorId] stringByAppendingString:@" added a new goal"];
+        NSString* temp = [appDelegate.userNames[goal.creatorId] stringByAppendingString:@" invited you to a goal"];
         
         storyHeaderText = [NSString stringWithFormat: temp, goal.creatorId];
         storyDetailText = goal.name;
@@ -132,7 +132,7 @@
         accessoryViewButtonText = @"Step it!";
         
         
-        NSString* temp = [appDelegate.userNames[step.creatorId] stringByAppendingString:@" added a new step"];
+        NSString* temp = [appDelegate.userNames[step.creatorId] stringByAppendingString:@" invited you to a step"];
         
         storyHeaderText = [NSString stringWithFormat: temp, step.creatorId];
         storyDetailText = step.name;

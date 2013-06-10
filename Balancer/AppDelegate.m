@@ -214,7 +214,7 @@
     Step *a1 = [[Step alloc] init];
     a1.activityId = 9;
     a1.name = @"Run 3 miles";
-    a1.description = @"Run with us!";
+    a1.description = @"Run with us around the salt dunes!";
     a1.startDate = [[NSDate alloc] init];
     a1.endDate = [[NSDate alloc] init];
     a1.open = YES;
@@ -244,7 +244,7 @@
     
     Step *a2 = [[Step alloc] init];
     a2.activityId = 9;
-    a2.name = @"Take the bus to work once per week";
+    a2.name = @"Take the bus to work\n once per week";
     a2.description = @"Let's go green!";
     a2.startDate = [[NSDate alloc] init];
     a2.endDate = [[NSDate alloc] init];
@@ -273,6 +273,17 @@
     g3.creatorId = 1;
     g3.inviteList = nil;
     [self.dummySocialStream addObject:g3];
+    
+    Step *a4 = [[Step alloc] init];
+    a4.activityId = 4;
+    a4.name = @"Pre-Screening of The Man of Steel";
+    a4.description = @"Who doesn't love superman!";
+    a4.startDate = [[NSDate alloc] init];
+    a4.endDate = [[NSDate alloc] init];
+    a4.open = YES;
+    a4.creatorId = 7;
+    a4.sponsored = YES;
+    [self.dummySocialStream addObject:a4];
     
     Goal *g4 = [[Goal alloc] init];
     g4.goalId = 2;
@@ -331,17 +342,7 @@
     a3.sponsored = NO;
     [self.dummySocialStream addObject:a3];
     
-    Step *a4 = [[Step alloc] init];
-    a4.activityId = 4;
-    a4.name = @"7-mile run";
-    a4.description = @"Let's go running outside when it is nice outside";
-    a4.startDate = [[NSDate alloc] init];
-    a4.endDate = [[NSDate alloc] init];
-    a4.open = YES;
-    a4.creatorId = 7;
-    a4.goal = g5;
-    a4.sponsored = YES;
-    [self.dummySocialStream addObject:a4];
+
     
     Goal *g2 = [[Goal alloc] init];
     g2.goalId = 4;
