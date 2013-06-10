@@ -70,42 +70,41 @@
 - (void)createDummySteps
 {
     _dummySteps = [[NSMutableArray alloc] init];
-    Step *s1 = [[Step alloc] init];
-    s1.activityId = 6;
-    s1.name = @"Cooking Class";
-    s1.description = @"May 27 (Sat) 11:00AM @ HUB 441";
-    s1.startDate = [[NSDate alloc] init];
-    s1.endDate = [[[NSDate alloc] init] dateByAddingTimeInterval: 86400];
-    s1.open = YES;
-    s1.creatorId = 2;
-    s1.goal = nil;
-    [_dummySteps addObject:s1];
+    Step *a4 = [[Step alloc] init];
+    a4.activityId = 4;
+    a4.name = @"7-mile run";
+    a4.description = @"Let's go running outside when it is nice outside";
+    a4.startDate = [[NSDate alloc] init];
+    a4.endDate = [[NSDate alloc] init];
+    a4.open = YES;
+    a4.creatorId = 7;
+    a4.goal = nil;
+    a4.sponsored = YES;
+    [self.dummySteps addObject:a4];
     
-    Step *s2 = [[Step alloc] init];
-    s2.activityId = 7;
-    s2.name = @"Read 5 Chapters";
-    s2.description = @"May 26 (Sun) 2:00PM @ Downtown Seattle";
-    s2.startDate = [[NSDate alloc] init];
-    s2.endDate = [[[NSDate alloc] init] dateByAddingTimeInterval: 86400];
-    //s2.endDate = [NSDate dateWithNaturalLanguageString : @"12/31/01"];
-    s2.open = YES;
-    s2.creatorId = 2;
-    s2.goal = nil;
-    [_dummySteps addObject:s2];
+    Goal *g5 = [[Goal alloc] init];
+    g5.goalId = 3;
+    g5.name = @"exercise three times";
+    g5.description = @"Do something that involves moving my legs";
+    g5.completionDate = [[NSDate alloc] init];
+    g5.open = YES;
+    g5.creatorId = 3;
+    g5.inviteList = nil;
     
-    Step *s3 = [[Step alloc] init];
-    s3.activityId = 8;
-    s3.name = @"Jogging";
-    s3.description = @"Tomorrow 6:00AM @ Facebook Gym";
-    s3.startDate = [[NSDate alloc] init];
-    s3.endDate = [[[NSDate alloc] init] dateByAddingTimeInterval: 86400];
-    s3.open = YES;
-    s3.creatorId = 4;
-    s3.goal = nil;
-    [_dummySteps addObject:s3];
+    Step *a1 = [[Step alloc] init];
+    a1.activityId = 1;
+    a1.name = @"Do hot yoga";
+    a1.description = @"It's our monthly hot yoga class for beginners! Take a break from coding and do some yoga!";
+    a1.startDate = [[NSDate alloc] init];
+    a1.endDate = [[NSDate alloc] init];
+    a1.open = YES;
+    a1.creatorId = 4;
+    a1.goal = g5;
+    a1.sponsored = YES;
+    [self.dummySteps addObject:a1];
+
     
-    
-    
+
 }
 
 //Shown on the Goals page 
@@ -328,31 +327,51 @@
     
     
 }
-
+//Seen in added goals page
 - (void)createDummyAvailableGoals {
     _dummyAvailableGoals = [[NSMutableArray alloc] init];
     
+    Goal *g2 = [[Goal alloc] init];
+    g2.goalId = 4;
+    g2.name = @"Early Bird Worm Hun";
+    g2.description = @"come to work early (recommended to add a step that accompanies this goal";
+    g2.completionDate = [[NSDate alloc] init];
+    g2.open = YES;
+    g2.creatorId = 7;
+    g2.inviteList = nil;
+    [self.dummyAvailableGoals addObject:g2];
+    
+    Goal *g4 = [[Goal alloc] init];
+    g4.goalId = 2;
+    g4.name = @"Finish 2 chapters";
+    g4.description = @"Finish 2 chapter of Fifty Shades of Gray";
+    g4.completionDate = [[NSDate alloc] init];
+    g4.open = YES;
+    g4.creatorId = 2;
+    g4.inviteList = nil;
+    [self.dummyAvailableGoals addObject:g4];
+    
+    Goal *g5 = [[Goal alloc] init];
+    g5.goalId = 3;
+    g5.name = @"exercise three times";
+    g5.description = @"Do something that involves moving my legs";
+    g5.completionDate = [[NSDate alloc] init];
+    g5.open = YES;
+    g5.creatorId = 3;
+    g5.inviteList = nil;
+    [self.dummyAvailableGoals addObject:g5];
+    
     Goal *g1 = [[Goal alloc] init];
-    g1.goalId = 10;
-    g1.name = @"Check in to 80% of the available cafeterias at Facebook!";
-    g1.completionDate = [[NSDate alloc] init]; // sets completion date to today
-    g1.description = [NSString stringWithFormat:@"Facebook has some great cafeterias, but have you tried them all?"];
+    g1.goalId = 7;
+    g1.name = @"INVITE: Swim twice a week";
+    g1.description = @"Running is boring let's try swimming";
+    g1.completionDate = [[NSDate alloc] init];
     g1.open = YES;
-    g1.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
+    g1.creatorId = 9;
     g1.inviteList = nil;
-    g1.sponsored = YES;
     [self.dummyAvailableGoals addObject:g1];
     
-    Goal *g2 = [[Goal alloc] init];
-    g2.goalId = 11;
-    g2.name = [NSString stringWithFormat:@"Catriona's Goal: Take more micro breaks during the work day"];
-    g2.completionDate = [[NSDate alloc] init]; // sets completion date to today
-    g2.description = [NSString stringWithFormat:@"I need rest time!"];
-    g2.open = YES;
-    g2.creatorId = arc4random_uniform(DUMMY_GOALS_MAX_CREATOR_ID);
-    g2.inviteList = nil;
-    g2.sponsored = NO;
-    [self.dummyAvailableGoals addObject:g2];
+    
 }
 
 - (void)createDummyAvailableSteps {
