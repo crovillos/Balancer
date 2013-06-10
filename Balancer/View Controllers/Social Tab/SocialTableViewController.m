@@ -48,14 +48,14 @@
         NSIndexPath* inviteIndexPath = [self.tableView indexPathForCell:invitationsHeader];
        // NSArray* inviteIndexRow = @[inviteIndexPath];
         //[self.tableView reloadRowsAtIndexPaths:inviteIndexRow withRowAnimation:UITableViewRowAnimationNone];
-        
-        [[self.tabBarController.tabBar.items objectAtIndex:0] setBadgeValue:[NSString stringWithFormat:@"333%d", appDelegate.dummyInvites.count]];
     }
 }
 
 -(void) viewDidAppear:(BOOL)animated
 {
     NSLog(@"view appeared ahhhh");
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [[self.tabBarController.tabBar.items objectAtIndex:0] setBadgeValue:[NSString stringWithFormat:@"%d", appDelegate.dummyInvites.count]];
 }
 
 /** Sets the model for this view controller.
