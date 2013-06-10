@@ -36,12 +36,26 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    UITableViewCell *invitesHeader = [self.tableView dequeueReusableCellWithIdentifier:@"Invitations"];
-    NSLog([NSString stringWithFormat:@"%d", appDelegate.dummyInvites.count]);
-    invitesHeader.textLabel.text = [NSString stringWithFormat:@"Invites (%i)", appDelegate.dummyInvites.count];
-    
-    [[self.tabBarController.tabBar.items objectAtIndex:0] setBadgeValue:@"2"];
+    NSArray* visibleCells = [self.tableView visibleCells];
+    if([visibleCells count]) {
+        NSLog(@"updating");
+
+        //UITableViewCell *invitationsHeader = [self.tableView dequeueReusableCellWithIdentifier:@"Invitations"];
+        UITableViewCell *invitationsHeader = self.header;
+        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        
+        invitationsHeader.textLabel.text = [NSString stringWithFormat:@"Invites (%i)", appDelegate.dummyInvites.count];
+        NSIndexPath* inviteIndexPath = [self.tableView indexPathForCell:invitationsHeader];
+       // NSArray* inviteIndexRow = @[inviteIndexPath];
+        //[self.tableView reloadRowsAtIndexPaths:inviteIndexRow withRowAnimation:UITableViewRowAnimationNone];
+        
+        [[self.tabBarController.tabBar.items objectAtIndex:0] setBadgeValue:[NSString stringWithFormat:@"333%d", appDelegate.dummyInvites.count]];
+    }
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    NSLog(@"view appeared ahhhh");
 }
 
 /** Sets the model for this view controller.
@@ -72,6 +86,8 @@
         tapGesture.cancelsTouchesInView = NO;
         invitesHeader.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         [invitesHeader addGestureRecognizer:tapGesture];
+        self.header = invitesHeader;
+        
         return invitesHeader;
     }
     else {
