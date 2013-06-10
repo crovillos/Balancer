@@ -130,8 +130,14 @@
     UIImage* image;
     
     BOOL disabled = NO;
+    UIButton *accessoryViewButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [accessoryViewButton setEnabled:!disabled];
+   
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     BOOL sponsored = NO;
+    
+    
+
     
     
     if([story isKindOfClass:[Goal class]]) {
