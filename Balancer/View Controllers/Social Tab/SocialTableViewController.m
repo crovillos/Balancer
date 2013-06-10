@@ -83,7 +83,6 @@
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showInvitations)];
         tapGesture.cancelsTouchesInView = NO;
         [invitesHeader addGestureRecognizer:tapGesture];
-        self.tableView.tableHeaderView = invitesHeader;
         self.header = invitesHeader;
         
         return invitesHeader;
