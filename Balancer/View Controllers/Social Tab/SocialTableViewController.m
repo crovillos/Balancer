@@ -29,7 +29,7 @@
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSMutableArray *dummySocialStream = appDelegate.dummySocialStream;
     
-    [self setSocialStream:dummySocialStream];    
+    [self setSocialStream:dummySocialStream];
 }
 
 
@@ -40,6 +40,7 @@
     //NSLog([NSString stringWithFormat:@"%d", appDelegate.dummyInvites.count]);
     invitesHeader.textLabel.text = [NSString stringWithFormat:@"Invites (%i)", appDelegate.dummyInvites.count];
     
+    [[self.tabBarController.tabBar.items objectAtIndex:0] setBadgeValue:@"2"];
 }
 
 /** Sets the model for this view controller.
@@ -177,6 +178,18 @@
     cell.accessoryView = accessoryViewButton;
     
     
+    CGSize mainViewSize = accessoryViewButton.bounds.size;
+    CGFloat borderWidth = 1;
+    UIColor *borderColor = [UIColor balancerDarkBlueColor];
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, borderWidth, mainViewSize.height)];
+    leftView.opaque = YES;
+    leftView.backgroundColor = borderColor;
+    
+    // for bonus points, set the views' autoresizing mask so they'll stay with the edges:
+    leftView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin;
+    
+    [accessoryViewButton addSubview:leftView];
+    
     if([story isKindOfClass:[Goal class]]) {
         [accessoryViewButton addTarget:self action:@selector(goalIt:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -207,6 +220,8 @@
     UIImage *cellSelectedBackgroundImage = [UIImage imageNamed:@"Social Story Background (selected)"];
     UIImage *cellSelectedBackgroundImageResizable = [cellSelectedBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(11.0, 11.0, 12.0, 11.0)];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:cellSelectedBackgroundImageResizable];
+    
+
     
     return cell;
 }
