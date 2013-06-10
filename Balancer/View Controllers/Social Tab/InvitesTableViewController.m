@@ -87,8 +87,9 @@
         
         inviteHeaderText = [NSString stringWithFormat:@"User %u shared a goal with you", goal.creatorId];
         inviteDetailText = goal.name;
+        BOOL dummy = goal.isAdded;
         
-        if (goal.added) {
+        if (dummy) {
             accessoryViewButtonText = @"Goaled!";
             disabled = YES;
         }
