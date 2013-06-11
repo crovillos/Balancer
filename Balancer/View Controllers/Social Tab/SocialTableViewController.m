@@ -11,8 +11,6 @@
 #import "SocialTableViewController.h"
 #import "Goal.h"
 #import "AppDelegate.h"
-#import "UINavigationBar+FlatUI.h"
-#import "UIColor+Balancer.h"
 #import "SocialAddGoalTableViewController.h"
 
 @implementation SocialTableViewController
@@ -32,8 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor balancerPinkColor]];
-    
     // prevent empty table cells from appearing after the social feed by setting
     // the table view's footer view to an empty view
     self.tableView.tableFooterView = [[UIView alloc] init];
@@ -216,7 +212,6 @@
     UIFont *accessoryButtonFont = [UIFont boldSystemFontOfSize:14.0];
     [accessoryViewButton setTitle:accessoryViewButtonText forState:UIControlStateNormal];
     accessoryViewButton.titleLabel.font = accessoryButtonFont;
-    [accessoryViewButton setTitleColor:[UIColor balancerDarkBlueColor] forState:UIControlStateNormal];
     [accessoryViewButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
     [accessoryViewButton sizeToFit];
     accessoryViewButton.userInteractionEnabled = YES;
@@ -224,15 +219,11 @@
     CGRect rect = CGRectMake(0, 0, 1, 1);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context,
-                                   [UIColor balancerLightBlueColor].CGColor);
     CGContextFillRect(context, rect);
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     [accessoryViewButton setBackgroundImage:img forState:UIControlStateHighlighted];
-    
-    [accessoryViewButton setTitleColor:[UIColor balancerDarkBlueColor] forState:UIControlStateSelected];
     
     CGRect accessoryViewButtonBounds = CGRectMake(0, 0, 75, cell.bounds.size.height - 20);
     [accessoryViewButton setBounds:accessoryViewButtonBounds];
@@ -242,10 +233,8 @@
     
     CGSize mainViewSize = accessoryViewButton.bounds.size;
     CGFloat borderWidth = 1;
-    UIColor *borderColor = [UIColor balancerDarkBlueColor];
     UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, borderWidth, mainViewSize.height)];
     leftView.opaque = YES;
-    leftView.backgroundColor = borderColor;
     
     // for bonus points, set the views' autoresizing mask so they'll stay with the edges:
     leftView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin;
@@ -291,31 +280,6 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //if (indexPath.section == 0 && indexPath.row == 0)
-    //    return 44;
-    
-    // TODO: factor out duplicated code; same as cellForRowAtIndexPath
-    NSString* storyHeaderText;
-    NSString* storyDetailText;
-    NSString* profileImagePath;
-    
-    NSInteger row = indexPath.row;
-    id story = self.socialStream[row];
-    
-    if([story isKindOfClass:[Goal class]]) {
-        Goal* goal = (Goal *) story;
-        
-        storyHeaderText = [NSString stringWithFormat:@"Brian Yin added a new goal", goal.creatorId];
-        storyDetailText = goal.name;
-        
-    } else if ([story isKindOfClass:[Step class]]) {
-        Step* step = (Step *) story;
-        
-        storyHeaderText = [NSString stringWithFormat:@"Brian Yin added a new step", step.creatorId];
-        storyDetailText = step.name;
-    }
-    
-    float totalContentHeight = 130.0;
     return 130;
 }
 
@@ -330,7 +294,6 @@
         
         // Add Goal at this index to the goals added page
         //button.backgroundColor = [UIColor greenColor];
-        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
         if(goal.isAdded) {
             [button setImage:[UIImage imageNamed:@"Joined Checkmark.png"] forState:UIControlStateNormal];
             [self.goalsToRemove addObject:goal];

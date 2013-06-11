@@ -6,10 +6,9 @@
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
-#import "FlatTableViewController.h"
 #import "Invite.h"
 
-@interface InvitesTableViewController : FlatTableViewController
+@interface InvitesTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray *invites;
 @property (nonatomic, strong) Invite* lastSelected;

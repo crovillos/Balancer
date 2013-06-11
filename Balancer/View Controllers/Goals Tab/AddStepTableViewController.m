@@ -41,7 +41,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
@@ -69,7 +68,6 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 	
-	NSInteger selectedIndex = indexPath.row;
 	UITableViewCell *cell =
     [tableView cellForRowAtIndexPath:indexPath];
 	cell.accessoryType = UITableViewCellAccessoryCheckmark;

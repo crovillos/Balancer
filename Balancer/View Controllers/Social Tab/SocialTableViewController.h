@@ -6,10 +6,9 @@
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
-#import "FlatTableViewController.h"
 #import "Step.h"
 
-@interface SocialTableViewController : FlatTableViewController
+@interface SocialTableViewController : UITableViewController
 
 /** The model for this view controller, obtained from the network */
 @property (nonatomic, strong) NSMutableArray *socialStream; // of Goal

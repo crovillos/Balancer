@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C3C5F6CE-B8B5-47EC-97E0-3D8CCD370660</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Balancer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>18CBA431-FAB6-4DEF-BEAE-A5D287A420A9</key>
+		<string>ssh://github.com/crovillos/Balancer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Balancer.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>18CBA431-FAB6-4DEF-BEAE-A5D287A420A9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/crovillos/Balancer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>18CBA431-FAB6-4DEF-BEAE-A5D287A420A9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>18CBA431-FAB6-4DEF-BEAE-A5D287A420A9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Interactive Prototype</string>
+		</dict>
+	</array>
+</dict>
+</plist>

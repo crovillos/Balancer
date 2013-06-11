@@ -29,8 +29,6 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
     [self setGoals:appDelegate.dummyGoals];
@@ -122,11 +120,7 @@
             cell = [tableView dequeueReusableCellWithIdentifier:GoalCellIdentifier];
             assert(cell != nil);
             
-            
             UILabel *goalLabel = (UILabel *)[cell viewWithTag:999];
-            UIButton *addButton = (UIButton *)[cell viewWithTag:1];
-            UIButton *editButton = (UIButton *)[cell viewWithTag:2];
-            UIButton *detailsButton = (UIButton *)[cell viewWithTag:3];
             
             goalLabel.text = [self titleForGoalAtSection:indexPath.section];
             
@@ -195,27 +189,12 @@
 }
 
 -(void) onClickedAddStepButton: (id) sender{
-    
-    UITableViewCell *clickedCell = (UITableViewCell *)[[sender superview] superview];
-    
-    NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
-    
 }
 
 -(void) onClickedEditGoalButton: (id) sender{
-    
-    UITableViewCell *clickedCell = (UITableViewCell *)[[sender superview] superview];
-    
-    NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
-    
 }
 
 -(void) onClickedShowGoalDetailsButton: (id) sender{
-    
-    UITableViewCell *clickedCell = (UITableViewCell *)[[sender superview] superview];
-    
-    NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
-    
 }
 
 #pragma mark - Table view delegate
@@ -298,14 +277,14 @@
                 [tableView deleteRowsAtIndexPaths:tmpArray
                                  withRowAnimation:UITableViewRowAnimationTop];
                 
-                cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
+                //cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
                 
             }
             else
             {
                 [tableView insertRowsAtIndexPaths:tmpArray
                                  withRowAnimation:UITableViewRowAnimationTop];
-                cell.accessoryView =  [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
+                //cell.accessoryView =  [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
                 
             }
             

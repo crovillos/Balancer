@@ -13,7 +13,6 @@
 #import "GoalInvite.h"
 #import "StepInvite.h"
 
-#import "UIBarButtonItem+FlatUI.h"
 #import "UIColor+Balancer.h"
 
 #define BALANCER_FONT_REGULAR @"Bariol-Regular"
@@ -32,14 +31,14 @@
     [[UINavigationBar appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
       titleTextFont,
-      UITextAttributeFont,
+      NSFontAttributeName,
       nil]];
     
     UIFont *tabBarTextFont = [UIFont fontWithName:BALANCER_FONT_BOLD size:[UIFont smallSystemFontSize]];
     [[UITabBarItem appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
       tabBarTextFont,
-      UITextAttributeFont,
+      NSFontAttributeName,
       nil] forState:UIControlStateNormal];
     
     UIFont *titleBarButtonTextFont = [UIFont fontWithName:BALANCER_FONT_BOLD size:13.0];
@@ -47,13 +46,8 @@
     [[UIBarButtonItem appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
       titleBarButtonTextFont,
-      UITextAttributeFont,
+      NSFontAttributeName,
       nil] forState:UIControlStateNormal];
-    
-    // Customize buttons in title bar
-    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor balancerLightPinkColor]
-                                  highlightedColor:[UIColor balancerDarkPinkColor]
-                                      cornerRadius:3];
     
     [self createDummyGoals];
     [self createDummyInvites];
@@ -63,8 +57,6 @@
     [self createDummyAvailableSteps];
     [self createUsers];
    
-    
-    
     return YES;
 }
 
@@ -72,7 +64,7 @@
 {
     _userNames = [[NSMutableArray alloc] init];
     NSString* s0 = @"";
-    [self.userNames addObject: @""];
+    [self.userNames addObject: s0];
     NSString* s1 = @"Dian";
     [self.userNames addObject: s1];
     NSString* s2 = @"Perry";

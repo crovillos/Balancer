@@ -17,7 +17,6 @@
 #import "AppDelegate.h"
 #import "SocialAddGoalTableViewController.h"
 
-#import "UINavigationBar+FlatUI.h"
 #import "UIColor+Balancer.h"
 
 @implementation InvitesTableViewController
@@ -25,8 +24,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor balancerPinkColor]];
     
     // prevent empty table cells from appearing after the social feed by setting
     // the table view's footer view to an empty view

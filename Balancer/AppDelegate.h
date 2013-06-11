@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 //#import <RestKit/RestKit.h>
-#import <FacebookSDK/FacebookSDK.h>
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

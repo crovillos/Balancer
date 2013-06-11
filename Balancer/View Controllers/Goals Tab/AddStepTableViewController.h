@@ -6,9 +6,7 @@
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
-#import "FlatTableViewController.h"
-
-@interface AddStepTableViewController : FlatTableViewController
+@interface AddStepTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray* availableSteps;
 

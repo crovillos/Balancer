@@ -6,11 +6,9 @@
 //  Copyright (c) 2013 Dian Hartono, Grace Jang, Chris Rovillos, Catriona Scott, Brian Yin. All rights reserved.
 //
 
-#import "FlatTableViewController.h"
-
 #import "Goal.h"
 
-@interface AddCustomGoalTableViewController : FlatTableViewController
+@interface AddCustomGoalTableViewController : UITableViewController
 
 @property (strong, nonatomic) Goal *customGoal;
 

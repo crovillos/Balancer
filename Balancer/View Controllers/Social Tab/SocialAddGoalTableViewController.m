@@ -9,7 +9,6 @@
 #import "SocialAddGoalTableViewController.h"
 #import "AppDelegate.h"
 #import "Goal.h"
-#import "UINavigationBar+FlatUI.h"
 #import "UIColor+Balancer.h"
 
 @interface SocialAddGoalTableViewController ()
@@ -77,7 +76,6 @@
     
     NSString* storyHeaderText;
     NSString* storyDetailText;
-    NSString* profileImagePath;
     NSInteger creatorFBID = 1;
         
     if([story isKindOfClass:[Goal class]]) {
